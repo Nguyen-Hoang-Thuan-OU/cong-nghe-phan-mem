@@ -1,0 +1,88 @@
+QUY TRÌNH LÀM/PHÁT TRIỂN PHẦN MỀM
+
+Methodology (nghĩa rộng: phương pháp luận): cách thức, phương pháp, bài viết, chỉ dẫn về một phương pháp nào đó
+Process (quy trình), Life cycle (chu trình, vòng đời)
+ -> Các bước để làm ra một phần mềm.
+
+*Customer, User, Product Owner (PO): Khách hàng, người đưa ra yêu cầu.
+	Requirement (descriptive): Yêu cầu, thứ khách hàng muốn
+					để hỗ trợ cho công việc HẰNG NGÀY của họ
+					(những công việc mà dù không có phần mềm
+					thì họ vẫn phải làm như bình thường).
+	User story (predictive): Mong đợi của khách hàng về tính năng của phần mềm
+		Khách hàng nói ra những mong ước của họ về các tính năng của phần mềm
+		vì chưa có hoặc đã có nhưng phần mềm hiện tại chưa được tốt, cần nâng cấp
+
+Có bao nhiêu bước? --> Từ 4 đến 8 bước, tuỳ vào cách nhìn nhận của tác giả.
+Bước 01: Specification/Requirements (Yêu cầu)
+		Người BA (Business Analyst): kỹ sư phân tích nghiệp vụ khách hàng
+		      BrSE (Bridge Software Engineer): kỹ sư cầu nối (Nhật Bản)
+		- Hỏi khách hàng để xem cần phải làm gì, khách hàng yêu cầu gì?
+		=> WHAT?
+
+Bước 02: Design (Thiết kế)
+		Người BA, Developer, Graphic Designer, Marketing
+		- Giao diện người dùng (UI)
+		- Cơ sở dữ liệu
+		- Kiến trúc phần mềm (Architecture): MVC, API, Web Service, Microservices,...
+
+Bước 03: Development/Implementation (Hiện thực hoá sản phẩm phần mềm bằng code)
+		Người Developer
+		- Cần các tool, IDE
+		- Cần Các thiết bị: máy in (in layout)
+
+Bước 04: Validation (Kiểm thử chất lượng phần mềm)
+		Người Quality Assurance/Quality Control (QA/QC), Tester
+		- Test code
+		- Test phần mềm để kiểm tra xem chạy có đúng hay không?
+
+Bước 05: Deployment/Maintenance/Enhancement (Bàn giao cho khách hàng sử dụng)
+		Người Help Desk, Customer Care
+		- Cài đặt phần mềm lên máy của khách hàng
+		- Upload lên trên internet để mọi người có thể download
+		- Cài đặt một đoạn code ngầm
+		  tự động kiểm tra cập nhật sau một khoảng thời gian
+		  để bảo trì, fix bug (sửa lỗi)
+		- Nâng cấp thêm tính năng
+			(VD: 
+				- Zalo thêm tính năng chuyển tiền khi chat
+				- Shopee, Lazada,... thêm tính năng Livestream)
+
+Cách phối hợp giữa các bước như thế nào?
+"Trường phái" truyền thống: Water fall (thác nước)
+	-> More descriptive: hướng về một thứ rõ ràng
+		(Ví dụ: khách hàng đã biết họ muốn gì trong một phần mềm do có tham khảo trước)
+
+"Trường phái" hiện đại: Agile
+(Nhánh: Scrum, Extreme programming (XP), Kanban, Lean Startup)
+	-> More predictive: mơ hồ, chưa rõ ràng, cần dự đoán
+		(Ví dụ: khách hàng chưa biết họ muốn gì trong một phần mềm)
+
+=> Thường theo hướng hiện đại nhưng vẫn cần sự hỗ trợ của truyền thống
+
+
+Làm phần mềm phải bàn về khách hàng (Stakeholders).
+Công ty thuần phần mềm: FPT Software, MISA, KMS,...
+	- Làm phần mềm do người khác (các ngân hàng, bệnh viên, viễn thông, hiệu thuốc, cửa hàng bán hàng,...) đặt hàng.
+	=> BA làm việc với khách hàng.
+
+	- Làm phần mềm do công ty phần mềm khác đặt hàng.
+	(Làm không được thì thuê, do giá nhân công,...)
+		-> Outsource: gia công phần mềm
+	=> BA làm việc với BA khác.
+
+Công ty không thuần phần mềm (thường là công ty lớn,
+	ví dụ: Lazada, Shopee, Grab, Momo, VNG, Garena, TGDD, Co.opmart, Start-up)
+	Để xây dựng nên tảng nhằm hỗ trợ cho công việc của họ và sử dụng trong nội bộ.
+	- Thuê một công ty phần mềm làm trước cho họ phần nền, phần cơ bản.
+		+ Mua luôn code thay vì chỉ phần mềm.
+	- Để tiết kiệm chi phí, công ty có một đội ngũ Developer riêng
+	  nhằm phát triển tiếp tính năng, bảo trì, nâng cấp.
+
+
+
+
+
+
+
+
