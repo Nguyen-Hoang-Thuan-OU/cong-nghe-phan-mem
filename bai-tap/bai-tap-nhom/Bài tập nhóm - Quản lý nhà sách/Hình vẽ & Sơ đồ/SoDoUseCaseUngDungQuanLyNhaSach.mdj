@@ -8053,11 +8053,11 @@
 												"$ref": "AAAAAAF9SoKj+vymtJE="
 											},
 											"font": "Arial;13;1",
-											"left": 623.5,
+											"left": 626,
 											"top": 515.5,
-											"width": 117,
+											"width": 128,
 											"height": 13,
-											"text": "In phiếu nhập sách"
+											"text": "Lập phiếu nhập sách"
 										},
 										{
 											"_type": "LabelView",
@@ -8088,9 +8088,9 @@
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 618.5,
+									"left": 621,
 									"top": 508.5,
-									"width": 127.736328125,
+									"width": 139.29541015625,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF9SoKj+vyno4s="
@@ -8190,7 +8190,7 @@
 							"containerChangeable": true,
 							"left": 592,
 							"top": 504,
-							"width": 180,
+							"width": 196,
 							"height": 35,
 							"nameCompartment": {
 								"$ref": "AAAAAAF9SoKj+vymtJE="
@@ -8234,8 +8234,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 572,
-									"top": 541,
+									"left": 576,
+									"top": 540,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -8254,7 +8254,7 @@
 										"$ref": "AAAAAAF9SoLYhv4wcaw="
 									},
 									"font": "Arial;13;0",
-									"left": 535,
+									"left": 539,
 									"top": 540,
 									"width": 55.65625,
 									"height": 13,
@@ -8277,8 +8277,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 583,
-									"top": 568,
+									"left": 587,
+									"top": 569,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -8296,7 +8296,7 @@
 								"$ref": "AAAAAAF9SFMwXf8JNNc="
 							},
 							"lineStyle": 1,
-							"points": "521:583;635:539",
+							"points": "524:583;641:539",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF9SoLYhv4zcx8="
@@ -8347,11 +8347,11 @@
 												"$ref": "AAAAAAF9SoMc+gAQL3o="
 											},
 											"font": "Arial;13;1",
-											"left": 809.5,
+											"left": 812,
 											"top": 395.5,
-											"width": 126,
+											"width": 138,
 											"height": 13,
-											"text": "In hoá đơn bán sách"
+											"text": "Lập hoá đơn bán sách"
 										},
 										{
 											"_type": "LabelView",
@@ -8382,9 +8382,9 @@
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 804.5,
+									"left": 807,
 									"top": 388.5,
-									"width": 136.978515625,
+									"width": 148.53759765625,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF9SoMc+gARdu0="
@@ -8484,7 +8484,7 @@
 							"containerChangeable": true,
 							"left": 776,
 							"top": 384,
-							"width": 193,
+							"width": 210,
 							"height": 35,
 							"nameCompartment": {
 								"$ref": "AAAAAAF9SoMc+gAQL3o="
@@ -8529,7 +8529,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 678,
-									"top": 400,
+									"top": 401,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -8549,7 +8549,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 640,
-									"top": 399,
+									"top": 400,
 									"width": 55.65625,
 									"height": 13,
 									"alpha": -4.103175590254648,
@@ -8572,7 +8572,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 681,
-									"top": 429,
+									"top": 430,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -8590,7 +8590,7 @@
 								"$ref": "AAAAAAF9SFMxu/829l4="
 							},
 							"lineStyle": 1,
-							"points": "585:432;775:411",
+							"points": "585:432;775:412",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF9SogMkgRfU+g="
@@ -8857,7 +8857,7 @@
 								"$ref": "AAAAAAF9SoKj+fylGZc="
 							},
 							"lineStyle": 1,
-							"points": "772:524;847:527"
+							"points": "788:525;847:527"
 						},
 						{
 							"_type": "UMLNoteView",
@@ -8886,7 +8886,7 @@
 								"$ref": "AAAAAAF9SoMc+QAPN2Y="
 							},
 							"lineStyle": 1,
-							"points": "910:419;1087:502"
+							"points": "917:419;1087:501"
 						},
 						{
 							"_type": "UMLNoteView",
@@ -10378,7 +10378,7 @@
 					"_parent": {
 						"$ref": "AAAAAAF9SCoM/fwP4mI="
 					},
-					"name": "In phiếu nhập sách"
+					"name": "Lập phiếu nhập sách"
 				},
 				{
 					"_type": "UMLUseCase",
@@ -10386,7 +10386,7 @@
 					"_parent": {
 						"$ref": "AAAAAAF9SCoM/fwP4mI="
 					},
-					"name": "In hoá đơn bán sách"
+					"name": "Lập hoá đơn bán sách"
 				},
 				{
 					"_type": "UMLUseCase",
