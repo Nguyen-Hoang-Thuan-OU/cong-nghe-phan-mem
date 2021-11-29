@@ -5,3 +5,6 @@
 	-> Mỗi Use Case tương ứng với một sơ đồ tuần tự.
 
 Người quản trị __________ (Tạo mới một tài khoản)
+- Lifeline: vòng đời, thời gian tồn tại, dòng thời gian Actor tương tác với hệ thống.
+- Message: 
+- Timeline: tiến trình thời gian:
