@@ -1,5 +1,0 @@
-﻿Sơ đồ Use Case và đặc tả Use Case vẫn chưa đủ với các lập trình viên, họ cần chi tiết hơn vì nó liên quan đến code xử lý, liên quan đến các thành phần cần triển khai trong code: UI, class, cơ sở dữ liệu,... -> Liên quan đến cách bố trí, kiến trúc (architecture) các thành phần code trong quá trình xây dựng hệ thống: MVC, Web Services, Micro Services,...
-
-=> Sequence Diagram (Sơ đồ tuần tự): sơ đồ để diễn tả thêm về luồng xử lý, góc nhìn phía xử lý code, nói về việc truyền những thông điệp, lời gọi hàm giữa các thành phần của code để làm nên các tính năng, làm nên một Use Case.
-	-> Các thành phần trong code gọi nhau như thế nào để hoàn thành một Use Case.
-	-> Mỗi Use Case tương ứng với một sơ đồ tuần tự.

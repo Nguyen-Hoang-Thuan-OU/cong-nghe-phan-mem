@@ -1,1 +1,40 @@
 ﻿UML (Unified Modeling Language): ngôn ngữ mô hình hóa thống nhất là tập hợp các loại sơ đồ để mô tả về hệ thống sẽ phục vụ cho khách hàng như thế nào theo cách tiếp cận hướng đối tượng.
+
+Use Case Diagram (UCD): sơ đồ tình huống sử dụng.
+	-> Chỉ ra WHO làm được WHAT với hệ thống.
+
+Sequence Diagram: sơ đồ tuần tự.
+	-> Các thành phần trong code gọi nhau như thế nào để hoàn thành một Use Case.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
