@@ -1,0 +1,1 @@
+﻿UML (Unified Modeling Language): ngôn ngữ mô hình hóa thống nhất là tập hợp các loại sơ đồ để mô tả về hệ thống sẽ phục vụ cho khách hàng như thế nào theo cách tiếp cận hướng đối tượng.

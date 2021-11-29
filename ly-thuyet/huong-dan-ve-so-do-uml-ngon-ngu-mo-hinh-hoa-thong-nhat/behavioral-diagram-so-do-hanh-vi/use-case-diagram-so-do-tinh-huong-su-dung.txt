@@ -157,12 +157,84 @@ Tối ưu, làm giảm độ phức tạp của sơ đồ bằng các mối quan
 
 https://www.uml-diagrams.org/use-case-extend.html
 
-04. ĐẶC TẢ USE CASE
+===============================================================================================
+
+ĐẶC TẢ USE CASE
+
+01. ĐỊNH NGHĨA
+Trong sơ đồ Use Case chỉ vẽ phần tổng quát (phần WHAT) để khách hàng hiểu được họ đạt được cái gì khi sử dụng hệ thống. Điều này sẽ tốt, dễ dàng cho khách hàng hiểu nhưng lại làm thiếu tính chi tiết về cách thức thực hiện/cài đặt cho lập trình viên và kiểm thử viên (không biết thế nào là đúng và đủ).
+Để mô tả chi tiết, cận cảnh (macro) về những xử lý bên trong (phần HOW) của một Use Case, cần có thêm một tài liệu/phiếu/biểu mẫu.
+
+	Ví dụ 1: (Tạo thời khoá biểu) -> Có được TKB cho sinh viên học và giảng viên xem -> WHAT
+			- Bị xung đột thời gian, phòng,... -> HOW
+
+	Ví dụ 2: (Tạo đơn hàng) -> Có được hoá đơn tính tiền -> WHAT
+			- Tích điểm, quên thẻ, phiếu quà tặng, mua hàng, giảm giá,... -> HOW
+
+Khi làm ứng dụng (viết code), mỗi Use Case sẽ tương ứng với một hoặc một vài màn hình, kèm với nút bấm, liên kết,... để xử lý thông tin và trả kết quả về cho người dùng.
+
+	Ví dụ: Để in ra được một hoá đơn bán hàng:
+		+ Màn hình nhập thông tin
+		+ Màn hình xem trước hoá đơn
+		+ Nhấn nút [In hoá đơn]
 
 
+02. CẤU TRÚC
 
+	01. Use Case ID: mã để phân biệt các Use Case, có thể tự đặt hoặc sinh tự động.
+	02. Tên Use Case: tên của Use Case, lấy theo tên đặt trong sơ đồ.
+	03. Mô tả vắn tắt use case (description/goal): xác định người dùng với quyền tương ứng đã được quy định từ trước.
+	04. Actor chính (primary actor): Actor trực tiếp tiếp cận Use Case này.
+	05. Actor phụ (secondary actor): Actor hỗ trợ cho Actor chính.
+	06.1. Kích hoạt (trigger): thường là việc nhấn nút, nhấn liên kết hoặc tính năng khác kết thúc thì Use Case này sẽ được gọi. -> Hành động để chạy code.
+	06.2. Tiền điều kiện (pre-conditions): điều kiện tiên quyết để chạy Use Case này, trước tiên cần phải có sẵn cái gì để Use Case này xảy ra. -> Cần có những dữ liệu, thiết bị, đầu vào là gì để xử lý được.
+		Ví dụ: Để đăng nhập vào hệ thống rút tiền, thẻ ATM cần còn thời hạn sử dụng.
+	07. Hậu điều kiện (post-conditions): kết quả nhận được sau khi Use Case được thực hiện thì người dùng hoặc hệ thống nhận được, kết quả đạt được là gì.
+	08. Luồng hoạt động (main flows/main success scenario/basic flows/normal flows): đường đến thành công. Actor làm gì với hệ thống & Hệ thống phản hồi như thế nào sau khi được Actor tác động.
+	09. Luồng thay thế (alternative flows): các con đường khác để thành công.
+	10. Luồng ngoại lệ (exception flows): tình huống trên đường đi khiến ta không thành công, không đến đích, không đạt được như những gì đã mô tả.
+	11. Quy tắc/Ràng buộc nghiệp vụ (business rules): những con số, câu điều kiện (if), ràng buộc trên dữ liệu/thiết bị để ép Use Case phải tuân theo mới hoàn tất được kết quả. Vì đây là công việc của khách hàng nên phải hỏi khách hàng để có được. -> Để đến đích thì phải qua những chốt chặn nào.
+		Ví dụ: Ràng buộc về điểm:
+			- Điểm nhập phải nằm trong khoảng [0, 10].
+			- Cột điểm = 0 -> Rớt môn.
+			- Khi muốn tính điểm GPA tích luỹ, phải chuyển từ hệ 10 -> hệ 4.
 
+Ví dụ: Đặc tả Use Case (Đăng nhập)
+	01. Use Case ID: UC-Login-001
+	02. Tên Use Case: Đăng nhập.
+	03. Mô tả vắn tắt use case (description/goal): Use Case cho phép người dùng chưa xác thực (khách) đăng nhập vào hệ thống.
+	04. Actor chính (primary actor): Người dùng chưa xác thực (khách).
+	05. Actor phụ (secondary actor): Không.
+	06.1. Kích hoạt (trigger): Khách nhấn nút [Đăng nhập].
+	06.2. Tiền điều kiện (pre-conditions): Tài khoản đã tồn tại trong hệ thống.
+	07. Hậu điều kiện (post-conditions):
+		- Vào được trang tương ứng đã được phân quyền (những người dùng với phân quyền khác nhau sẽ thấy được những màn hình, giao diện khác nhau).
+		- Được ghi nhận vào tập tin nhật ký của hệ thống.
+	08. Luồng hoạt động (main flows/main success scenario/basic flows/normal flows):
+		Actor					|		Hệ thống
+		01. Mở hệ thống					02. Hiện màn hình đăng nhập
+		03. Nhập tài khoản và mật khẩu
+		04. Nhấn nút [Đăng nhập]
+	09. Luồng thay thế (alternative flows):
+		Actor					|		Hệ thống
+		03a. Nhấn chọn [Đăng nhập bằng Google]
+		03b. Nhấn chọn [Đăng nhập bằng Facebook]
+	10. Luồng ngoại lệ (exception flows):
+		Actor					|		Hệ thống
+		04e. Nhập sai ba lần				Khoá tài khoản trong 30 phút
+	11. Quy tắc/Ràng buộc nghiệp vụ (business rules):
+		Ràng buộc: nếu đăng nhập thất bại quá (x) lần thì sẽ bị khoá tài khoản hoặc...
 
+===============================================================================================
+
+Use Case là sơ đồ quan trọng vì nó thể hiện được góc nhìn của người dùng (và vì hệ thống được viết ra là để người dùng sử dụng).
+
+1 Use Case ------------- 1 đặc tả Use Case
+
+Logic bên trong hệ thống:
+1 Use Case ------------- 1 Sequence Diagram (sơ đồ tuần tự)
+1 Use Case ------------- 1 Activity Diagram (sơ đồ hoạt động)
+... -> Được gọi chung là UML.
 
 
 
