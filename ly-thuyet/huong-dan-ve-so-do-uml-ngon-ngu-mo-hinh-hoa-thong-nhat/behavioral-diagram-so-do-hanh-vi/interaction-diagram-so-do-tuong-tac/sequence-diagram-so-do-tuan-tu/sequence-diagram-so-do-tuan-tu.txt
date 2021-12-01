@@ -1,37 +1,71 @@
-﻿Sơ đồ Use Case và đặc tả Use Case vẫn chưa đủ với các lập trình viên, họ cần chi tiết hơn vì nó liên quan đến code xử lý, liên quan đến các thành phần cần triển khai trong code: UI, class, cơ sở dữ liệu,... -> Liên quan đến cách bố trí, kiến trúc (architecture) các thành phần code trong quá trình xây dựng hệ thống: MVC, Web Services, Micro Services,...
+﻿Sơ đồ Use Case và đặc tả Use Case chỉ thân thiện, dễ đọc đối với khách hàng chứ vẫn chưa đủ với các lập trình viên. Để lập trình theo sơ đồ đã được thiết kế thì họ cần nhiều chi tiết hơn để phối hợp các lớp (class) lại với nhau vì nó liên quan đến code xử lý, liên quan đến các thành phần cần triển khai trong code: UI, lớp (class), cơ sở dữ liệu,... -> Liên quan đến cách bố trí, kiến trúc (architecture) các thành phần code trong quá trình xây dựng hệ thống: MVC, Web Services, Micro Services,...
 
 => Sequence Diagram (Sơ đồ tuần tự): sơ đồ để diễn tả thêm về luồng xử lý, góc nhìn phía xử lý code, nói về việc truyền những thông điệp, lời gọi hàm giữa các thành phần của code, sự tương tác giữa các đối tượng (object) để làm nên các tính năng, làm nên một Use Case (mỗi Use Case tương ứng với một sơ đồ tuần tự).
-	-> Các thành phần, lớp (class), đối tượng (object) gọi nhau như thế nào trong code để hoàn thành một Use Case, sẽ được vẽ trong sơ đồ tuần tự này.
+	-> Sơ đồ miêu tả các kiến trúc, thành phần, lớp (class), đối tượng (object) gọi nhau như thế nào trong code để hoàn thành một Use Case, giúp cho lập trình viên có thể đọc, hiểu và thiết kế theo.
 
 ========================================================================================
 
 Lớp và Đối tượng (Class & Object)
 
+Một lớp đại diện cho một nhóm, từ lớp đó ta có thể tạo ra những đối tượng cụ thể. Ví dụ: từ lớp SinhVien, ta có thể tạo ra các đối tượng SinhVien khác nhau với các thuộc tính khác nhau.
+
 Ví dụ: SinhVien sv = new SinhVien("1851010999", "An", 2000, 8.0)
 	-> sv là tên gọi tắt cho một đối tượng sinh viên nào đó được khởi tạo (new).
 
 SinhVien 	sv 		= new 		SinhVien("1851010999", "An", 2000, 8.0)
-lớp		biến obj			giá trị, object, cái gì đó cụ thể
+lớp		biến obj	  khởi tạo	giá trị, đối tượng, cái gì đó cụ thể
 kiểu dữ liệu	biến tham chiếu			con con người/sinh viên cụ thể
 		biến con trỏ
-		sv.hàmGìĐó() -> Gọi hành động của sv để báo cho sv biết rằng cần phải làm gì.
-			     -> Gọi hàm tức là yêu cầu ai đó phải làm gì.
+		sv.hàmGìĐó() -> Gọi hàm tức là yêu cầu ai đó phải làm gì.
+			     -> Gọi hành động của sv để báo cho sv biết rằng cần phải làm gì.
 			     -> Giao tiếp, gửi thông điệp đề nghị sv làm gì đó.
 		sv.lấyTuổi() -> Hỏi sv tuổi của họ.
 
-Trong khi vẽ sơ đồ tuần tự, cần có một cách để biểu diễn gọn gàng hơn cho các lớp, đối tượng xuất hiện trong code. Khi chạy, chương trình cũng tạo thành class.
-Thay vì ghi: SinhVien sv = new SinhVien(...) để nói về một đối tượng, ta sử dụng ": SinhVien" (hàm ý new SinhVien() và gán vào sv).
+Trong khi vẽ sơ đồ tuần tự, cần có một cách để biểu diễn gọn gàng hơn cho các lớp, đối tượng xuất hiện trong code.
+Thay vì ghi: SinhVien sv = new SinhVien(...) để nói về một đối tượng, ta sử dụng ": SinhVien" (hàm ý khởi tạo SinhVien() và gán vào sv).
 
+Khi chạy, chương trình cũng tạo thành class.
 	- Controller là một class.
 	- DAO, DTO là một class.
-
 Khi chạy, khi người dùng tương tác với hệ thống, phải new tất cả những cái trên.
 	- Controller sẽ do container (tomcat) new và không biết tên đự động đặt là gì.
 	- DAO, DTO sẽ do lập trình viên new và tự đặt tên biến.
 
 ": Tên-Class" đã là đủ cho việc new và gán code.
 
+========================================================================================
 
+class TaoNguoiDungController {
+	NguoiDungDAO dao = new NguoiDungDAO();
+
+	xuLy() {
+		ketQua = dao.themNguoiDung(...);
+
+		if (thành-công) -> làm gì tiếp
+		if (thất-bại) -> làm gì tiếp
+	}
+}
+
+
+class NguoiDungDAO {
+	Connection ketNoi = DBUtil.getConnection();
+
+	? themNguoiDung(...) {
+		String sql = "themCacGiaTriVaoNguoiDung(...)";
+		.executeUpdate();
+		// hàm execute() của cơ sở dữ liệu phải trả về một kết quả để DAO tính tiếp
+
+		return ?;
+	}
+}
+
+========================================================================================
+
+Lifeline/Activation bar
+Self Message: phản thân, đệ quy.
+Interaction Use: tham chiếu đến một sơ đồ khác. Dùng để ẩn, che giấu đi một cụm xử lý rất phức tạp và chuyển thành biểu tượng Ref. Tách phần phức tạp sang một sơ đồ khác, chỉ thể hiện rằng mạch đi của dữ liệu có nhận vào và trả về nhằm đảm bảo xử lý và tạo cảm giác giống như chưa tách. -> Sơ đồ chi tiết được gọi là reference/decomposition (phân rã).
+Đồng bộ: nếu bước không trả về kết quả thì bước trước đó không thể thực hiện tiếp được.
+Bất đồng bộ:
 
 
 
