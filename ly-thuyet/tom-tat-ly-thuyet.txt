@@ -102,7 +102,7 @@ Công ty không thuần phần mềm (thường là công ty lớn,
 	-> Người dùng này có phải người quen của hệ thống không?
 
 * Authorized User/Authorization: người dùng đã được phân quyền, uỷ quyền.
-	-> Tuy đã là người quen của hệ thống nhưng người dùng này có quyền gì đối với hệ thống?
+	-> Tuy đã là người quen của hệ thống nhưng người dùng này có quyền gì trong hệ thống?
 
 
 	01. End-user đặc biệt (UnAuthenticated User): khách được đăng ký tài khoản, đăng nhập -> không quan tâm chi tiết xử lý ra sao, chỉ quan tâm kết quả là đăng ký hoặc đăng nhập thành công.
