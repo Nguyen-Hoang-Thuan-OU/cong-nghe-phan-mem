@@ -1,6 +1,6 @@
-QUY TRÌNH LÀM/PHÁT TRIỂN PHẦN MỀM
+QUY TRÌNH LÀM/PHÁT TRIỂN PHẦN MỀM (Các bước làm phần mềm theo một thứ tự nào đó).
 
-Methodology (nghĩa rộng: phương pháp luận): cách thức, phương pháp, bài viết, chỉ dẫn về một phương pháp nào đó
+Methodology (nghĩa rộng: phương pháp luận): cách thức, phương pháp, bài viết, chỉ dẫn về một phương pháp nào đó.
 Process (quy trình), Life cycle (chu trình, vòng đời)
  -> Các bước để làm ra một phần mềm.
 
@@ -14,6 +14,9 @@ Process (quy trình), Life cycle (chu trình, vòng đời)
 		vì chưa có hoặc đã có nhưng phần mềm hiện tại chưa được tốt, cần nâng cấp
 
 Có bao nhiêu bước? --> Từ 4 đến 8 bước, tuỳ vào cách nhìn nhận của tác giả.
+
+Bao gồm bốn bước/công đoạn không kể thứ tự: Spec, Dev, Valid, Evol.
+
 Bước 01: Specification/Requirements (Yêu cầu)
 		Người BA, BrSE
 		- Hỏi khách hàng để xem cần phải làm gì, khách hàng yêu cầu gì?
@@ -37,27 +40,46 @@ Bước 04: Validation (Kiểm thử chất lượng phần mềm)
 
 Bước 05: Deployment/Maintenance/Enhancement (Bàn giao cho khách hàng sử dụng)
 		Người Help Desk, Customer Care
-		- Cài đặt phần mềm lên máy của khách hàng
-		- Upload lên trên internet để mọi người có thể download
-		- Cài đặt một đoạn code ngầm
-		  tự động kiểm tra cập nhật sau một khoảng thời gian
-		  để bảo trì, fix bug (sửa lỗi)
+		- Cài đặt phần mềm lên máy của khách hàng.
+		- Upload lên trên internet để mọi người có thể download.
+		- Cài đặt một đoạn code ngầm tự động kiểm tra cập nhật
+		  sau một khoảng thời gian để bảo trì, fix bug (sửa lỗi).
 		- Nâng cấp thêm tính năng
 			(VD: 
 				- Zalo thêm tính năng chuyển tiền khi chat
 				- Shopee, Lazada,... thêm tính năng Livestream)
 
 Cách phối hợp giữa các bước như thế nào?
+Trình tự phát triển phần mềm:
 "Trường phái" truyền thống: Water fall (thác nước)
-	-> More descriptive: hướng về một thứ rõ ràng
-		(Ví dụ: khách hàng đã biết họ muốn gì trong một phần mềm do có tham khảo trước)
+=> More descriptive: hướng về một thứ rõ ràng.
+   (Khách hàng đã biết họ muốn gì trong một phần mềm do có tham khảo trước)
+	- Nghiêm ngặt theo từng bước, từng khoảng thời gian định trước.
+	- Nhấn mạnh yếu tố THE WHOLE - làm trên tổng thể:
+	  phân tích đầy đủ yêu cầu, viết đầy đủ tài liệu rồi mới xây dựng hệ thống.
+		-> Một hệ thống hoàn chỉnh với đầy đủ chức năng sẽ ra đời ở những giai đoạn cuối,
+		   nhưng cũng sẽ tốn kém khi lúc này sản phẩm không đạt được như yêu cầu.
 
 "Trường phái" hiện đại: Agile
 (Nhánh: Scrum, Extreme programming (XP), Kanban, Lean Startup)
-	-> More predictive: mơ hồ, chưa rõ ràng, cần dự đoán
-		(Ví dụ: khách hàng chưa biết họ muốn gì trong một phần mềm)
+=> More predictive: mơ hồ, chưa rõ ràng, cần dự đoán.
+   (Khách hàng chưa biết họ muốn gì trong một phần mềm)
+	- Thoải mái, linh hoạt theo từng giai đoạn/mô đun.
+	- Nhấn mạnh yếu tố phân vùng, chia để trị:
+	  không cần phân tích toàn bộ yêu cầu và vẽ quá chi tiết các sơ đồ,
+	  mà phân tích đến đâu thì làm đến đấy.
+	  Xây dựng hệ thống sớm để nhanh chóng nhận phản hồi từ phía khách hàng.
+	- Incremental (tăng dần): hệ thống trải qua nhiều phiên bản và hoàn thiện dần
+					theo từng phiên bản sau một khoảng thời gian đều nhau.
+	- Iterative (lặp lại): lặp đi lặp lại các bước,
+				chia công việc thành các đoạn thời gian bằng nhau.
+		-> Một hệ thống không hoàn chỉnh
+		   mà chỉ là những chức năng/mô đun nhỏ được ra đời
+		   trong những khoảng thời gian bằng nhau (sprint),
+		   giúp dễ dàng thay đổi khi chức năng/mô đun ấy không đạt được yêu cầu.
 
-=> Thường theo hướng hiện đại nhưng vẫn cần sự hỗ trợ của truyền thống
+=> Trong phát triển phần mềm bây giờ thường theo hướng hiện đại
+nhưng vẫn cần sự hỗ trợ của truyền thống.
 
 
 Làm phần mềm phải bàn về khách hàng (Stakeholders).
@@ -78,7 +100,9 @@ Công ty không thuần phần mềm (thường là công ty lớn,
 	- Để tiết kiệm chi phí, công ty có một đội ngũ Developer riêng
 	  nhằm phát triển tiếp tính năng, bảo trì, nâng cấp.
 
---------------------------------------------------------------------------------------------
+===========================================================================================
+
+GIAI ĐOẠN THU THẬP, PHÂN TÍCH & THIẾT KẾ YÊU CẦU CỦA KHÁCH HÀNG (theo mô hình thác nước)
 
 ******Hệ thống được tạo ra cho ai (WHO) sử dụng******
 -> Xác định những nhóm người dùng: người dùng khiến cho hệ thống tồn tại.
@@ -112,13 +136,21 @@ Công ty không thuần phần mềm (thường là công ty lớn,
 
 ==> Toàn bộ những Requirements/Features + chi tiết (hành trình) được gom vào một cuốn tài liệu SPEC/SRS - Software Requirements Specification (tài liệu đặc tả yêu cầu phần mềm) để các Stakeholder (các bên có liên quan như khách hàng, đội ngũ dev,...) cùng đọc.
 
+===========================================================================================
 
+17 người họp vào năm 2001 -> Agile (linh hoạt với khách hàng) -> Manifesto (tuyên ngôn)
 
+Chúng tôi đang khám phá ra một cách tốt hơn để phát triển phần mềm bằng cách chúng tôi làm nó và giúp đỡ mọi người cùng hiện thực hoá nó. Thông qua những công việc này, chúng tôi đi đến kết luận giá trị cốt lõi (quan trọng) sau:
 
+- Cá nhân hoá và sự tương tác lớn hơn bất kỳ quy trình và công cụ nào.
+	+ Quy trình và công cụ: làm theo khuôn khổ, bị cứng nhắc và ràng buộc theo một quy tắc.
+	+ Cá nhân hoá và sự tương tác: 
+- Phần mềm chạy được hơn là tài liệu thiết kế (SRS).
+- Phối hợp với khách hàng hơn là làm theo điểu khoản hợp đồng.
+- Tương thích, lắng nghe thay đổi hơn là làm theo kế hoạch đã định.
 
-
-
-
+Vẫn giữ nguyên giá trị của vế phải, song đề cao giá trị của vế trái hơn.
+	-> 20 nguyên lý
 
 
 
