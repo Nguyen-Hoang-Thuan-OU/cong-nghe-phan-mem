@@ -138,7 +138,7 @@ GIAI ĐOẠN THU THẬP, PHÂN TÍCH & THIẾT KẾ YÊU CẦU CỦA KHÁCH HÀN
 
 ===========================================================================================
 
-17 người họp vào năm 2001 -> Agile (linh hoạt với khách hàng) -> Manifesto (tuyên ngôn)
+17 chuyên gia họp vào năm 2001 -> Agile (linh hoạt với khách hàng) -> Manifesto (tuyên ngôn)
 
 Chúng tôi đang khám phá ra một cách tốt hơn để phát triển phần mềm bằng cách chúng tôi làm nó và giúp đỡ mọi người cùng hiện thực hoá nó. Thông qua những công việc này, chúng tôi đi đến kết luận giá trị cốt lõi (quan trọng) sau:
 
