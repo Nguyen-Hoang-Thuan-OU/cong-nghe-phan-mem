@@ -1,7 +1,7 @@
 ﻿Sơ đồ Use Case và đặc tả Use Case chỉ thân thiện, dễ đọc đối với khách hàng chứ vẫn chưa đủ với các lập trình viên. Để lập trình theo sơ đồ đã được thiết kế thì họ cần nhiều chi tiết hơn để phối hợp các lớp (class) lại với nhau vì nó liên quan đến code xử lý, liên quan đến các thành phần cần triển khai trong code: UI, lớp (class), cơ sở dữ liệu,... -> Liên quan đến cách bố trí, kiến trúc (architecture) các thành phần code trong quá trình xây dựng hệ thống: MVC, Web Services, Micro Services,...
 
-=> Sequence Diagram (Sơ đồ tuần tự): sơ đồ để diễn tả thêm về luồng xử lý, góc nhìn phía xử lý code, nói về việc truyền những thông điệp, lời gọi hàm giữa các thành phần của code, sự tương tác giữa các đối tượng (object) để làm nên các tính năng, làm nên một Use Case (mỗi Use Case tương ứng với một sơ đồ tuần tự).
-	-> Sơ đồ miêu tả các kiến trúc, thành phần, lớp (class), đối tượng (object) gọi nhau như thế nào trong code để hoàn thành một Use Case, giúp cho lập trình viên có thể đọc, hiểu và thiết kế theo.
+=> Sequence Diagram (Sơ đồ tuần tự): sơ đồ để diễn tả thêm về luồng xử lý, góc nhìn phía xử lý code, nói về thứ tự truyền những thông điệp, lời gọi hàm giữa các thành phần của code, sự tương tác giữa các đối tượng (object) để làm nên các tính năng, làm nên một Use Case (mỗi Use Case tương ứng với một sơ đồ tuần tự).
+	-> Sơ đồ miêu tả các kiến trúc, thành phần, lớp (class), đối tượng (object) và thứ tự gọi nhau như thế nào trong code để hoàn thành một Use Case, giúp cho lập trình viên có thể đọc, hiểu và thiết kế theo.
 
 ========================================================================================
 
@@ -61,11 +61,21 @@ class NguoiDungDAO {
 
 ========================================================================================
 
-Lifeline/Activation bar
+[Hình người] Actor: người dùng tương tác với hệ thống/code.
+[Hình chữ nhật] Đối tượng (Object): controller, DAO, cơ sở dữ liệu.
+[Đường né đứt từ Actor và Object kéo xuống] Lifeline: biểu diễn sự tồn tại của object trong hệ thống.
+[Thanh nằm đề lên Lifeline] Activation bar/Activation box: cho thấy sự sống, thời gian làm việc của một đối tượng
+[Đường mũi tên] Thông điệp (Message): gồm những yêu cầu (request) và phản hồi (response) trong hệ thống.
+	[Đường mũi tên nét liền] Yêu cầu (Request)
+	[Đường mũi tên nét đứt] Phản hồi (Response)
+
+
+Combined Fragment: phân chia các trường hợp (tuỳ chọn, câu điều kiện if-else, vòng lặp,...)
+Guard: 
 Self Message: phản thân, đệ quy.
 Interaction Use: tham chiếu đến một sơ đồ khác. Dùng để ẩn, che giấu đi một cụm xử lý rất phức tạp và chuyển thành biểu tượng Ref. Tách phần phức tạp sang một sơ đồ khác, chỉ thể hiện rằng mạch đi của dữ liệu có nhận vào và trả về nhằm đảm bảo xử lý và tạo cảm giác giống như chưa tách. -> Sơ đồ chi tiết được gọi là reference/decomposition (phân rã).
-Đồng bộ: nếu bước không trả về kết quả thì bước trước đó không thể thực hiện tiếp được.
-Bất đồng bộ:
+Đồng bộ: nếu bước bên phải không trả về kết quả thì bước bên trái không thể thực hiện tiếp được.
+Bất đồng bộ: bước bên trái không cần đợi kết quả trả về của bước bên phải.
 
 
 
