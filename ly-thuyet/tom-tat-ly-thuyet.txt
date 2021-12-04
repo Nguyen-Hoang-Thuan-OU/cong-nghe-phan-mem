@@ -1,8 +1,9 @@
-QUY TRÌNH LÀM/PHÁT TRIỂN PHẦN MỀM (Các bước làm phần mềm theo một thứ tự nào đó).
+QUY TRÌNH LÀM/PHÁT TRIỂN PHẦN MỀM
+Quy trình phát triển phần mềm là một tập hợp các hoạt động tổ chức mà mục đính là xây dựng và phát triển phần mềm, đảm bảo cho sản phẩm đạt chất lượng.
 
 Methodology (nghĩa rộng: phương pháp luận): cách thức, phương pháp, bài viết, chỉ dẫn về một phương pháp nào đó.
 Process (quy trình), Life cycle (chu trình, vòng đời)
- -> Các bước để làm ra một phần mềm.
+ -> Các bước làm phần mềm theo một thứ tự nào đó.
 
 *Customer, User, Product Owner (PO): Khách hàng, người đưa ra yêu cầu.
 	Requirement (descriptive): Yêu cầu, thứ khách hàng muốn
