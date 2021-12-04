@@ -1,4 +1,13 @@
-﻿UML (Unified Modeling Language): ngôn ngữ mô hình hóa thống nhất là tập hợp các loại sơ đồ để mô tả về hệ thống sẽ phục vụ cho khách hàng như thế nào theo cách tiếp cận hướng đối tượng.
+﻿Mô hình hoá hệ thống là quá trình phát triển mô hình trừu tượng cho hệ thống, phác thảo những bức tranh toàn cảnh về hệ thống, luồng xử lý và sự tương tác của hệ thống. Mỗi mô hình thể hiện những đường đi, khía cạnh/khung nhìn (view) khác nhau về hệ thống.
+	-> Mô hình hoá hệ thống giúp lựa chọn ra được con đường tối ưu nhất để xây dựng, bảo trì, mở rộng hệ thống.
+
+Trong quá trình xây dựng và thiết kế phần mềm, mô hình hoá hệ thống có thể sử dụng trong:
+	- Phân tích yêu cầu giúp hiểu rõ yêu cầu hệ thống: Use Case Diagram.
+	- Thiết kế để mô tả hệ thống giúp các kỹ sư hiện thực hệ thống: Class, Component, Deployment, Activity, Sequence Diagram,...
+	- Tài liệu hoá các hoạt động và cấu trúc hệ thống sau giai đoạn hiện thực hệ thống: Activity, Sequence Diagram,...
+
+UML (Unified Modeling Language): ngôn ngữ mô hình hóa thống nhất là tập hợp các loại sơ đồ để mô tả về hệ thống sẽ phục vụ cho khách hàng như thế nào theo cách tiếp cận hướng đối tượng.
+	-> Để mô hình hoá hệ thống, ta sử dụng các mô hình đồ hoạ (graphic) của UML.
 (Sơ đồ biểu diễn một thuật toán (Flow chart) và mô hình thực thể-mối kết hợp (ERD) không thuộc UML).
 
 Use Case Diagram (UCD): sơ đồ tình huống sử dụng.
