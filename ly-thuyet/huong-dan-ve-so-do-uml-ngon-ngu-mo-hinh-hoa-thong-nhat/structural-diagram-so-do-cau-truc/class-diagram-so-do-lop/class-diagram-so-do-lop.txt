@@ -1,1 +1,1 @@
-﻿
+﻿Trong sơ đồ lớp có nhiều loại lớp, trong đó có lớp thực thể đại diện cho cơ sở dữ liệu. Tránh nhầm với sơ đồ thực thể-mối kết hợp (ERD).
