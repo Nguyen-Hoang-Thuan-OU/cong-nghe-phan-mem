@@ -79,8 +79,13 @@ class NguoiDungDAO {
 
 [Hình chữ nhật] Đối tượng (Object): những thứ không liên quan đến lập trình hoặc không chắc chắn.
 	Ví dụ: trình duyệt, cơ sở dữ liệu.
-	[Dấu hai chấm đằng trước tên] Lớp (Class): đại diện cho việc khởi tạo và gán code, đại diện cho các đối tượng liên quan đến lập trình (những thứ xuất hiện trong code).
+	- Dấu hai chấm đằng trước tên lớp: đại diện cho việc khởi tạo và gán code, đại diện cho các đối tượng liên quan đến lập trình (những thứ xuất hiện trong code).
 		Ví dụ: controller, DAO.
+	--------------------------------------------------------------------------------
+	|--O : Boundary (thừa tác viên) - giao diện, tương tác giữa bên trong hệ thống và bên ngoài (UI) để Actor có thể thấy được.
+	O-^   : Control - chỉ trong
+	_O   : Lưu trữ dữ liệu
+
 
 [Đường né đứt từ Actor và Object kéo xuống] Lifeline: biểu diễn vòng đời tồn tại, sự sống, sự tồn tại của object trong hệ thống.
 [Thanh nằm đề lên Lifeline] Activation bar/Activation box/Timeline: tiến trình thời gian để cho thấy sự sống, thời gian làm việc của một đối tượng.
@@ -88,6 +93,9 @@ class NguoiDungDAO {
 [Đường mũi tên] Thông điệp (Message): gồm những yêu cầu (request) và phản hồi (response) trong hệ thống.
 	[Đường mũi tên nét liền] Yêu cầu (Request).
 	[Đường mũi tên nét đứt] Phản hồi (Response).
+	Thông điệp đồng bộ (Synchronous Message): nếu bước bên phải không trả về kết quả thì bước bên trái không thể thực hiện tiếp được.
+	Thông điệp bất đồng bộ (Asynchronous Message): bước bên trái không cần đợi kết quả trả về của bước bên phải.
+	Thông điệp tự gửi/Phản thân/Đệ quy (Self Message/Recursive): Thông điệp tự gửi cho chính mình để thực hiện các hàm như kiểm tra tính hợp lệ dữ liệu. Ví dụ: trong một class, hàm được liên tục gọi và trả về kết quả để kiểm tra một xử lý nào đó, hàm trợ giúp (helper) để hàm khác gọi.
 
 Combined Fragment: phân chia các trường hợp.
 	- alt (lựa chọn thay thế): câu điều kiện if-else, switch-case. Lựa chọn một trong hai.
@@ -98,13 +106,9 @@ Combined Fragment: phân chia các trường hợp.
 		Ví dụ: [kiểm tra tính hợp lệ của form]
 		+ guard: điều kiện của các câu lệnh.
 			Ví dụ: [đăng nhập thành công], [đăng nhập thất bại]
-		+ Self Message/Recursive: phản thân, đệ quy. Ví dụ: trong một class, hàm được liên tục gọi và trả về kết quả để kiểm tra một xử lý nào đó, hàm trợ giúp (helper) để hàm khác gọi.
 
 Interaction Use: tham chiếu đến một sơ đồ khác. Dùng để ẩn, che giấu đi một cụm xử lý rất phức tạp và chuyển thành biểu tượng Ref. Tách phần phức tạp sang một sơ đồ khác, chỉ thể hiện rằng mạch đi của dữ liệu có nhận vào và trả về nhằm đảm bảo xử lý và tạo cảm giác giống như chưa tách.
 	-> Sơ đồ chi tiết được gọi là reference/decomposition (phân rã).
-
-Đồng bộ: nếu bước bên phải không trả về kết quả thì bước bên trái không thể thực hiện tiếp được.
-Bất đồng bộ: bước bên trái không cần đợi kết quả trả về của bước bên phải.
 
 
 
