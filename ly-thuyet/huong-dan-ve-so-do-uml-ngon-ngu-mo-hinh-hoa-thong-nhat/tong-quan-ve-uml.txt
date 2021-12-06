@@ -1,20 +1,73 @@
-﻿Mô hình hoá hệ thống là quá trình phát triển mô hình trừu tượng cho hệ thống, phác thảo những bức tranh toàn cảnh về hệ thống, luồng xử lý và sự tương tác của hệ thống. Mỗi mô hình thể hiện những đường đi, khía cạnh/khung nhìn (view) khác nhau về hệ thống.
-	-> Mô hình hoá hệ thống giúp lựa chọn ra được con đường tối ưu nhất để xây dựng, bảo trì, mở rộng hệ thống.
+﻿Mô hình hoá hệ thống là quá trình phát triển mô hình trừu tượng cho hệ thống, phác thảo những bức tranh toàn cảnh về hệ thống, luồng xử lý và sự tương tác của hệ thống. Mỗi mô hình thể hiện những đường đi, khía cạnh/khung nhìn (view) khác nhau về hệ thống (Ví dụ: Use Case là để phân tích, Sequence và Activity dùng để mô tả luồng, logic hoạt động của chương trình).
+
+Mục đích mô hình hoá:
+	- Làm sáng tỏ hệ thống, bao quát và dễ quản lý hơn.
+	- Mô phỏng các hình ảnh hệ thống, cho thấy được hệ thống trong tương lai sẽ được xây dựng như thế nào.
+	- Đơn giản hoá hệ thống, tránh được việc code xong mới thiết kế, làm khổ những người đến sau.
+	- Tăng khả năng bảo trì hệ thống, giúp những người đến sau có thể dễ dàng tiếp quản code, xác định được ưu và khuyết điểm của code, từ đó đưa ra được kết luận hệ thống có thể tích hợp được những tính năng mới mà lập trình viên định đưa vào hay không.
+
+=> Mô hình hoá hệ thống giúp lựa chọn ra được con đường tối ưu nhất để xây dựng, bảo trì và mở rộng hệ thống.
 
 Trong quá trình xây dựng và thiết kế phần mềm, mô hình hoá hệ thống có thể sử dụng trong:
 	- Phân tích yêu cầu giúp hiểu rõ yêu cầu hệ thống: Use Case Diagram.
 	- Thiết kế để mô tả hệ thống giúp các kỹ sư hiện thực hệ thống: Class, Component, Deployment, Activity, Sequence Diagram,...
 	- Tài liệu hoá các hoạt động và cấu trúc hệ thống sau giai đoạn hiện thực hệ thống: Activity, Sequence Diagram,...
 
+=> Để mô hình hoá hệ thống, ta sử dụng các mô hình đồ hoạ (graphic) của UML.
+
+-----
+
 UML (Unified Modeling Language): ngôn ngữ mô hình hóa thống nhất là tập hợp các loại sơ đồ để mô tả về hệ thống sẽ phục vụ cho khách hàng như thế nào theo cách tiếp cận hướng đối tượng.
-	-> Để mô hình hoá hệ thống, ta sử dụng các mô hình đồ hoạ (graphic) của UML.
+
+UML giúp	xác định (specifying)
+		trực quan hoá (visualizing) bằng các mô hình thay vì mô tả bằng lời nói
+		xây dựng (constructing)
+		tài liệu hoá (documenting)
+cho các artifact(*) của quy trình hiện thực phần mềm.
+(*)Artifact mô tả kết quả được tạo ra sau mỗi bước lặp nào đó của quy trình phần mềm.
+
 (Sơ đồ biểu diễn một thuật toán (Flow chart) và mô hình thực thể-mối kết hợp (ERD) không thuộc UML).
+
+* Các dạng mô hình UML:
+	- Mô hình tĩnh (static model): mô tả các thông số, cấu trúc và khía cạnh tĩnh ít bị thay đổi trong quá trình xây dựng hệ thống.
+	- Mô hình động (dynamic model): mô tả hành vi, thủ tục, xử lý bên trong của hệ thống, biểu diễn sự tương tác, luồng tương tác giữa các đối tượng để thực hiện một công việc hệ thống.
+
+* Các cách tiếp cận mô hình hoá hệ thống:
+	- Cấu trúc (structural): mô hình tổ chức hệ thống thành component và chỉ định mối quan hệ giữa chúng. (Class Diagram,...)
+	- Hành vi (behavioral): mô hình hành vi động của hệ thống khi nó thực thi, cách thức phản hồi của hệ thống với một sự kiện nào đó, sự tương tác giữa các thành phần hoặc giữa các đối tượng bên ngoài với thành phần bên trong hệ thống. (Use Case, Activity, State, Sequence Diagra,...)
+
+==================================================================================================
+
+Kế thừa (Generalization): cho phép ta định nghĩa một lớp trong điều kiện một lớp khác, mà làm cho nó dễ dàng hơn để tạo và duy trì một ứng dụng. Điều này cũng cung cấp cơ hội để tái sử dụng tính năng code và thời gian thực thi nhanh hơn. (Dùng mũi tên nét liền).
+	Ví dụ: HinhTron, HinhVuong, HinhChuNhat đều là hình học, nên chúng kế thừa một lớp cơ sở là HinhHoc.
+		-> Có thể tái sử dụng những thuộc tính, phương thức của lớp HinhHoc mà không cần phải khai báo lại
+
+		// Thông thường, khi làm lớp cơ sở,
+		// lớp HinhHoc sẽ được khai báo dạng trừu tượng (abstract)
+		public abstract class HinhHoc {//...}
+
+		import HinhHoc;
+		public class HinhTron extends HinhHoc {//...}
+		public class HinhVuong extends HinhHoc {//...}
+		public class HinhChuNhat extends HinhHoc {//...}
+
+-----
+
+Hiện thực hóa (Realization)
+Được áp dụng cho interface
+
+==================================================================================================
 
 Use Case Diagram (UCD): sơ đồ tình huống sử dụng.
 	-> Chỉ ra WHO làm được WHAT với hệ thống.
 
 Sequence Diagram: sơ đồ tuần tự.
 	-> Các thành phần trong code gọi nhau như thế nào và trình tự của các thông điệp để hoàn thành một Use Case.
+
+==================================================================================================
+
+
+
 
 
 
