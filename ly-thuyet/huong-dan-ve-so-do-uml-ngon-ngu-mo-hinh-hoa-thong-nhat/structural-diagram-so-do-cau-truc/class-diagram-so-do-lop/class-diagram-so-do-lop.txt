@@ -1,1 +1,108 @@
-﻿Trong sơ đồ lớp có nhiều loại lớp, trong đó có lớp thực thể đại diện cho cơ sở dữ liệu. Tránh nhầm với sơ đồ thực thể-mối kết hợp (ERD).
+﻿Sơ đồ lớp (Class Diagram) là một mô hình cấu trúc tĩnh của hệ thống, dùng biểu diễn các lớp đối tượng và mối quan hệ giữa chúng.
+	Association - kết hợp
+	Aggregation - tập hợp (không phụ thuộc)
+	Composition - hợp thành (phụ thuộc)
+	Inheritance - kế thừa
+	Dependency - phụ thuộc.
+
+Trong sơ đồ lớp có nhiều loại lớp, trong đó có lớp thực thể đại diện cho cơ sở dữ liệu. Tránh nhầm với sơ đồ thực thể-mối kết hợp (ERD).
+
+Ký hiệu lớp:
+
+|-------------------------------------------------------|
+|Tên lớp						|
+|-------------------------------------------------------|
+|tên-thuộc-tính1: kiểu-dữ-liệu1 = giá-trị-mặc-định1	|
+|tên-thuộc-tính2: kiểu-dữ-liệu2 = giá-trị-mặc-định2	|
+|-------------------------------------------------------|
+|tên-phương-thức1(ds-tham-số1): kiểu-trả-về1		|
+|tên-phương-thức2(ds-tham-số2): kiểu-trả-về2		|
+|_______________________________________________________|
+
+* Tên lớp:
+	- [N] Bình thường: lớp bình thường
+	- [I] In nghiêng: lớp trừu tượng (lớp không cho phép tạo đối tượng từ nó, chỉ định nghĩa khuôn để các lớp con kết thừa và hiện thực một số trừu tượng)
+	- [U] Gạch dưới: đối tượng cụ thể của một lớp (instance đã được tạo)
+
+* Tên thuộc tính:
+	- [N] Bình thường: thuộc tính bình thường
+	- [I] In nghiêng: thuộc tính tĩnh (những thuộc tính dùng chung cho toàn bộ những đối tượng được tạo ra từ lớp đó, thuộc tính tĩnh có thể được tạo ra ngay khi chưa có đối tượng nào từ lớp)
+
+* Tên phương thức:
+	- [N] Bình thường: phương thức bình thường
+	- [I] In nghiêng: phương thức trừu tượng (phương thức không có phần thân thực thi, chỉ có phần khai báo phương thức)
+	- [U] Gạch dưới: phương thức tĩnh
+
+
+* Phạm vi truy cập
+	- public: +
+	- private: -
+	- protected: #
+	- package: ~ (trong Java, khi một thuộc tính không được khai báo phạm vi truy cập sẽ được mặc định gán phạm vi truy cập là default, được phép truy cập bởi các lớp trong cùng một package)
+
+==================================================================================================
+
+Mối quan hệ giữa các lớp
+
+* Kết hợp (Association): |A|_____|B|
+	- Trong danh sách thuộc tính của lớp A có một thuộc tính kiểu của B và ngược lại.
+	- Bản số (multiplicity): xác định số đối tượng của hai lớp có liên kết với nhau, tham gia vào quan hệ đó.
+		*: nhiều.
+		1: một
+		0..*: từ 0 đến nhiều.
+		1..*: từ 1 đến nhiều.
+		1..3: từ 1 đến 3.
+	- Mối quan hệ nhiều-nhiều.
+		+ Lớp trung gian, được sinh ra từ hai lớp quan hệ nhiều-nhiều, sẽ được vẽ bằng net đứt.
+
+			* Ví dụ 1: Sử dụng ký hiệu của lớp trung gian (đường nét đứt) cho các mối quan hệ với trọng số nhiều-nhiều.
+
+				|---------------|				 |--------------|
+				|	Khoa	|				 |SinhVien 	|
+				|_______________|(1..2)			(30..200)|______________|
+				|-sv:SinhVien[]	|________________________________|-kh:Khoa[]	|
+				|		|		|		 |	   	|
+								|
+								|
+							|-----------------------|
+							|	ThamGia		|
+							|_______________________|
+							|-ngayThamGia:Date	|
+							|-kh:Khoa[]		|
+							|-sv:SinhVien[]		|
+							|			|
+							
+			* Ví dụ 2: giữa SanPham và LoaiSanPham có quan hệ nhiều-nhiều nhưng không có thuộc tính quan hệ nào khác.
+
+|---------------|		|------------------|			    |--------------------|
+|LoaiSanPham	|(1..*)	  (0..*)|	SanPham	   |(1..*)	      (0..*)|	DonHang		 |
+|_______________|_______________|__________________|________________________|____________________|
+|- id : int	|		|- id : int	   |	|  <|ChiTietDonHang |- id : int		 |  
+|- ten : String	|		|- ten : String	   |	|		    |- ngayTao : Date    |	
+|_______________|		|- gia : BigDecimal|	|		    |- ngayCapNhat : Date|
+|		|		|__________________|	|		    |____________________|
+|_______________|		|+ SanPham()	   |	|		    |____________________|
+				|+ xemCT() : void  |	|
+				|+ timKiem() : void|	|
+				|------------------|	|
+				|__________________|	|
+							|
+							|
+						|-----------------------|
+						|ChiTietDonHang		|
+						|_______________________|
+						|- soLuong : int	|
+						|- donGia : BigDecimal	|
+						|- sp : SanPham[]	|
+						|- dh : DonHang[]	|
+						|_______________________|
+						|_______________________|
+
+
+
+
+
+
+
+
+
