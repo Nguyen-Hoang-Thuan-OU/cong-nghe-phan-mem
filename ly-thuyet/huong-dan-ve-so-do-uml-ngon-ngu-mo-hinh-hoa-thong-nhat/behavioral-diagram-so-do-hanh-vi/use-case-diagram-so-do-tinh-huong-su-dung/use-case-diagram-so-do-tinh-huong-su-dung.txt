@@ -89,7 +89,7 @@ Tối ưu, làm giảm độ phức tạp của sơ đồ bằng các mối quan
 
 
 * Lưu ý khi vẽ Include: (UC chính) -----<<include>>-----> (UC chính phụ thuộc vào UC này)
-	- Đọc ở gốc mũi tên.
+	- Đọc ở gốc mũi tên -> (UC chính) bắt buộc phải có (UC phụ) để hoàn thành.
 	- Trả lời câu hỏi "Giữa những Use Case độc lập có liên kết gì với nhau?".
 	- Giữa những Use Case sẽ phụ thuộc chặt chẽ lẫn nhau.
 
@@ -103,7 +103,7 @@ Tối ưu, làm giảm độ phức tạp của sơ đồ bằng các mối quan
 
 
 * Lưu ý khi vẽ Extend: (UC chính) <-----<<extend>>----- (UC này mở rộng thêm cho UC chính)
-	- Đọc ở đầu mũi tên.
+	- Đọc ở đầu mũi tên -> (UC chính) có thể cần hoặc không cần (UC phụ) để hoàn thành.
 	- Trả lời câu hỏi "Giữa những Use Case độc lập có liên kết gì với nhau?".
 	- Giữa những Use Case sẽ phụ thuộc lỏng lẻo với nhau.
 
