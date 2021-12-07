@@ -6,60 +6,66 @@
 	Dependency - phụ thuộc.
 
 Trong sơ đồ lớp có nhiều loại lớp, trong đó có lớp thực thể đại diện cho cơ sở dữ liệu. Tránh nhầm với sơ đồ thực thể-mối kết hợp (ERD).
+	- Class Diagram: lớp đối tượng, ngoài việc có những lớp đại diện cho cơ sở dữ liệu (entity class) thì sơ đồ lớp còn có nhiều lớp xử lý khác (lớp giao diện, controller,...).
+	- ERD: sơ đồ ý niệm, nằm bên trong cơ sở dữ liệu.
 
 Ký hiệu lớp:
 
 |-------------------------------------------------------|
-|Tên lớp						|
+|Tên lớp						|	-> Class
 |-------------------------------------------------------|
-|tên-thuộc-tính1: kiểu-dữ-liệu1 = giá-trị-mặc-định1	|
-|tên-thuộc-tính2: kiểu-dữ-liệu2 = giá-trị-mặc-định2	|
+|tên-thuộc-tính1: kiểu-dữ-liệu1 = giá-trị-mặc-định1	|	-> Attribute là thuộc tính
+|tên-thuộc-tính2: kiểu-dữ-liệu2 = giá-trị-mặc-định2	|	được đóng gói trong lớp đối tượng
 |-------------------------------------------------------|
-|tên-phương-thức1(ds-tham-số1): kiểu-trả-về1		|
-|tên-phương-thức2(ds-tham-số2): kiểu-trả-về2		|
+|tên-phương-thức1(ds-tham-số1): kiểu-trả-về1		|	-> Behavior là phương thức
+|tên-phương-thức2(ds-tham-số2): kiểu-trả-về2		|	thể hiện hành vi của đối tượng
 |_______________________________________________________|
 
 * Tên lớp:
 	- [N] Bình thường: lớp bình thường
-	- [I] In nghiêng: lớp trừu tượng (lớp không cho phép tạo đối tượng từ nó, chỉ định nghĩa khuôn để các lớp con kết thừa và hiện thực một số trừu tượng)
-	- [U] Gạch dưới: đối tượng cụ thể của một lớp (instance đã được tạo)
+	- [I] In nghiêng: lớp trừu tượng (lớp không cho phép tạo đối tượng từ lớp đó, chỉ định nghĩa khuôn để các lớp con kết thừa và hiện thực một số nhiệm vụ trừu tượng)
+	- [U] Gạch dưới: đối tượng cụ thể của một lớp (object/instance đã được tạo của lớp)
 
 * Tên thuộc tính:
 	- [N] Bình thường: thuộc tính bình thường
-	- [I] In nghiêng: thuộc tính tĩnh (những thuộc tính dùng chung cho toàn bộ những đối tượng được tạo ra từ lớp đó, thuộc tính tĩnh có thể được tạo ra ngay khi chưa có đối tượng nào từ lớp)
+	- [I] In nghiêng: thuộc tính tĩnh (thuộc tính được chia sẻ, dùng chung cho toàn bộ những đối tượng được tạo ra từ lớp đó, thuộc tính tĩnh có thể được tạo ra ngay khi chưa có đối tượng nào từ lớp)
 
 * Tên phương thức:
 	- [N] Bình thường: phương thức bình thường
 	- [I] In nghiêng: phương thức trừu tượng (phương thức không có phần thân thực thi, chỉ có phần khai báo phương thức)
-	- [U] Gạch dưới: phương thức tĩnh
+	- [U] Gạch dưới: phương thức tĩnh (phương thức có thể được gọi sử dụng mà không cần thông qua việc tạo đối tượng, nó tương tự như 1 hàm cơ bản)
 
 
-* Phạm vi truy cập
-	- public: +
-	- private: -
-	- protected: #
-	- package: ~ (trong Java, khi một thuộc tính không được khai báo phạm vi truy cập sẽ được mặc định gán phạm vi truy cập là default, được phép truy cập bởi các lớp trong cùng một package)
+* Phạm vi truy cập (Access modifier): được đặt ở trước tên thuộc tính và tên phương thức.
+	- public: + (mọi người đều có thể truy cập)
+	- private: - (để thể hiện tính che giấu dữ liệu trong lập trình hướng đối tượng, thuộc tính thường có phạm vi truy cập là private hoặc protected, và truy cập thông qua hai phương thức getter và setter.)
+	- protected: # (để các thuộc tính, phương thức con có thể truy cập)
+	- package (Java)/namespace (C#): ~ (trong Java, khi một thuộc tính không được khai báo phạm vi truy cập sẽ được mặc định gán phạm vi truy cập là default, được phép truy cập bởi các lớp (anh em) trong cùng một package)
 
 ==================================================================================================
 
 Mối quan hệ giữa các lớp
 
+-----
 * Kết hợp (Association): |A|_____|B|
-	- Trong danh sách thuộc tính của lớp A có một thuộc tính kiểu của B và ngược lại.
+	- Trong danh sách THUỘC TÍNH (không phải phương thức) của lớp A có một ĐỐI TƯỢNG, THUỘC TÍNH kiểu của B và ngược lại.
+		Ví dụ:
+			class A {
+    				private B b;
+			};
 	- Bản số (multiplicity): xác định số đối tượng của hai lớp có liên kết với nhau, tham gia vào quan hệ đó.
 		*: nhiều.
 		1: một
 		0..*: từ 0 đến nhiều.
 		1..*: từ 1 đến nhiều.
 		1..3: từ 1 đến 3.
-	- Mối quan hệ nhiều-nhiều.
-		+ Lớp trung gian, được sinh ra từ hai lớp quan hệ nhiều-nhiều, sẽ được vẽ bằng net đứt.
-
-			* Ví dụ 1: Sử dụng ký hiệu của lớp trung gian (đường nét đứt) cho các mối quan hệ với trọng số nhiều-nhiều.
+	- Nếu mối quan hệ là nhiều-nhiều.
+		+ Lớp trung gian được sinh ra từ hai lớp quan hệ nhiều-nhiều sẽ được vẽ bằng net đứt.
+			* Ví dụ 1: sử dụng ký hiệu của lớp trung gian (đường nét đứt) cho các mối quan hệ với trọng số nhiều-nhiều. Ràng buộc số lượng sinh viên tối thiểu và tối đa của một khoa, số lượng khoa (chuyên ngành) mà một sinh viên được phép tham gia.
 
 				|---------------|				 |--------------|
 				|	Khoa	|				 |SinhVien 	|
-				|_______________|(1..2)			(30..200)|______________|
+				|_______________|(1..2)			(30..500)|______________|
 				|-sv:SinhVien[]	|________________________________|-kh:Khoa[]	|
 				|		|		|		 |	   	|
 								|
@@ -97,9 +103,85 @@ Mối quan hệ giữa các lớp
 						|- dh : DonHang[]	|
 						|_______________________|
 						|_______________________|
+-----
 
+-----
+Tập hợp/Kết tập (Aggregation/Has-a - liên kết yếu/lỏng lẻo): |A|<>_____|B|
+	- Điều kiện:
+		+ Đã có mối quan hệ kết hợp (association).
+		+ Mối quan hệ một chiều (một-nhiều/nhiều-một).
+	- Trong danh sách THUỘC TÍNH (không phải phương thức) của lớp A có một THUỘC TÍNH kiểu của B, và khi đối tượng A của lớp A bị huỷ thì thì đối tượng, thuộc tính B bên trong A vẫn còn tồn tại (cả hai thực thể có thể tồn tại riêng lẻ).
+		Ví dụ: class A có quan hệ aggregation với class B khi class A có method dùng B như parameter.
+			class A {
+    				void lamXYZ (B b) { };
+			};
+	- Khi vẽ, hình thoi rỗng <> thường nằm ở phía trọng số là 1.
+			Ví dụ 1: nếu đối tượng DanhMuc bị xoá thì tất cả các sản phẩm thuộc SanPham vẫn còn tồn tại.
 
+				|-------|	 |-------|
+				|SanPham|*	1|DanhMuc|
+				|_______|______<>|_______|
+				|	|	 |	 |
 
+			Ví dụ 2: nếu đối tượng TruongHoc bị xoá thì tất cả các SinhVien và GiangVien vẫn còn tồn tại.
+
+				|---------|	   |---------|	      |--------|
+				|GiangVien|*	  1|TruongHoc|1	     *|SinhVien|
+				|_________|______<>|_________|<>______|________|
+				|	  |	   |	     |	      |	       |
+-----
+
+-----
+Hợp thành (Composition/Part-of - liên kết mạnh/chặt chẽ): |A|<<>>_____|B|
+	- Điều kiện:
+		+ Đã có mối quan hệ kết hợp (aggregation) - là một trường hợp đặc biệt của aggregation.
+	- Trong danh sách THUỘC TÍNH (không phải phương thức) của lớp A có một THUỘC TÍNH kiểu của B, và khi đối tượng A của lớp A bị huỷ thì thì đối tượng B bên trong A sẽ bị huỷ theo (cả hai thực thể đều phụ thuộc vào nhau).
+		Ví dụ: class A có quan hệ compostion với class B khi constructor của class A dùng B như parameter.
+			class A {
+    				A (B b) {
+        				new B ();
+    				}
+			};
+	- Khi vẽ, hình thoi đặc <<>> thường nằm ở phía trọng số là 1.
+			Ví dụ: nếu đối tượng ThuMuc bị xoá thì tất cả các tập tin con bên trong đều sẽ bị xoá theo.
+
+				|-------|	   |------|
+				|ThuMuc	|1	  *|TapTin|
+				|_______|<<>>______|______|
+				|	|	   |	  |
+-----
+
+-----
+Phụ thuộc (Dependency/Uses-a): |A|----->|B|
+	- Điều kiện:
+		+ Chỉ xét đến khi hai lớp đối tượng không có cả ba mối quan hệ association, aggregation, composition).
+	- Trong danh sách PHƯƠNG THỨC (không phải thuộc tính) của lớp A có một THUỘC TÍNH với tham số/đối số kiểu của B, có một biến cục bộ kiểu B, hoặc trả về một biến kiểu B -> Lớp A phụ thuộc vào lớp B.
+		Ví dụ:
+			test (B b) {			// Tham số kiểu của B
+				// B b;			// Biến cục bộ kiểu B
+				return new B();		// Trả về một biến kiểu B
+			}
+-----
+
+-----
+Kế thừa (Inheritance/Generalization/Is-a): |A|<|_____|B|
+	- Quan hệ một-một của hai lớp đối tượng.
+		+ Lớp A: lớp cơ sở (base class)/lớp cha(superclass).
+		+ Lớp B: lớp dẫn xuất (derived class)/lớp con (subclass).
+			-> Một lớp B ánh xạ với một đối tượng lớp A (B là mở rộng (extends) của A).
+			-> Khi chuyển xuống cơ sở dữ liệu sẽ là mối quan hệ ánh xạ một-một.
+	- Lớp B thừa hưởng những đặc tính, hành vi của lớp A.
+		Ví dụ:
+
+|-----------------------|		|-------------------|		    |-------------------|
+|	KhachHang	|		|	NguoiDung   |		    |	Admin		|
+|_______________________|1	       1|___________________|1		   1|___________________|
+|- email : String	|_____________|>|- id: int	    |<|_____________|- laQuanLy :boole	|
+|- soDienThoai: String	|		|- taiKhoan : String|		    |			|
+|			|		|- matKhau : String |		    |			|
+|_______________________|		|___________________|		    |___________________|
+|			|		|		    |		    |			|
+-----
 
 
 
