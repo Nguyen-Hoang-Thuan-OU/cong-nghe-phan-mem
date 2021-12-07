@@ -1,13 +1,12 @@
 ﻿Sơ đồ Use Case và đặc tả Use Case chỉ thân thiện, dễ đọc đối với khách hàng chứ vẫn chưa đủ với các lập trình viên. Để lập trình theo sơ đồ đã được thiết kế thì họ cần nhiều chi tiết hơn để phối hợp các lớp (class) lại với nhau vì nó liên quan đến code xử lý, liên quan đến các thành phần cần triển khai trong code: UI, lớp (class), cơ sở dữ liệu,... -> Liên quan đến cách bố trí, kiến trúc (architecture) các thành phần code trong quá trình xây dựng hệ thống: MVC, Web Services, Micro Services,...
 
-=> Sequence Diagram (Sơ đồ tuần tự): sơ đồ để diễn tả thêm về luồng xử lý, góc nhìn phía xử lý code, nói về thứ tự truyền những thông điệp, lời gọi hàm giữa các thành phần của code, sự tương tác giữa các đối tượng (object) để làm nên các tính năng, làm nên một Use Case (mỗi Use Case tương ứng với một sơ đồ tuần tự).
+=> Sequence Diagram (Sơ đồ tuần tự): sơ đồ để diễn tả thêm về luồng xử lý, góc nhìn phía xử lý code, nói về thứ tự truyền những thông điệp, lời gọi hàm giữa các thành phần của code, sự tương tác giữa các đối tượng (object) theo trình tự thời gian (timeline) để làm nên các tính năng, làm nên một Use Case (mỗi Use Case tương ứng với một sơ đồ tuần tự).
 	-> Sơ đồ miêu tả các
-		+ Kiến trúc, thành phần, lớp (class), đối tượng (object) một cách gọn gàng (không phải liệt kê tất cả các đối tượng)
+		+ Kiến trúc, thành phần, lớp (class), đối tượng (object) một cách gọn gàng (không phải liệt kê tất cả các đối tượng).
 			Ví dụ:
-			Thay vì ghi: SinhVien sv = new SinhVien(...)
-			Ghi trong sequence diagram: ": SinhVien" đã là đủ cho việc khởi tạo và gán code. -> Hàm ý khởi tạo SinhVien() và gán vào sv.
-		+ Thứ tự gọi nhau (.hàm) như thế nào trong code
-	để hoàn thành một Use Case, giúp cho lập trình viên có thể đọc, hiểu và thiết kế theo.
+				Thay vì ghi: SinhVien sv = new SinhVien(...)
+				Ghi trong sequence diagram: ": SinhVien" đã là đủ cho việc khởi tạo và gán code. -> Hàm ý khởi tạo SinhVien() và gán vào sv.
+		+ Thứ tự gọi nhau (.hàm) như thế nào trong code theo trình tự thời gian (timeline) để hoàn thành một Use Case, giúp cho lập trình viên có thể đọc, hiểu và thiết kế theo.
 
 ========================================================================================
 
