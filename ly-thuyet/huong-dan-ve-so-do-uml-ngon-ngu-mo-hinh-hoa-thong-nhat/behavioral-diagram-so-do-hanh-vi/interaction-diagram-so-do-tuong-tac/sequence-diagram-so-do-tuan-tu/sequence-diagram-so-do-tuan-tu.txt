@@ -81,9 +81,9 @@ class NguoiDungDAO {
 	- Dấu hai chấm đằng trước tên lớp: đại diện cho việc khởi tạo và gán code, đại diện cho các đối tượng liên quan đến lập trình (những thứ xuất hiện trong code).
 		Ví dụ: controller, DAO.
 	--------------------------------------------------------------------------------
-	|__O : Boundary (thừa tác viên) - đại diện cho giao diện, tương tác giữa bên trong hệ thống và bên ngoài (thường là giao diện người dùng - UI) để Actor có thể thấy được.
-	O-^   : Control [dấu gạch dưới _ nằm ở ngay bên dưới hình tròn] - giao tiếp với entity để lấy dữ liệu và trả kết quả về cho boundary.
-	_O   : Entity [mũi tên nhỏ dạng vòng lặp được vẽ ở biên của hình tròn] - Lưu trữ dữ liệu.
+	Ю : Boundary [dấu | nằm bên trái hình tròn O] - đại diện cho giao diện, tương tác giữa bên trong hệ thống và bên ngoài (thường là giao diện người dùng - UI) để Actor có thể thấy được.
+	δ   : Control [mũi tên nhỏ dạng vòng lặp ↺ được vẽ ở biên của hình tròn] - giao tiếp với entity để lấy dữ liệu và trả kết quả về cho boundary.
+	Ω   : Entity [dấu gạch dưới _ nằm ở ngay bên dưới hình tròn] - Lưu trữ dữ liệu.
 
 	(Xem thêm chi tiết ở lý thuyết của sơ đồ lớp - class diagram)
 	--------------------------------------------------------------------------------
