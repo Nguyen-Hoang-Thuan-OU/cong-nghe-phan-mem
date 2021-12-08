@@ -183,6 +183,118 @@ Kế thừa (Inheritance/Generalization/Is-a): |A|<|_____|B|
 |			|		|		    |		    |			|
 -----
 
+-----
+Lớp trong (nested): |A|+O_____|A1|
+	- Trong lập trình hướng đối tượng, Java kế thừa từ C++, do đó Java thừa hưởng đầy đủ những đặc trưng trong lập trình hướng đối tượng của C++. Nhưng trong Java có thêm cơ chế đặc trưng hướng đối tượng mà C++ không có là metaclass.
+		+ Metaclass là lớp mà bên trong một lớp A có lồng thêm một số lớp A1, A2,...
+		+ Lớp lồng bên trong được phép truy cập vào thành viên của lớp lớn. Khác với quan hệ kế thừa.
+	- Thành viên tĩnh là thành viên dùng chung cho tất cả các đối tượng. Lớp tĩnh (static class) được phép khai báo bên trong một lớp lớn, giúp lớp lớn truy cập trực tiếp vào lớp trong bằng tên của lớp lớn và tạo đối tượng ở bên trong, thay vì phải tạo đối tượng từ lớp lớn rồi dùng đối tượng vừa tạo để truy cập vào lớp trong (thường được áp dụng trong xử lý sự kiện của lập trình giao diện).
+			Ví dụ 1:
+				class A {
+					// Phạm vi truy cập bên private
+					// chỉ cho truy cập bên trong phạm vi của lớp,
+					// không cho lớp nào khác được phép truy cập
+					private int x;
+
+					// Lớp B (lớp trong) giờ đây cũng được truy cập
+					// vào thành phần private của lớp A
+					class B {
+					}
+
+					// Lớp tĩnh cho phép lớp A truy cập trực tiếp vào lớp C
+					// bằng tên của lớp A và tạo đối tượng ở bên trong
+					// mà không cần phải tạo đối tượng ở lớp A
+					static class C {
+					}
+				}
+
+			Ví dụ 2:
+				// Lớp giao diện
+				class A {
+					private textBoxNhap;
+					private buttonXuLy;
+
+					// Lớp xử lý sự kiện
+					// và có thể truy cập vào thuộc tính privte
+					class A1 {
+					}
+				}
+
+		Ví dụ: lớp A1 là lớp trong của lớp A
+
+		|-----------------------|		|---------------------------------------|
+		|	A		|		|		A1			|
+		|_______________________|		|_______________________________________|
+		|- textBoxNhap : TextBox|+O_____________|					|
+		|- buttonXuLy : Button	|		|_______________________________________|
+		|_______________________|		|+ handle (event : ActionEvent) : void	|
+		|_______________________|		|_______________________________________|
+-----
+
+-----
+Trong mô hình Model-View-Controller (MVC):
+	- Controller: nơi nhận các yêu cầu (request) từ phía giao diện của người dùng để xử lý, định tuyến để gọi các action, sau đó giao tiếp với Model.
+	- Model: nơi tương tác với cơ sở dữ liệu, sau khi được Controller gọi sẽ thực hiện các thao tác thêm hoặc xoá dữ liệu trong cơ sở dữ liệu, sau đó trả kết quả về cho View.
+	- View: là nơi để người dùng thao tác và thay người dùng gửi yêu cầu (request) lên Server.
+-> Trong sơ đồ lớp cũng có các loại tương ứng.
+
+Một số loại lớp khác bên cạnh các loại lớp đại diện cho dữ liệu:
+	- Boundary Class: dùng để mô hình hoá sự tương tác giữa người dùng và hệ thống, chẳng hạn như giao diện chương trình.
+		+ Kí hiệu: |__O
+		+ Tương ứng với View trong mô hình MVC.
+
+	- Entity Class: dùng để mô hình hoá những thông tin của thành phần/lớp đối tượng được lưu trữ/tồn tại lâu dài trong hệ thống. Nó đại diện cho những bảng dữ liệu trong cơ sở dữ liệu, chẳng hạn như như SanPham, GiaoDich,...
+		+ Kí hiệu: _O (dấu gạch dưới _ nằm ở ngay bên dưới hình tròn)
+		+ Tương ứng với Model trong mô hình MVC.
+
+	- Controller Class: biểu diễn các đối tượng trung gian giữa boundary (view) và entity (model). Nó thực thi các lệnh từ boundary (view) bằng cách tương tác với các đối tượng entity (model) và boundary (view).
+		+ Kí hiệu: O-^ (mũi tên nhỏ dạng vòng lặp được vẽ ở biên của hình tròn)
+		+ Tương ứng với Controller trong mô hình MVC.
+
+	|__O : Boundary (thừa tác viên) - đại diện cho giao diện, tương tác giữa bên trong hệ thống và bên ngoài (thường là giao diện người dùng - UI) để Actor có thể thấy được.
+	O-^   : Control [dấu gạch dưới _ nằm ở ngay bên dưới hình tròn] - giao tiếp với entity để lấy dữ liệu và trả kết quả về cho boundary.
+	_O   : Entity [mũi tên nhỏ dạng vòng lặp được vẽ ở biên của hình tròn] - Lưu trữ dữ liệu.
+-----
+
+-----
+Hiện thực hóa (Realization/Implementation)
+Giao diện (Interface) chỉ có phần khai báo chứ không có phần thực thi và một vài phương thức mặc định, để chạy được cần viết một lớp đối tượng để hiện thực/triển khai, quá trình này được gọi là hiện thực hoá.
+	Ví dụ 1:
+		|---------------|
+		|[In nghiêng] I1|<|-----|
+		|---------------|	|
+					|-----|class A|
+		|---------------|	|
+		|[In nghiêng] I2|<|-----|
+		|---------------|
+
+-----
+
+-----
+Bài tập vẽ sơ đồ lớp:
+	Bài tập 1: thiết kế lớp TapTin và ThuMuc
+		Thư mục chứa thông tin tên thư mục, ngày tạo.
+		Tập tin cũng là một loại thư mục có thêm thông tin loại tập tin và dung lượng.
+		Thư mục có thể chứa các thư mục con và nhiều tập tin khác.
+		Trong đó:
+			- Thư mục bắt buộc phải có tên, còn tập tin phải có tên và dung lượng.
+			- Một thư mục bị xoá thì tất cả tập tin, thư mục con của nó cũng bị xoá theo.
+		       1|-----------------------|	|-----------------------|
+		____<<>>|	ThuMuc		|	|	TapTin		|
+		|	|_______________________|	|_______________________|
+		|	|- ten : String		|<|_____|- loai : String	|
+		|_______|- ngayTao : Date	|	|- dungLuong : double	|
+		       *|_______________________|	|_______________________|
+			|_______________________|	|_______________________|
+
+
+
+
+
+
+
+
+
 
 
 
