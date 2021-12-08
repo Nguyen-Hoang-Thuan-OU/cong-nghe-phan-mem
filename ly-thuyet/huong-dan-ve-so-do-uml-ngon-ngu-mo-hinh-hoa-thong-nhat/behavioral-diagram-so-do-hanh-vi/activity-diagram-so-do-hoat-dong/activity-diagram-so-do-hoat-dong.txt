@@ -1,1 +1,20 @@
-﻿
+﻿Sơ đồ hoạt động (Activity Diagram) biểu diễn các hoạt động tạo nên quy trình hệ thống và luồng điều khiển từ hoạt động này đến hoạt động khác.
+
+Các trạng thái:
+	- Trạng thái bắt đầu (hình tròn đặc ở bên trong): ●___>
+		+ Thường sẽ chỉ có duy nhất một nơi bắt đầu.
+	- Trạng thái kết thúc (Hai hình tròn đồng tâm, hình tròn ở bên trong là hình tròn đặc): ___>◉
+		+ Thường sẽ chỉ có nhiều nơi kết thúc.
+	Ví dụ: rút tiền ở cây ATM.
+		- Một điểm bắt đầu: cho thẻ vào máy ATM và thực hiện chứng thực.
+		- Nhiều điểm kết thúc:
+			+ Nhập sai mật khẩu/mã pin quá 5 lần, máy không nhận thẻ nữa -> Thất bại và rút tiền không thành công.
+			+ Đã rút tiền không thành công, máy trả thẻ lại cho người dùng.
+
+Mỗi hoạt động đại diện bằng hình chữ nhật bo tròn 4 góc, luồng hoạt động thể hiện bằng mũi tên.
+	Ví dụ:
+		(---------------)		(---------------)
+		|Đăng nhập	|______________>|Báo lỗi	|
+		(---------------)		(---------------)
+
+♢
