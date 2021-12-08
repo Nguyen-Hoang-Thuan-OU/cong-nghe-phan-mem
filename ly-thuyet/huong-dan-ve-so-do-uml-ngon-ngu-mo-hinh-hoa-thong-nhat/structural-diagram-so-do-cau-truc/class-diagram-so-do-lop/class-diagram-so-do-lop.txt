@@ -53,7 +53,7 @@ Mối quan hệ giữa các lớp
 			class A {
     				private B b;
 			};
-	- Bản số (multiplicity): xác định số đối tượng của hai lớp có liên kết với nhau, tham gia vào quan hệ đó.
+	- Bản số/trọng số (multiplicity): xác định số đối tượng của hai lớp có liên kết với nhau, tham gia vào quan hệ đó.
 		*: nhiều.
 		1: một
 		0..*: từ 0 đến nhiều.
