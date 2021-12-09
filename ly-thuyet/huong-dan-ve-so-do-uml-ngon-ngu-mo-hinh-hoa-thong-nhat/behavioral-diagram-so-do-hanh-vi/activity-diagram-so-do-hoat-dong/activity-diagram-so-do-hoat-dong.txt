@@ -1,7 +1,7 @@
 ﻿Sơ đồ hoạt động (Activity Diagram) biểu diễn các hoạt động tạo nên quy trình hệ thống và luồng điều khiển từ hoạt động này đến hoạt động khác.
 
 Các trạng thái:
-	- Trạng thái bắt đầu (hình tròn đặc ở bên trong): ●___>
+	- Trạng thái bắt đầu (hình tròn đặc ở bên trong): ●_____>
 		+ Thường sẽ chỉ có duy nhất một nơi bắt đầu.
 	- Trạng thái kết thúc (Hai hình tròn đồng tâm, hình tròn ở bên trong là hình tròn đặc): ___>◉
 		+ Thường sẽ chỉ có nhiều nơi kết thúc.
@@ -11,10 +11,34 @@ Các trạng thái:
 			+ Nhập sai mật khẩu/mã pin quá 5 lần, máy không nhận thẻ nữa -> Thất bại và rút tiền không thành công.
 			+ Đã rút tiền không thành công, máy trả thẻ lại cho người dùng.
 
-Mỗi hoạt động đại diện bằng hình chữ nhật bo tròn 4 góc, luồng hoạt động thể hiện bằng mũi tên.
+- Mỗi hoạt động đại diện bằng hình chữ nhật bo tròn 4 góc, luồng hoạt động thể hiện bằng mũi tên.
 	Ví dụ:
-		(---------------)		(---------------)
+		◜---------------◝		◜---------------◝
 		|Đăng nhập	|______________>|Báo lỗi	|
-		(---------------)		(---------------)
+		◟---------------◞		◟---------------◞
 
-♢
+- Điều kiện thể hiện bằng hình thoi.
+	Ví dụ:
+			Sai<_____◇_____>Đúng
+
+- Nhiều hoạt động thuộc nhiều hướng/nhánh khác nhau, không thực thi đồng thời (tuần tự hoặc trước sau), chẳng hạn như if-else, cần được hợp lại.
+	Ví dụ:
+			|
+			|
+			v
+		_______>◇_____>
+
+- Nút forking dùng chia luồng điều khiển (hoạt động - activity) thành nhiều luồng xử lý đồng thời  (hoạt động chạy song song với nhau, không ai đợi ai). Có một đường vào và nhiều đường ra.
+	Ví dụ: thanh toán -> cùng gửi hoá đơn đến email và sms.
+- Nút joining dùng kết hợp nhiều luồng xử lý (hoạt động - activity) đồng thời thành một luồng duy nhất. Có nhiều đường vào và một đường ra.
+
+- Pre-condition: điều kiện tiên quyết để hoạt động bắt đầu thực hiện.
+- Post-condition: điều kiện phải thực hiện sau khi hoạt động hoàn tất.
+
+- Có thể chia các nhóm các hoạt động liên quan thành những cột khác nhau.
+
+
+
+
+
+
