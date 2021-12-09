@@ -1,0 +1,174 @@
+{
+	"_type": "Project",
+	"_id": "AAAAAAFF+h6SjaM2Hec=",
+	"name": "Untitled",
+	"ownedElements": [
+		{
+			"_type": "UMLModel",
+			"_id": "AAAAAAFF+qBWK6M3Z8Y=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "Model",
+			"ownedElements": [
+				{
+					"_type": "UMLClassDiagram",
+					"_id": "AAAAAAFF+qBtyKM79qY=",
+					"_parent": {
+						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
+					},
+					"name": "Main",
+					"defaultDiagram": true
+				}
+			]
+		},
+		{
+			"_type": "UMLActivity",
+			"_id": "AAAAAAF9nQBwPgKnBtk=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "Activity1",
+			"ownedElements": [
+				{
+					"_type": "UMLActivityDiagram",
+					"_id": "AAAAAAF9nQBwQAKoe04=",
+					"_parent": {
+						"$ref": "AAAAAAF9nQBwPgKnBtk="
+					},
+					"name": "ActivityDiagram-NguoiDungTruyCapVaoTrangGioHang",
+					"ownedViews": [
+						{
+							"_type": "UMLSwimlaneView",
+							"_id": "AAAAAAF9nQWhOgLYu3M=",
+							"_parent": {
+								"$ref": "AAAAAAF9nQBwQAKoe04="
+							},
+							"model": {
+								"$ref": "AAAAAAF9nQWhOQLWaSY="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF9nQWhOgLZ7dg=",
+									"_parent": {
+										"$ref": "AAAAAAF9nQWhOgLYu3M="
+									},
+									"font": "Roboto;16;0",
+									"left": 64,
+									"top": 68,
+									"width": 241,
+									"height": 16,
+									"text": "Khách hàng",
+									"verticalAlignment": 3
+								}
+							],
+							"font": "Roboto;16;0",
+							"left": 64,
+							"top": 64,
+							"width": 241,
+							"height": 300,
+							"nameLabel": {
+								"$ref": "AAAAAAF9nQWhOgLZ7dg="
+							}
+						},
+						{
+							"_type": "UMLSwimlaneView",
+							"_id": "AAAAAAF9nQY5hALkY/Q=",
+							"_parent": {
+								"$ref": "AAAAAAF9nQBwQAKoe04="
+							},
+							"model": {
+								"$ref": "AAAAAAF9nQY5hALi1lE="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF9nQY5hALlcPg=",
+									"_parent": {
+										"$ref": "AAAAAAF9nQY5hALkY/Q="
+									},
+									"font": "Roboto;16;0",
+									"left": 304,
+									"top": 68,
+									"width": 241,
+									"height": 16,
+									"text": "Trang giỏ hàng",
+									"verticalAlignment": 3
+								}
+							],
+							"font": "Roboto;16;0",
+							"left": 304,
+							"top": 64,
+							"width": 241,
+							"height": 300,
+							"nameLabel": {
+								"$ref": "AAAAAAF9nQY5hALlcPg="
+							}
+						},
+						{
+							"_type": "UMLSwimlaneView",
+							"_id": "AAAAAAF9nQbF5ALySiE=",
+							"_parent": {
+								"$ref": "AAAAAAF9nQBwQAKoe04="
+							},
+							"model": {
+								"$ref": "AAAAAAF9nQbF4wLw430="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF9nQbF5ALzog4=",
+									"_parent": {
+										"$ref": "AAAAAAF9nQbF5ALySiE="
+									},
+									"font": "Roboto;16;0",
+									"left": 544,
+									"top": 68,
+									"width": 241,
+									"height": 16,
+									"text": "Controller",
+									"verticalAlignment": 3
+								}
+							],
+							"font": "Roboto;16;0",
+							"left": 544,
+							"top": 64,
+							"width": 241,
+							"height": 300,
+							"nameLabel": {
+								"$ref": "AAAAAAF9nQbF5ALzog4="
+							}
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"_type": "UMLActivityPartition",
+					"_id": "AAAAAAF9nQWhOQLWaSY=",
+					"_parent": {
+						"$ref": "AAAAAAF9nQBwPgKnBtk="
+					},
+					"name": "Khách hàng"
+				},
+				{
+					"_type": "UMLActivityPartition",
+					"_id": "AAAAAAF9nQY5hALi1lE=",
+					"_parent": {
+						"$ref": "AAAAAAF9nQBwPgKnBtk="
+					},
+					"name": "Trang giỏ hàng"
+				},
+				{
+					"_type": "UMLActivityPartition",
+					"_id": "AAAAAAF9nQbF4wLw430=",
+					"_parent": {
+						"$ref": "AAAAAAF9nQBwPgKnBtk="
+					},
+					"name": "Controller"
+				}
+			]
+		}
+	]
+}
