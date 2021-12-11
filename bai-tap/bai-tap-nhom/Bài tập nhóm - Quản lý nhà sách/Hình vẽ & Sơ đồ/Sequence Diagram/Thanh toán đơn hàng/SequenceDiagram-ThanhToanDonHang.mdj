@@ -1232,12 +1232,12 @@
 												"$ref": "AAAAAAF9pvV1zDvORdQ="
 											},
 											"font": "Roboto;17;0",
-											"left": 717,
-											"top": 303,
+											"left": 735,
+											"top": 304,
 											"width": 252.333984375,
 											"height": 17,
-											"alpha": 1.5955836347844148,
-											"distance": 121.03718436910205,
+											"alpha": 1.5851828221488935,
+											"distance": 139.01438774457844,
 											"hostEdge": {
 												"$ref": "AAAAAAF9pvV1zjvP7hE="
 											},
@@ -1821,7 +1821,7 @@
 												"$ref": "AAAAAAF9pzdAlD0YTIk="
 											},
 											"edgePosition": 1,
-											"text": "if (HangTrongGio > Hang Trong Kho)"
+											"text": "Không đủ số lượng hàng trong kho"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2269,7 +2269,7 @@
 												"$ref": "AAAAAAF9p0D4UD2Ui2M="
 											},
 											"edgePosition": 1,
-											"text": "if (HangTrongGio <= Hang Trong Kho)"
+											"text": "Còn đủ số lượng hàng trong kho"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -5193,7 +5193,7 @@
 												"$ref": "AAAAAAF9qLgOGWgjTaU="
 											},
 											"edgePosition": 1,
-											"text": "if (DaNhan == false && NgayDat > 48)"
+											"text": "Cách ngày đặt 48 giờ và chưa đến nhận"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -8254,7 +8254,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9pSqo+7vyf6k="
 							},
-							"name": "if (HangTrongGio > Hang Trong Kho)",
+							"name": "Không đủ số lượng hàng trong kho",
 							"source": {
 								"$ref": "AAAAAAF9pTyVB7yY5TA="
 							},
@@ -8314,7 +8314,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9pSqo+7vyf6k="
 							},
-							"name": "if (HangTrongGio <= Hang Trong Kho)",
+							"name": "Còn đủ số lượng hàng trong kho",
 							"source": {
 								"$ref": "AAAAAAF9pTyVB7yY5TA="
 							},
@@ -8678,7 +8678,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9pSqo+7vyf6k="
 							},
-							"name": "if (DaNhan == false && NgayDat > 48)",
+							"name": "Cách ngày đặt 48 giờ và chưa đến nhận",
 							"source": {
 								"$ref": "AAAAAAF9pTyVB7yY5TA="
 							},
