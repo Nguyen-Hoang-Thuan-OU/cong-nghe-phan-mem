@@ -44,7 +44,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9o76OCJWIeYU="
 							},
-							"name": "SoDoSequenceDiagram-DangNhap",
+							"name": "SequenceDiagram-DangNhap",
 							"ownedViews": [
 								{
 									"_type": "UMLFrameView",
@@ -65,9 +65,9 @@
 											"font": "Roboto;17;0",
 											"left": 91.384765625,
 											"top": 5,
-											"width": 263.935546875,
+											"width": 223.3115234375,
 											"height": 17,
-											"text": "SoDoSequenceDiagram-DangNhap"
+											"text": "SequenceDiagram-DangNhap"
 										},
 										{
 											"_type": "LabelView",
@@ -694,12 +694,12 @@
 												"$ref": "AAAAAAF9o8YGpZZnfNY="
 											},
 											"font": "Roboto;17;0",
-											"left": 413,
-											"top": 159,
+											"left": 412,
+											"top": 151,
 											"width": 232.83203125,
 											"height": 17,
-											"alpha": 1.5707963267948966,
-											"distance": 10,
+											"alpha": -4.653633743875884,
+											"distance": 17.029386365926403,
 											"hostEdge": {
 												"$ref": "AAAAAAF9o8YGppZoKVU="
 											},
@@ -917,12 +917,12 @@
 												"$ref": "AAAAAAF9o8xNnZbdAuM="
 											},
 											"font": "Roboto;17;0",
-											"left": 349,
+											"left": 347,
 											"top": 296,
 											"width": 372.5625,
 											"height": 17,
-											"alpha": 1.2120251085792315,
-											"distance": 17.08800749063506,
+											"alpha": 1.325817075432825,
+											"distance": 16.492422502470642,
 											"hostEdge": {
 												"$ref": "AAAAAAF9o8xNnpbeRf0="
 											},
@@ -1139,12 +1139,12 @@
 												"$ref": "AAAAAAF9o85UQ5b2BNQ="
 											},
 											"font": "Roboto;17;0",
-											"left": 434,
-											"top": 462,
+											"left": 432,
+											"top": 455,
 											"width": 191.93359375,
 											"height": 17,
-											"alpha": 1.5707963267948966,
-											"distance": 10,
+											"alpha": -4.588034601222591,
+											"distance": 16.1245154965971,
 											"hostEdge": {
 												"$ref": "AAAAAAF9o85URJb39Qs="
 											},
@@ -1250,12 +1250,12 @@
 												"$ref": "AAAAAAF9o9AGJJcNbZU="
 											},
 											"font": "Roboto;17;0",
-											"left": 767,
-											"top": 478,
+											"left": 766,
+											"top": 471,
 											"width": 202.841796875,
 											"height": 17,
-											"alpha": 1.5707963267948966,
-											"distance": 10,
+											"alpha": -4.64997079295685,
+											"distance": 16.0312195418814,
 											"hostEdge": {
 												"$ref": "AAAAAAF9o9AGJpcO//8="
 											},
@@ -1361,12 +1361,12 @@
 												"$ref": "AAAAAAF9o9Fu1ZckNzA="
 											},
 											"font": "Roboto;17;0",
-											"left": 1039,
-											"top": 494,
+											"left": 1038,
+											"top": 487,
 											"width": 334.8046875,
 											"height": 17,
-											"alpha": 1.5707963267948966,
-											"distance": 10,
+											"alpha": -4.64997079295685,
+											"distance": 16.0312195418814,
 											"hostEdge": {
 												"$ref": "AAAAAAF9o9Fu1ZclMUU="
 											},
@@ -1472,12 +1472,12 @@
 												"$ref": "AAAAAAF9o9WBPZdQHro="
 											},
 											"font": "Roboto;17;0",
-											"left": 1402,
-											"top": 510,
+											"left": 1401,
+											"top": 503,
 											"width": 314.56689453125,
 											"height": 17,
-											"alpha": 1.5707963267948966,
-											"distance": 10,
+											"alpha": -4.64997079295685,
+											"distance": 16.0312195418814,
 											"hostEdge": {
 												"$ref": "AAAAAAF9o9WBPpdRjoc="
 											},
@@ -2591,12 +2591,12 @@
 												"$ref": "AAAAAAF9pA+EH5kTy20="
 											},
 											"font": "Roboto;17;0",
-											"left": 1034,
-											"top": 886,
+											"left": 1033,
+											"top": 879,
 											"width": 344.01318359375,
 											"height": 17,
-											"alpha": 1.5707963267948966,
-											"distance": 10,
+											"alpha": -4.64997079295685,
+											"distance": 16.0312195418814,
 											"hostEdge": {
 												"$ref": "AAAAAAF9pA+EIJkUNbE="
 											},
@@ -2703,11 +2703,11 @@
 											},
 											"font": "Roboto;17;0",
 											"left": 1390,
-											"top": 910,
+											"top": 904,
 											"width": 339.13330078125,
 											"height": 17,
-											"alpha": 1.5707963267948966,
-											"distance": 10,
+											"alpha": 1.5707957017948966,
+											"distance": 16,
 											"hostEdge": {
 												"$ref": "AAAAAAF9pBQB1ZlAKU0="
 											},
