@@ -5628,7 +5628,7 @@
 												"$ref": "AAAAAAF9qM4Jm2j1n7k="
 											},
 											"edgePosition": 1,
-											"text": "Gửi thông báo đơn hàng đã bị huỷ"
+											"text": "Hiện thông báo đơn hàng đã bị huỷ"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -8720,7 +8720,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9pSqo+7vyf6k="
 							},
-							"name": "Gửi thông báo đơn hàng đã bị huỷ",
+							"name": "Hiện thông báo đơn hàng đã bị huỷ",
 							"source": {
 								"$ref": "AAAAAAF9pTqrIrwr8qY="
 							},
