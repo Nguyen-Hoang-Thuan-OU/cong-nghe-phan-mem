@@ -36,7 +36,7 @@
 					"_parent": {
 						"$ref": "AAAAAAF9SCoM/fwP4mI="
 					},
-					"name": "SoDoUseCaseUngDungQuanLyNhaSach",
+					"name": "UseCaseDiagram-UngDungQuanLyNhaSach",
 					"ownedViews": [
 						{
 							"_type": "UMLUseCaseSubjectView",
