@@ -1942,9 +1942,9 @@
 												"$ref": "AAAAAAF9o91HLZe1Or8="
 											},
 											"font": "Roboto;17;0",
-											"left": 745,
+											"left": 732,
 											"top": 616,
-											"width": 247.5390625,
+											"width": 272.3154296875,
 											"height": 17,
 											"alpha": 1.5083781393670568,
 											"distance": 16.0312195418814,
@@ -1952,7 +1952,7 @@
 												"$ref": "AAAAAAF9o91HLpe2tQw="
 											},
 											"edgePosition": 1,
-											"text": "Xác thực thất bại"
+											"text": "Phản hồi trạng thái xác thực thất bại"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3047,7 +3047,7 @@
 												"$ref": "AAAAAAF9pCEM2ZmO/0I="
 											},
 											"edgePosition": 1,
-											"text": "Đăng nhập với tư cách quản trị viên"
+											"text": "Phân quyền thành công"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3495,7 +3495,7 @@
 												"$ref": "AAAAAAF9pClRg5oSIvw="
 											},
 											"edgePosition": 1,
-											"text": "Đăng nhập với tư cách quản lý kho"
+											"text": "Phân quyền thành công"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3943,7 +3943,7 @@
 												"$ref": "AAAAAAF9pCw6rpp48tE="
 											},
 											"edgePosition": 1,
-											"text": "Đăng nhập với tư cách nhân viên"
+											"text": "Phân quyền thành công"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4391,7 +4391,7 @@
 												"$ref": "AAAAAAF9pDAZgJrn+WI="
 											},
 											"edgePosition": 1,
-											"text": "Đăng nhập với tư cách người dùng"
+											"text": "Phân quyền thành công"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4842,7 +4842,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9o76OCJWIeYU="
 							},
-							"name": "Xác thực thất bại",
+							"name": "Phản hồi trạng thái xác thực thất bại",
 							"source": {
 								"$ref": "AAAAAAF9o8Eop5Xrygg="
 							},
@@ -4960,7 +4960,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9o76OCJWIeYU="
 							},
-							"name": "Đăng nhập với tư cách quản trị viên",
+							"name": "Phân quyền thành công",
 							"source": {
 								"$ref": "AAAAAAF9o8Eop5Xrygg="
 							},
@@ -5020,7 +5020,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9o76OCJWIeYU="
 							},
-							"name": "Đăng nhập với tư cách quản lý kho",
+							"name": "Phân quyền thành công",
 							"source": {
 								"$ref": "AAAAAAF9o8Eop5Xrygg="
 							},
@@ -5080,7 +5080,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9o76OCJWIeYU="
 							},
-							"name": "Đăng nhập với tư cách nhân viên",
+							"name": "Phân quyền thành công",
 							"source": {
 								"$ref": "AAAAAAF9o8Eop5Xrygg="
 							},
@@ -5140,7 +5140,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9o76OCJWIeYU="
 							},
-							"name": "Đăng nhập với tư cách người dùng",
+							"name": "Phân quyền thành công",
 							"source": {
 								"$ref": "AAAAAAF9o8Eop5Xrygg="
 							},
