@@ -85,7 +85,7 @@
 									],
 									"font": "Roboto;17;0",
 									"width": 1865,
-									"height": 2617,
+									"height": 2625,
 									"nameLabel": {
 										"$ref": "AAAAAAF9pSqo/bv180I="
 									},
@@ -194,14 +194,14 @@
 											"left": 341,
 											"top": 109,
 											"width": 1,
-											"height": 2476
+											"height": 2492
 										}
 									],
 									"font": "Roboto;17;0",
 									"left": 264,
 									"top": 40,
 									"width": 154.8828125,
-									"height": 2545,
+									"height": 2561,
 									"stereotypeDisplay": "icon",
 									"nameCompartment": {
 										"$ref": "AAAAAAF9pTBCb7wKdTY="
@@ -311,14 +311,14 @@
 											"left": 686,
 											"top": 80,
 											"width": 1,
-											"height": 2505
+											"height": 2521
 										}
 									],
 									"font": "Roboto;17;0",
 									"left": 632,
 									"top": 40,
 									"width": 108.55859375,
-									"height": 2545,
+									"height": 2561,
 									"nameCompartment": {
 										"$ref": "AAAAAAF9pTqrI7wtc8I="
 									},
@@ -427,14 +427,14 @@
 											"left": 1359,
 											"top": 80,
 											"width": 1,
-											"height": 2505
+											"height": 2521
 										}
 									],
 									"font": "Roboto;17;0",
 									"left": 1288,
 									"top": 40,
 									"width": 142.0078125,
-									"height": 2545,
+									"height": 2561,
 									"nameCompartment": {
 										"$ref": "AAAAAAF9pTxkA7x4g5U="
 									},
@@ -543,14 +543,14 @@
 											"left": 1708,
 											"top": 80,
 											"width": 1,
-											"height": 2505
+											"height": 2521
 										}
 									],
 									"font": "Roboto;17;0",
 									"left": 1648,
 									"top": 40,
 									"width": 119.2900390625,
-									"height": 2545,
+									"height": 2561,
 									"nameCompartment": {
 										"$ref": "AAAAAAF9pTyVB7yaKDc="
 									},
@@ -659,14 +659,14 @@
 											"left": 1018,
 											"top": 80,
 											"width": 1,
-											"height": 2505
+											"height": 2521
 										}
 									],
 									"font": "Roboto;17;0",
 									"left": 864,
 									"top": 40,
 									"width": 308.9140625,
-									"height": 2545,
+									"height": 2561,
 									"nameCompartment": {
 										"$ref": "AAAAAAF9pUPIO70CgzU="
 									},
@@ -916,9 +916,9 @@
 											"font": "Roboto;17;0",
 											"left": 107.7861328125,
 											"top": 253,
-											"width": 217.60888671875,
+											"width": 214.5458984375,
 											"height": 17,
-											"text": "Cập nhật số lượng sản phẩm"
+											"text": "Thay đổi số lượng sản phẩm"
 										},
 										{
 											"_type": "LabelView",
@@ -1242,7 +1242,7 @@
 												"$ref": "AAAAAAF9pvV1zjvP7hE="
 											},
 											"edgePosition": 1,
-											"text": "Cập nhật lại số lượng sản phẩm"
+											"text": "Thay đổi số lượng sản phẩm"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1430,7 +1430,7 @@
 													"left": 72,
 													"top": 1753,
 													"width": 1745,
-													"height": 808,
+													"height": 816,
 													"guardLabel": {
 														"$ref": "AAAAAAF9pXykCL6kmdQ="
 													}
@@ -1440,14 +1440,14 @@
 											"left": 72,
 											"top": 1203,
 											"width": 1745,
-											"height": 1358
+											"height": 1366
 										}
 									],
 									"font": "Roboto;17;0",
 									"left": 72,
 									"top": 1176,
 									"width": 1745,
-									"height": 1385,
+									"height": 1393,
 									"nameLabel": {
 										"$ref": "AAAAAAF9pXvR5L6GOzU="
 									},
@@ -1821,7 +1821,7 @@
 												"$ref": "AAAAAAF9pzdAlD0YTIk="
 											},
 											"edgePosition": 1,
-											"text": "Không đủ số lượng hàng trong kho"
+											"text": "Không còn đủ số lượng hàng trong kho"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2035,9 +2035,9 @@
 												"$ref": "AAAAAAF9pzvVkD1PAW0="
 											},
 											"font": "Roboto;17;0",
-											"left": 732,
+											"left": 697,
 											"top": 508,
-											"width": 234.861328125,
+											"width": 304.7880859375,
 											"height": 17,
 											"alpha": 1.471128169353264,
 											"distance": 20.09975124224178,
@@ -2045,7 +2045,7 @@
 												"$ref": "AAAAAAF9pzvVkD1QWLg="
 											},
 											"edgePosition": 1,
-											"text": "Không còn đủ hàng trong kho"
+											"text": "Thông báo không còn đủ hàng trong kho"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2157,7 +2157,7 @@
 												"$ref": "AAAAAAF9pzxO3z1qowQ="
 											},
 											"edgePosition": 1,
-											"text": "Thông báo nhập quá số lượng hàng tồn"
+											"text": "Cảnh báo nhập quá số lượng hàng tồn"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2485,7 +2485,7 @@
 											"font": "Roboto;17;0",
 											"left": 723,
 											"top": 647,
-											"width": 252.333984375,
+											"width": 253.9873046875,
 											"height": 17,
 											"alpha": 1.4382454495201138,
 											"distance": 15.132745950421556,
@@ -2493,7 +2493,7 @@
 												"$ref": "AAAAAAF9p0LCuj3Ia7g="
 											},
 											"edgePosition": 1,
-											"text": "Cập nhật lại số lượng sản phẩm"
+											"text": "Thông báo còn đủ hàng trong kho"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3509,9 +3509,9 @@
 												"$ref": "AAAAAAF9p09P/D4NIb0="
 											},
 											"font": "Roboto;17;0",
-											"left": 1468,
+											"left": 1434,
 											"top": 1004,
-											"width": 129.6123046875,
+											"width": 197.28466796875,
 											"height": 17,
 											"alpha": -4.659806443635641,
 											"distance": 19.026297590440446,
@@ -3519,7 +3519,7 @@
 												"$ref": "AAAAAAF9p09P/D4OkkM="
 											},
 											"edgePosition": 1,
-											"text": "Xử lý thanh toán"
+											"text": "Xử lý thanh toán đơn hàng"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3630,7 +3630,7 @@
 												"$ref": "AAAAAAF9p1I4+T5HjSY="
 											},
 											"edgePosition": 1,
-											"text": "Tiếp nhận đơn hàng"
+											"text": "Xử lý thành công"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3742,7 +3742,7 @@
 												"$ref": "AAAAAAF9p1TgGz5zdQ8="
 											},
 											"edgePosition": 1,
-											"text": "Lựa chọn phương thức thanh toán"
+											"text": "Tiếp nhận đơn hàng thành công"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4735,17 +4735,17 @@
 												"$ref": "AAAAAAF9p5v2ZqIJ2/8="
 											},
 											"font": "Roboto;17;0",
-											"left": 1390,
+											"left": 1376,
 											"top": 1463,
-											"width": 273.8671875,
+											"width": 319.83740234375,
 											"height": 17,
-											"alpha": 1.1341697144267506,
-											"distance": 16.55294535724685,
+											"alpha": 1.695151936726226,
+											"distance": 16.1245154965971,
 											"hostEdge": {
 												"$ref": "AAAAAAF9p5v2Z6IKKYg="
 											},
 											"edgePosition": 1,
-											"text": "Địa chỉ cửa hàng và thời gian nhận"
+											"text": "Ghi nhận phương thức thanh toán"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4857,7 +4857,7 @@
 												"$ref": "AAAAAAF9p50ZZ6IkG10="
 											},
 											"edgePosition": 1,
-											"text": "Thông báo địa chỉ và thời gian nhận"
+											"text": "Thanh toán trực tiếp thành công"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -5071,9 +5071,9 @@
 												"$ref": "AAAAAAF9p54yCqJTitE="
 											},
 											"font": "Roboto;17;0",
-											"left": 344,
+											"left": 313,
 											"top": 1520,
-											"width": 331.3515625,
+											"width": 393.921875,
 											"height": 17,
 											"alpha": 1.5083781393670568,
 											"distance": 16.0312195418814,
@@ -5304,7 +5304,7 @@
 												"$ref": "AAAAAAF9qMj6BGhUKpo="
 											},
 											"edgePosition": 1,
-											"text": "Thông báo huỷ đơn hàng"
+											"text": "Huỷ đơn hàng"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -5405,9 +5405,9 @@
 												"$ref": "AAAAAAF9qMleRWhrW54="
 											},
 											"font": "Roboto;17;0",
-											"left": 750,
+											"left": 737,
 											"top": 1650,
-											"width": 201.9638671875,
+											"width": 227.83154296875,
 											"height": 17,
 											"alpha": 1.5152983753953506,
 											"distance": 18.027756377319946,
@@ -5415,7 +5415,7 @@
 												"$ref": "AAAAAAF9qMleRWhs0xc="
 											},
 											"edgePosition": 1,
-											"text": "Thông báo huỷ đơn hàng"
+											"text": "Thông báo đơn hàng đã bị huỷ"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -6620,9 +6620,9 @@
 												"$ref": "AAAAAAF9p992MaRMs9M="
 											},
 											"font": "Roboto;17;0",
-											"left": 1450,
+											"left": 1404,
 											"top": 2175,
-											"width": 160.0390625,
+											"width": 252.4765625,
 											"height": 17,
 											"alpha": 1.373401407970739,
 											"distance": 15.297058540778355,
@@ -6630,7 +6630,7 @@
 												"$ref": "AAAAAAF9p992MqRNdkw="
 											},
 											"edgePosition": 1,
-											"text": "Thông tin hoá đơn"
+											"text": "Ghi nhận phương thức thanh toán"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -6732,9 +6732,9 @@
 												"$ref": "AAAAAAF9p+ACUaSDWFs="
 											},
 											"font": "Roboto;17;0",
-											"left": 1071,
+											"left": 1059,
 											"top": 2195,
-											"width": 230.255859375,
+											"width": 254.634765625,
 											"height": 17,
 											"alpha": 1.4659199086126364,
 											"distance": 19.1049731745428,
@@ -6742,7 +6742,7 @@
 												"$ref": "AAAAAAF9p+ACUaSExUU="
 											},
 											"edgePosition": 1,
-											"text": "Thông báo thông tin hoá đơn"
+											"text": "Thanh toán trực tuyến thành công"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -7168,7 +7168,7 @@
 											},
 											"font": "Roboto;17;0",
 											"left": 179.7861328125,
-											"top": 2269,
+											"top": 2285,
 											"width": 105.4072265625,
 											"height": 17,
 											"text": "Huỷ đơn hàng"
@@ -7181,7 +7181,7 @@
 											},
 											"font": "Roboto;17;1",
 											"left": 149,
-											"top": 2269,
+											"top": 2285,
 											"width": 25.7861328125,
 											"height": 17,
 											"text": "opt"
@@ -7214,7 +7214,7 @@
 															},
 															"font": "Roboto;17;0",
 															"left": 164,
-															"top": 2306,
+															"top": 2322,
 															"width": 158.1630859375,
 															"height": 17,
 															"text": "[Muổn huỷ đơn hàng]"
@@ -7222,9 +7222,9 @@
 													],
 													"font": "Roboto;17;0",
 													"left": 144,
-													"top": 2291,
+													"top": 2307,
 													"width": 1617,
-													"height": 246,
+													"height": 238,
 													"guardLabel": {
 														"$ref": "AAAAAAF9qPfw9mmRwvA="
 													}
@@ -7232,16 +7232,16 @@
 											],
 											"font": "Roboto;17;0",
 											"left": 144,
-											"top": 2291,
+											"top": 2307,
 											"width": 1617,
-											"height": 246
+											"height": 238
 										}
 									],
 									"font": "Roboto;17;0",
 									"left": 144,
-									"top": 2264,
+									"top": 2280,
 									"width": 1617,
-									"height": 273,
+									"height": 265,
 									"nameLabel": {
 										"$ref": "AAAAAAF9qPfwv2mCdEY="
 									},
@@ -7726,7 +7726,7 @@
 												"$ref": "AAAAAAF9qQKSxGobw30="
 											},
 											"edgePosition": 1,
-											"text": "Huỷ đơn hàng thành công"
+											"text": "Ghi nhận huỷ đơn hàng"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -7838,7 +7838,7 @@
 												"$ref": "AAAAAAF9qSV0Wmp+JUs="
 											},
 											"edgePosition": 1,
-											"text": "Thông báo huỷ đơn hàng thành công"
+											"text": "Huỷ thông tin đơn hàng"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -8198,7 +8198,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9pSqo+7vyf6k="
 							},
-							"name": "Cập nhật lại số lượng sản phẩm",
+							"name": "Thay đổi số lượng sản phẩm",
 							"source": {
 								"$ref": "AAAAAAF9pTqrIrwr8qY="
 							},
@@ -8254,7 +8254,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9pSqo+7vyf6k="
 							},
-							"name": "Không đủ số lượng hàng trong kho",
+							"name": "Không còn đủ số lượng hàng trong kho",
 							"source": {
 								"$ref": "AAAAAAF9pTyVB7yY5TA="
 							},
@@ -8284,7 +8284,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9pSqo+7vyf6k="
 							},
-							"name": "Không còn đủ hàng trong kho",
+							"name": "Thông báo không còn đủ hàng trong kho",
 							"source": {
 								"$ref": "AAAAAAF9pUPIO70A3ZA="
 							},
@@ -8299,7 +8299,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9pSqo+7vyf6k="
 							},
-							"name": "Thông báo nhập quá số lượng hàng tồn",
+							"name": "Cảnh báo nhập quá số lượng hàng tồn",
 							"source": {
 								"$ref": "AAAAAAF9pTqrIrwr8qY="
 							},
@@ -8344,7 +8344,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9pSqo+7vyf6k="
 							},
-							"name": "Cập nhật lại số lượng sản phẩm",
+							"name": "Thông báo còn đủ hàng trong kho",
 							"source": {
 								"$ref": "AAAAAAF9pUPIO70A3ZA="
 							},
@@ -8459,7 +8459,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9pSqo+7vyf6k="
 							},
-							"name": "Xử lý thanh toán",
+							"name": "Xử lý thanh toán đơn hàng",
 							"source": {
 								"$ref": "AAAAAAF9pTxkArx2l2E="
 							},
@@ -8473,7 +8473,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9pSqo+7vyf6k="
 							},
-							"name": "Tiếp nhận đơn hàng",
+							"name": "Xử lý thành công",
 							"source": {
 								"$ref": "AAAAAAF9pTyVB7yY5TA="
 							},
@@ -8488,7 +8488,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9pSqo+7vyf6k="
 							},
-							"name": "Lựa chọn phương thức thanh toán",
+							"name": "Tiếp nhận đơn hàng thành công",
 							"source": {
 								"$ref": "AAAAAAF9pTxkArx2l2E="
 							},
@@ -8618,7 +8618,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9pSqo+7vyf6k="
 							},
-							"name": "Địa chỉ cửa hàng và thời gian nhận",
+							"name": "Ghi nhận phương thức thanh toán",
 							"source": {
 								"$ref": "AAAAAAF9pTyVB7yY5TA="
 							},
@@ -8633,7 +8633,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9pSqo+7vyf6k="
 							},
-							"name": "Thông báo địa chỉ và thời gian nhận",
+							"name": "Thanh toán trực tiếp thành công",
 							"source": {
 								"$ref": "AAAAAAF9pTxkArx2l2E="
 							},
@@ -8692,7 +8692,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9pSqo+7vyf6k="
 							},
-							"name": "Thông báo huỷ đơn hàng",
+							"name": "Huỷ đơn hàng",
 							"source": {
 								"$ref": "AAAAAAF9pTxkArx2l2E="
 							},
@@ -8706,7 +8706,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9pSqo+7vyf6k="
 							},
-							"name": "Thông báo huỷ đơn hàng",
+							"name": "Thông báo đơn hàng đã bị huỷ",
 							"source": {
 								"$ref": "AAAAAAF9pUPIO70A3ZA="
 							},
@@ -8849,7 +8849,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9pSqo+7vyf6k="
 							},
-							"name": "Thông tin hoá đơn",
+							"name": "Ghi nhận phương thức thanh toán",
 							"source": {
 								"$ref": "AAAAAAF9pTyVB7yY5TA="
 							},
@@ -8864,7 +8864,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9pSqo+7vyf6k="
 							},
-							"name": "Thông báo thông tin hoá đơn",
+							"name": "Thanh toán trực tuyến thành công",
 							"source": {
 								"$ref": "AAAAAAF9pTxkArx2l2E="
 							},
@@ -8965,7 +8965,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9pSqo+7vyf6k="
 							},
-							"name": "Huỷ đơn hàng thành công",
+							"name": "Ghi nhận huỷ đơn hàng",
 							"source": {
 								"$ref": "AAAAAAF9pTyVB7yY5TA="
 							},
@@ -8980,7 +8980,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9pSqo+7vyf6k="
 							},
-							"name": "Thông báo huỷ đơn hàng thành công",
+							"name": "Huỷ thông tin đơn hàng",
 							"source": {
 								"$ref": "AAAAAAF9pTxkArx2l2E="
 							},
@@ -9086,7 +9086,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9pSqo+7vyf6k="
 							},
-							"name": "Cập nhật số lượng sản phẩm",
+							"name": "Thay đổi số lượng sản phẩm",
 							"interactionOperator": "opt",
 							"operands": [
 								{
