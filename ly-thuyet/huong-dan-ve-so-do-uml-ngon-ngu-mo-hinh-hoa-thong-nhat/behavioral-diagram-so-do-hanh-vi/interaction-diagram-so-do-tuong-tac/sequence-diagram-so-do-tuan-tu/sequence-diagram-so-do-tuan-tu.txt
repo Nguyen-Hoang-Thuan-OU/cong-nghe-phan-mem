@@ -180,7 +180,7 @@ Combined Fragment: phân chia các trường hợp.
 	- Tuỳ chọn (opt - optional): câu điều kiện if, không có else; thực thi nếu một điều kiện duy nhất nào đó đúng. Thích thì chọn, không thì thôi.
 		Ví dụ: [bật tính năng xác thực hai bước]
 	- Vòng lặp (loop): câu lệnh lặp do-while, for; được thực thi nhiều lần dựa trên điều kiện được chỉ định trong guard. Lặp đi lặp lại, còn sai là còn lặp.
-		Ví dụ: [kiểm tra tính hợp lệ của form]
+		Ví dụ: [kiểm tra tính hợp lệ của form], [quét mã qr để đọc mặt hàng ở siêu thị]
 		+ guard: điều kiện của các câu lệnh, chỉ định số lần lặp.
 			Ví dụ: [đăng nhập thành công], [đăng nhập thất bại]
 	- Song song (par - parallel): mỗi fragment, tác vụ được thực thi, tương tác song song trong phạm vi được vẽ.
