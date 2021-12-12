@@ -187,7 +187,6 @@ Combined Fragment: phân chia các trường hợp.
 	- Vùng/Nhóm quan trọng (region - critical region): fragment chỉ một luồng (thread, liên quan đến đa luồng) được thi một lần bên trong phạm vi được vẽ, không bị ngắt bởi những sự kiện không mong muốn, không kể thứ tự được thực hiện bên trong.
 	- Không hợp lệ (neg - negative): fragment chỉ định các tương tác không hợp lệ. Mục đích là để chỉ ra những trường hợp sẽ xảy ra lỗi, những thứ tự không đúng.
 	- Tên biểu đồ (sd - sequence diagram): sử dụng để bọc toàn bộ sơ đồ tuần tự và đặt tên cho sơ đồ.
-
 	- Tham chiếu (ref - reference/Interaction Use): trỏ, tham chiếu đến một sơ đồ khác. Dùng để ẩn, che giấu đi một cụm xử lý rất phức tạp và chuyển thành biểu tượng Ref. Tách phần phức tạp sang một sơ đồ khác, chỉ thể hiện rằng mạch đi của dữ liệu có nhận vào và trả về nhằm đảm bảo xử lý và tạo cảm giác giống như chưa tách.
 		-> Sơ đồ chi tiết được gọi là reference/decomposition (phân rã).
 
