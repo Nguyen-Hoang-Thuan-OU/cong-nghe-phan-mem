@@ -121,7 +121,7 @@
 													},
 													"visible": false,
 													"font": "Roboto;17;0",
-													"left": -414,
+													"left": -494,
 													"height": 17
 												},
 												{
@@ -131,7 +131,7 @@
 														"$ref": "AAAAAAF9q/U3gZ7N/BY="
 													},
 													"font": "Roboto;17;1",
-													"left": 213,
+													"left": 173,
 													"top": 87,
 													"width": 140.9765625,
 													"height": 17,
@@ -145,7 +145,7 @@
 													},
 													"visible": false,
 													"font": "Roboto;17;0",
-													"left": -414,
+													"left": -494,
 													"width": 142.44140625,
 													"height": 17,
 													"text": "(from Interaction1)"
@@ -158,13 +158,13 @@
 													},
 													"visible": false,
 													"font": "Roboto;17;0",
-													"left": -414,
+													"left": -494,
 													"height": 17,
 													"horizontalAlignment": 1
 												}
 											],
 											"font": "Roboto;17;0",
-											"left": 208,
+											"left": 168,
 											"top": 80,
 											"width": 150.9765625,
 											"height": 29,
@@ -191,14 +191,14 @@
 												"$ref": "AAAAAAF9q/U3gZ7Lhfk="
 											},
 											"font": "Roboto;16;0",
-											"left": 283,
+											"left": 243,
 											"top": 109,
 											"width": 1,
 											"height": 1204
 										}
 									],
 									"font": "Roboto;17;0",
-									"left": 208,
+									"left": 168,
 									"top": 40,
 									"width": 150.9765625,
 									"height": 1273,
@@ -238,7 +238,7 @@
 													},
 													"visible": false,
 													"font": "Roboto;17;0",
-													"left": -80,
+													"left": -96,
 													"height": 17
 												},
 												{
@@ -248,9 +248,9 @@
 														"$ref": "AAAAAAF9q/V6eJ7vC24="
 													},
 													"font": "Roboto;17;1",
-													"left": 565,
+													"left": 557,
 													"top": 47,
-													"width": 93.638671875,
+													"width": 94.69287109375,
 													"height": 17,
 													"text": "TrinhDuyet"
 												},
@@ -262,7 +262,7 @@
 													},
 													"visible": false,
 													"font": "Roboto;17;0",
-													"left": -80,
+													"left": -96,
 													"width": 142.44140625,
 													"height": 17,
 													"text": "(from Interaction1)"
@@ -275,15 +275,15 @@
 													},
 													"visible": false,
 													"font": "Roboto;17;0",
-													"left": -80,
+													"left": -96,
 													"height": 17,
 													"horizontalAlignment": 1
 												}
 											],
 											"font": "Roboto;17;0",
-											"left": 560,
+											"left": 552,
 											"top": 40,
-											"width": 103.638671875,
+											"width": 104.69287109375,
 											"height": 40,
 											"stereotypeLabel": {
 												"$ref": "AAAAAAF9q/V6eJ7wGos="
@@ -308,16 +308,16 @@
 												"$ref": "AAAAAAF9q/V6eJ7tf6g="
 											},
 											"font": "Roboto;16;0",
-											"left": 612,
+											"left": 604,
 											"top": 80,
 											"width": 1,
 											"height": 1233
 										}
 									],
 									"font": "Roboto;17;0",
-									"left": 560,
+									"left": 552,
 									"top": 40,
-									"width": 103.638671875,
+									"width": 104.69287109375,
 									"height": 1273,
 									"nameCompartment": {
 										"$ref": "AAAAAAF9q/V6eJ7vC24="
@@ -354,7 +354,7 @@
 													},
 													"visible": false,
 													"font": "Roboto;17;0",
-													"left": -174,
+													"left": -190,
 													"height": 17
 												},
 												{
@@ -364,7 +364,7 @@
 														"$ref": "AAAAAAF9q/t5FJ8VfU8="
 													},
 													"font": "Roboto;17;1",
-													"left": 853,
+													"left": 845,
 													"top": 47,
 													"width": 239.984375,
 													"height": 17,
@@ -378,7 +378,7 @@
 													},
 													"visible": false,
 													"font": "Roboto;17;0",
-													"left": -174,
+													"left": -190,
 													"width": 142.44140625,
 													"height": 17,
 													"text": "(from Interaction1)"
@@ -391,13 +391,13 @@
 													},
 													"visible": false,
 													"font": "Roboto;17;0",
-													"left": -174,
+													"left": -190,
 													"height": 17,
 													"horizontalAlignment": 1
 												}
 											],
 											"font": "Roboto;17;0",
-											"left": 848,
+											"left": 840,
 											"top": 40,
 											"width": 249.984375,
 											"height": 40,
@@ -424,14 +424,14 @@
 												"$ref": "AAAAAAF9q/t5E58TSBk="
 											},
 											"font": "Roboto;16;0",
-											"left": 973,
+											"left": 965,
 											"top": 80,
 											"width": 1,
 											"height": 1233
 										}
 									],
 									"font": "Roboto;17;0",
-									"left": 848,
+									"left": 840,
 									"top": 40,
 									"width": 249.984375,
 									"height": 1273,
@@ -694,9 +694,9 @@
 												"$ref": "AAAAAAF9q/2DtJ+JBW0="
 											},
 											"font": "Roboto;17;0",
-											"left": 307,
+											"left": 274,
 											"top": 167,
-											"width": 274.171875,
+											"width": 293.95556640625,
 											"height": 17,
 											"alpha": 1.5707957385596025,
 											"distance": 17,
@@ -704,7 +704,7 @@
 												"$ref": "AAAAAAF9q/2DtZ+KAuI="
 											},
 											"edgePosition": 1,
-											"text": "Nhập nội dung vào thanh tìm kiếm"
+											"text": "1.1 : Nhập nội dung vào thanh tìm kiếm"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -717,7 +717,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 444,
+											"left": 420,
 											"top": 159,
 											"height": 16,
 											"alpha": 1.5707963267948966,
@@ -738,7 +738,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 444,
+											"left": 420,
 											"top": 194,
 											"height": 16,
 											"alpha": -1.5707963267948966,
@@ -758,7 +758,7 @@
 												"$ref": "AAAAAAF9q/2DtJ+JBW0="
 											},
 											"font": "Roboto;17;0",
-											"left": 605,
+											"left": 597,
 											"top": 192,
 											"width": 14,
 											"height": 321
@@ -771,7 +771,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9q/U3gZ7SLHY="
 									},
-									"points": "283:192;605:192",
+									"points": "243:192;597:192",
 									"nameLabel": {
 										"$ref": "AAAAAAF9q/2Dtp+LCn4="
 									},
@@ -940,9 +940,9 @@
 												"$ref": "AAAAAAF9rCychqBs2a8="
 											},
 											"font": "Roboto;17;0",
-											"left": 680,
+											"left": 647,
 											"top": 182,
-											"width": 223.29931640625,
+											"width": 273.41943359375,
 											"height": 17,
 											"alpha": -4.659806443635641,
 											"distance": 19.026297590440446,
@@ -950,7 +950,7 @@
 												"$ref": "AAAAAAF9rCych6Bt4PQ="
 											},
 											"edgePosition": 1,
-											"text": "Gửi nội dung trong ô tìm kiếm"
+											"text": "1.1.1 : Gửi nội dung trong ô tìm kiếm"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -963,7 +963,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 792,
+											"left": 784,
 											"top": 177,
 											"height": 16,
 											"alpha": 1.5707963267948966,
@@ -984,7 +984,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 792,
+											"left": 784,
 											"top": 212,
 											"height": 16,
 											"alpha": -1.5707963267948966,
@@ -1004,7 +1004,7 @@
 												"$ref": "AAAAAAF9rCychqBs2a8="
 											},
 											"font": "Roboto;17;0",
-											"left": 966,
+											"left": 958,
 											"top": 210,
 											"width": 14,
 											"height": 287
@@ -1017,7 +1017,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9q/V6eJ7069g="
 									},
-									"points": "618:210;966:210",
+									"points": "610:210;958:210",
 									"nameLabel": {
 										"$ref": "AAAAAAF9rCych6Bujew="
 									},
@@ -1051,17 +1051,17 @@
 												"$ref": "AAAAAAF9rCz80aCE5xY="
 											},
 											"font": "Roboto;17;0",
-											"left": 991,
+											"left": 964,
 											"top": 206,
-											"width": 299.63330078125,
+											"width": 349.75341796875,
 											"height": 17,
-											"alpha": -4.653633743875884,
-											"distance": 17.029386365926403,
+											"alpha": 1.515297267703043,
+											"distance": 18.027756377319946,
 											"hostEdge": {
 												"$ref": "AAAAAAF9rCz80aCFiiw="
 											},
 											"edgePosition": 1,
-											"text": "Gọi phương thức TraCuuSachTheoTen()"
+											"text": "1.1.2 : Gọi phương thức TimSachTheoTen()"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1074,7 +1074,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 1141,
+											"left": 1137,
 											"top": 199,
 											"height": 16,
 											"alpha": 1.5707963267948966,
@@ -1095,7 +1095,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 1141,
+											"left": 1137,
 											"top": 234,
 											"height": 16,
 											"alpha": -1.5707963267948966,
@@ -1128,7 +1128,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9q/t5FZ8aRDM="
 									},
-									"points": "979:232;1304:232",
+									"points": "971:232;1304:232",
 									"nameLabel": {
 										"$ref": "AAAAAAF9rCz80aCG2mo="
 									},
@@ -1264,9 +1264,9 @@
 												"$ref": "AAAAAAF9rC7BmaCfm4c="
 											},
 											"font": "Roboto;17;0",
-											"left": 1376,
+											"left": 1351,
 											"top": 222,
-											"width": 204.12451171875,
+											"width": 254.24462890625,
 											"height": 17,
 											"alpha": -4.653633743875884,
 											"distance": 17.029386365926403,
@@ -1274,7 +1274,7 @@
 												"$ref": "AAAAAAF9rC7BmqCguTc="
 											},
 											"edgePosition": 1,
-											"text": "Tra cứu sách theo tên sách"
+											"text": "1.1.3 : Tra cứu sách theo tên sách"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1375,9 +1375,9 @@
 												"$ref": "AAAAAAF9rDEODqDsaZ4="
 											},
 											"font": "Roboto;17;0",
-											"left": 1329,
+											"left": 1304,
 											"top": 317,
-											"width": 298.7451171875,
+											"width": 348.865234375,
 											"height": 17,
 											"alpha": 1.523213698631046,
 											"distance": 21.02379604162864,
@@ -1385,7 +1385,7 @@
 												"$ref": "AAAAAAF9rDEODqDtYM0="
 											},
 											"edgePosition": 1,
-											"text": "Không tìm thấy tên sách trong kho sách"
+											"text": "2.1.1 : Không tìm thấy tên sách trong kho"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1487,9 +1487,9 @@
 												"$ref": "AAAAAAF9rDK3xKEHiTM="
 											},
 											"font": "Roboto;17;0",
-											"left": 1016,
+											"left": 957,
 											"top": 327,
-											"width": 249.78125,
+											"width": 359.8720703125,
 											"height": 17,
 											"alpha": 1.5042288267359163,
 											"distance": 15.033296378372908,
@@ -1497,7 +1497,7 @@
 												"$ref": "AAAAAAF9rDK3xKEIL6k="
 											},
 											"edgePosition": 1,
-											"text": "Lỗi không tìm thấy sách"
+											"text": "2.1.1.1 : Lỗi không tìm thấy sách"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1510,7 +1510,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 1140,
+											"left": 1136,
 											"top": 337,
 											"height": 16,
 											"alpha": 1.5707963267948966,
@@ -1531,7 +1531,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 1141,
+											"left": 1137,
 											"top": 302,
 											"height": 16,
 											"alpha": -1.5707963267948966,
@@ -1552,7 +1552,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 966,
+											"left": 958,
 											"top": 320,
 											"width": 14,
 											"height": 25
@@ -1565,7 +1565,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9q/vxsZ9AtVs="
 									},
-									"points": "1304:320;979:320",
+									"points": "1304:320;971:320",
 									"nameLabel": {
 										"$ref": "AAAAAAF9rDK3xKEJCiI="
 									},
@@ -1734,9 +1734,9 @@
 												"$ref": "AAAAAAF9rDNN2KEggrw="
 											},
 											"font": "Roboto;17;0",
-											"left": 659,
+											"left": 619,
 											"top": 343,
-											"width": 265.392578125,
+											"width": 329.53271484375,
 											"height": 17,
 											"alpha": 1.494025200231046,
 											"distance": 13.038404810405298,
@@ -1744,7 +1744,7 @@
 												"$ref": "AAAAAAF9rDNN2KEh8TI="
 											},
 											"edgePosition": 1,
-											"text": "Thông báo không tìm thấy tên sách"
+											"text": "2.1.1.2 : Thông báo không tìm thấy tên sách"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1757,7 +1757,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 791,
+											"left": 783,
 											"top": 355,
 											"height": 16,
 											"alpha": 1.5707963267948966,
@@ -1778,7 +1778,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 792,
+											"left": 784,
 											"top": 320,
 											"height": 16,
 											"alpha": -1.5707963267948966,
@@ -1799,7 +1799,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 605,
+											"left": 597,
 											"top": 338,
 											"width": 14,
 											"height": 25
@@ -1812,7 +1812,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9q/t5FZ8aRDM="
 									},
-									"points": "966:338;618:338",
+									"points": "958:338;610:338",
 									"nameLabel": {
 										"$ref": "AAAAAAF9rDNN2KEiuB0="
 									},
@@ -1846,9 +1846,9 @@
 												"$ref": "AAAAAAF9rDOCE6E3uHE="
 											},
 											"font": "Roboto;17;0",
-											"left": 308,
+											"left": 252,
 											"top": 359,
-											"width": 271.49365234375,
+											"width": 335.6337890625,
 											"height": 17,
 											"alpha": 1.5042288267359163,
 											"distance": 15.033296378372908,
@@ -1856,7 +1856,7 @@
 												"$ref": "AAAAAAF9rDOCE6E491o="
 											},
 											"edgePosition": 1,
-											"text": "Hiện thông báo không tìm thấy sách"
+											"text": "2.1.1.3 : Hiện thông báo không tìm thấy sách"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1869,7 +1869,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 443,
+											"left": 419,
 											"top": 369,
 											"height": 16,
 											"alpha": 1.5707963267948966,
@@ -1890,7 +1890,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 444,
+											"left": 420,
 											"top": 334,
 											"height": 16,
 											"alpha": -1.5707963267948966,
@@ -1911,7 +1911,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 283,
+											"left": 243,
 											"top": 352,
 											"width": 14,
 											"height": 25
@@ -1924,7 +1924,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9q/V6eJ7069g="
 									},
-									"points": "605:352;283:352",
+									"points": "597:352;243:352",
 									"nameLabel": {
 										"$ref": "AAAAAAF9rDOCFKE5z2U="
 									},
@@ -1958,17 +1958,17 @@
 												"$ref": "AAAAAAF9rDRJS6FRaXM="
 											},
 											"font": "Roboto;17;0",
-											"left": 1353,
-											"top": 439,
-											"width": 250.49267578125,
+											"left": 1325,
+											"top": 440,
+											"width": 300.61279296875,
 											"height": 17,
-											"alpha": 1.5208384298260835,
-											"distance": 20.024984394500787,
+											"alpha": 1.3825752810087657,
+											"distance": 21.37755832643195,
 											"hostEdge": {
 												"$ref": "AAAAAAF9rDRJS6FSCts="
 											},
 											"edgePosition": 1,
-											"text": "Tìm thấy tên sách trong kho sách"
+											"text": "2.1.2 : Tìm thấy tên sách trong kho sách"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2070,9 +2070,9 @@
 												"$ref": "AAAAAAF9rDSu2aFqe2A="
 											},
 											"font": "Roboto;17;0",
-											"left": 1042,
+											"left": 1006,
 											"top": 455,
-											"width": 194.8525390625,
+											"width": 258.99267578125,
 											"height": 17,
 											"alpha": 1.4382454495201138,
 											"distance": 15.132745950421556,
@@ -2080,7 +2080,7 @@
 												"$ref": "AAAAAAF9rDSu2aFrJZo="
 											},
 											"edgePosition": 1,
-											"text": "Tìm thấy sách thành công"
+											"text": "2.1.2.1 : Tìm thấy sách thành công"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2093,7 +2093,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 1140,
+											"left": 1136,
 											"top": 465,
 											"height": 16,
 											"alpha": 1.5707963267948966,
@@ -2114,7 +2114,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 1141,
+											"left": 1137,
 											"top": 430,
 											"height": 16,
 											"alpha": -1.5707963267948966,
@@ -2135,7 +2135,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 966,
+											"left": 958,
 											"top": 448,
 											"width": 14,
 											"height": 25
@@ -2148,7 +2148,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9q/vxsZ9AtVs="
 									},
-									"points": "1304:448;979:448",
+									"points": "1304:448;971:448",
 									"nameLabel": {
 										"$ref": "AAAAAAF9rDSu2aFsqyg="
 									},
@@ -2182,9 +2182,9 @@
 												"$ref": "AAAAAAF9rDWD/aGFneE="
 											},
 											"font": "Roboto;17;0",
-											"left": 667,
+											"left": 632,
 											"top": 471,
-											"width": 249.78125,
+											"width": 302.02392578125,
 											"height": 17,
 											"alpha": 1.5152983753953506,
 											"distance": 18.027756377319946,
@@ -2192,7 +2192,7 @@
 												"$ref": "AAAAAAF9rDWD/aGGZNw="
 											},
 											"edgePosition": 1,
-											"text": "Thông báo đã tìm thấy tên sách"
+											"text": "2.1.2.2 : Thông báo đã tìm thấy tên sách"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2205,7 +2205,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 791,
+											"left": 783,
 											"top": 478,
 											"height": 16,
 											"alpha": 1.5707963267948966,
@@ -2226,7 +2226,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 792,
+											"left": 784,
 											"top": 443,
 											"height": 16,
 											"alpha": -1.5707963267948966,
@@ -2247,7 +2247,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 605,
+											"left": 597,
 											"top": 461,
 											"width": 14,
 											"height": 25
@@ -2260,7 +2260,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9q/t5FZ8aRDM="
 									},
-									"points": "966:461;618:461",
+									"points": "958:461;610:461",
 									"nameLabel": {
 										"$ref": "AAAAAAF9rDWD/aGHP1o="
 									},
@@ -2294,9 +2294,9 @@
 												"$ref": "AAAAAAF9rDXVt6GdV1w="
 											},
 											"font": "Roboto;17;0",
-											"left": 304,
+											"left": 248,
 											"top": 487,
-											"width": 270.51416015625,
+											"width": 334.654296875,
 											"height": 17,
 											"alpha": 1.2277730198584995,
 											"distance": 14.866068747318506,
@@ -2304,7 +2304,7 @@
 												"$ref": "AAAAAAF9rDXVt6GejoU="
 											},
 											"edgePosition": 1,
-											"text": "Hiện kết quả tìm kiếm theo tên sách"
+											"text": "2.1.2.3 : Hiện kết quả tìm kiếm theo tên sách"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2317,7 +2317,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 443,
+											"left": 419,
 											"top": 498,
 											"height": 16,
 											"alpha": 1.5707963267948966,
@@ -2338,7 +2338,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 444,
+											"left": 420,
 											"top": 463,
 											"height": 16,
 											"alpha": -1.5707963267948966,
@@ -2359,7 +2359,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 283,
+											"left": 243,
 											"top": 481,
 											"width": 14,
 											"height": 25
@@ -2372,7 +2372,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9q/V6eJ7069g="
 									},
-									"points": "605:481;283:481",
+									"points": "597:481;243:481",
 									"nameLabel": {
 										"$ref": "AAAAAAF9rDXVt6GfO4E="
 									},
@@ -2406,7 +2406,7 @@
 												"$ref": "AAAAAAF9rAWVVZ/WA+4="
 											},
 											"font": "Roboto;17;0",
-											"left": 321,
+											"left": 297,
 											"top": 595,
 											"width": 241.9375,
 											"height": 17,
@@ -2416,7 +2416,7 @@
 												"$ref": "AAAAAAF9rAWVVp/XhXE="
 											},
 											"edgePosition": 1,
-											"text": "Nhấn nút [Tất cả sách]"
+											"text": "1.2 : Nhấn nút [Tất cả sách]"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2429,7 +2429,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 444,
+											"left": 420,
 											"top": 591,
 											"height": 16,
 											"alpha": 1.5707963267948966,
@@ -2450,7 +2450,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 444,
+											"left": 420,
 											"top": 626,
 											"height": 16,
 											"alpha": -1.5707963267948966,
@@ -2470,7 +2470,7 @@
 												"$ref": "AAAAAAF9rAWVVZ/WA+4="
 											},
 											"font": "Roboto;17;0",
-											"left": 605,
+											"left": 597,
 											"top": 624,
 											"width": 14,
 											"height": 177
@@ -2483,7 +2483,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9q/U3gZ7SLHY="
 									},
-									"points": "283:624;605:624",
+									"points": "243:624;597:624",
 									"nameLabel": {
 										"$ref": "AAAAAAF9rAWVV5/YUww="
 									},
@@ -2517,9 +2517,9 @@
 												"$ref": "AAAAAAF9rFPxHaJElrY="
 											},
 											"font": "Roboto;17;0",
-											"left": 637,
+											"left": 604,
 											"top": 614,
-											"width": 308.66455078125,
+											"width": 358.78466796875,
 											"height": 17,
 											"alpha": -4.656891028985144,
 											"distance": 18.027756377319946,
@@ -2527,7 +2527,7 @@
 												"$ref": "AAAAAAF9rFPxHqJFt7Q="
 											},
 											"edgePosition": 1,
-											"text": "Gửi yêu cầu hiện danh sách toàn bộ sách"
+											"text": "1.2.1 : Gửi yêu cầu hiện danh sách tất cả sách"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2540,7 +2540,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 792,
+											"left": 784,
 											"top": 608,
 											"height": 16,
 											"alpha": 1.5707963267948966,
@@ -2561,7 +2561,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 792,
+											"left": 784,
 											"top": 643,
 											"height": 16,
 											"alpha": -1.5707963267948966,
@@ -2581,7 +2581,7 @@
 												"$ref": "AAAAAAF9rFPxHaJElrY="
 											},
 											"font": "Roboto;17;0",
-											"left": 966,
+											"left": 958,
 											"top": 641,
 											"width": 14,
 											"height": 144
@@ -2594,7 +2594,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9q/V6eJ7069g="
 									},
-									"points": "618:641;966:641",
+									"points": "610:641;958:641",
 									"nameLabel": {
 										"$ref": "AAAAAAF9rFPxH6JG67E="
 									},
@@ -2628,9 +2628,9 @@
 												"$ref": "AAAAAAF9rFSbeKJbpak="
 											},
 											"font": "Roboto;17;0",
-											"left": 1009,
+											"left": 979,
 											"top": 630,
-											"width": 263.95654296875,
+											"width": 314.07666015625,
 											"height": 17,
 											"alpha": -4.653633743875884,
 											"distance": 17.029386365926403,
@@ -2638,7 +2638,7 @@
 												"$ref": "AAAAAAF9rFSbeKJcx9Y="
 											},
 											"edgePosition": 1,
-											"text": "Gọi phương thức LayToanBoSach()"
+											"text": "1.2.2 : Gọi phương thức LayToanBoSach()"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2651,7 +2651,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 1141,
+											"left": 1137,
 											"top": 623,
 											"height": 16,
 											"alpha": 1.5707963267948966,
@@ -2672,7 +2672,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 1141,
+											"left": 1137,
 											"top": 658,
 											"height": 16,
 											"alpha": -1.5707963267948966,
@@ -2705,7 +2705,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9q/t5FZ8aRDM="
 									},
-									"points": "979:656;1304:656",
+									"points": "971:656;1304:656",
 									"nameLabel": {
 										"$ref": "AAAAAAF9rFSbeaJdu4g="
 									},
@@ -2739,17 +2739,17 @@
 												"$ref": "AAAAAAF9rFXm+qJ3BHc="
 											},
 											"font": "Roboto;17;0",
-											"left": 1363,
-											"top": 646,
-											"width": 231.2099609375,
+											"left": 1336,
+											"top": 647,
+											"width": 281.330078125,
 											"height": 17,
-											"alpha": -4.668938518955431,
-											"distance": 23.021728866442675,
+											"alpha": -4.57686171264668,
+											"distance": 22.20360331117452,
 											"hostEdge": {
 												"$ref": "AAAAAAF9rFXm+6J4ZUs="
 											},
 											"edgePosition": 1,
-											"text": "Truy xuất tên của toàn bộ sách"
+											"text": "1.2.3 : Truy xuất tên của toàn bộ sách"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2850,9 +2850,9 @@
 												"$ref": "AAAAAAF9rFbfHKKPFyM="
 											},
 											"font": "Roboto;17;0",
-											"left": 1387,
+											"left": 1369,
 											"top": 719,
-											"width": 181.46337890625,
+											"width": 217.5634765625,
 											"height": 17,
 											"alpha": 1.4382454495201138,
 											"distance": 15.132745950421556,
@@ -2860,7 +2860,7 @@
 												"$ref": "AAAAAAF9rFbfHaKQr6Y="
 											},
 											"edgePosition": 1,
-											"text": "Danh sách toàn bộ sách"
+											"text": "2.2 : Danh sách toàn bộ sách"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2962,9 +2962,9 @@
 												"$ref": "AAAAAAF9rFfXVqKmFXo="
 											},
 											"font": "Roboto;17;0",
-											"left": 1007,
+											"left": 978,
 											"top": 735,
-											"width": 267.716796875,
+											"width": 317.8369140625,
 											"height": 17,
 											"alpha": 1.5042288267359163,
 											"distance": 15.033296378372908,
@@ -2972,7 +2972,7 @@
 												"$ref": "AAAAAAF9rFfXVqKn+Bw="
 											},
 											"edgePosition": 1,
-											"text": "Sắp xếp tên sách theo bảng chữ cái"
+											"text": "2.2.1 : Sắp xếp tên sách theo bảng chữ cái"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2985,7 +2985,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 1140,
+											"left": 1136,
 											"top": 745,
 											"height": 16,
 											"alpha": 1.5707963267948966,
@@ -3006,7 +3006,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 1141,
+											"left": 1137,
 											"top": 710,
 											"height": 16,
 											"alpha": -1.5707963267948966,
@@ -3027,7 +3027,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 966,
+											"left": 958,
 											"top": 728,
 											"width": 14,
 											"height": 25
@@ -3040,7 +3040,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9q/vxsZ9AtVs="
 									},
-									"points": "1304:728;979:728",
+									"points": "1304:728;971:728",
 									"nameLabel": {
 										"$ref": "AAAAAAF9rFfXV6KoP9E="
 									},
@@ -3074,9 +3074,9 @@
 												"$ref": "AAAAAAF9rFkBZKK/6pk="
 											},
 											"font": "Roboto;17;0",
-											"left": 670,
+											"left": 637,
 											"top": 751,
-											"width": 239.3779296875,
+											"width": 289.498046875,
 											"height": 17,
 											"alpha": 1.373401407970739,
 											"distance": 15.297058540778355,
@@ -3084,7 +3084,7 @@
 												"$ref": "AAAAAAF9rFkBZKLABEU="
 											},
 											"edgePosition": 1,
-											"text": "Thông báo truy xuất thành công"
+											"text": "2.2.2 : Thông báo truy xuất thành công"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3097,7 +3097,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 791,
+											"left": 783,
 											"top": 761,
 											"height": 16,
 											"alpha": 1.5707963267948966,
@@ -3118,7 +3118,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 792,
+											"left": 784,
 											"top": 726,
 											"height": 16,
 											"alpha": -1.5707963267948966,
@@ -3139,7 +3139,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 605,
+											"left": 597,
 											"top": 744,
 											"width": 14,
 											"height": 25
@@ -3152,7 +3152,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9q/t5FZ8aRDM="
 									},
-									"points": "966:744;618:744",
+									"points": "958:744;610:744",
 									"nameLabel": {
 										"$ref": "AAAAAAF9rFkBZaLBiRM="
 									},
@@ -3186,9 +3186,9 @@
 												"$ref": "AAAAAAF9rBkJIKAbdYo="
 											},
 											"font": "Roboto;17;0",
-											"left": 304,
+											"left": 255,
 											"top": 775,
-											"width": 276.14208984375,
+											"width": 326.26220703125,
 											"height": 17,
 											"alpha": 1.4840584196386275,
 											"distance": 23.08679276123039,
@@ -3196,7 +3196,7 @@
 												"$ref": "AAAAAAF9rBkJIKAcU9A="
 											},
 											"edgePosition": 1,
-											"text": "Hiện danh sách sách xếp theo thứ tự"
+											"text": "2.2.3 : Hiện danh sách sách xếp theo thứ tự"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3209,7 +3209,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 443,
+											"left": 419,
 											"top": 777,
 											"height": 16,
 											"alpha": 1.5707963267948966,
@@ -3230,7 +3230,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 444,
+											"left": 420,
 											"top": 742,
 											"height": 16,
 											"alpha": -1.5707963267948966,
@@ -3251,7 +3251,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 283,
+											"left": 243,
 											"top": 760,
 											"width": 14,
 											"height": 25
@@ -3264,7 +3264,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9q/V6eJ7069g="
 									},
-									"points": "605:760;283:760",
+									"points": "597:760;243:760",
 									"nameLabel": {
 										"$ref": "AAAAAAF9rBkJIKAdHhI="
 									},
@@ -3298,9 +3298,9 @@
 												"$ref": "AAAAAAF9rEsqx6HYlJ4="
 											},
 											"font": "Roboto;17;0",
-											"left": 322,
+											"left": 282,
 											"top": 879,
-											"width": 244.70703125,
+											"width": 276.3330078125,
 											"height": 17,
 											"alpha": 1.5707958506044204,
 											"distance": 21,
@@ -3308,7 +3308,7 @@
 												"$ref": "AAAAAAF9rEsqyaHZP24="
 											},
 											"edgePosition": 1,
-											"text": "Nhập khoảng giá muốn tìm kiếm"
+											"text": "3 : Nhập khoảng giá muốn tìm kiếm"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3321,7 +3321,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 444,
+											"left": 420,
 											"top": 875,
 											"height": 16,
 											"alpha": 1.5707963267948966,
@@ -3342,7 +3342,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 444,
+											"left": 420,
 											"top": 910,
 											"height": 16,
 											"alpha": -1.5707963267948966,
@@ -3362,7 +3362,7 @@
 												"$ref": "AAAAAAF9rEsqx6HYlJ4="
 											},
 											"font": "Roboto;17;0",
-											"left": 605,
+											"left": 597,
 											"top": 908,
 											"width": 14,
 											"height": 317
@@ -3375,7 +3375,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9q/U3gZ7SLHY="
 									},
-									"points": "283:908;605:908",
+									"points": "243:908;597:908",
 									"nameLabel": {
 										"$ref": "AAAAAAF9rEsqyqHaKeQ="
 									},
@@ -3409,9 +3409,9 @@
 												"$ref": "AAAAAAF9rEwHp6HzhXQ="
 											},
 											"font": "Roboto;17;0",
-											"left": 700,
+											"left": 676,
 											"top": 895,
-											"width": 184.3935546875,
+											"width": 216.01953125,
 											"height": 17,
 											"alpha": 1.5707958004791072,
 											"distance": 19,
@@ -3419,7 +3419,7 @@
 												"$ref": "AAAAAAF9rEwHqKH0HeE="
 											},
 											"edgePosition": 1,
-											"text": "Gửi thông tin khoảng giá"
+											"text": "4 : Gửi thông tin khoảng giá"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3432,7 +3432,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 792,
+											"left": 784,
 											"top": 889,
 											"height": 16,
 											"alpha": 1.5707963267948966,
@@ -3453,7 +3453,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 792,
+											"left": 784,
 											"top": 924,
 											"height": 16,
 											"alpha": -1.5707963267948966,
@@ -3473,7 +3473,7 @@
 												"$ref": "AAAAAAF9rEwHp6HzhXQ="
 											},
 											"font": "Roboto;17;0",
-											"left": 966,
+											"left": 958,
 											"top": 922,
 											"width": 14,
 											"height": 287
@@ -3486,7 +3486,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9q/V6eJ7069g="
 									},
-									"points": "618:922;966:922",
+									"points": "610:922;958:922",
 									"nameLabel": {
 										"$ref": "AAAAAAF9rEwHqaH1cVU="
 									},
@@ -3520,9 +3520,9 @@
 												"$ref": "AAAAAAF9rExhpqILJLs="
 											},
 											"font": "Roboto;17;0",
-											"left": 1006,
+											"left": 986,
 											"top": 911,
-											"width": 270.6220703125,
+											"width": 302.248046875,
 											"height": 17,
 											"alpha": 1.5707958267948967,
 											"distance": 20,
@@ -3530,7 +3530,7 @@
 												"$ref": "AAAAAAF9rExhpqIMCUg="
 											},
 											"edgePosition": 1,
-											"text": "Gọi phương thức LocSachTheoGia()"
+											"text": "5 : Gọi phương thức LocSachTheoGia()"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3543,7 +3543,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 1141,
+											"left": 1137,
 											"top": 906,
 											"height": 16,
 											"alpha": 1.5707963267948966,
@@ -3564,7 +3564,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 1141,
+											"left": 1137,
 											"top": 941,
 											"height": 16,
 											"alpha": -1.5707963267948966,
@@ -3597,7 +3597,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9q/t5FZ8aRDM="
 									},
-									"points": "979:939;1304:939",
+									"points": "971:939;1304:939",
 									"nameLabel": {
 										"$ref": "AAAAAAF9rExhpqIN0Ig="
 									},
@@ -3631,9 +3631,9 @@
 												"$ref": "AAAAAAF9rE6NCKIniwk="
 											},
 											"font": "Roboto;17;0",
-											"left": 1390,
+											"left": 1375,
 											"top": 935,
-											"width": 178.02685546875,
+											"width": 209.65283203125,
 											"height": 17,
 											"alpha": 1.5707958004791072,
 											"distance": 19,
@@ -3641,7 +3641,7 @@
 												"$ref": "AAAAAAF9rE6NCaIoN2Q="
 											},
 											"edgePosition": 1,
-											"text": "Áp dụng bộ lọc theo giá"
+											"text": "6 : Áp dụng bộ lọc theo giá"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3752,7 +3752,7 @@
 												"$ref": "AAAAAAF9rGD7pdxpmC8="
 											},
 											"edgePosition": 1,
-											"text": "Không tìm thấy sách theo giá"
+											"text": "7.1 : Không tìm thấy sách theo giá"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3854,7 +3854,7 @@
 												"$ref": "AAAAAAF9rGHguNyD418="
 											},
 											"font": "Roboto;17;0",
-											"left": 1019,
+											"left": 1015,
 											"top": 1039,
 											"width": 240.140625,
 											"height": 17,
@@ -3864,7 +3864,7 @@
 												"$ref": "AAAAAAF9rGHguNyE/e4="
 											},
 											"edgePosition": 1,
-											"text": "Lỗi không tìm thấy sách"
+											"text": "7.1.1 : Lỗi không tìm thấy sách"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3877,7 +3877,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 1140,
+											"left": 1136,
 											"top": 1049,
 											"height": 16,
 											"alpha": 1.5707963267948966,
@@ -3898,7 +3898,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 1141,
+											"left": 1137,
 											"top": 1014,
 											"height": 16,
 											"alpha": -1.5707963267948966,
@@ -3919,7 +3919,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 966,
+											"left": 958,
 											"top": 1032,
 											"width": 14,
 											"height": 25
@@ -3932,7 +3932,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9q/vxsZ9AtVs="
 									},
-									"points": "1304:1032;979:1032",
+									"points": "1304:1032;971:1032",
 									"nameLabel": {
 										"$ref": "AAAAAAF9rGHguNyFXrs="
 									},
@@ -4101,9 +4101,9 @@
 												"$ref": "AAAAAAF9rHJRK9zXVIo="
 											},
 											"font": "Roboto;17;0",
-											"left": 645,
+											"left": 612,
 											"top": 1063,
-											"width": 290.162109375,
+											"width": 340.2822265625,
 											"height": 17,
 											"alpha": 1.4659199086126364,
 											"distance": 19.1049731745428,
@@ -4111,7 +4111,7 @@
 												"$ref": "AAAAAAF9rHJRLNzYxuw="
 											},
 											"edgePosition": 1,
-											"text": "Thông báo tìm kiếm không thành công"
+											"text": "7.1.2 : Thông báo tìm kiếm không thành công"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4124,7 +4124,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 791,
+											"left": 783,
 											"top": 1069,
 											"height": 16,
 											"alpha": 1.5707963267948966,
@@ -4145,7 +4145,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 792,
+											"left": 784,
 											"top": 1034,
 											"height": 16,
 											"alpha": -1.5707963267948966,
@@ -4166,7 +4166,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 605,
+											"left": 597,
 											"top": 1052,
 											"width": 14,
 											"height": 25
@@ -4179,7 +4179,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9q/t5FZ8aRDM="
 									},
-									"points": "966:1052;618:1052",
+									"points": "958:1052;610:1052",
 									"nameLabel": {
 										"$ref": "AAAAAAF9rHJRLNzZ/Tk="
 									},
@@ -4213,9 +4213,9 @@
 												"$ref": "AAAAAAF9rHWnV9zvj3w="
 											},
 											"font": "Roboto;17;0",
-											"left": 328,
+											"left": 279,
 											"top": 1071,
-											"width": 231.0107421875,
+											"width": 281.130859375,
 											"height": 17,
 											"alpha": 1.4994895726695407,
 											"distance": 14.035668847618199,
@@ -4223,7 +4223,7 @@
 												"$ref": "AAAAAAF9rHWnWdzwEX8="
 											},
 											"edgePosition": 1,
-											"text": "Hiện thông báo không tìm thấy"
+											"text": "7.1.3 : Hiện thông báo không tìm thấy"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4236,7 +4236,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 443,
+											"left": 419,
 											"top": 1082,
 											"height": 16,
 											"alpha": 1.5707963267948966,
@@ -4257,7 +4257,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 444,
+											"left": 420,
 											"top": 1047,
 											"height": 16,
 											"alpha": -1.5707963267948966,
@@ -4278,7 +4278,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 283,
+											"left": 243,
 											"top": 1065,
 											"width": 14,
 											"height": 25
@@ -4291,7 +4291,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9q/V6eJ7069g="
 									},
-									"points": "605:1065;283:1065",
+									"points": "597:1065;243:1065",
 									"nameLabel": {
 										"$ref": "AAAAAAF9rHWnW9zxImk="
 									},
@@ -4335,7 +4335,7 @@
 												"$ref": "AAAAAAF9rHc5Td0Lrng="
 											},
 											"edgePosition": 1,
-											"text": "Tìm thấy sách theo giá"
+											"text": "7.2 : Tìm thấy sách theo giá"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4437,9 +4437,9 @@
 												"$ref": "AAAAAAF9rHdIrd0fZyA="
 											},
 											"font": "Roboto;17;0",
-											"left": 1012,
+											"left": 983,
 											"top": 1167,
-											"width": 255.1494140625,
+											"width": 305.26953125,
 											"height": 17,
 											"alpha": 1.4536881624328502,
 											"distance": 17.11724276862369,
@@ -4447,7 +4447,7 @@
 												"$ref": "AAAAAAF9rHdIrd0gjZc="
 											},
 											"edgePosition": 1,
-											"text": "Danh sách sách được lọc theo giá"
+											"text": "7.2.1 : Danh sách sách được lọc theo giá"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4460,7 +4460,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 1140,
+											"left": 1136,
 											"top": 1175,
 											"height": 16,
 											"alpha": 1.5707963267948966,
@@ -4481,7 +4481,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 1141,
+											"left": 1137,
 											"top": 1140,
 											"height": 16,
 											"alpha": -1.5707963267948966,
@@ -4502,7 +4502,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 966,
+											"left": 958,
 											"top": 1158,
 											"width": 14,
 											"height": 25
@@ -4515,7 +4515,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9q/vxsZ9AtVs="
 									},
-									"points": "1304:1158;979:1158",
+									"points": "1304:1158;971:1158",
 									"nameLabel": {
 										"$ref": "AAAAAAF9rHdIrd0hlmA="
 									},
@@ -4549,9 +4549,9 @@
 												"$ref": "AAAAAAF9rHdjkd00bLw="
 											},
 											"font": "Roboto;17;0",
-											"left": 672,
+											"left": 639,
 											"top": 1183,
-											"width": 239.361328125,
+											"width": 289.4814453125,
 											"height": 17,
 											"alpha": 1.5120410902860908,
 											"distance": 17.029386365926403,
@@ -4559,7 +4559,7 @@
 												"$ref": "AAAAAAF9rHdjkd01770="
 											},
 											"edgePosition": 1,
-											"text": "Thông báo tìm kiếm thành công"
+											"text": "7.2.2 : Thông báo tìm kiếm thành công"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4572,7 +4572,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 791,
+											"left": 783,
 											"top": 1191,
 											"height": 16,
 											"alpha": 1.5707963267948966,
@@ -4593,7 +4593,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 792,
+											"left": 784,
 											"top": 1156,
 											"height": 16,
 											"alpha": -1.5707963267948966,
@@ -4614,7 +4614,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 605,
+											"left": 597,
 											"top": 1174,
 											"width": 14,
 											"height": 25
@@ -4627,7 +4627,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9q/t5FZ8aRDM="
 									},
-									"points": "966:1174;618:1174",
+									"points": "958:1174;610:1174",
 									"nameLabel": {
 										"$ref": "AAAAAAF9rHdjkd02lrI="
 									},
@@ -4661,9 +4661,9 @@
 												"$ref": "AAAAAAF9rHdrDd1JY/Q="
 											},
 											"font": "Roboto;17;0",
-											"left": 330,
+											"left": 281,
 											"top": 1198,
-											"width": 229.001953125,
+											"width": 279.1220703125,
 											"height": 17,
 											"alpha": 1.570796993461563,
 											"distance": 15,
@@ -4671,7 +4671,7 @@
 												"$ref": "AAAAAAF9rHdrDd1KFqM="
 											},
 											"edgePosition": 1,
-											"text": "Hiện kết quả tìm kiếm theo giá"
+											"text": "7.2.3 : Hiện kết quả tìm kiếm theo giá"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4684,7 +4684,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 443,
+											"left": 419,
 											"top": 1209,
 											"height": 16,
 											"alpha": 1.5707963267948966,
@@ -4705,7 +4705,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 444,
+											"left": 420,
 											"top": 1174,
 											"height": 16,
 											"alpha": -1.5707963267948966,
@@ -4726,7 +4726,7 @@
 											},
 											"visible": false,
 											"font": "Roboto;16;0",
-											"left": 283,
+											"left": 243,
 											"top": 1192,
 											"width": 14,
 											"height": 25
@@ -4739,7 +4739,7 @@
 									"tail": {
 										"$ref": "AAAAAAF9q/V6eJ7069g="
 									},
-									"points": "605:1192;283:1192",
+									"points": "597:1192;243:1192",
 									"nameLabel": {
 										"$ref": "AAAAAAF9rHdrDt1LT14="
 									},
@@ -4770,7 +4770,8 @@
 							},
 							"target": {
 								"$ref": "AAAAAAF9q/V6eJ7tf6g="
-							}
+							},
+							"sequenceNumber": "1.1"
 						},
 						{
 							"_type": "UMLMessage",
@@ -4784,7 +4785,8 @@
 							},
 							"target": {
 								"$ref": "AAAAAAF9q/t5E58TSBk="
-							}
+							},
+							"sequenceNumber": "1.1.1"
 						},
 						{
 							"_type": "UMLMessage",
@@ -4792,13 +4794,14 @@
 							"_parent": {
 								"$ref": "AAAAAAF9qknxJez5F+g="
 							},
-							"name": "Gọi phương thức TraCuuSachTheoTen()",
+							"name": "Gọi phương thức TimSachTheoTen()",
 							"source": {
 								"$ref": "AAAAAAF9q/t5E58TSBk="
 							},
 							"target": {
 								"$ref": "AAAAAAF9q/vxr585yAA="
-							}
+							},
+							"sequenceNumber": "1.1.2"
 						},
 						{
 							"_type": "UMLMessage",
@@ -4812,7 +4815,8 @@
 							},
 							"target": {
 								"$ref": "AAAAAAF9q/weAp9acMw="
-							}
+							},
+							"sequenceNumber": "1.1.3"
 						},
 						{
 							"_type": "UMLMessage",
@@ -4820,14 +4824,15 @@
 							"_parent": {
 								"$ref": "AAAAAAF9qknxJez5F+g="
 							},
-							"name": "Không tìm thấy tên sách trong kho sách",
+							"name": "Không tìm thấy tên sách trong kho",
 							"source": {
 								"$ref": "AAAAAAF9q/weAp9acMw="
 							},
 							"target": {
 								"$ref": "AAAAAAF9q/vxr585yAA="
 							},
-							"messageSort": "reply"
+							"messageSort": "reply",
+							"sequenceNumber": "2.1.1"
 						},
 						{
 							"_type": "UMLMessage",
@@ -4842,7 +4847,8 @@
 							"target": {
 								"$ref": "AAAAAAF9q/t5E58TSBk="
 							},
-							"messageSort": "reply"
+							"messageSort": "reply",
+							"sequenceNumber": "2.1.1.1"
 						},
 						{
 							"_type": "UMLMessage",
@@ -4857,7 +4863,8 @@
 							"target": {
 								"$ref": "AAAAAAF9q/V6eJ7tf6g="
 							},
-							"messageSort": "reply"
+							"messageSort": "reply",
+							"sequenceNumber": "2.1.1.2"
 						},
 						{
 							"_type": "UMLMessage",
@@ -4872,7 +4879,8 @@
 							"target": {
 								"$ref": "AAAAAAF9q/U3gZ7Lhfk="
 							},
-							"messageSort": "reply"
+							"messageSort": "reply",
+							"sequenceNumber": "2.1.1.3"
 						},
 						{
 							"_type": "UMLMessage",
@@ -4887,7 +4895,8 @@
 							"target": {
 								"$ref": "AAAAAAF9q/vxr585yAA="
 							},
-							"messageSort": "reply"
+							"messageSort": "reply",
+							"sequenceNumber": "2.1.2"
 						},
 						{
 							"_type": "UMLMessage",
@@ -4902,7 +4911,8 @@
 							"target": {
 								"$ref": "AAAAAAF9q/t5E58TSBk="
 							},
-							"messageSort": "reply"
+							"messageSort": "reply",
+							"sequenceNumber": "2.1.2.1"
 						},
 						{
 							"_type": "UMLMessage",
@@ -4917,7 +4927,8 @@
 							"target": {
 								"$ref": "AAAAAAF9q/V6eJ7tf6g="
 							},
-							"messageSort": "reply"
+							"messageSort": "reply",
+							"sequenceNumber": "2.1.2.2"
 						},
 						{
 							"_type": "UMLMessage",
@@ -4932,7 +4943,8 @@
 							"target": {
 								"$ref": "AAAAAAF9q/U3gZ7Lhfk="
 							},
-							"messageSort": "reply"
+							"messageSort": "reply",
+							"sequenceNumber": "2.1.2.3"
 						},
 						{
 							"_type": "UMLMessage",
@@ -4946,7 +4958,8 @@
 							},
 							"target": {
 								"$ref": "AAAAAAF9q/V6eJ7tf6g="
-							}
+							},
+							"sequenceNumber": "1.2"
 						},
 						{
 							"_type": "UMLMessage",
@@ -4954,13 +4967,14 @@
 							"_parent": {
 								"$ref": "AAAAAAF9qknxJez5F+g="
 							},
-							"name": "Gửi yêu cầu hiện danh sách toàn bộ sách",
+							"name": "Gửi yêu cầu hiện danh sách tất cả sách",
 							"source": {
 								"$ref": "AAAAAAF9q/V6eJ7tf6g="
 							},
 							"target": {
 								"$ref": "AAAAAAF9q/t5E58TSBk="
-							}
+							},
+							"sequenceNumber": "1.2.1"
 						},
 						{
 							"_type": "UMLMessage",
@@ -4974,7 +4988,8 @@
 							},
 							"target": {
 								"$ref": "AAAAAAF9q/vxr585yAA="
-							}
+							},
+							"sequenceNumber": "1.2.2"
 						},
 						{
 							"_type": "UMLMessage",
@@ -4988,7 +5003,8 @@
 							},
 							"target": {
 								"$ref": "AAAAAAF9q/weAp9acMw="
-							}
+							},
+							"sequenceNumber": "1.2.3"
 						},
 						{
 							"_type": "UMLMessage",
@@ -5003,7 +5019,8 @@
 							"target": {
 								"$ref": "AAAAAAF9q/vxr585yAA="
 							},
-							"messageSort": "reply"
+							"messageSort": "reply",
+							"sequenceNumber": "2.2"
 						},
 						{
 							"_type": "UMLMessage",
@@ -5018,7 +5035,8 @@
 							"target": {
 								"$ref": "AAAAAAF9q/t5E58TSBk="
 							},
-							"messageSort": "reply"
+							"messageSort": "reply",
+							"sequenceNumber": "2.2.1"
 						},
 						{
 							"_type": "UMLMessage",
@@ -5033,7 +5051,8 @@
 							"target": {
 								"$ref": "AAAAAAF9q/V6eJ7tf6g="
 							},
-							"messageSort": "reply"
+							"messageSort": "reply",
+							"sequenceNumber": "2.2.2"
 						},
 						{
 							"_type": "UMLMessage",
@@ -5048,7 +5067,8 @@
 							"target": {
 								"$ref": "AAAAAAF9q/U3gZ7Lhfk="
 							},
-							"messageSort": "reply"
+							"messageSort": "reply",
+							"sequenceNumber": "2.2.3"
 						},
 						{
 							"_type": "UMLMessage",
@@ -5062,7 +5082,8 @@
 							},
 							"target": {
 								"$ref": "AAAAAAF9q/V6eJ7tf6g="
-							}
+							},
+							"sequenceNumber": "3"
 						},
 						{
 							"_type": "UMLMessage",
@@ -5076,7 +5097,8 @@
 							},
 							"target": {
 								"$ref": "AAAAAAF9q/t5E58TSBk="
-							}
+							},
+							"sequenceNumber": "4"
 						},
 						{
 							"_type": "UMLMessage",
@@ -5090,7 +5112,8 @@
 							},
 							"target": {
 								"$ref": "AAAAAAF9q/vxr585yAA="
-							}
+							},
+							"sequenceNumber": "5"
 						},
 						{
 							"_type": "UMLMessage",
@@ -5104,7 +5127,8 @@
 							},
 							"target": {
 								"$ref": "AAAAAAF9q/weAp9acMw="
-							}
+							},
+							"sequenceNumber": "6"
 						},
 						{
 							"_type": "UMLMessage",
@@ -5119,7 +5143,8 @@
 							"target": {
 								"$ref": "AAAAAAF9q/vxr585yAA="
 							},
-							"messageSort": "reply"
+							"messageSort": "reply",
+							"sequenceNumber": "7.1"
 						},
 						{
 							"_type": "UMLMessage",
@@ -5134,7 +5159,8 @@
 							"target": {
 								"$ref": "AAAAAAF9q/t5E58TSBk="
 							},
-							"messageSort": "reply"
+							"messageSort": "reply",
+							"sequenceNumber": "7.1.1"
 						},
 						{
 							"_type": "UMLMessage",
@@ -5149,7 +5175,8 @@
 							"target": {
 								"$ref": "AAAAAAF9q/V6eJ7tf6g="
 							},
-							"messageSort": "reply"
+							"messageSort": "reply",
+							"sequenceNumber": "7.1.2"
 						},
 						{
 							"_type": "UMLMessage",
@@ -5164,7 +5191,8 @@
 							"target": {
 								"$ref": "AAAAAAF9q/U3gZ7Lhfk="
 							},
-							"messageSort": "reply"
+							"messageSort": "reply",
+							"sequenceNumber": "7.1.3"
 						},
 						{
 							"_type": "UMLMessage",
@@ -5179,7 +5207,8 @@
 							"target": {
 								"$ref": "AAAAAAF9q/vxr585yAA="
 							},
-							"messageSort": "reply"
+							"messageSort": "reply",
+							"sequenceNumber": "7.2"
 						},
 						{
 							"_type": "UMLMessage",
@@ -5194,7 +5223,8 @@
 							"target": {
 								"$ref": "AAAAAAF9q/t5E58TSBk="
 							},
-							"messageSort": "reply"
+							"messageSort": "reply",
+							"sequenceNumber": "7.2.1"
 						},
 						{
 							"_type": "UMLMessage",
@@ -5209,7 +5239,8 @@
 							"target": {
 								"$ref": "AAAAAAF9q/V6eJ7tf6g="
 							},
-							"messageSort": "reply"
+							"messageSort": "reply",
+							"sequenceNumber": "7.2.2"
 						},
 						{
 							"_type": "UMLMessage",
@@ -5224,7 +5255,8 @@
 							"target": {
 								"$ref": "AAAAAAF9q/U3gZ7Lhfk="
 							},
-							"messageSort": "reply"
+							"messageSort": "reply",
+							"sequenceNumber": "7.2.3"
 						}
 					],
 					"participants": [
