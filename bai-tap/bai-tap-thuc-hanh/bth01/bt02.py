@@ -1,3 +1,7 @@
+# Viết chương trình cho phép người dùng
+# nhập dãy n số nguyên khác 0,
+# n (n > 0) nhập từ bán phím.
+
 # region - Cách 1
 def nhap_danh_sach(n):
     a = []
