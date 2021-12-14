@@ -5,7 +5,7 @@
 # truyền vào giá trị mặc định = 0
 # tham số *args (argument) đại diện cho danh sách đối số,
 # kw = keyword, kwargs cho phép truyền đối số dạng keyword
-def tinhTong(a = 0, b = 0, c = 0, *args, **kwargs):
+def tinh_tong(a = 0, b = 0, c = 0, *args, **kwargs):
     print("\n" + "Hàm tính tổng".center(20, "-"))
     tong = a + b + c
     
@@ -20,7 +20,7 @@ def tinhTong(a = 0, b = 0, c = 0, *args, **kwargs):
 
 # Các số 7, 8, 9 sẽ được thêm vào args
 # và so_nguyen_cua_toi sẽ được thêm vào kwargs
-tong = tinhTong(4, 5, 6, 7, 8, 9, so_nguyen_cua_toi = 9999)
+tong = tinh_tong(4, 5, 6, 7, 8, 9, so_nguyen_cua_toi = 9999)
 print("Tổng = " + str(tong) + "\n")
 
 # Biểu thức lambda: hàm nặc danh (anonymous), không cần tên,
