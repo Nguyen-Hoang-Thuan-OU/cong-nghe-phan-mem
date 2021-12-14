@@ -1,3 +1,5 @@
+# Cho người dùng nhập số nguyên n và xuất các hình
+
 n = int(input("Nhập n = "))
 print()
 
