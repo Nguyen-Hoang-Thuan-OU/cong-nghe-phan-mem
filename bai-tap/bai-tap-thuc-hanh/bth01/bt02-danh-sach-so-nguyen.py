@@ -2,11 +2,13 @@
 # nhập dãy n số nguyên khác 0,
 # n (n > 0) nhập từ bán phím.
 
+# Nhập danh sách
+
 # region - Cách 1
 def nhap_danh_sach(n):
     a = []
     for i in range(n):
-        x = int(input("a[%d] = " % i))
+        x = int(input("Nhập giá trị phần tử thứ %d = " % i))
         a.append(x)
     return a
 # endregion
@@ -19,7 +21,10 @@ def nhap_danh_sach_2(n):
 print("\n=====================================\n")
 
 n = int(input("Nhập n = "))
-a = nhap_danh_sach_2(n)
+if n <= 0:
+    exit()
+
+a = nhap_danh_sach(n)
 print("Mảng a =", a)
 
 print("\n=====================================\n")
@@ -27,20 +32,30 @@ print("\n=====================================\n")
 # Câu a: tìm số dương lớn nhất và số âm bé nhất
 
 # region - Cách 1
-duong = []
+mang_so_duong = []
 for x in a:
     if x > 0:
-        duong.append(x)
+        mang_so_duong.append(x)
 # endregion
 
 # region - Cách 2
-duong = [x for x in  a if x > 0]
+mang_so_duong = [x for x in a if x > 0]
 # endregion
 
-if len(duong) > 0:
-    print("Số dương lớn nhất = ", max(duong))
+print("Mảng =", a)
+
+lon_nhat = max(a)
+nho_nhat = min(a)
+
+if lon_nhat < 0:
+    print("Số dương lớn nhất: *")
 else:
-    print("*")
+    print("Số dương lớn nhất:", lon_nhat)
+    
+if nho_nhat > 0:
+    print("Số âm nhỏ nhất: *")
+else:
+    print("Số âm nhỏ nhất:", nho_nhat)
 
 print("\n=====================================\n")
 
@@ -64,6 +79,6 @@ print("Các phần tử xuất hiện %d lần là %s" % (k, str(kq)))
 
 print("\n=====================================\n")
 
-# Câu d: ắp xếp danh sách giảm dần
+# Câu d: Sắp xếp danh sách giảm dần
 a.sort(reverse=True)
 print("Mảng được sắp xếp theo tứ tự giảm dần: ", a, "\n")
