@@ -18,7 +18,7 @@ Bước 08: tạo folder static chứa các tài nguyên tĩnh
             mỗi loại tài nguyên sẽ có một folder riêng)
 '''
 from flask import render_template, request
-from saleapp import app
+from simplesaleapp import app
 import os
 
 # Định nghĩa trang chủ

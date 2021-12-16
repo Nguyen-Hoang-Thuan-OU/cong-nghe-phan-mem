@@ -1,5 +1,5 @@
 from  sqlalchemy import Column, Integer, String
-from saleapp import csdl
+from simplesaleapp import csdl
 
 class LoaiSanPham(csdl.Model):
     id = Column(Integer, primary_key=True,
