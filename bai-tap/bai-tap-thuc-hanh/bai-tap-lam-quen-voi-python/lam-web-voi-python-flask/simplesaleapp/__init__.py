@@ -4,13 +4,28 @@
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask_admin import Admin
+from flask_babelex import Babel
 
 # Tên mô-đun được đặt trong biến toàn cục "__name__",
 # sẽ được tự động thay bằng tên package
-app = Flask (__name__)
+app = Flask(__name__)
+app.secret_key = 'UwU$40FD#IUO^OPXZC%NK^*23SN-_-M4MDFNB#SD62UvU3$GBXCVM%OwO'
 
 app.config["SQLALCHEMY_DATABASE_URI"] =\
-    "mysql+pymysql://root:1234@localhost/saledb?charset=utf8mb4"
+    "mysql+pymysql://root:1234@localhost/simplesaledb?charset=utf8mb4"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = True
 
 csdl = SQLAlchemy(app=app)
+
+admin = Admin(app=app,
+              name='QUẢN TRỊ BÁN HÀNG ONLINE',
+              template_mode='bootstrap4')
+
+babel = Babel(app=app)
+@babel.localeselector
+def get_locale():
+        # Put your logic here. Application can store locale in
+        # user profile, cookie, session, etc.
+        return 'vi'
+

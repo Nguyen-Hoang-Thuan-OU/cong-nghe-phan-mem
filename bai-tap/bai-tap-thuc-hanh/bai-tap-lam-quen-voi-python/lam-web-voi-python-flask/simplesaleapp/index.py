@@ -20,6 +20,7 @@ Bước 08: tạo folder static chứa các tài nguyên tĩnh
 from flask import render_template, request
 from simplesaleapp import app
 import os
+from simplesaleapp.admin import *
 
 # Định nghĩa trang chủ
 @app.route("/")

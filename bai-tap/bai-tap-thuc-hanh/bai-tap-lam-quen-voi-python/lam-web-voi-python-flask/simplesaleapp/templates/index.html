@@ -26,10 +26,10 @@
 <body>
     <h1>Chào mừng bạn đã đến với website của tôi!</h1>
 
-    <!--
+    {#
         Biến từ Server gửi qua cho view,
-        sử dụng ký pháp { và { để biểu thị biểu thức
-    -->
+        sử dụng ký pháp {{ để biểu thị biểu thức
+    #}
     <h1>{{thong_diep}}</h1>
 
     <!--Form tìm kiếm-->
@@ -50,10 +50,10 @@
         <input type="submit" value="Tải lên" />
     </form>
 
-    <!--
+    {#
         Hiển thị danh sách người dùng,
-        sử dụng cú pháp { và % để xử lý, thực thi lệnh
-    -->
+        sử dụng cú pháp {% để xử lý, thực thi lệnh
+    #}
     <ul>
         {% for nguoi_dung in danhsachnguoidung %}
         <li>{{ nguoi_dung.ten }} - {{ nguoi_dung.email }}</li>
