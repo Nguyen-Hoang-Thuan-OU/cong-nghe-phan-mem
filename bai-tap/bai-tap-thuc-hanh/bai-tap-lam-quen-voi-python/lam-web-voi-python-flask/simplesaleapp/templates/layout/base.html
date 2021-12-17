@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %} Trang của tôi {% endblock %}
+    </title>
+
+
+    <!--
+        Nhúng tập tin css vào href="",
+        không thể sử dụng cấu trúc thư mục
+        do website có server
+    -->
+    <link href="/static/css/style.css" rel="stylesheet"/>
+</head>
+
+<body>
+
+    {% block header %}
+        {% include 'layout/header.html' %}
+    {% endblock %}
+
+    {% block content %}
+        <h1>Content của tôi</h1>
+    {% endblock %}
+
+    {% block footer %}
+        {% include 'layout/footer.html' %}
+    {% endblock %}
+
+</body>
+</html>
