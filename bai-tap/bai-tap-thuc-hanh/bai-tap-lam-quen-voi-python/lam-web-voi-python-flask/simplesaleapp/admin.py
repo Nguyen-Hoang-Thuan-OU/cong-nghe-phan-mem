@@ -1,7 +1,7 @@
-from simplesaleapp import admin, csdl
+from simplesaleapp import csdl, app, utils
 from simplesaleapp.models import LoaiSanPham, SanPham, TheSanPham, NguoiDung, VaiTroNguoiDung
 from flask_admin.contrib.sqla import ModelView
-from flask_admin import BaseView, expose
+from flask_admin import BaseView, expose, Admin, AdminIndexView
 from flask_login import logout_user, current_user
 from flask import redirect
 
@@ -54,6 +54,18 @@ class ThongKeBaoCaoView(DaXacThucBaseView):
         return self.render('admin/stats.html')
 
 
+class AdminIndexViewCuaToi(AdminIndexView):
+    @expose('/')
+    def index(self):
+        thong_ke_bao_cao = utils.dem_san_pham_theo_danh_muc()
+        return self.render('admin/index.html',
+                           thong_ke_bao_cao=thong_ke_bao_cao)
+
+
+admin = Admin(app=app,
+              name='QUẢN TRỊ BÁN HÀNG ONLINE',
+              template_mode='bootstrap4',
+              index_view=AdminIndexViewCuaToi())
 admin.add_view(DaXacThucModelView(LoaiSanPham,
                                   csdl.session,
                                   name='Danh mục'))
