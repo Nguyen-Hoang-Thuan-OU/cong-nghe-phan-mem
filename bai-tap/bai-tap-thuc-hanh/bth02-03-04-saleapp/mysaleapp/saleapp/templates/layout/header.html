@@ -7,7 +7,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Navbar links -->
+    <!-- Thanh menu -->
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav">
 
@@ -16,16 +16,22 @@
                 <a class="nav-link" href="{{ url_for('home') }}">Tất cả sản phẩm</a>
             </li>
 
+            <!--Danh sách các sản phẩm-->
             {% for c in categories %}
             <li class="nav-item">
                 <a class="nav-link" href="{{ url_for('home', category_id=c.id) }}">{{ c.name }}</a>
             </li>
             {% endfor %}
 
+            <!--Đăng ký tài khoản-->
+            <li class="nav-item">
+                <a class="nav-link text-danger" href="{{ url_for('user_register') }}">Đăng ký</a>
+            </li>
+
         </ul>
     </div>
 
-    <!--Form search-->
+    <!--Ô tìm kiếm sản phẩm-->
     <form class="form-inline">
         <input class="form-control mr-sm-2" type="text" name="keyword" placeholder="Nhập từ khoá tìm kiếm">
         <button class="btn btn-success" type="submit">Tìm kiếm</button>

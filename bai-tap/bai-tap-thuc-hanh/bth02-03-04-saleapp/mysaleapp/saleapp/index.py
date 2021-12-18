@@ -1,6 +1,6 @@
 import math
 
-from flask import render_template, request
+from flask import render_template, request, redirect, url_for
 from saleapp import app
 from saleapp.admin import *
 import utils
@@ -9,8 +9,6 @@ import utils
 # Trang chủ
 @app.route("/")
 def home():
-    cates = utils.load_categories()
-
     cate_id = request.args.get("category_id")
     kw = request.args.get("keyword")
     page = request.args.get('page', 1)
@@ -20,11 +18,46 @@ def home():
     counter = utils.count_products()
 
     return render_template('index.html',
-                           categories=cates,
                            products=products,
                            pages=math.ceil(counter/app.config['PAGE_SIZE']))
 
 
+# Trang đăng ký tài khoản
+@app.route("/register", methods=['GET', 'POST'])
+def user_register():
+    err_msg = ""
+    if request.method.__eq__('POST'):
+        name = request.form.get('name')
+        username = request.form.get('username')
+        password = request.form.get('password')
+        confirm = request.form.get('confirm')
+        email = request.form.get('email')
+
+        try:
+            if password.strip().__eq__(confirm.strip()):
+                utils.add_user(name=name,
+                               username=username,
+                               password=password,
+                               email=email)
+                return redirect(url_for('home'))
+            else:
+                err_msg = "Mật khẩu nhập lại không khớp!"
+        except Exception as ex:
+            err_msg = "Hệ thống đang xảy ra lỗi: " + str(ex)
+
+    return render_template('register.html',
+                           err_msg=err_msg)
+
+
+# Luôn hiển thị các danh mục sản phẩm ở các trang
+@app.context_processor
+def common_respone():
+    return {
+        'categories': utils.load_categories()
+    }
+
+
+# Trang danh sách sản phẩm
 @app.route("/products")
 def product_list():
     cate_id = request.args.get("category_id")
@@ -41,6 +74,7 @@ def product_list():
                            products=products)
 
 
+# Trang chi tiết sản phẩm
 @app.route("/products/<int:product_id>")
 def product_detail(product_id):
     product = utils.get_product_by_id(product_id)

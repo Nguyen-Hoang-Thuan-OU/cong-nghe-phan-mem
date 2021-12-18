@@ -3,8 +3,9 @@
 import json
 import os
 
-from saleapp import app
-from saleapp.models import Category, Product
+from saleapp import app, db
+from saleapp.models import Category, Product, User
+import hashlib
 
 
 # Hàm đọc tập tin json chung
@@ -82,3 +83,15 @@ def get_product_by_id(product_id):
             return p
 
     return None
+
+
+def add_user(name, username, password, **kwargs):
+    password = str(hashlib.md5(password.strip().encode('utf-8')).hexdigest())
+    user = User(name=name.strip(),
+                username=username.strip(),
+                password=password,
+                email=kwargs.get('email'),
+                avatar=kwargs.get('avatar'))
+
+    db.session.add(user)
+    db.session.commit()
