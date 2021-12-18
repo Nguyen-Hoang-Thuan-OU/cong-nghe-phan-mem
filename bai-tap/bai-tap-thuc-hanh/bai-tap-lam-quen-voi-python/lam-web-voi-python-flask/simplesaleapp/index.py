@@ -104,5 +104,6 @@ if __name__ == "__main__":
     # Truyền biến debug vào hàm run() và bật lên
     # để khi xảy ra lỗi ra quá trình lập trình
     # thì lỗi sẽ được hiện trực tiếp lên trình duyệt
-    app.run(debug = True)
     app.run(host='127.0.0.1', port=6969)
+    app.run(debug = True)
+
