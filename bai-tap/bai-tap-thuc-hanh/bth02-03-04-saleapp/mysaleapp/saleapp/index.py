@@ -1,5 +1,6 @@
 from flask import render_template, request
 from saleapp import app
+from saleapp.admin import *
 import utils
 
 

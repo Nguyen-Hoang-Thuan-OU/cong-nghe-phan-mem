@@ -19,6 +19,9 @@ class Category(BaseModel):
                             backref='category',
                             lazy=True)
 
+    def __str__(self):
+        return self.name
+
 
 class Product(BaseModel):
     __tablename__ = 'product'
@@ -31,6 +34,9 @@ class Product(BaseModel):
     category_id = Column(Integer,
                          ForeignKey(Category.id),
                          nullable=False)
+
+    def __str__(self):
+        return self.name
 
 
 if __name__ == '__main__':
