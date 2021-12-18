@@ -1,7 +1,11 @@
 # Chuyên tương tác với cơ sở dữ liệu, giống DAO
 
-import json, os
+import json
+import os
+
 from saleapp import app
+from saleapp.models import Category, Product
+
 
 # Hàm đọc tập tin json chung
 def read_json(path):
@@ -9,10 +13,12 @@ def read_json(path):
         return json.load(f)
 
 
-# Hàm đọc danh mục sản phâm
+# Hàm đọc danh mục sản phẩm
 def load_categories():
-    return read_json(os.path.join(app.root_path,
-                                  'data/categories.json'))
+    return Category.query.all()
+
+    # return read_json(os.path.join(app.root_path,
+    #                               'data/categories.json'))
 
 
 # Hàm đọc danh sách sản phẩm
@@ -20,25 +26,41 @@ def load_products(cate_id=None,
                   kw=None,
                   from_price=None,
                   to_price=None):
-    products = read_json(os.path.join(app.root_path,
-                                      'data/products.json'))
+    products = Product.query.filter(Product.active.__eq__(True))
 
     if cate_id:
-        products = [p for p in products
-                    if p['category_id'] == int(cate_id)]
+        products = products.filter(Product.category_id == cate_id)
 
     if kw:
-        products = [p for p in products
-                    if p['name'].lower().find(kw.lower()) >= 0]
+        products = products.filter(Product.name.contains(kw))
 
     if from_price:
-        products = [p for p in products
-                    if p['price'] >= float(from_price)]
+        products = products.filter(Product.price.__ge__(from_price))
 
     if to_price:
-        products = [p for p in products
-                    if p['price'] <= float(to_price)]
-    return products
+        products = products.filter(Product.price.__le__(to_price))
+
+    return products.all()
+
+    # products = read_json(os.path.join(app.root_path,
+    #                                   'data/products.json'))
+    #
+    # if cate_id:
+    #     products = [p for p in products
+    #                 if p['category_id'] == int(cate_id)]
+    #
+    # if kw:
+    #     products = [p for p in products
+    #                 if p['name'].lower().find(kw.lower()) >= 0]
+    #
+    # if from_price:
+    #     products = [p for p in products
+    #                 if p['price'] >= float(from_price)]
+    #
+    # if to_price:
+    #     products = [p for p in products
+    #                 if p['price'] <= float(to_price)]
+    # return products
 
 
 def get_product_by_id(product_id):

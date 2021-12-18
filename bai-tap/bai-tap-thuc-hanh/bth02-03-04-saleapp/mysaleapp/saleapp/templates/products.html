@@ -23,6 +23,7 @@
 
         <hr>
 
+        {% if products %}
         <table border="1" class="product">
             <tr>
                 <th></th>
@@ -46,6 +47,9 @@
             </tr>
             {% endfor %}
         </table>
+        {% else %}
+        <p>Chưa có sản phẩm nào trong danh mục này!</p>
+        {% endif %}
 
     </div>
 
