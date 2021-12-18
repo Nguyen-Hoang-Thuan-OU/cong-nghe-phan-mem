@@ -1,9 +1,18 @@
 from simplesaleapp import admin, csdl
-from simplesaleapp.models import LoaiSanPham, SanPham, TheSanPham
+from simplesaleapp.models import LoaiSanPham, SanPham, TheSanPham, NguoiDung, VaiTroNguoiDung
 from flask_admin.contrib.sqla import ModelView
+from flask_admin import BaseView, expose
+from flask_login import logout_user, current_user
+from flask import redirect
 
 
-class SanPhamView(ModelView):
+class DaXacThucModelView(ModelView):
+    def is_accessible(self):
+        return current_user.is_authenticated\
+               and current_user.vai_tro_nguoi_dung == VaiTroNguoiDung.QUANTRIVIEN
+
+
+class SanPhamView(DaXacThucModelView):
     column_display_pk = True
     can_view_details = True
     can_export = True
@@ -25,12 +34,37 @@ class SanPhamView(ModelView):
     }
     form_excluded_columns = ['cac_the_san_pham']
 
-admin.add_view(ModelView(LoaiSanPham,
-                         csdl.session,
-                         name='Danh mục'))
+
+class DaXacThucBaseView(BaseView):
+    def is_accessible(self):
+        return current_user.is_authenticated
+
+
+class DangXuatView(DaXacThucBaseView):
+    @expose('/')
+    def index(self):
+        logout_user()
+
+        return redirect('/admin')
+
+
+class ThongKeBaoCaoView(DaXacThucBaseView):
+    @expose('/')
+    def index(self):
+        return self.render('admin/stats.html')
+
+
+admin.add_view(DaXacThucModelView(LoaiSanPham,
+                                  csdl.session,
+                                  name='Danh mục'))
 admin.add_view(SanPhamView(SanPham,
                            csdl.session,
                            name='Sản phẩm'))
-admin.add_view(ModelView(TheSanPham,
-                         csdl.session,
-                         name='Nhãn'))
+admin.add_view(DaXacThucModelView(TheSanPham,
+                                  csdl.session,
+                                  name='Nhãn'))
+admin.add_view(DaXacThucModelView(NguoiDung,
+                                  csdl.session,
+                                  name='Người dùng'))
+admin.add_view(ThongKeBaoCaoView(name='Thống kê báo cáo'))
+admin.add_view(DangXuatView(name='Đăng xuất'))

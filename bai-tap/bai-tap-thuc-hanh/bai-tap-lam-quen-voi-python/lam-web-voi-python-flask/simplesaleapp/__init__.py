@@ -6,6 +6,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_admin import Admin
 from flask_babelex import Babel
+from flask_login import LoginManager
 
 # Tên mô-đun được đặt trong biến toàn cục "__name__",
 # sẽ được tự động thay bằng tên package
@@ -21,6 +22,8 @@ csdl = SQLAlchemy(app=app)
 admin = Admin(app=app,
               name='QUẢN TRỊ BÁN HÀNG ONLINE',
               template_mode='bootstrap4')
+
+login = LoginManager(app=app)
 
 babel = Babel(app=app)
 @babel.localeselector

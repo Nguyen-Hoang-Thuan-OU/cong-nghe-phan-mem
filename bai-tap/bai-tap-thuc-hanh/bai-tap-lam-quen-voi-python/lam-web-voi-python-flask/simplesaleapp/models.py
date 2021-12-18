@@ -1,7 +1,35 @@
-from  sqlalchemy import Column, Integer, String, Boolean, Float, DateTime, ForeignKey
+from  sqlalchemy import Column, Integer, String, Boolean, Float, Enum, DateTime, ForeignKey
 from sqlalchemy.orm import relationship, backref
 from simplesaleapp import csdl
 from datetime import datetime
+from enum import Enum as NguoiDungEnum
+from flask_login import UserMixin
+
+class VaiTroNguoiDung(NguoiDungEnum):
+    QUANTRIVIEN = 1
+    NGUOIDUNG = 2
+
+# Đa kế thừa
+class NguoiDung(csdl.Model, UserMixin):
+    id = Column(Integer, primary_key=True,
+                autoincrement=True)
+    ten_nguoi_dung = Column(String(50), nullable=False)
+    ten_tai_khoan = Column(String(50),
+                           nullable=False,
+                           unique=True)
+    mat_khau_tai_khoan = Column(String(50),
+                           nullable=False)
+    trang_thai_hoat_dong = Column(Boolean,
+                                  default=True)
+    ngay_dang_ky_tai_khoan = Column(DateTime,
+                                    default=datetime.now())
+    anh_dai_dien = Column(String(100))
+    vai_tro_nguoi_dung = Column(Enum(VaiTroNguoiDung),
+                                default=VaiTroNguoiDung.NGUOIDUNG)
+
+    def __str__(self):
+        return self.ten_nguoi_dung
+
 
 class LoaiSanPham(csdl.Model):
     id = Column(Integer, primary_key=True,

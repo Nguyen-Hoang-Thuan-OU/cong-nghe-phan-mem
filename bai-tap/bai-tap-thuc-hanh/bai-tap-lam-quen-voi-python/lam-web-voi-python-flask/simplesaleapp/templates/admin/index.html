@@ -1,0 +1,33 @@
+{% extends 'admin/base.html' %}
+
+{% block body %}
+
+{% if current_user.is_authenticated %}
+<h1 class="text-info">
+    Chào mừng <span class="text-danger">{{ current_user.ten_nguoi_dung }}</span> đến với trang quản trị
+</h1>
+
+{% else %}
+<h1 class="text-info text-center">Đăng nhập vào trang quản trị</h1>
+
+<form method="post" action="{{ url_for('dang_nhap_tu_cach_quan_tri') }}">
+
+    <div class="form-group">
+        <label for="tendangnhap">Tên đăng nhập:</label>
+        <input type="text" class="form-control"
+               name="tendangnhap"
+               placeholder="Nhập tên người dùng" id="tendangnhap">
+    </div>
+
+    <div class="form-group">
+        <label for="matkhaudangnhap">Mật khẩu đăng nhập:</label>
+        <input type="password" class="form-control"
+               name="matkhaudangnhap"
+               placeholder="Nhập mật khẩu đăng nhập" id="matkhaudangnhap">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Đăng nhập</button>
+</form>
+{% endif %}
+
+{% endblock %}
