@@ -55,7 +55,7 @@ if __name__ == '__main__':
         "name": "iPhone 7 Plus",
         "description": "Apple, 32GB, RAM: 3GB, iOS13",
         "price": 17000000,
-        "image": "images/iphone-7-plus-gold-400x460-400x460.png",
+        "image": "images/iphone-7-plus-32gb-gold-600x600-600x600.jpg",
         "category_id": 1
     },
         {

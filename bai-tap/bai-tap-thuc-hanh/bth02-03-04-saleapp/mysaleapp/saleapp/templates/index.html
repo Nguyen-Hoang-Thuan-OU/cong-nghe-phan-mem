@@ -1,26 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Trang chủ</title>
-    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
-</head>
-<body>
-    <!--Câu chào mừng-->
-    <h1 class="subject">Chào mừng bạn đã đến với website bán hàng trực tuyến</h1>
+{% extends 'layout/base.html' %}
 
-    <!--Nạp danh mục và danh sách sản phẩm-->
-    <ul>
-        <li>
-            <a href="{{ url_for('product_list') }}">Tất cả sản phẩm</a>
-        </li>
+{% block title %} Trang chủ {% endblock %}
 
-        {% for c in categories %}
-        <li>
-            <a href="{{ url_for('product_list', category_id=c.id) }}">{{ c.name }}</a>
-        </li>
+{% block content %}
+
+<!--Câu chào mừng-->
+<h1 class="subject">
+    Chào mừng bạn đã đến với website bán hàng trực tuyến
+</h1>
+
+<div class="container">
+    <div class="row">
+
+        {% for p in products %}
+        <div class="col-md-3" style="padding: 5px">
+
+            <div class="card" style="padding: 10px">
+
+                {% if p.image %}
+                <img class="card-img-top img-fluid" src="{{ url_for('static', filename=p.image) }}" alt="{{p.name}}">
+                {% else %}
+                <img class="card-img-top img-fluid"
+                     src="{{ url_for('static', filename='images/default-samsung-galaxy-z-fold-3-green-1-600x600.jpg') }}"
+                     alt="{{p.name}}">
+                {% endif %}
+
+                <div class="card-body">
+                    <h4 class="card-title">{{ p.name }}</h4>
+                    <p class="card-text">{{ "{:,.1f}".format(p.price) }} VNĐ</p>
+                    <a href="#" class="btn btn-primary stretched-link">Đặt hàng</a>
+                </div>
+
+            </div>
+
+        </div>
         {% endfor %}
-    </ul>
 
-</body>
-</html>
+    </div>
+</div>
+
+{% endblock %}

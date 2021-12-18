@@ -9,8 +9,14 @@ import utils
 def home():
     cates = utils.load_categories()
 
+    cate_id = request.args.get("category_id")
+    kw = request.args.get("keyword")
+    products = utils.load_products(cate_id=cate_id,
+                                   kw=kw)
+
     return render_template('index.html',
-                           categories=cates)
+                           categories=cates,
+                           products=products)
 
 
 @app.route("/products")
