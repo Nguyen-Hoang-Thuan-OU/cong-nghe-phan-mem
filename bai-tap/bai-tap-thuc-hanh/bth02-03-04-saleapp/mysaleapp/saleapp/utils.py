@@ -25,7 +25,8 @@ def load_categories():
 def load_products(cate_id=None,
                   kw=None,
                   from_price=None,
-                  to_price=None):
+                  to_price=None,
+                  page=1):
     products = Product.query.filter(Product.active.__eq__(True))
 
     if cate_id:
@@ -40,7 +41,11 @@ def load_products(cate_id=None,
     if to_price:
         products = products.filter(Product.price.__le__(to_price))
 
-    return products.all()
+    page_size = app.config['PAGE_SIZE']
+    start = (page - 1) * page_size
+    end = start + page_size
+
+    return products.slice(start, end).all()
 
     # products = read_json(os.path.join(app.root_path,
     #                                   'data/products.json'))
@@ -61,6 +66,11 @@ def load_products(cate_id=None,
     #     products = [p for p in products
     #                 if p['price'] <= float(to_price)]
     # return products
+
+
+def count_products():
+    return Product.query\
+        .filter(Product.active.__eq__(True)).count()
 
 
 def get_product_by_id(product_id):

@@ -1,3 +1,5 @@
+import math
+
 from flask import render_template, request
 from saleapp import app
 from saleapp.admin import *
@@ -11,12 +13,16 @@ def home():
 
     cate_id = request.args.get("category_id")
     kw = request.args.get("keyword")
+    page = request.args.get('page', 1)
     products = utils.load_products(cate_id=cate_id,
-                                   kw=kw)
+                                   kw=kw,
+                                   page=int(page))
+    counter = utils.count_products()
 
     return render_template('index.html',
                            categories=cates,
-                           products=products)
+                           products=products,
+                           pages=math.ceil(counter/app.config['PAGE_SIZE']))
 
 
 @app.route("/products")
@@ -43,7 +49,9 @@ def product_detail(product_id):
                            product=product)
 
 
-# Bật tính năng debug trên trình duyệt
 if __name__ == '__main__':
+    # Đổi port thành 9696 thay vì mặc định là 5000
     app.run(host='127.0.0.1', port=9696)
+
+    # Bật tính năng debug trên trình duyệt
     app.run(debug=True)
