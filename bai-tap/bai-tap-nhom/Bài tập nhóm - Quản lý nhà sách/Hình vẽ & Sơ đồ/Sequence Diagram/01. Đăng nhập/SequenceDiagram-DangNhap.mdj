@@ -1038,7 +1038,7 @@
 												"$ref": "AAAAAAF9pQ7QWfVSuaU="
 											},
 											"edgePosition": 1,
-											"text": "3.1 : Kiểm tra định dạng"
+											"text": "4 : Kiểm tra định dạng"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1149,7 +1149,7 @@
 												"$ref": "AAAAAAF9o85URJb39Qs="
 											},
 											"edgePosition": 1,
-											"text": "4 : Nhấn nút [Đăng nhập]"
+											"text": "5 : Nhấn nút [Đăng nhập]"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1260,7 +1260,7 @@
 												"$ref": "AAAAAAF9o9AGJpcO//8="
 											},
 											"edgePosition": 1,
-											"text": "5 : Gửi yêu cầu đăng nhập"
+											"text": "6 : Gửi yêu cầu đăng nhập"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1371,7 +1371,7 @@
 												"$ref": "AAAAAAF9o9Fu1ZclMUU="
 											},
 											"edgePosition": 1,
-											"text": "6 : Gọi phương thức XacThucDangNhap()"
+											"text": "7 : Gọi phương thức XacThucDangNhap()"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1482,7 +1482,7 @@
 												"$ref": "AAAAAAF9o9WBPpdRjoc="
 											},
 											"edgePosition": 1,
-											"text": "7 : Tra cứu thông tin xác thực đăng nhập"
+											"text": "8 : Tra cứu thông tin xác thực đăng nhập"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1728,7 +1728,7 @@
 												"$ref": "AAAAAAF9o9uSipeG1ww="
 											},
 											"edgePosition": 1,
-											"text": "8.1 : Không tìm thấy người dùng"
+											"text": "9 : Không tìm thấy người dùng"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1840,7 +1840,7 @@
 												"$ref": "AAAAAAF9o9xf65eh58U="
 											},
 											"edgePosition": 1,
-											"text": "8.1.1 : Xác thực thất bại"
+											"text": "10 : Xác thực thất bại"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1942,17 +1942,17 @@
 												"$ref": "AAAAAAF9o91HLZe1Or8="
 											},
 											"font": "Roboto;17;0",
-											"left": 707,
-											"top": 616,
+											"left": 710,
+											"top": 615,
 											"width": 322.435546875,
 											"height": 17,
-											"alpha": 1.5083781393670568,
-											"distance": 16.0312195418814,
+											"alpha": 1.695151936726226,
+											"distance": 16.1245154965971,
 											"hostEdge": {
 												"$ref": "AAAAAAF9o91HLpe2tQw="
 											},
 											"edgePosition": 1,
-											"text": "8.1.2 : Thông báo đăng nhập thất bại"
+											"text": "11 : Ở lại trang đăng nhập"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2064,7 +2064,7 @@
 												"$ref": "AAAAAAF9o93b5JfWp4s="
 											},
 											"edgePosition": 1,
-											"text": "8.1.3 : Hiện thông báo đăng nhập thất bại"
+											"text": "12 : Hiện thông báo đăng nhập thất bại"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2176,7 +2176,7 @@
 												"$ref": "AAAAAAF9o+S4MJgC7BY="
 											},
 											"edgePosition": 1,
-											"text": "8.2 : Tìm thấy người dùng"
+											"text": "13 : Tìm thấy người dùng"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2288,7 +2288,7 @@
 												"$ref": "AAAAAAF9o/RF4phLezg="
 											},
 											"edgePosition": 1,
-											"text": "8.2.1 : Xác thực thành công"
+											"text": "14 : Xác thực thành công"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2601,7 +2601,7 @@
 												"$ref": "AAAAAAF9pA+EIJkUNbE="
 											},
 											"edgePosition": 1,
-											"text": "8.2.2 : Gọi phương thức PhanQuyenDN()"
+											"text": "15 : Gọi phương thức PhanQuyenDN()"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2712,7 +2712,7 @@
 												"$ref": "AAAAAAF9pBQB1ZlAKU0="
 											},
 											"edgePosition": 1,
-											"text": "8.2.3 : Tra cứu phân quyền đăng nhập"
+											"text": "16 : Tra cứu phân quyền đăng nhập"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2823,7 +2823,7 @@
 												"$ref": "AAAAAAF9pBWGhplcTwU="
 											},
 											"edgePosition": 1,
-											"text": "8.2.3.1 : Phân quyền quản trị viên"
+											"text": "17 : Phân quyền quản trị viên"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2935,7 +2935,7 @@
 												"$ref": "AAAAAAF9pB+OH5l2VIg="
 											},
 											"edgePosition": 1,
-											"text": "8.2.3.1.1 : Đăng nhập tư cách quản trị viên"
+											"text": "18 : Đăng nhập tư cách quản trị viên"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3047,7 +3047,7 @@
 												"$ref": "AAAAAAF9pCEM2ZmO/0I="
 											},
 											"edgePosition": 1,
-											"text": "8.2.3.1.2 : Phân quyền thành công"
+											"text": "19 : Chuyển về trang quản trị"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3159,7 +3159,7 @@
 												"$ref": "AAAAAAF9pCGJDJmmVzI="
 											},
 											"edgePosition": 1,
-											"text": "8.2.3.1.3 : Hiện thông báo đăng nhập thành công"
+											"text": "20 : Đăng nhập thành công"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3271,7 +3271,7 @@
 												"$ref": "AAAAAAF9pCh7uJniDuo="
 											},
 											"edgePosition": 1,
-											"text": "8.2.3.2 : Phân quyền quản lý kho"
+											"text": "21 : Phân quyền quản lý kho"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3383,7 +3383,7 @@
 												"$ref": "AAAAAAF9pCj+AZn7eHQ="
 											},
 											"edgePosition": 1,
-											"text": "8.2.3.2.1 : Đăng nhập tư cách quản lý kho"
+											"text": "22 : Đăng nhập tư cách quản lý kho"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3495,7 +3495,7 @@
 												"$ref": "AAAAAAF9pClRg5oSIvw="
 											},
 											"edgePosition": 1,
-											"text": "8.2.3.2.2 : Phân quyền thành công"
+											"text": "23 : Chuyển về trang quản trị"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3607,7 +3607,7 @@
 												"$ref": "AAAAAAF9pCoz75opWnA="
 											},
 											"edgePosition": 1,
-											"text": "8.2.3.2.3 : Hiện thông báo đăng nhập thành công"
+											"text": "24 : Đăng nhập thành công"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3719,7 +3719,7 @@
 												"$ref": "AAAAAAF9pCsGk5pEDRQ="
 											},
 											"edgePosition": 1,
-											"text": "8.2.3.3 : Phân quyền nhân viên"
+											"text": "25 : Phân quyền nhân viên"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3831,7 +3831,7 @@
 												"$ref": "AAAAAAF9pCvaFppgsSo="
 											},
 											"edgePosition": 1,
-											"text": "8.2.3.3.1 : Đăng nhập tư cách nhân viên"
+											"text": "26 : Đăng nhập tư cách nhân viên"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3943,7 +3943,7 @@
 												"$ref": "AAAAAAF9pCw6rpp48tE="
 											},
 											"edgePosition": 1,
-											"text": "8.2.3.3.2 : Phân quyền thành công"
+											"text": "27 : Chuyển về trang chủ"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4055,7 +4055,7 @@
 												"$ref": "AAAAAAF9pCxsl5qPRLM="
 											},
 											"edgePosition": 1,
-											"text": "8.2.3.3.3 : Hiện thông báo đăng nhập thành công"
+											"text": "28 : Đăng nhập thành công"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4167,7 +4167,7 @@
 												"$ref": "AAAAAAF9pC9bR5q2E94="
 											},
 											"edgePosition": 1,
-											"text": "8.2.3.4 : Phân quyền người dùng"
+											"text": "29 : Phân quyền người dùng"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4279,7 +4279,7 @@
 												"$ref": "AAAAAAF9pC+9AZrO8EE="
 											},
 											"edgePosition": 1,
-											"text": "8.2.3.4.1 : Đăng nhập tư cách người dùng"
+											"text": "30 : Đăng nhập tư cách người dùng"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4391,7 +4391,7 @@
 												"$ref": "AAAAAAF9pDAZgJrn+WI="
 											},
 											"edgePosition": 1,
-											"text": "8.2.3.4.2 : Phân quyền thành công"
+											"text": "31 : Chuyển về trang chủ"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4503,7 +4503,7 @@
 												"$ref": "AAAAAAF9pDBeT5r+348="
 											},
 											"edgePosition": 1,
-											"text": "8.2.3.4.3 : Hiện thông báo đăng nhập thành công"
+											"text": "32 : Đăng nhập thành công"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4687,8 +4687,7 @@
 										"$ref": "AAAAAAF9pEXxEptG4bs="
 									}
 								}
-							],
-							"sequenceNumbering": "custom"
+							]
 						}
 					],
 					"messages": [
@@ -4852,7 +4851,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9o76OCJWIeYU="
 							},
-							"name": "Thông báo đăng nhập thất bại",
+							"name": "Ở lại trang đăng nhập",
 							"source": {
 								"$ref": "AAAAAAF9o8Eop5Xrygg="
 							},
@@ -4978,7 +4977,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9o76OCJWIeYU="
 							},
-							"name": "Phân quyền thành công",
+							"name": "Chuyển về trang quản trị",
 							"source": {
 								"$ref": "AAAAAAF9o8Eop5Xrygg="
 							},
@@ -4994,7 +4993,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9o76OCJWIeYU="
 							},
-							"name": "Hiện thông báo đăng nhập thành công",
+							"name": "Đăng nhập thành công",
 							"source": {
 								"$ref": "AAAAAAF9o8BMMpXDg0s="
 							},
@@ -5042,7 +5041,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9o76OCJWIeYU="
 							},
-							"name": "Phân quyền thành công",
+							"name": "Chuyển về trang quản trị",
 							"source": {
 								"$ref": "AAAAAAF9o8Eop5Xrygg="
 							},
@@ -5058,7 +5057,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9o76OCJWIeYU="
 							},
-							"name": "Hiện thông báo đăng nhập thành công",
+							"name": "Đăng nhập thành công",
 							"source": {
 								"$ref": "AAAAAAF9o8BMMpXDg0s="
 							},
@@ -5106,7 +5105,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9o76OCJWIeYU="
 							},
-							"name": "Phân quyền thành công",
+							"name": "Chuyển về trang chủ",
 							"source": {
 								"$ref": "AAAAAAF9o8Eop5Xrygg="
 							},
@@ -5122,7 +5121,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9o76OCJWIeYU="
 							},
-							"name": "Hiện thông báo đăng nhập thành công",
+							"name": "Đăng nhập thành công",
 							"source": {
 								"$ref": "AAAAAAF9o8BMMpXDg0s="
 							},
@@ -5170,7 +5169,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9o76OCJWIeYU="
 							},
-							"name": "Phân quyền thành công",
+							"name": "Chuyển về trang chủ",
 							"source": {
 								"$ref": "AAAAAAF9o8Eop5Xrygg="
 							},
@@ -5186,7 +5185,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9o76OCJWIeYU="
 							},
-							"name": "Hiện thông báo đăng nhập thành công",
+							"name": "Đăng nhập thành công",
 							"source": {
 								"$ref": "AAAAAAF9o8BMMpXDg0s="
 							},
