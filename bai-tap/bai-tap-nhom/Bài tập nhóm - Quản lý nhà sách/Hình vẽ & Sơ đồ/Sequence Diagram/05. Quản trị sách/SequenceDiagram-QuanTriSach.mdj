@@ -4790,17 +4790,17 @@
 												"$ref": "AAAAAAF9rbuPVFkKwjY="
 											},
 											"font": "Roboto;17;0",
-											"left": 350,
-											"top": 1478,
-											"width": 186.12841796875,
+											"left": 225,
+											"top": 1471,
+											"width": 434.595703125,
 											"height": 17,
-											"alpha": 1.5707963267948966,
-											"distance": 10,
+											"alpha": -4.64997079295685,
+											"distance": 16.0312195418814,
 											"hostEdge": {
 												"$ref": "AAAAAAF9rbuPV1kL7GU="
 											},
 											"edgePosition": 1,
-											"text": "35 : Nhấn vào [Xoá sách]"
+											"text": "35 : Chọn đầu sách cần xoá và nhấn nút [Xoá sách]"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -6426,7 +6426,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9rJRddVONHbY="
 							},
-							"name": "Nhấn vào [Xoá sách]",
+							"name": "Chọn đầu sách cần xoá và nhấn nút [Xoá sách]",
 							"source": {
 								"$ref": "AAAAAAF9rJUAH1PU/t4="
 							},
