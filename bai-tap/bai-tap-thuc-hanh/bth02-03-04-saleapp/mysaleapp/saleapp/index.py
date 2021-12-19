@@ -1,9 +1,9 @@
 import math
-
 from flask import render_template, request, redirect, url_for
 from saleapp import app
 from saleapp.admin import *
 import utils
+import cloudinary.uploader
 
 
 # Trang chủ
@@ -32,13 +32,20 @@ def user_register():
         password = request.form.get('password')
         confirm = request.form.get('confirm')
         email = request.form.get('email')
+        avatar_path = None
 
         try:
             if password.strip().__eq__(confirm.strip()):
+                avatar = request.files.get('avatar')
+                if avatar:
+                    res = cloudinary.uploader.upload(avatar)
+                    avatar_path = res['secure_url']
+
                 utils.add_user(name=name,
                                username=username,
                                password=password,
-                               email=email)
+                               email=email,
+                               avatar=avatar_path)
                 return redirect(url_for('home'))
             else:
                 err_msg = "Mật khẩu nhập lại không khớp!"

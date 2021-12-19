@@ -25,7 +25,7 @@ class User(BaseModel):
     username = Column(String(50), nullable=False,
                       unique=True)
     password = Column(String(50), nullable=False)
-    avatar = Column(String(100))
+    avatar = Column(String(255))
     email = Column(String(50))
     active = Column(Boolean, default=True)
     joined_date = Column(DateTime,
