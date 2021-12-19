@@ -1539,7 +1539,7 @@
 												"$ref": "AAAAAAF9rZK6l1bqszE="
 											},
 											"edgePosition": 1,
-											"text": "7.1 : Không có mã này trong cơ sở dữ liệu"
+											"text": "7 : Không có mã này trong cơ sở dữ liệu"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1651,7 +1651,7 @@
 												"$ref": "AAAAAAF9rZTzn1cLZa8="
 											},
 											"edgePosition": 1,
-											"text": "7.1.1 : Không tìm thấy sách ứng với mã ISBN"
+											"text": "8 : Không tìm thấy sách ứng với mã ISBN"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1763,7 +1763,7 @@
 												"$ref": "AAAAAAF9rZZHDlcs8Iw="
 											},
 											"edgePosition": 1,
-											"text": "7.1.2 : Thông báo thông tìm thấy sách"
+											"text": "9 : Thông báo thông tìm thấy sách"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1875,7 +1875,7 @@
 												"$ref": "AAAAAAF9rZjedVelwz8="
 											},
 											"edgePosition": 1,
-											"text": "7.1.3 : Hiện thông báo không tìm thấy sách với mã ISBN"
+											"text": "10 : Hiện thông báo không tìm thấy sách với mã ISBN"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1987,7 +1987,7 @@
 												"$ref": "AAAAAAF9rZdlIVdGLSg="
 											},
 											"edgePosition": 1,
-											"text": "7.2 : Có mã này trong cơ sở dữ liệu"
+											"text": "11 : Có mã này trong cơ sở dữ liệu"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2099,7 +2099,7 @@
 												"$ref": "AAAAAAF9rZe+qVde9UM="
 											},
 											"edgePosition": 1,
-											"text": "7.2.1 : Tìm thấy sách ứng với mã ISBN"
+											"text": "12 : Tìm thấy sách ứng với mã ISBN"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2211,7 +2211,7 @@
 												"$ref": "AAAAAAF9rZhL8Vd4oEk="
 											},
 											"edgePosition": 1,
-											"text": "7.2.2 : Thông báo tìm thấy sách"
+											"text": "13 : Thông báo tìm thấy sách"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2323,7 +2323,7 @@
 												"$ref": "AAAAAAF9rZilz1ePUI8="
 											},
 											"edgePosition": 1,
-											"text": "7.2.3 : Hiện thông báo tìm thấy sách ứng với mã ISBN"
+											"text": "14 : Hiện thông báo tìm thấy sách ứng với mã ISBN"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2425,9 +2425,9 @@
 												"$ref": "AAAAAAF9rPzG/VU+H7Q="
 											},
 											"font": "Roboto;17;0",
-											"left": 332,
+											"left": 327,
 											"top": 728,
-											"width": 223.51513671875,
+											"width": 233.06103515625,
 											"height": 17,
 											"alpha": 1.5707957017948966,
 											"distance": 16,
@@ -2435,7 +2435,7 @@
 												"$ref": "AAAAAAF9rPzG/lU/b1I="
 											},
 											"edgePosition": 1,
-											"text": "8 : Nhấn vào [Thêm mới sách]"
+											"text": "15 : Nhấn vào [Thêm mới sách]"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2536,9 +2536,9 @@
 												"$ref": "AAAAAAF9rP2GslVWnc4="
 											},
 											"font": "Roboto;17;0",
-											"left": 300,
+											"left": 295,
 											"top": 797,
-											"width": 283.91162109375,
+											"width": 293.45751953125,
 											"height": 17,
 											"alpha": 1.475845092362274,
 											"distance": 21.095023109728988,
@@ -2546,7 +2546,7 @@
 												"$ref": "AAAAAAF9rP2GslVXc7w="
 											},
 											"edgePosition": 1,
-											"text": "9 : Hiện biểu mẫu nhập thông tin sách"
+											"text": "16 : Hiện biểu mẫu nhập thông tin sách"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2658,7 +2658,7 @@
 												"$ref": "AAAAAAF9rXg4H1VuE2c="
 											},
 											"edgePosition": 1,
-											"text": "10 : Nhập(maISBN, ten, tacGia, theLoai, gia, soLuong)"
+											"text": "17 : Nhập(maISBN, ten, tacGia, theLoai, gia, soLuong)"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2769,7 +2769,7 @@
 												"$ref": "AAAAAAF9rX+TV1WVlRA="
 											},
 											"edgePosition": 1,
-											"text": "10.1 : Gửi yêu cầu tạo và thông tin sách mới"
+											"text": "18 : Gửi yêu cầu tạo và thông tin sách mới"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2880,7 +2880,7 @@
 												"$ref": "AAAAAAF9rYAEFVWuOT8="
 											},
 											"edgePosition": 1,
-											"text": "10.2 : Gọi phương thức ThemSachMoi()"
+											"text": "19 : Gọi phương thức ThemSachMoi()"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2991,7 +2991,7 @@
 												"$ref": "AAAAAAF9rYDaCVXJ8MM="
 											},
 											"edgePosition": 1,
-											"text": "10.3 : Thêm sách mới vào cơ sở dữ liệu"
+											"text": "20 : Thêm sách mới vào cơ sở dữ liệu"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3102,7 +3102,7 @@
 												"$ref": "AAAAAAF9rYGR0lXmMzU="
 											},
 											"edgePosition": 1,
-											"text": "11 : Tạo thành công vào cơ sở dữ liệu"
+											"text": "21 : Tạo thành công vào cơ sở dữ liệu"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3214,7 +3214,7 @@
 												"$ref": "AAAAAAF9rYQfO1YHNY4="
 											},
 											"edgePosition": 1,
-											"text": "11.1 : Thêm sách mới thành công"
+											"text": "22 : Thêm sách mới thành công"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3326,7 +3326,7 @@
 												"$ref": "AAAAAAF9rYUqMFYhtWs="
 											},
 											"edgePosition": 1,
-											"text": "11.2 : Thông báo đã thêm sách thành công"
+											"text": "23 : Thông báo đã thêm sách thành công"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3438,7 +3438,7 @@
 												"$ref": "AAAAAAF9rYWBH1Y4ZYg="
 											},
 											"edgePosition": 1,
-											"text": "11.3 : Hiện thông báo đã thêm sách thành công"
+											"text": "24 : Hiện thông báo đã thêm sách thành công"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3685,7 +3685,7 @@
 												"$ref": "AAAAAAF9rZ955VfRgdY="
 											},
 											"edgePosition": 1,
-											"text": "12 : Nhấn vào [Cập nhật thông tin sách]"
+											"text": "25 : Nhấn vào [Cập nhật thông tin sách]"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3796,7 +3796,7 @@
 												"$ref": "AAAAAAF9ra7aRlgNwaQ="
 											},
 											"edgePosition": 1,
-											"text": "13 : Hiện biểu mẫu nhập thông tin sách"
+											"text": "26 : Hiện biểu mẫu nhập thông tin sách"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3908,7 +3908,7 @@
 												"$ref": "AAAAAAF9ra9FGlgmaII="
 											},
 											"edgePosition": 1,
-											"text": "14 : Cập nhật lại thông tin sách ứng với số ISBN"
+											"text": "27 : Cập nhật lại thông tin sách ứng với số ISBN"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4019,7 +4019,7 @@
 												"$ref": "AAAAAAF9rbDsR1hGFxo="
 											},
 											"edgePosition": 1,
-											"text": "14.1 : Gửi yêu cầu cập nhật và thông tin sách"
+											"text": "28 : Gửi yêu cầu cập nhật và thông tin sách"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4130,7 +4130,7 @@
 												"$ref": "AAAAAAF9rbFcZ1hevJs="
 											},
 											"edgePosition": 1,
-											"text": "14.2 : Gọi phương thức CapNhatSach()"
+											"text": "29 : Gọi phương thức CapNhatSach()"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4241,7 +4241,7 @@
 												"$ref": "AAAAAAF9rbHZ31h3V2A="
 											},
 											"edgePosition": 1,
-											"text": "14.3 : Cập nhật thông tin sách vào cơ sở dữ liệu"
+											"text": "30 : Cập nhật thông tin sách vào cơ sở dữ liệu"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4352,7 +4352,7 @@
 												"$ref": "AAAAAAF9rbJnUliPX+0="
 											},
 											"edgePosition": 1,
-											"text": "15 : Cập nhật thành công vào cơ sở dữ liệu"
+											"text": "31 : Cập nhật thành công vào cơ sở dữ liệu"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4464,7 +4464,7 @@
 												"$ref": "AAAAAAF9rbLy31ioxj8="
 											},
 											"edgePosition": 1,
-											"text": "15.1 : Cập nhật thông tin sách thành công"
+											"text": "32 : Cập nhật thông tin sách thành công"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4576,7 +4576,7 @@
 												"$ref": "AAAAAAF9rbOPPljACbI="
 											},
 											"edgePosition": 1,
-											"text": "15.2 : Thông báo đã cập nhật sách thành công"
+											"text": "33 : Thông báo đã cập nhật sách thành công"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4688,7 +4688,7 @@
 												"$ref": "AAAAAAF9rbREm1jbA5M="
 											},
 											"edgePosition": 1,
-											"text": "15.3 : Hiện thông báo đã cập nhật sách thành công"
+											"text": "34 : Hiện thông báo đã cập nhật sách thành công"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4800,7 +4800,7 @@
 												"$ref": "AAAAAAF9rbuPV1kL7GU="
 											},
 											"edgePosition": 1,
-											"text": "16 : Nhấn vào [Xoá sách]"
+											"text": "35 : Nhấn vào [Xoá sách]"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -4911,7 +4911,7 @@
 												"$ref": "AAAAAAF9rby8elkn/PM="
 											},
 											"edgePosition": 1,
-											"text": "17 : Hiện hộp thoại cảnh báo"
+											"text": "36 : Hiện hộp thoại cảnh báo"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -5023,7 +5023,7 @@
 												"$ref": "AAAAAAF9rb8tfFlBvgg="
 											},
 											"edgePosition": 1,
-											"text": "18 : Xác nhận thao tác xoá ứng với số ISBN"
+											"text": "37 : Xác nhận thao tác xoá ứng với số ISBN"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -5134,7 +5134,7 @@
 												"$ref": "AAAAAAF9rcACJFlYnso="
 											},
 											"edgePosition": 1,
-											"text": "18.1 : Gửi yêu cầu xoá sách"
+											"text": "38 : Gửi yêu cầu xoá sách"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -5245,7 +5245,7 @@
 												"$ref": "AAAAAAF9rcBec1lw50k="
 											},
 											"edgePosition": 1,
-											"text": "18.2 : Gọi phương thức AnSachTrenWebsite()"
+											"text": "39 : Gọi phương thức AnSachTrenWebsite()"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -5356,7 +5356,7 @@
 												"$ref": "AAAAAAF9rcGB2lmPGXE="
 											},
 											"edgePosition": 1,
-											"text": "18.3 : Ẩn thông tin của sách trên Website"
+											"text": "40 : Ẩn thông tin của sách trên Website"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -5467,7 +5467,7 @@
 												"$ref": "AAAAAAF9rcIh41mnRxA="
 											},
 											"edgePosition": 1,
-											"text": "19 : Ẩn thành công sách trên Website"
+											"text": "41 : Ẩn thành công sách trên Website"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -5579,7 +5579,7 @@
 												"$ref": "AAAAAAF9rcK7IVnBty0="
 											},
 											"edgePosition": 1,
-											"text": "19.1 : Ẩn sách thành công"
+											"text": "42 : Ẩn sách thành công"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -5691,7 +5691,7 @@
 												"$ref": "AAAAAAF9rcNQ6Fnaczs="
 											},
 											"edgePosition": 1,
-											"text": "19.2 : Thông báo đã xoá sách thành công"
+											"text": "43 : Thông báo đã xoá sách thành công"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -5803,7 +5803,7 @@
 												"$ref": "AAAAAAF9rcOiIFnxV+o="
 											},
 											"edgePosition": 1,
-											"text": "19.3 : Hiện thông báo đã xoá sách thành công"
+											"text": "44 : Hiện thông báo đã xoá sách thành công"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -5885,8 +5885,7 @@
 										"$ref": "AAAAAAF9rcOiIFn1T6Y="
 									}
 								}
-							],
-							"sequenceNumbering": "custom"
+							]
 						}
 					],
 					"messages": [
