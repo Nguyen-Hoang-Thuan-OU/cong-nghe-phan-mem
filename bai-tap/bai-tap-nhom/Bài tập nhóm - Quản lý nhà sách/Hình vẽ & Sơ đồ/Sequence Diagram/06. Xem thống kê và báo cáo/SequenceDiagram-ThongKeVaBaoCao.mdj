@@ -815,7 +815,7 @@
 												"$ref": "AAAAAAF9rgSvlhptXaw="
 											},
 											"edgePosition": 1,
-											"text": "2 : Hiện biểu mẫu thống kê và báo cáo"
+											"text": "2 : Hiện biểu đồ thống kê và báo cáo"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1052,12 +1052,12 @@
 												"$ref": "AAAAAAF9riONEhrEZLc="
 											},
 											"font": "Roboto;17;0",
-											"left": 283,
-											"top": 295,
+											"left": 312,
+											"top": 296,
 											"width": 275.021484375,
 											"height": 17,
-											"alpha": 1.405647108839778,
-											"distance": 18.24828759089466,
+											"alpha": 0.48833382158195116,
+											"distance": 36.235341863986875,
 											"hostEdge": {
 												"$ref": "AAAAAAF9riONFBrFVWA="
 											},
@@ -1506,7 +1506,7 @@
 												"$ref": "AAAAAAF9ri4C0BtP+X8="
 											},
 											"edgePosition": 1,
-											"text": "7.1 : Không có doanh thu trong khoảng này"
+											"text": "7 : Không có doanh thu trong khoảng này"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1753,7 +1753,7 @@
 												"$ref": "AAAAAAF9rjQPJBulev0="
 											},
 											"edgePosition": 1,
-											"text": "7.1.1 : Không thể thống kê doanh thu"
+											"text": "8 : Không trả về kết quả doanh thu"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1865,7 +1865,7 @@
 												"$ref": "AAAAAAF9rjU5qxu+Zb0="
 											},
 											"edgePosition": 1,
-											"text": "7.1.2 : Thông báo không thể thống kê"
+											"text": "9 : Thông báo không thể thống kê"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -1977,7 +1977,7 @@
 												"$ref": "AAAAAAF9rjhzqBvujjA="
 											},
 											"edgePosition": 1,
-											"text": "7.1.3 : Hiện thông báo không thể thống kê"
+											"text": "10 : Hiện thông báo không thể thống kê"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2089,7 +2089,7 @@
 												"$ref": "AAAAAAF9rjsbVhwLk80="
 											},
 											"edgePosition": 1,
-											"text": "7.2 : Thống kê doanh thu thành công"
+											"text": "11 : Thống kê doanh thu thành công"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2201,7 +2201,7 @@
 												"$ref": "AAAAAAF9rjxQPBwnKr4="
 											},
 											"edgePosition": 1,
-											"text": "7.2.1 : Trả về kết quả doanh thu theo tháng"
+											"text": "12 : Trả về kết quả doanh thu theo tháng"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2313,7 +2313,7 @@
 												"$ref": "AAAAAAF9rjy0HBw+XJE="
 											},
 											"edgePosition": 1,
-											"text": "7.2.2 : Thông báo kết quả doanh thu theo tháng"
+											"text": "13 : Thông báo kết quả doanh thu theo tháng"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2425,7 +2425,7 @@
 												"$ref": "AAAAAAF9rj1CcRxX3uQ="
 											},
 											"edgePosition": 1,
-											"text": "7.2.3 : Hiện kết quả doanh thu theo tháng"
+											"text": "14 : Hiện kết quả doanh thu theo tháng"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2527,17 +2527,17 @@
 												"$ref": "AAAAAAF9rkA3+Bx1yWo="
 											},
 											"font": "Roboto;17;0",
-											"left": 245,
-											"top": 719,
+											"left": 279,
+											"top": 720,
 											"width": 348.796875,
 											"height": 17,
-											"alpha": 1.4711271792542542,
-											"distance": 20.09975124224178,
+											"alpha": 0.4856219786324363,
+											"distance": 40.70626487409524,
 											"hostEdge": {
 												"$ref": "AAAAAAF9rkA3+Bx2Mbk="
 											},
 											"edgePosition": 1,
-											"text": "8 : Nhập mã ISBN hoặc tên sách"
+											"text": "15 : Nhập mã ISBN hoặc tên sách"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2638,9 +2638,9 @@
 												"$ref": "AAAAAAF9rkemkByNhE4="
 											},
 											"font": "Roboto;17;0",
-											"left": 635,
+											"left": 630,
 											"top": 742,
-											"width": 328.66943359375,
+											"width": 338.21533203125,
 											"height": 17,
 											"alpha": -4.64582148032571,
 											"distance": 15.033296378372908,
@@ -2648,7 +2648,7 @@
 												"$ref": "AAAAAAF9rkemkRyOlPA="
 											},
 											"edgePosition": 1,
-											"text": "9 : Gửi yêu cầu xem thống kê từng đầu sách"
+											"text": "16 : Gửi yêu cầu xem thống kê từng đầu sách"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2759,7 +2759,7 @@
 												"$ref": "AAAAAAF9rkrvchyrU2M="
 											},
 											"edgePosition": 1,
-											"text": "10 : Gọi phương thức TanSuatDauSach()"
+											"text": "17 : Gọi phương thức TanSuatDauSach()"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -2870,7 +2870,7 @@
 												"$ref": "AAAAAAF9rkxwUxzFAKM="
 											},
 											"edgePosition": 1,
-											"text": "11 : Truy xuất thống kê"
+											"text": "18 : Truy xuất thống kê"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3116,7 +3116,7 @@
 												"$ref": "AAAAAAF9rl4BAx0U8Yg="
 											},
 											"edgePosition": 1,
-											"text": "12.1 : Không có thống kê cho đầu sách"
+											"text": "19 : Không có thống kê cho đầu sách"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3228,7 +3228,7 @@
 												"$ref": "AAAAAAF9rl95AB00ovY="
 											},
 											"edgePosition": 1,
-											"text": "12.1.1 : Không thể thống kê cho đầu sách"
+											"text": "20 : Không trả về kết quả doanh thu"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3340,7 +3340,7 @@
 												"$ref": "AAAAAAF9rmCk3R1R+7A="
 											},
 											"edgePosition": 1,
-											"text": "12.1.2 : Thông báo không thể thống kê"
+											"text": "21 : Thông báo không thể thống kê"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3452,7 +3452,7 @@
 												"$ref": "AAAAAAF9rmE+1h1rnxE="
 											},
 											"edgePosition": 1,
-											"text": "12.1.3 : Hiện thông báo không thể thống kê"
+											"text": "22 : Hiện thông báo không thể thống kê"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3564,7 +3564,7 @@
 												"$ref": "AAAAAAF9rmK5aB2EgVo="
 											},
 											"edgePosition": 1,
-											"text": "12.2 : Thống kê thành công theo đầu sách"
+											"text": "23 : Thống kê thành công theo đầu sách"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3676,7 +3676,7 @@
 												"$ref": "AAAAAAF9rmQaKh2hte4="
 											},
 											"edgePosition": 1,
-											"text": "12.2.1 : Trả về kết quả thống kê theo đầu sách"
+											"text": "24 : Trả về kết quả thống kê theo đầu sách"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3788,7 +3788,7 @@
 												"$ref": "AAAAAAF9rmbsVh29iIA="
 											},
 											"edgePosition": 1,
-											"text": "12.2.2 : Thông báo kết quả thống kê theo đầu sách"
+											"text": "25 : Thông báo kết quả thống kê theo đầu sách"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3900,7 +3900,7 @@
 												"$ref": "AAAAAAF9rmdi5R3WrXI="
 											},
 											"edgePosition": 1,
-											"text": "12.2.3 : Hiện kết quả thống kê theo đầu sách"
+											"text": "26 : Hiện kết quả thống kê theo đầu sách"
 										},
 										{
 											"_type": "EdgeLabelView",
@@ -3982,8 +3982,7 @@
 										"$ref": "AAAAAAF9rmdi5R3aMRY="
 									}
 								}
-							],
-							"sequenceNumbering": "custom"
+							]
 						}
 					],
 					"messages": [
@@ -4008,7 +4007,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9reMBSxl1G5k="
 							},
-							"name": "Hiện biểu mẫu thống kê và báo cáo",
+							"name": "Hiện biểu đồ thống kê và báo cáo",
 							"source": {
 								"$ref": "AAAAAAF9reU5/Bmt52Y="
 							},
@@ -4100,7 +4099,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9reMBSxl1G5k="
 							},
-							"name": "Không thể thống kê doanh thu",
+							"name": "Không trả về kết quả doanh thu",
 							"source": {
 								"$ref": "AAAAAAF9reb9YRn4kMg="
 							},
@@ -4288,7 +4287,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9reMBSxl1G5k="
 							},
-							"name": "Không thể thống kê cho đầu sách",
+							"name": "Không trả về kết quả doanh thu",
 							"source": {
 								"$ref": "AAAAAAF9reb9YRn4kMg="
 							},
