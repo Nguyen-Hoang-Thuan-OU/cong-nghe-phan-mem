@@ -1,7 +1,8 @@
 import math
 import utils
 import cloudinary.uploader
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request,\
+    redirect, url_for, session, jsonify
 from saleapp import app, login
 from saleapp.admin import *
 from flask_login import login_user, logout_user
@@ -120,6 +121,33 @@ def product_detail(product_id):
 
     return render_template("product_detail.html",
                            product=product)
+
+
+# Xử lý gọi dữ liệu JavaScript của giỏ hàng bằng API
+@app.route('/api/add-cart', methods=['POST'])
+def add_to_cart():
+    data = request.json
+    id = str(data.get('id'))
+    name = data.get('name')
+    price = data.get('price')
+
+    cart = session.get('cart')
+    if not cart:
+        cart = {}
+
+    if id in cart:
+        cart[id]['quantity'] = cart[id]['quantity'] + 1
+    else:
+        cart[id] = {
+            'id': id,
+            'name': name,
+            'price': price,
+            'quantity': 1
+        }
+
+    session['cart'] = cart
+
+    return jsonify(utils.count_cart(cart))
 
 
 if __name__ == '__main__':
