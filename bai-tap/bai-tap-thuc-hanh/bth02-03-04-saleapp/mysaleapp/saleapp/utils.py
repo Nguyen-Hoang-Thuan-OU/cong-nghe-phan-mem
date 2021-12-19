@@ -70,7 +70,7 @@ def load_products(cate_id=None,
 
 
 def count_products():
-    return Product.query\
+    return Product.query \
         .filter(Product.active.__eq__(True)).count()
 
 
@@ -86,7 +86,9 @@ def get_product_by_id(product_id):
 
 
 def add_user(name, username, password, **kwargs):
-    password = str(hashlib.md5(password.strip().encode('utf-8')).hexdigest())
+    password = str(hashlib.md5(password.strip()
+                               .encode('utf-8'))
+                   .hexdigest())
     user = User(name=name.strip(),
                 username=username.strip(),
                 password=password,
@@ -95,3 +97,19 @@ def add_user(name, username, password, **kwargs):
 
     db.session.add(user)
     db.session.commit()
+
+
+def check_login(username, password):
+    if username and password:
+        password = str(hashlib.md5(password.strip()
+                                   .encode('utf-8'))
+                       .hexdigest())
+
+        return User.query.filter(User.username.__eq__(username.strip()),
+                                 User.password.__eq__(password)).first()
+
+    return None
+
+
+def get_user_by_id(user_id):
+    return User.query.get(user_id)

@@ -1,9 +1,10 @@
 import math
-from flask import render_template, request, redirect, url_for
-from saleapp import app
-from saleapp.admin import *
 import utils
 import cloudinary.uploader
+from flask import render_template, request, redirect, url_for
+from saleapp import app, login
+from saleapp.admin import *
+from flask_login import login_user, logout_user
 
 
 # Trang chủ
@@ -19,7 +20,7 @@ def home():
 
     return render_template('index.html',
                            products=products,
-                           pages=math.ceil(counter/app.config['PAGE_SIZE']))
+                           pages=math.ceil(counter / app.config['PAGE_SIZE']))
 
 
 # Trang đăng ký tài khoản
@@ -46,7 +47,7 @@ def user_register():
                                password=password,
                                email=email,
                                avatar=avatar_path)
-                return redirect(url_for('home'))
+                return redirect(url_for('user_signin'))
             else:
                 err_msg = "Mật khẩu nhập lại không khớp!"
         except Exception as ex:
@@ -54,6 +55,37 @@ def user_register():
 
     return render_template('register.html',
                            err_msg=err_msg)
+
+
+# Trang đăng nhập tài khoản
+@app.route("/user-login", methods=['GET', 'POST'])
+def user_signin():
+    err_msg = ""
+    if request.method.__eq__('POST'):
+        username = request.form.get('username')
+        password = request.form.get('password')
+
+        user = utils.check_login(username=username,
+                                 password=password)
+        if user:
+            login_user(user=user)
+            return redirect(url_for('home'))
+        else:
+            err_msg = "Tên đăng nhập hoặc mật khẩu không chính xác!"
+
+    return render_template('login.html',
+                           err_msg=err_msg)
+
+
+@app.route('/user-logout')
+def user_signout():
+    logout_user()
+    return redirect(url_for('user_signin'))
+
+
+@login.user_loader
+def user_load(user_id):
+    return utils.get_user_by_id(user_id=user_id)
 
 
 # Luôn hiển thị các danh mục sản phẩm ở các trang

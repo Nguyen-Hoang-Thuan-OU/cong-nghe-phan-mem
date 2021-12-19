@@ -5,6 +5,7 @@ from sqlalchemy.orm import relationship
 from saleapp import db
 from datetime import datetime
 from enum import Enum as UserEnum
+from flask_login import UserMixin
 
 
 class BaseModel(db.Model):
@@ -20,7 +21,7 @@ class UserRole(UserEnum):
     USER = 2
 
 
-class User(BaseModel):
+class User(BaseModel, UserMixin):
     name = Column(String(50), nullable=False)
     username = Column(String(50), nullable=False,
                       unique=True)

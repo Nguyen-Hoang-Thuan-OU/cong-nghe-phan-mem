@@ -23,10 +23,40 @@
             </li>
             {% endfor %}
 
+            <!--Xử lý chỉ hiện -->
+            {% if current_user.is_authenticated %}
+            <!--Hiển thị ảnh đại diện và tên người dùng-->
+            <li class="nav-item">
+                <a class="nav-link text-danger" href="{{ url_for('home') }}">
+                    {% if current_user.avatar %}
+                    <img src="{{ current_user.avatar }}"
+                         class="rounded-circle"
+                         width="30" alt="{{ current_user.name }}">
+                    {% else %}
+                    <img src="{{ url_for('static', filename='images/ou-logo-vietnamese.png') }}"
+                         class="rounded-circle"
+                         width="30" alt="{{ current_user.name }}">
+                    {% endif %}
+
+                    {{ current_user.username }}
+                </a>
+            </li>
+
+            <!--Đăng nhập tài khoản-->
+            <li class="nav-item">
+                <a class="nav-link text-success" href="{{ url_for('user_signout') }}">Đăng xuất</a>
+            </li>
+            {% else %}
             <!--Đăng ký tài khoản-->
             <li class="nav-item">
                 <a class="nav-link text-danger" href="{{ url_for('user_register') }}">Đăng ký</a>
             </li>
+
+            <!--Đăng nhập tài khoản-->
+            <li class="nav-item">
+                <a class="nav-link text-success" href="{{ url_for('user_signin') }}">Đăng nhập</a>
+            </li>
+            {% endif %}
 
         </ul>
     </div>
