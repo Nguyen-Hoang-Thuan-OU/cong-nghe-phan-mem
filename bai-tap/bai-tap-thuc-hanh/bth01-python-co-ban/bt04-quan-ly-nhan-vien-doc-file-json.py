@@ -16,7 +16,7 @@ def hien_thi_danh_sach_nhan_vien(danh_sach_nhan_vien):
         hien_thi_mot_nhan_vien(nhan_vien)
 
 def doc_danh_sach_nhan_vien():
-    file = open("bt04-danh-sach-nhan-vien.json", "r", encoding="utf-8")
+    file = open("bt04-danh-sach-nhan-vien.json", "r", encoding="utf8")
     du_lieu = json.load(file)
     file.close()
     
