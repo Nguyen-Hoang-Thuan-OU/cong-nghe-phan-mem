@@ -19,7 +19,7 @@ while True:
     # được gọi khi không hề có một lỗi nào xảy ra
     else:
         if a == 0:
-            if b ==0:
+            if b == 0:
                 print("Phương trình vô số nghiệm! \n")
             else:
                 print("Phương trình vô nghiệm! \n")
