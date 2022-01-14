@@ -1,7 +1,7 @@
 ﻿Sơ đồ hoạt động (Activity Diagram) biểu diễn các hoạt động tạo nên quy trình hệ thống, chức năng của hệ thống, sự tương tác giữa các đối tượng bên trong hệ thống và luồng điều khiển từ hoạt động này đến hoạt động khác.
 	-> Đi qua những đối tượng, hoạt động nào để hoàn thành được một luồng, hoàn thành được logic bên trong hệ thống.
 
------
+===========================================================================
 
 Để biểu diễn được các luồng hoạt động, sử dụng các ký hiệu:
 
@@ -10,7 +10,7 @@
 		+ Thường sẽ chỉ có duy nhất một nơi bắt đầu.
 
 	- Trạng thái kết thúc - Final (Hai hình tròn đồng tâm, hình tròn ở bên trong là hình tròn đặc): ___>◉
-		+ Thường sẽ chỉ có nhiều nơi kết thúc.
+		+ Thường sẽ có nhiều nơi kết thúc.
 
 		Ví dụ: rút tiền ở cây ATM.
 			- Một điểm bắt đầu: cho thẻ vào máy ATM và thực hiện chứng thực.
@@ -24,9 +24,9 @@
 
 *  Mỗi hoạt động (action/activity) đại diện bằng hình chữ nhật bo tròn 4 góc, luồng hoạt động thể hiện bằng mũi tên.
 	Ví dụ:
-		◜---------------◝		◜---------------◝
+		 ◜-------------◝		 ◜-------------◝
 		|Đăng nhập	|______________>|Báo lỗi	|
-		◟---------------◞		◟---------------◞
+		 ◟-------------◞		 ◟-------------◞
 
 * Điều kiện (Decision) thể hiện bằng hình thoi, biểu diễn một biểu thức vị từ, luồng xử lý khi đúng và sai.
 	Ví dụ:
@@ -44,7 +44,7 @@
 
 * Khi vẽ một sơ đồ hoạt động, logic xử lý các hoạt động có thể rất phức tạp, rất khó để biết hoạt động nào thuộc thành phần (component) nào. Để có được cái nhìn tổng quát về sơ đồ hoạt động, có thể chia các nhóm các hoạt động liên quan thành những cột khác nhau.
 
------
+===========================================================================
 
 Lưu ý: khi sẽ, tránh trường hợp để một action/activity nằm riêng lẻ, xử lý xong mà không biết nên tiếp tục hay kết thúc. Nên nối các action/activity năm riêng lẻ đến một luồng hoạt động khác để tiếp tục luồng xử lý hoặc kết thúc action/activity năm riêng lẻ ấy bằng trạng thái kết thúc.
 
