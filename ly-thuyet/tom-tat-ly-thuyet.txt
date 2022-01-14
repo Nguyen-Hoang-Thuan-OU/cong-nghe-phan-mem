@@ -1,11 +1,12 @@
-QUY TRÌNH LÀM/PHÁT TRIỂN PHẦN MỀM
+***************QUY TRÌNH LÀM/PHÁT TRIỂN PHẦN MỀM**********
+
 Quy trình phát triển phần mềm là một tập hợp các hoạt động tổ chức mà mục đính là xây dựng và phát triển phần mềm, đảm bảo cho sản phẩm đạt chất lượng.
 
-Methodology (nghĩa rộng: phương pháp luận): cách thức, phương pháp, bài viết, chỉ dẫn về một phương pháp nào đó.
+** Methodology (nghĩa rộng: phương pháp luận): cách thức, phương pháp, bài viết, chỉ dẫn về một phương pháp nào đó.
 Process (quy trình), Life cycle (chu trình, vòng đời)
  -> Các bước làm phần mềm theo một thứ tự nào đó.
 
-*Customer, User, Product Owner (PO): Khách hàng, người đưa ra yêu cầu.
+** Customer, User, Product Owner (PO): Khách hàng, người đưa ra yêu cầu.
 	Requirement (descriptive): Yêu cầu, thứ khách hàng muốn
 					để hỗ trợ cho công việc HẰNG NGÀY của họ
 					(những công việc mà dù không có phần mềm
@@ -13,6 +14,8 @@ Process (quy trình), Life cycle (chu trình, vòng đời)
 	User story (predictive): Mong đợi của khách hàng về tính năng của phần mềm
 		Khách hàng nói ra những mong ước của họ về các tính năng của phần mềm
 		vì chưa có hoặc đã có nhưng phần mềm hiện tại chưa được tốt, cần nâng cấp
+
+===========================================================================================
 
 Có bao nhiêu bước? --> Từ 4 đến 8 bước, tuỳ vào cách nhìn nhận của tác giả.
 
@@ -50,8 +53,12 @@ Bước 05: Deployment/Maintenance/Enhancement (Bàn giao cho khách hàng sử 
 				- Zalo thêm tính năng chuyển tiền khi chat
 				- Shopee, Lazada,... thêm tính năng Livestream)
 
+===========================================================================================
+
 Cách phối hợp giữa các bước như thế nào?
+
 Trình tự phát triển phần mềm:
+
 "Trường phái" truyền thống: Water fall (thác nước)
 => More descriptive: hướng về một thứ rõ ràng.
    (Khách hàng đã biết họ muốn gì trong một phần mềm do có tham khảo trước)
@@ -82,8 +89,10 @@ Trình tự phát triển phần mềm:
 => Trong phát triển phần mềm bây giờ thường theo hướng hiện đại
 nhưng vẫn cần sự hỗ trợ của truyền thống.
 
+===========================================================================================
 
 Làm phần mềm phải bàn về khách hàng (Stakeholders).
+
 Công ty thuần phần mềm: FPT Software, MISA, KMS,...
 	- Làm phần mềm do người khác (các ngân hàng, bệnh viên, viễn thông, hiệu thuốc, cửa hàng bán hàng,...) đặt hàng.
 	=> BA làm việc với khách hàng.
@@ -107,13 +116,16 @@ GIAI ĐOẠN THU THẬP, PHÂN TÍCH & THIẾT KẾ YÊU CẦU CỦA KHÁCH HÀN
 
 ******Hệ thống được tạo ra cho ai (WHO) sử dụng******
 -> Xác định những nhóm người dùng: người dùng khiến cho hệ thống tồn tại.
+
 	01. End-user đặc biệt: những người khách (guest/visitor/anonymous) ghé ngang qua hệ thống, chưa có tài khoản hoặc chưa đăng nhập nên hệ thống chưa biết đây là ai. Sau khi đăng nhập thì có thể trở thành End-user thông thường hoặc Admin.
 	02. End-user thông thường: nhóm người dùng cuối, đông nhưng ít quyền thao tác trên dữ liệu (thêm, xem, sửa, xoá một số dữ liệu được cho phép). Ví dụ: người mua hàng, thu ngân bán hàng tại cửa hàng (nếu là người làm thuê thì sẽ không được xếp vào nhóm người quản trị vì họ phải đợi khách hàng mua thì họ mới có thể bán, chứ họ không có quyền quyết định những mặt hàng nào được phép bán và giá của từng mặt hàng).
 	03. Admin: nhóm người quản trị, ít nhưng nhiều quyền thao tác trên dữ liệu (thêm, xem, sửa, xoá gần như toàn bộ dữ liệu) nhằm cung cấp tính khả dụng về dữ liệu cho nhóm người dùng cuối. Ví dụ: người quản lý, người có quyền quyết định loại mặt hàng được bán và loại nào không, giá của từng loại hàng,...
 
+------------------------------------------------------------------
 
 ******Ai làm được gì (WHAT) với hệ thống******
 -> Xác định những tính năng: hệ thống có những tính năng gì để phục vụ cho các nhóm người dùng.
+
 	- Xác định những mục tiêu (goal/target) cần đạt được, khách hàng muốn đạt được.
 		+ Những công việc thường ngày mà khách hàng phải làm thủ công nay cần được tin học hoá.
 		+ Những công việc đã được tin học hoá nhưng chưa tốt.
@@ -122,6 +134,7 @@ GIAI ĐOẠN THU THẬP, PHÂN TÍCH & THIẾT KẾ YÊU CẦU CỦA KHÁCH HÀN
 		+ Đích đến: đích đến là nơi mình muốn đến.
 		+ Hành trình: phương tiện di chuyển và những nơi đi qua trước khi đến được đích.
 
+------------------------------------------------------------------
 
 * Authenticated User/Authentication: người dùng đã xác thực, chứng thực.
 	-> Người dùng này có phải người quen của hệ thống không?
@@ -153,7 +166,11 @@ Chúng tôi đang khám phá ra một cách tốt hơn để phát triển phầ
 Vẫn giữ nguyên giá trị của vế phải, song đề cao giá trị của vế trái hơn.
 	-> 20 nguyên lý
 
+------------------------------------------------------------------
 
+===========================================================================================
+
+Jira dùng để quản lý User Story (các yêu cầu của khách hàng), vòng đời làm sản phẩm theo phong cách Agile, Scrum.
 
 
 
