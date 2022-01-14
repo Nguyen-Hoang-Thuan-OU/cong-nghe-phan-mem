@@ -18,11 +18,11 @@ Ký hiệu lớp:
 |-------------------------------------------------------|
 |Tên lớp						|	-> Class
 |-------------------------------------------------------|
-|tên-thuộc-tính1: kiểu-dữ-liệu1 = giá-trị-mặc-định1	|	-> Attribute là thuộc tính
-|tên-thuộc-tính2: kiểu-dữ-liệu2 = giá-trị-mặc-định2	|	được đóng gói trong lớp đối tượng
+|- tên-thuộc-tính1: kiểu-dữ-liệu1 = giá-trị-mặc-định1	|	-> Attribute/Field/Property là thuộc tính
+|- tên-thuộc-tính2: kiểu-dữ-liệu2 = giá-trị-mặc-định2	|	được đóng gói trong lớp đối tượng
 |-------------------------------------------------------|
-|tên-phương-thức1(ds-tham-số1): kiểu-trả-về1		|	-> Behavior là phương thức
-|tên-phương-thức2(ds-tham-số2): kiểu-trả-về2		|	thể hiện hành vi của đối tượng
+|+ tên-phương-thức1(ds-tham-số1): kiểu-trả-về1		|	-> Behavior/Method/Function là phương thức
+|+ tên-phương-thức2(ds-tham-số2): kiểu-trả-về2		|	thể hiện hành vi của đối tượng
 |_______________________________________________________|
 
 Ví dụ:
@@ -31,7 +31,7 @@ Ví dụ:
 
 * Tên lớp:
 	- [N] Bình thường: lớp bình thường
-	- [I] In nghiêng: lớp trừu tượng (lớp không cho phép tạo đối tượng từ lớp đó, chỉ định nghĩa khuôn để các lớp con kết thừa và hiện thực một số nhiệm vụ trừu tượng)
+	- [I] In nghiêng: lớp trừu tượng (lớp không cho phép tạo đối tượng từ lớp đó, chỉ định nghĩa khuôn để các lớp con kế thừa và hiện thực một số nhiệm vụ trừu tượng)
 	- [U] Gạch dưới: đối tượng cụ thể của một lớp (object/instance đã được tạo của lớp)
 
 -------------------------
