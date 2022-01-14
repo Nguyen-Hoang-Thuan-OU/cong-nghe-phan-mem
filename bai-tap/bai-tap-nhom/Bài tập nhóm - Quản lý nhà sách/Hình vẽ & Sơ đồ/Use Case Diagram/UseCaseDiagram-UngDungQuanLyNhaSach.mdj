@@ -6892,9 +6892,9 @@
 							},
 							"font": "Roboto;14;0",
 							"left": 376,
-							"top": 1104,
+							"top": 1112,
 							"width": 89,
-							"height": 142,
+							"height": 121,
 							"text": "+ Tháng\n+ STT\n+ Tên sách\n+ Thể loại\n+ Số lượng\n+ Tỷ lệ"
 						},
 						{
@@ -6911,7 +6911,7 @@
 								"$ref": "AAAAAAF9SFMzdf9jW64="
 							},
 							"lineStyle": 1,
-							"points": "551:1175;465:1174"
+							"points": "551:1174;465:1173"
 						},
 						{
 							"_type": "UMLAssociationView",
