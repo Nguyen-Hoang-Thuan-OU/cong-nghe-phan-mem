@@ -1,5 +1,11 @@
 ***************QUY TRÌNH LÀM/PHÁT TRIỂN PHẦN MỀM**********
 
+ ---------------------------------------
+|	Phân tích WHAT, thiết kế HOW	|
+ ---------------------------------------
+
+===========================================================================================
+
 Quy trình phát triển phần mềm là một tập hợp các hoạt động tổ chức mà mục đính là xây dựng và phát triển phần mềm, đảm bảo cho sản phẩm đạt chất lượng.
 
 ** Methodology (nghĩa rộng: phương pháp luận): cách thức, phương pháp, bài viết, chỉ dẫn về một phương pháp nào đó.
@@ -171,6 +177,118 @@ Vẫn giữ nguyên giá trị của vế phải, song đề cao giá trị củ
 ===========================================================================================
 
 Jira dùng để quản lý User Story (các yêu cầu của khách hàng), vòng đời làm sản phẩm theo phong cách Agile, Scrum.
+
+===========================================================================================
+
+Thiết kế (HOW) giao diện, xử lý, dữ liệu,...
+
+------------------------------------------------------------------
+
+Thiết kế phần mềm là công đoạn nằm sau công đoạn phân tích, nhằm mô tả chi tiết tổ chức, hoạt động các đơn vị xử lý phần mềm dựa trên kết quả yêu cầu phần mềm (SRS).
+
+Thiết kế là cơ sở cho việc hiện thực phần mềm, xác định giải pháp, cách thức giải quyết vấn đề (HOW).
+	-> Công đoạn đưa ra đầy đủ cơ sở để tiến hành hiện thực hoá hệ thống. Dữ liệu thiết kế, các sơ đồ, luồng xử lý,... đều phải sẵn sàng để triển khai thành hệ thống thật.
+
+------------------------------------------------------------------
+
+** Thiết kế dữ liệu:
+
+Lưu trữ dữ liệu trên tập tin gây khó khăn vì sẽ có dữ liệu bị trùng lắp, vì vậy, người ta sử dụng cơ sở dữ liệu quan hệ để lưu trữ dữ liệu. Cơ sở dữ liệu quan hệ hạn chế tối đa sự trùng lắp thông tin và đảm bảo toàn tính toàn vẹn của dữ liệu (các ràng buộc về mặt dữ liệu đều được cơ sở dữ liệu kiểm tra).
+
+Thiết kế dữ liệu nhằm mô tả cách thức (HOW) tổ chức lưu trữ dữ liệu của phần mềm trong máy tính.
+
+------------------------------
+
+** Kết quả của thiết kế dữ liệu:
+	- Danh sách các bảng dữ liệu (bảng DanhMuc, SanPham, HoaDon, ChiTietHoaDon,...).
+	- Xác định được mối quan hệ giữa các bảng dữ liệu (khoá ngoại).
+	- Thông tin chi tiết của từng bảng như mục đích lưu trữ, tên bảng, kiểu dữ liệu, danh sách thuộc tính, khoá chính,...
+
+------------------------------
+
+** Tiêu chuẩn để thiết kế dữ liệu:
+
+	- Tính đúng đắn: dữ liệu đã được lưu đầy đủ và đúng ngữ nghĩa các thông tin có trong nghiệp vụ liên quan.
+		-> Lưu đúng và đủ.
+
+	- Tính hiệu quả: lưu trữ tiết kiệm không gian bộ nhớ, đạt hiệu xuất tốt/truy xuất nhanh thông tin cần thiết.
+		-> Lưu tiết kiệm không gian và hiệu quả truy xuất cao.
+
+	- Tính tiến hoá: lưu trữ những thông tin về tổ chức và quy định có trong nghiệp vụ liên quan có khả năng mở rộng/tiến hoá hay không.
+		-> Lưu không gặp vấn đề khi mở rộng.
+
+	- Tính bảo mật: lưu thông tin cá nhân/riêng tư của người dùng với quyền tương ứng, những dữ liệu được phép thấy ứng với phân quyền hiện tại.
+		-> Lưu những dự liệu cá nhân một an toàn với phân quyền.
+
+------------------------------
+
+** Thuộc tính: để đảm bảo tính đúng đắn, hiệu quả và tiến hoa.
+
+------------------
+
+	- Thuộc tính khoá (primary key): dùng để định danh 1 dòng dữ liệu, là giá trị không thể/không nên/không được thay đổi trong quá trình xây dụng, giúp hạn chế trùng lắp trong cơ sở dữ liệu. Có thể là một trường hoặc nhiều trường hợp lại để trở thành khoá chính. Thường là ID - số nguyên tăng dần, UUID (Universally Unique Identifier) - chuỗi tự động sinh,...
+
+------------------
+
+	- Thuộc tính có giá trị rời rạc: mỗi giá trị có vai trò ngang nhau, cần tách những giá trị rời rạc ra thành những bảng riêng (loại và thuộc tính) để đạt được tính hiệu quả (giống dạng chuẩn CSDL).
+		+ Số điện thoại: di động, nhà, cơ quan.
+		+ Điểm kiểm tra học sinh THPT: điểm 15 phút, điểm 1 tiết, điểm giữa kỳ, điểm cuối kỳ.
+		+ Giá vé tour du lịch: giá người lớn và trẻ em.
+
+------------------
+
+	- Thuộc tính đa trị (multivalued attributes): gồm nhiều quá trị gộp lại với nhau, cần tách ra thành nhiều trường, mỗi trường sẽ tương ứng với một thuộc tính trong bảng/cột.
+		+ Địa chỉ: số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành.
+
+------------------
+
+	- Thuộc tính suy diễn: không cần phải lưu trữ vì có thể suy ra được từ những thuộc tính đã sẵn có.
+
+		* Việc nên lưu hay không cũng còn tuỳ:
+			- Nếu lưu thì sẽ tốn thêm bộ nhớ để lưu trữ, phải luôn đảm bảo tính toàn vẹn dữ liệu.
+				-> Sử dụng khi trường giá trị mật độ truy cập cao và được truy cập bởi rất nhiều người, việc lưu sẽ giúp thao tác truy vấn dữ liệu nhanh và hiệu quả hơn, chấp nhận việc tốn bộ nhớ.
+
+			- Nếu không lưu thì sẽ tốn thời gian để xử lý nối (JOIN) các bảng lại với nhau.
+				-> Sử dụng khi trường dữ liệu ít khi được truy vấn, cần tiết kiệm bộ nhớ.
+
+		Ví dụ: thuộc tính tong_tien trong bảng HoaDon có thể được suy ra nhờ hai thuộc tính so_luong * don_gia trong bảng ChiTietHoaDon.
+			-> Nếu lưu thêm thuộc tính tong_tien vào bảng HoaDon thì mỗi lần cập nhật chi tiết sản phẩm của bảng ChiTietHoaDon thì sẽ phải cập nhật lại ở bên bảng HoaDon.
+
+------------------------------
+
+* Quan hệ các thực thể:
+
+	- Quan hệ một-một (1-1): khoá chính hoặc unique.
+	- Quan hệ một-nhiều (1-n): 
+	- Quan hệ nhiều-nhiều (n-n): luôn luôn có một bảng trung gian được tạo ra.
+
+------------------------------------------------------------------
+
+** Thiết kế hướng đối tượng:
+
+Thiết kế phần mềm hướng đối tượng bao gồm việc phát triển nhiều mô hình hệ thống khác nhau (điển hình là sơ đồ lớp).
+
+Phương pháp này phù hợp với các dự án lớn, nhiều nhóm làm việc. Vì nếu không có một bảng phân tích và thiết kế chỉn chu thì sẽ khó truyền đạt lại được định hướng cho các thành viên trong nhóm.
+
+Do đòi hỏi nhiều công sức (effort) cho việc phát triển và bảo trì các mô hình, nên nó sẽ không hiệu quả về mặt chi phí cho các hệ thống nhỏ
+
+------------------------------
+
+* Thiết kế dữ liệu từ sơ đồ lớp (class diagram):
+
+	- Mỗi lớp đối tượng được ánh xạ thành một bảng dữ liệu. (Chỉ nói về Entity, không nói về Boundary hay Controller)
+
+	- Nếu lớp đối tượng có cấu trúc kiểu mảng hoặc có cấu trúc phức tạp thì tách thành bảng riêng.
+
+	- Nếu lớp có thuộc tính kiểu enum thì tách thành một bảng và có khoá ngoại tham chiếu đến.
+
+	- Các thuộc tính có giá trị rời rạc thì tách thành bảng danh mục.
+
+		=> Hạn chế trùng lắp dữ liệu.
+
+
+
+
 
 
 
