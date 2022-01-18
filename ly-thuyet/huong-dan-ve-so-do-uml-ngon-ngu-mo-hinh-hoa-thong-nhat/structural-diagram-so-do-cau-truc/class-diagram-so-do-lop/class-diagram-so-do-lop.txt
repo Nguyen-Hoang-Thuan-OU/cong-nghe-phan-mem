@@ -38,7 +38,7 @@ Ví dụ:
 
 * Tên thuộc tính:
 	- [N] Bình thường: thuộc tính bình thường
-	- [I] Gạch dưới: thuộc tính tĩnh (thuộc tính được chia sẻ, dùng chung cho toàn bộ những đối tượng được tạo ra từ lớp đó, thuộc tính tĩnh có thể được tạo ra ngay khi chưa có đối tượng nào từ lớp)
+	- [U] Gạch dưới: thuộc tính tĩnh (thuộc tính được chia sẻ, dùng chung cho toàn bộ những đối tượng được tạo ra từ lớp đó, thuộc tính tĩnh có thể được tạo ra ngay khi chưa có đối tượng nào từ lớp)
 
 -------------------------
 
