@@ -10,63 +10,89 @@ Quy trình phát triển phần mềm là một tập hợp các hoạt động 
 
 ** Methodology (nghĩa rộng: phương pháp luận): cách thức, phương pháp, bài viết, chỉ dẫn về một phương pháp nào đó.
 Process (quy trình), Life cycle (chu trình, vòng đời)
- -> Các bước làm phần mềm theo một thứ tự nào đó.
+	-> Các bước làm phần mềm theo một thứ tự nào đó.
 
-** Customer, User, Product Owner (PO): Khách hàng, người đưa ra yêu cầu.
-	Requirement (descriptive): Yêu cầu, thứ khách hàng muốn
-					để hỗ trợ cho công việc HẰNG NGÀY của họ
-					(những công việc mà dù không có phần mềm
-					thì họ vẫn phải làm như bình thường).
-	User story (predictive): Mong đợi của khách hàng về tính năng của phần mềm
-		Khách hàng nói ra những mong ước của họ về các tính năng của phần mềm
-		vì chưa có hoặc đã có nhưng phần mềm hiện tại chưa được tốt, cần nâng cấp
+---------------------------------------------
+
+** Customer, User, Product Owner (PO): người đưa ra yêu cầu của sản phẩm.
+	- [Water-fall] Software Requirement (descriptive): Yêu cầu, thứ khách hàng muốn (feature/function)
+							   để hỗ trợ cho công việc HẰNG NGÀY của họ
+							   (những công việc mà dù không có phần mềm
+							   thì họ vẫn phải làm như bình thường)
+							   và còn hơn thế nữa (ví dụ: xem doanh thu).
+			(I want...)
+
+	- [Agile] User story (predictive): Mong đợi của khách hàng về tính năng của phần mềm
+			(AS a <loại người dùng>, I want <mục tiêu> so that <lý do>)
+
+	=> Khách hàng nói ra những mong ước của họ về các tính năng của phần mềm
+	   vì chưa có hoặc đã có nhưng phần mềm hiện tại chưa được tốt, cần nâng cấp.
+
+---------------------------------------------
+
+** BA, BrSE:
+	- BA (Business Analyst): kỹ sư phân tích nghiệp vụ khách hàng.
+
+	- BrSE (Bridge Software Engineer): kỹ sư cầu nối.
 
 ===========================================================================================
 
 Có bao nhiêu bước? --> Từ 4 đến 8 bước, tuỳ vào cách nhìn nhận của tác giả.
 
-Bao gồm bốn bước/công đoạn không kể thứ tự: Spec, Dev, Valid, Evol.
+Bao gồm ít nhất 4 bước/công đoạn không kể thứ tự: Spec, Dev, Valid, Evol.
 
-Bước 01: Specification/Requirements (Yêu cầu)
-		Người BA, BrSE
-		- Hỏi khách hàng để xem cần phải làm gì, khách hàng yêu cầu gì?
+---------------------------------------------
+
+Bước 01: Specification/Requirements (Đặc tả/Yêu cầu)
+		(Người BA, BrSE)
+		- Hỏi khách hàng để xem cần phải làm gì, khách hàng yêu cầu gì ở phần mềm?
 		=> WHAT?
 
+---------------------------------------------
+
 Bước 02: Design (Thiết kế)
-		Người BA, Developer, Graphic Designer, Marketing
-		- Giao diện người dùng (UI)
-		- Cơ sở dữ liệu
+		(Người BA, Developer, Graphic Designer, Marketing,...)
+		- Giao diện người dùng (UI).
+		- Cơ sở dữ liệu.
 		- Kiến trúc phần mềm (Architecture): MVC, API, Web Service, Microservices,...
 
-Bước 03: Development/Implementation (Hiện thực hoá sản phẩm phần mềm bằng code)
-		Người Developer
-		- Cần các tool, IDE
-		- Cần Các thiết bị: máy in (in layout)
+---------------------------------------------
 
-Bước 04: Validation (Kiểm thử chất lượng phần mềm)
-		Người Quality Assurance/Quality Control (QA/QC), Tester
-		- Test code
+Bước 03: Development/Implementation (Hiện thực hoá sản phẩm phần mềm bằng code)
+		(Người Developer)
+		- Cần các tool, IDE,...
+		- Cần các thiết bị: máy in (in layout), máy mã quét mã vạch, máy ảo,...
+		- Viết mã nguồn.
+
+---------------------------------------------
+
+Bước 04: Verification/Validation (Kiểm thử chất lượng phần mềm)
+		(Người Quality Assurance/Quality Control (QA/QC), Tester)
+		- Test code, hệ thống (Kiểm thử tĩnh, kiểm thử động,..).
 		- Test phần mềm để kiểm tra xem chạy có đúng hay không?
 
-Bước 05: Deployment/Maintenance/Enhancement (Bàn giao cho khách hàng sử dụng)
-		Người Help Desk, Customer Care
-		- Cài đặt phần mềm lên máy của khách hàng.
-		- Upload lên trên internet để mọi người có thể download.
+---------------------------------------------
+
+Bước 05: Deployment/Maintenance/Enhancement (Bàn giao cho khách hàng, công bố cho mọi người sử dụng)
+		(Người Help Desk, Customer Care)
+		- Cài đặt phần mềm lên máy của khách hàng, ví dụ: các máy tính tiền ở cửa hàng.
+		- Upload lên trên internet để mọi người có thể download
+			(bán bản quyền, cho sử dụng trial).
 		- Cài đặt một đoạn code ngầm tự động kiểm tra cập nhật
-		  sau một khoảng thời gian để bảo trì, fix bug (sửa lỗi).
-		- Nâng cấp thêm tính năng
-			(VD: 
-				- Zalo thêm tính năng chuyển tiền khi chat
-				- Shopee, Lazada,... thêm tính năng Livestream)
+		  sau một khoảng thời gian để bảo trì, sửa lỗi/vá lỗi (fix bug).
+		- Nâng cấp, bổ sung thêm tính năng.
+			VD: 
+				- Zalo thêm tính năng chuyển tiền khi nhắn tin.
+				- Shopee, Lazada,... thêm tính năng Livestream.
 
 ===========================================================================================
 
-Cách phối hợp giữa các bước như thế nào?
+Cách phối hợp giữa các bước như thế nào? -> "Trường phái" phát triển phần mềm
 
 Trình tự phát triển phần mềm:
 
 "Trường phái" truyền thống: Water fall (thác nước)
-=> More descriptive: hướng về một thứ rõ ràng.
+=> More descriptive (miêu tả chi tiết): hướng về một thứ rõ ràng, kể/liệt kê ra được.
    (Khách hàng đã biết họ muốn gì trong một phần mềm do có tham khảo trước)
 	- Nghiêm ngặt theo từng bước, từng khoảng thời gian định trước.
 	- Nhấn mạnh yếu tố THE WHOLE - làm trên tổng thể:
@@ -74,9 +100,11 @@ Trình tự phát triển phần mềm:
 		-> Một hệ thống hoàn chỉnh với đầy đủ chức năng sẽ ra đời ở những giai đoạn cuối,
 		   nhưng cũng sẽ tốn kém khi lúc này sản phẩm không đạt được như yêu cầu.
 
-"Trường phái" hiện đại: Agile
-(Nhánh: Scrum, Extreme programming (XP), Kanban, Lean Startup)
-=> More predictive: mơ hồ, chưa rõ ràng, cần dự đoán.
+---------------------------------------------
+
+"Trường phái" hiện đại: Agile (linh hoạt) || Adaptive/Incremental/Iterative
+(Nhánh con: Scrum, Extreme programming (XP), Kanban, Lean Startup)
+=> More predictive (đoán trước): mơ hồ, chưa rõ ràng, cần dự đoán.
    (Khách hàng chưa biết họ muốn gì trong một phần mềm)
 	- Thoải mái, linh hoạt theo từng giai đoạn/mô đun.
 	- Nhấn mạnh yếu tố phân vùng, chia để trị:
@@ -92,33 +120,66 @@ Trình tự phát triển phần mềm:
 		   trong những khoảng thời gian bằng nhau (sprint),
 		   giúp dễ dàng thay đổi khi chức năng/mô đun ấy không đạt được yêu cầu.
 
-=> Trong phát triển phần mềm bây giờ thường theo hướng hiện đại
-nhưng vẫn cần sự hỗ trợ của truyền thống.
+=> Trong phát triển phần mềm bây giờ sẽ tuỳ thuộc vào những công ty khác nhau,
+thường theo hướng hiện đại nhưng vẫn cần sự hỗ trợ của truyền thống.
 
 ===========================================================================================
 
-Làm phần mềm phải bàn về khách hàng (Stakeholders).
+Dev cần phải biết phần mềm cần có những tính năng gì,
+và Customer, User, Product Owner sẽ là người cho biết cần phải làm gì.
 
-Công ty thuần phần mềm: FPT Software, MISA, KMS,...
-	- Làm phần mềm do người khác (các ngân hàng, bệnh viên, viễn thông, hiệu thuốc, cửa hàng bán hàng,...) đặt hàng.
-	=> BA làm việc với khách hàng.
+-> Làm phần mềm là phải bàn về khách hàng (Stakeholders).
 
-	- Làm phần mềm do công ty phần mềm khác đặt hàng.
-	(Làm không được thì thuê, do giá nhân công,...)
-		-> Outsource: gia công phần mềm
-	=> BA làm việc với BA khác.
+---------------------------------------------
 
-Công ty không thuần phần mềm (thường là công ty lớn,
-	ví dụ: Lazada, Shopee, Grab, Momo, VNG, Garena, TGDD, Co.opmart, Start-up)
-	Để xây dựng nên tảng nhằm hỗ trợ cho công việc của họ và sử dụng trong nội bộ.
-	- Thuê một công ty phần mềm làm trước cho họ phần nền, phần cơ bản.
-		+ Mua luôn code thay vì chỉ phần mềm.
-	- Để tiết kiệm chi phí, công ty có một đội ngũ Developer riêng
-	  nhằm phát triển tiếp tính năng, bảo trì, nâng cấp.
+** Công ty thuần phần mềm: FPT Software, MISA, KMS,...
+
+	- Làm phần mềm do người khác đặt hàng:
+		+ Các ngân hàng.
+		+ Bệnh viên.
+		+ Viễn thông.
+		+ Bệnh viện.
+		+ Hiệu thuốc.
+		+ Cửa hàng bán hàng,...
+	=> BA (phía công ty phần mềm) làm việc với khách hàng
+	   để hiểu khách hàng muốn gì.
+
+--------------------
+
+	- Làm phần mềm do công ty phần mềm khác đặt hàng:
+		+ Làm theo yêu cầu/đặt hàng của những công ty phần mềm khác
+		  (bên Mỹ, bên Nhật,... -> Những công ty này cũng đang làm phần mềm
+		   cho khách hàng của họ, nhưng nhờ ta gia công một số mô-đun)
+	(Làm không được thì thuê, do giá nhân công cạnh tranh, thời gian,...)
+			-> Outsource: gia công phần mềm.
+	=> BA (phía công ty phần mềm)
+	   làm việc với BA bên kia (BA bên kia làm việc với khách hàng của họ).
+
+--------------------
+
+	- Tự nghĩ ra một phần mềm mà thị trường sẽ cần (chưa có ai đặt hàng)
+		-> Làm sản phẩm (product) mang thương hiệu của mình.
+
+---------------------------------------------
+
+** Công ty không thuần phần mềm, chỉ áp dụng công nghệ vào kinh doanh
+   (thường là công ty lớn): Lazada, Shopee, Grab, Momo, VNG, Garena, TGDD, Co.opmart, Start-up,...
+
+	Để xây dựng nên tảng (flatform)
+	nhằm hỗ trợ cho công việc của họ và sử dụng trong nội bộ:
+
+	- Thuê một công ty phần mềm làm trước cho họ phần nền/phần cơ bản.
+		+ Mua luôn code thay vì chỉ phần mềm/tập tin thực thi.
+
+	- Tiết kiệm chi phí, những công ty này thường sẽ có một đội ngũ Developer riêng,
+	  nhận lương và hằng ngày phát triển tiếp tính năng, bảo trì, nâng cấp trên phần mềm đã mua trước đó.
+
+---------------------------------------------
 
 ===========================================================================================
 
-GIAI ĐOẠN THU THẬP, PHÂN TÍCH & THIẾT KẾ YÊU CẦU CỦA KHÁCH HÀNG (theo mô hình thác nước)
+GIAI ĐOẠN THU THẬP, PHÂN TÍCH & THIẾT KẾ YÊU CẦU CỦA KHÁCH HÀNG
+(theo mô hình thác nước)
 
 ******Hệ thống được tạo ra cho ai (WHO) sử dụng******
 -> Xác định những nhóm người dùng: người dùng khiến cho hệ thống tồn tại.
@@ -176,7 +237,7 @@ Vẫn giữ nguyên giá trị của vế phải, song đề cao giá trị củ
 
 ===========================================================================================
 
-Jira dùng để quản lý User Story (các yêu cầu của khách hàng), vòng đời làm sản phẩm theo phong cách Agile, Scrum.
+Jira dùng để quản lý User Story (các yêu cầu của khách hàng), giúp hiện thực hoá công đoạn và vòng đời làm sản phẩm theo phong cách Agile/Scrum.
 
 ===========================================================================================
 
