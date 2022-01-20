@@ -1,0 +1,135 @@
+[LỊCH SỬ HÌNH THÀNH]
+
+17 chuyên gia họp vào năm 2001 -> Agile (linh hoạt với khách hàng)
+					-> Manifesto (tuyên ngôn/nguyên tắc chung/giá trị/nguyên lý)
+
+Chúng tôi đang khám phá ra một cách tốt hơn để phát triển phần mềm bằng cách chúng tôi làm nó và giúp đỡ mọi người cùng hiện thực hoá nó. Thông qua những công việc này, chúng tôi đi đến kết luận giá trị cốt lõi (quan trọng) sau:
+
+	01. CÁ NHÂN HOÁ VÀ SỰ TƯƠNG TÁC lớn hơn bất kỳ quy trình và công cụ nào.
+		(INDIVIDUALS AND INTERACTIONS over processes and tools)
+		+ Quy trình và công cụ: làm theo khuôn khổ, bị cứng nhắc và ràng buộc theo một quy tắc.
+		+ Cá nhân hoá và sự tương tác.
+
+	02. PHẦN MỀM CHẠY ĐƯỢC hơn là tài liệu thiết kế (SRS).
+		(WORKING SOFTWARE over comprehensive documentation)
+
+	03. PHỐI HỢP VỚI KHÁCH HÀNG hơn là làm theo điểu khoản hợp đồng.
+		(CUSTOMER COLLABORATION over contract negotiation)
+
+	04. TƯƠNG THÍCH, LẮNG NGHE THAY ĐỔI hơn là làm theo kế hoạch đã định.
+		(RESPONDING TO CHANGE over following a plan)
+
+Vẫn giữ nguyên giá trị của vế phải, song đề cao giá trị của vế trái hơn.
+	-> 20 nguyên lý.
+
+------------------------------------------------------------------
+
+Agile (linh hoạt) || Adaptive/Incremental/Iterative
+(Nhánh con: Scrum, Extreme programming (XP), Kanban, Lean Startup)
+
+(Nếu xem Agile là nguyên lý thiết kế động cơ 4 thì: Nạp-Nén-Nổ-Xả
+thì Honda, Yamaha,... sẽ có những bí quyết riêng để cài đặt (implement) động cơ 4 thì)
+
+------------------------------------------------------------------
+
+Được xây dựng dựa trên nguyên tắc làm việc nhóm (cross-functional), trong đội ngũ phát triển phần mềm không có người BA/BrSE để chuyên đi lấy yêu cầu từ phía khách hàng mà là toàn bộ người trong đội ngũ phát triển sẽ cùng lấy yêu cầu khách hàng.
+	-> Lấy kinh nghiệm về lập trình để tư vấn cho khách hàng về đầu ra của sản phẩm.
+
+"Nếu bạn có vấn đề nhưng không nói cho chúng tôi biết thì vấn đề đó là vấn đề chung"
+	-> Trở thành vấn đề của cả nhóm.
+
+========================================================================================
+
+[AGILE: SCRUM FRAMEWORK]
+[THUẬT NGỮ THƯỜNG GẶP]
+
+Agile chia dự án thành từng giai đoạn đều nhau (sprint), làm và bàn giao trong một khoảng thời gian không quá lâu để nhanh chóng thu thập phản hồi và từ đó sửa đổi theo đúng ý của khách hàng nhất có thể.
+
+------------------------------------------------------------------
+
+* Sprint: bước chạy nước rút.
+
+------------------------------------------------------------------
+
+* Daily Scrum Meeting: buổi họp đầu mỗi ngày làm việc, được lặp lại hằng ngày, có thể đứng họp thay vì không ngồi (Stand-up Meeting), nhanh chóng báo cáo tiến độ công việc để sớm phát hiện vấn đề (của cá nhân và nhóm), 
+
+------------------------------------------------------------------
+
+* Scum Master: người trưởng nhóm, quản lý và điều phối mọi hoạt động nhóm Scrum (thường gồm 7-8 thành viên), quản lý tiến độ và phối hợp với những thành viên khác để đàm phán với khách hàng, nhưng có thể tham gia vào việc code.
+
+------------------------------------------------------------------
+
+* Sprint Planning Meeting: diễn ra duy nhất một lần vào đầu sprint, khách hàng sẽ đưa ra yêu cầu, ta sẽ phải họp cùng khách hàng để quyết định nên làm những gì trong sprint đó, cả nhóm sẽ chọn ra những tính năng với độ ưu tiên cao và có khả năng hoàn tất kịp trong một sprint để bàn giao cho khách hàng (khách hàng muốn cái nào thì ta chọn cái đó).
+
+------------------------------------------------------------------
+
+* User Story: các yêu cầu (requirements) mà khách hàng đưa ra, là mong muốn về tính năng phần mềm mà khách hàng muốn sử dụng, nếu khách hàng không biết hoặc không thể diễn đạt thành ý thì có thể thảo luận với toàn bộ thành viên trong đội ngũ phát triển.
+	- Viết tự do.
+	- Viết theo định dạng: Là một (as a) <loại người dùng>, tôi muốn (I want) <mục tiêu muốn làm/đạt được> để (so that) <lý do>.
+
+* Product Backlog: nơi chứa tất cả các yêu cầu cần phải làm đến từ phía khách hàng, khối lượng công việc/tính năng cần phải làm của sản phẩm, do PO hoặc cả nhóm cùng viết.
+
+----------------------------
+
+Khi làm phần mềm, luôn xuất hiện 1 câu hỏi: "Phần mềm viết cho đối tượng nào sử dụng?"
+(Người đặt làm phần mềm và người sử dụng phần mềm đôi khi có thể là hai đối tượng khác nhau.)
+
+----------------------------
+
+Ví dụ: hệ thống quản lý học tập
+
+	- Loại người dùng:
+		+ Học sinh, sinh viên.
+		+ Giảng viên.
+		+ Nhân viên phòng quản lý đào tạo/giáo vụ.
+		+ Phụ huynh.
+
+	- Mục tiêu:
+		+ Muốn xem thời khoá biểu.
+		+ Muốn điểm danh.
+		+ Muốn quản lý môn học.
+		+ Muốn xem kết quả học tập.
+
+	- Lý do:
+		+ Để xem lịch học và đi học/đi làm đúng giờ.
+		+ Để cộng điểm chuyên cần.
+		+ Để phân bổ tiết học và giảng viên.
+		+ Để nắm được tình hình học tập một cách tổng quan.
+
+	* Viết tự do:
+		- I want a feature of/function of viewing my own transcipt.
+
+	* Viết theo định dạng:
+		- As a student, I want to view the timetable so that I can be in the class on time.
+		- As a student, I want to view the attendance infomation so that I can know if my lecturer checked my own attendance or not.
+
+------------------------------------------------------------------
+
+========================================================================================
+
+Jira dùng để quản lý User Story (các yêu cầu của khách hàng), giúp hiện thực hoá công đoạn/vòng đời làm sản phẩm theo phong cách Agile/Scrum.
+
+========================================================================================
+
+** Phương pháp quản lý quá trình phát triển sản phẩm, dự án và chất lượng sản phẩm để làm sao đem lại giá trị lợi ích cao nhất cho khách hàng với thời gian sớm nhất mà vẫn đúng với chất lượng và yêu cầu.
+
+------------------------------------------------------------------
+
+* Kanban: một ngày chỉ làm đúng 5 việc, không hơn không kém, nếu bất chợt có việc khác khẩn cấp hơn (công việc mới) buộc phải giải quyết thì phải nhanh chóng hoàn thành cho xong những công việc cũ trước khi chèn thêm công việc mới vào.
+	-> Cam kết, mọi việc vẫn phải trong tầm kiểm soát (không ít hoặc nhiều quá).
+
+----------------------------
+
+* Lean (tinh gọn): phương pháp quản lý công việc xuất phát từ bên kinh tế, lấy cảm hứng từ phương pháp sản xuất/mô hình quản trị của Toyota, cần mới làm (just in time) và không làm dư thừa, tính trước đầu vào và tỷ lệ hao hụt, cam kết về mặt giá thành và thời gian.
+
+
+
+
+
+
+
+
+
+
+
+
