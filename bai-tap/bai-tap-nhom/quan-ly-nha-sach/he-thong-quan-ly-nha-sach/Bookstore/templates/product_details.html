@@ -1,0 +1,107 @@
+{% extends 'layout/base.html' %}
+
+
+{% block css %}
+   <link href="{{ url_for('static', filename='css/product.css') }}" rel="stylesheet" />
+{% endblock %}
+{% block title %}Chi tiết Sản phẩm {% endblock %}
+
+{% block content %}
+<section class="product-page mb-4">
+        <div class="container">
+
+            <div class="product bg-white p-4">
+                <div class="row">
+
+                    <div class="col-md-6 khoianh">
+                        <div class="anhto mb-4">
+                            <a class="active" href="{{ url_for('static',filename=products.image) }}" data-fancybox="thumb-img">
+                                <img class="product-image" src="{{ url_for('static',filename=products.image) }}" alt="products.name" style="width: 100%;">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 products-content">
+                        <div class="row">
+                            <div class="col-md-12 header">
+                                <h4 class="ten">{{ products.name }}</h4>
+                                <hr>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="price">
+                                    <div class="prices">Giá bán tại DealBooks: <span
+                                            class="price-book font-weight-bold">{{ "{:,.0f}".format(products.price) }}</span><span class="unitmoney">₫</span></div>
+
+                                    </div>
+                                </div>
+                                <div class="sale my-3">
+                                    <h6 class="header font-weight-bold">Khuyến mãi & Ưu đãi tại DealBook:</h6>
+                                    <ul>
+                                        <li><b>Miễn phí giao hàng </b>cho đơn hàng từ 150.000đ ở TP.HCM và 300.000đ ở
+                                            Tỉnh/Thành khác
+                                        <li><b>Combo sách HOT - GIẢM 25% </b>
+                                        <li>Tặng Bookmark cho mỗi đơn hàng</li>
+                                        <li>Bao sách miễn phí (theo yêu cầu)</li>
+                                    </ul>
+                                </div>
+                                <div class="quantily mb-3 w-100">
+                                    <label class="font-weight-bold w-100">Số lượng còn lại : {{ products.quantity }} </label>
+
+                                </div>
+                                <div class="nutmua btn w-100 text-uppercase" onclick="addToCart({{ products.id }}, '{{ products.name }}', {{ products.price }})">Chọn mua</div>
+                                <a class="huongdanmuahang text-decoration-none" href="#">(Vui lòng xem hướng dẫn mua
+                                    hàng)</a>
+                                <small class="share">Share: </small>
+                                <div class="fb-like" data-href="https://www.facebook.com/DealBook-110745443947730/"
+                                    data-width="300px" data-layout="button" data-action="like" data-size="small"
+                                    data-share="true"></div>
+                            </div>
+                            <!-- thông tin khác của sản phẩm:  tác giả, ngày xuất bản, kích thước ....  -->
+                            <div class="col-md-5">
+                                <div class="thongtinsach">
+                                    <ul>
+                                        <li>Tác giả: <a href="#" class="tacgia">{{ products.author.name }}</a></li>
+                                        <li>Ngày xuất bản: <b>{{ products.created_date }}</b></li>
+                                        <li>Kích thước: <b>20.5 x 13.5 cm</b></li>
+                                        <li>Dịch giả: Skye Phan;</li>
+                                        <li>Nhà xuất bản: Nhà Xuất Bản Thanh Niên</li>
+                                        <li>Hình thức bìa: <b>Bìa mềm</b></li>
+                                        <li>Số trang: <b>336</b></li>
+                                        <li>Cân nặng: <b>0</b></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- decripstion của 1 sản phẩm: giới thiệu , đánh giá độc giả  -->
+                    <div class="product-description col-md-9">
+                        <!-- 2 tab ở trên  -->
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active text-uppercase" id="nav-gioithieu-tab"
+                                    data-toggle="tab" href="#nav-gioithieu" role="tab" aria-controls="nav-gioithieu"
+                                    aria-selected="true">Giới thiệu</a>
+                            </div>
+                        </nav>
+                        <!-- nội dung của từng tab  -->
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active ml-3" id="nav-gioithieu" role="tabpanel"
+                                aria-labelledby="nav-gioithieu-tab">
+                                <h6 class="tieude font-weight-bold">{{ products.name }}</h6>
+
+                                <p>{{ products.description }}</p>
+                            </div>
+                            <hr>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+</section>
+{% endblock %}
