@@ -44,7 +44,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF9reMBSxl1G5k="
 							},
-							"name": "SequenceDiagram-ThongKeVaBaoCao",
+							"name": "SequenceDiagram-XemThongKeVaBaoCao",
 							"ownedViews": [
 								{
 									"_type": "UMLFrameView",
@@ -65,9 +65,9 @@
 											"font": "Roboto;17;0",
 											"left": 91.384765625,
 											"top": 5,
-											"width": 290.5146484375,
+											"width": 324.86328125,
 											"height": 17,
-											"text": "SequenceDiagram-ThongKeVaBaoCao"
+											"text": "SequenceDiagram-XemThongKeVaBaoCao"
 										},
 										{
 											"_type": "LabelView",
