@@ -1,6 +1,9 @@
 ﻿Sử dụng Use Case Diagram để phân tích yêu cầu
 
-Hệ thống có những vai trò (role) gì, từng vai trò được thực hiện những tính năng gì
+--------------------------------------------------------
+
+Hệ thống có những vai trò (role) gì, từng vai trò được thực hiện những tính năng gì:
+
 * Quản lý kho:
 	- Quản trị sách (CRUD sách)
 	- Nhập sách vào kho
@@ -12,10 +15,14 @@ Hệ thống có những vai trò (role) gì, từng vai trò được thực hi
 			+ Tác giả
 			+ Số lượng: Số lượng nhập ít nhất 150, chỉ nhập những đầu sách có số lượng ít hơn 300.
 
+--------------------
+
 * Khách hàng:
 	- Mua sách online: sau 48 tiếng từ thời điểm đặt, người dùng không đến lấy sách và thanh toán thì đơn hàng sẽ bị huỷ
 		+ Thanh toán online: miễn phí giao hàng
 		+ Thanh toán trực tiếp khi đến nhà sách nhận sách
+
+--------------------
 
 * Nhân viên:
 	- Bán sách tại quầy:
@@ -29,6 +36,8 @@ Hệ thống có những vai trò (role) gì, từng vai trò được thực hi
 			+ Số lượng
 			+ Đơn giá
 			+ Nhân viên thanh toán
+
+--------------------
 
 * Người quản trị:
 	- Xem thông kê: dạng bảng và biểu đồ
@@ -50,3 +59,22 @@ Hệ thống có những vai trò (role) gì, từng vai trò được thực hi
 	- Thay đổi quy định
 		+ Thay đổi số lượng nhập tối thiểu, số lượng tồn tối thiểu trước khi nhập
 		+ Thay đổi quy định thời gian huỷ đơn hàng nếu người dùng không nhận
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
