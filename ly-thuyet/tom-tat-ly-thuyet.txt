@@ -50,6 +50,7 @@ Process (quy trình), Life cycle (chu trình, vòng đời)
 				      và đội ngũ phát triển phần mềm.
 				      Có thể sẽ cần nghiên cứu để tối ưu sản phẩm tốt hơn,
 				      có được nhiều người dùng hơn và đạt doanh số của công ty.
+			-> Người trực tiếp nhận yêu cầu từ Executives, Team, Stakeholders, Customers, Users.
 
 		+ Ở các công ty nhỏ thì PM/PO có thể là 1 người.
 
@@ -162,7 +163,7 @@ Trình tự phát triển phần mềm:
 		   trong những khoảng thời gian bằng nhau (sprint),
 		   giúp dễ dàng thay đổi khi chức năng/mô đun ấy không đạt được yêu cầu.
 		-> Sau mỗi sprint sẽ cho ra một phiên bản (version) phần mềm
-		   có thể hoạt động được (working software).
+		   có thể chưa hoàn chỉnh nhưng hoạt động được (working software).
 
 => Trong phát triển phần mềm bây giờ sẽ tuỳ thuộc vào những công ty khác nhau,
 thường theo hướng hiện đại nhưng vẫn cần sự hỗ trợ của truyền thống.
