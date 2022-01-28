@@ -55,7 +55,7 @@ Process (quy trình), Life cycle (chu trình, vòng đời), model, method
 				      và đội ngũ phát triển phần mềm.
 				      Có thể sẽ cần nghiên cứu để tối ưu sản phẩm tốt hơn,
 				      có được nhiều người dùng hơn và đạt doanh số của công ty.
-			-> Người trực tiếp nhận yêu cầu từ Executives, Team, Stakeholders,
+			-> Là cầu nối trực tiếp nhận yêu cầu từ Executives, Team, Stakeholders,
 			   Customers, Users và truyền đạt lại yêu cầu cho đội ngũ phát triển.
 
 		+ Ở các công ty nhỏ thì PM/PO có thể là 1 người.
