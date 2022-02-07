@@ -23,7 +23,7 @@ A Python web application to manage all bookstore activities, such as: Placing or
 
 #### Member:
 1. [Hoàng Tuấn Anh](https://github.com/tuananhhoang1805 "Hoàng Tuấn Anh")
-2. [Nguyễn Hoàng Duy Lộc](https://github.com/ "Nguyễn Hoàng Duy Lộc")
+2. [Nguyễn Hoàng Duy Lộc](https://github.com/duyloc110120 "Nguyễn Hoàng Duy Lộc")
 3. [Nguyễn Hoàng Thuận](https://github.com/Nguyen-Hoang-Thuan-OU/ "Nguyễn Hoàng Thuận")
 
 #### Role:
