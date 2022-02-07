@@ -7,7 +7,7 @@
 
 ### Screenshot:
 #### Group Homework Report
-![Group homework report](https://github.com/Nguyen-Hoang-Thuan-OU/cong-nghe-phan-mem/blob/main/bai-tap/bai-tap-nhom/images/bookstore-management-system-introduce-and-requirements.png "Group Homework Report")
+![Group homework report](https://github.com/Nguyen-Hoang-Thuan-OU/cong-nghe-phan-mem/blob/main/bai-tap/bai-tap-nhom/images/dealbook-introduce-and-requirements.png "Group Homework Report")
 
 ---
 
@@ -22,15 +22,15 @@
 ![Use Case Diagram](https://github.com/Nguyen-Hoang-Thuan-OU/cong-nghe-phan-mem/blob/main/bai-tap/bai-tap-nhom/quan-ly-nha-sach/hinh-ve-va-so-do-phan-tich-cua-he-thong/Use-Case-Diagram/UseCaseDiagram-UngDungQuanLyNhaSach.jpg "Use Case Diagram")
 
 * Use Case Description
-![Use Case Description](https://github.com/Nguyen-Hoang-Thuan-OU/cong-nghe-phan-mem/blob/main/bai-tap/bai-tap-nhom/images/bookstore-management-system-use-case-description-statistics-and-reports.png "Use Case Description")
+![Use Case Description](https://github.com/Nguyen-Hoang-Thuan-OU/cong-nghe-phan-mem/blob/main/bai-tap/bai-tap-nhom/images/dealbook-use-case-description-statistics-and-reports.png "Use Case Description")
 
 ---
 
 #### Bookstore Management System
-* Homepage
-![Homepage]( "Homepage")
+* DealBook - Homepage
+![DealBook - Homepage](https://github.com/Nguyen-Hoang-Thuan-OU/cong-nghe-phan-mem/blob/main/bai-tap/bai-tap-nhom/images/dealbook-website-homepage.png "DealBook - Homepage")
 
-* Source Code
-![Bookstore Management System]( "Source Code")
+* DealBook - Source Code
+![DealBook - Source Code](https://github.com/Nguyen-Hoang-Thuan-OU/cong-nghe-phan-mem/blob/main/bai-tap/bai-tap-nhom/images/dealbook-source-code.png "DealBook - Source Code")
 
 © 2022 Bản quyền thuộc về Nguyễn Hoàng Thuận
