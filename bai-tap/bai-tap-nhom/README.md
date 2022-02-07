@@ -1,13 +1,13 @@
 ﻿# Welcome to my group homework - Bookstore Management System
 
 ### You will find in this folder/directory the following stuff:
-* Group Homework Report using Software Requirements Specification (SRS) template IEEE 830/IEEE 29148 and Software Design Document (SDD) template IEEE 1016.
+* Group homework report using Software Requirements Specification (SRS) template IEEE 830/IEEE 29148 and Software Design Document (SDD) template IEEE 1016.
 * Unified Modeling Language (UML) Diagrams: Activity Diagram, Sequence Diagrams, Class Diagram, Use Case Diagram and Use Case Descriptions.
 * Bookstore Management System using Flask, SQLAlchem and Chart.js.
 
 ### Screenshot:
-#### Group Homework Report
-![Group homework report](https://github.com/Nguyen-Hoang-Thuan-OU/cong-nghe-phan-mem/blob/main/bai-tap/bai-tap-nhom/images/dealbook-introduce-and-requirements.png "Group Homework Report")
+#### Group homework report
+![Group homework report](https://github.com/Nguyen-Hoang-Thuan-OU/cong-nghe-phan-mem/blob/main/bai-tap/bai-tap-nhom/images/dealbook-introduce-and-requirements.png "Group homework report")
 
 ---
 
@@ -27,10 +27,10 @@
 ---
 
 #### Bookstore Management System
-* DealBook - Homepage
-![DealBook - Homepage](https://github.com/Nguyen-Hoang-Thuan-OU/cong-nghe-phan-mem/blob/main/bai-tap/bai-tap-nhom/images/dealbook-website-homepage.png "DealBook - Homepage")
+* DealBook - Website homepage
+![DealBook - Website homepage](https://github.com/Nguyen-Hoang-Thuan-OU/cong-nghe-phan-mem/blob/main/bai-tap/bai-tap-nhom/images/dealbook-website-homepage.png "DealBook - Website homepage")
 
-* DealBook - Source Code
-![DealBook - Source Code](https://github.com/Nguyen-Hoang-Thuan-OU/cong-nghe-phan-mem/blob/main/bai-tap/bai-tap-nhom/images/dealbook-source-code.png "DealBook - Source Code")
+* DealBook - Source code
+![DealBook - Source code](https://github.com/Nguyen-Hoang-Thuan-OU/cong-nghe-phan-mem/blob/main/bai-tap/bai-tap-nhom/images/dealbook-source-code.png "DealBook - Source code")
 
 © 2022 Bản quyền thuộc về Nguyễn Hoàng Thuận
