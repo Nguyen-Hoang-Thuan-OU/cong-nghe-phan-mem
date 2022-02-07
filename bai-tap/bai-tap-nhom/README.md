@@ -1,9 +1,38 @@
 ﻿# Welcome to my group homework - Bookstore Management System
 
+*Oct 2021 - Jan 2022 (3 months) | Semester 10/12*
+
+---
+
 ### You will find in this folder/directory the following stuff:
-* Group homework report using Software Requirements Specification (SRS) template IEEE 830/IEEE 29148 and Software Design Document (SDD) template IEEE 1016.
-* Unified Modeling Language (UML) Diagrams: Activity Diagram, Sequence Diagrams, Class Diagram, Use Case Diagram and Use Case Descriptions.
-* Bookstore Management System using Flask, SQLAlchem and Chart.js.
+- Group homework report using Software Requirements Specification (SRS) template IEEE 830/IEEE 29148 and Software Design Document (SDD) template IEEE 1016.
+- Unified Modeling Language (UML) Diagrams: Activity Diagram, Sequence Diagrams, Class Diagram, Use Case Diagram and Use Case Descriptions.
+- Bookstore Management System using Flask, SQLAlchemy, Cloudinary and Chart.js.
+
+#### Brief:
+A Python web application to manage all bookstore activities, such as: Placing orders, Make payments, CRUD (create, read, update and delete) books, View reports as graphs and charts,...
+
+#### Technology:
+- StarUML.
+- PyCharm.
+- Python.
+- Flask.
+- SQLAlchemy.
+- Cloudinary.
+- Chart.js.
+
+#### Member:
+1. [Hoàng Tuấn Anh](https://github.com/tuananhhoang1805 "Hoàng Tuấn Anh")
+2. [Nguyễn Hoàng Duy Lộc](https://github.com/ "Nguyễn Hoàng Duy Lộc")
+3. [Nguyễn Hoàng Thuận](https://github.com/Nguyen-Hoang-Thuan-OU/ "Nguyễn Hoàng Thuận")
+
+#### Role:
+- Design Activity Diagram.
+- Design Sequence Diagrams.
+- Design Use Case Diagram.
+- Write Use Case Descriptions.
+
+---
 
 ### Screenshot:
 #### Group homework report
