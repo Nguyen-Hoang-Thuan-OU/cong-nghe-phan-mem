@@ -43,12 +43,13 @@
 	- Product Manager (PM): giám đốc sản phẩm, người được mướn về,
 				người có tầm nhìn bao quát về sản phẩm,
 				người làm việc chặt chẽ với hội đồng quản trị,
-				nghiên cứu với nhiệm vụ cho ra được sản phẩm
+				người đảm bảo chất lượng, thời gian và tiến độ,
+				người nghiên cứu với nhiệm vụ cho ra được sản phẩm
 				có tính năng cạnh tranh cao so với đối thủ.
 				(tính năng nào hay, tính năng nào cần bổ sung thêm)
 		-> Người nghiên cứu (thói quen, hành vi, nhu cầu của người dùng,...),
 		   làm việc trực tiếp với các cổ đông và trách nhiệm phát triển sản phẩm,
-		   tầm nhìn, chiến lược, định vị sản phẩm trong thị trường.
+		   tầm nhìn, chiến lược, chất lượng, định vị sản phẩm trong thị trường.
 
 		+ Product Owner (PO): người chịu trách nhiệm cho các vấn đề của người dùng
 				      khi tiếp cận và sử dụng sản phẩm.
@@ -103,41 +104,45 @@ Bao gồm ít nhất 4 bước/công đoạn không kể thứ tự: Spec, Dev, 
 ------------------------------------------------------------------
 
 Bước 01: Requirements/Specifications (Yêu cầu/Đặc tả)
-		[Người BA, BrSE]
+		[IT BA, BrSE]
 		- Hỏi khách hàng để xem cần phải làm gì, khách hàng yêu cầu gì ở phần mềm?
 		=> WHAT?
 
 ----------------------------
 
 Bước 02: Design (Thiết kế)
-		[Người BA, Developer, Graphic Designer, Marketing,...]
+		[BA, Solution Architect, Developer, Graphic Designer, Marketing,...]
 		- Giao diện người dùng (UI).
 		- Cơ sở dữ liệu (DB).
 		- Kiến trúc phần mềm (Architecture),
-		  cách tổ chức mã nguồn: MVC, API, Web Service, Microservices,...
+		  cách tổ chức mã nguồn: MVC, API, Web Service, Microservices,
+					 3 Tier/Layer, Client-Server,...
+		  (Kiến trúc: cách bố trí, chia mã nguồn thành từng khu vực - package/namespace,...)
 
 ----------------------------
 
 Bước 03: Development/Implementation (Hiện thực hoá sản phẩm phần mềm bằng code)
-		[Người Developer]
+		[Developer]
 		- Cần các tool, IDE,...
 		- Cần các thiết bị: máy in (in layout), máy mã quét mã vạch, máy ảo,...
-		- Viết mã nguồn.
+		- Viết mã nguồn, tương tác với cơ sở dữ liệu.
 
 ----------------------------
 
 Bước 04: Testing/Verification/Validation (Kiểm thử chất lượng phần mềm)
 		[Người Quality Assurance/Quality Control (QA/QC), Tester]
 		- Test code, hệ thống (Kiểm thử tĩnh, kiểm thử động,..).
-		- Test phần mềm để kiểm tra xem chạy có đúng hay không?
+		- Test phần mềm để kiểm tra xem hoạt động theo đúng yêu cầu
+		  hoặc phần mềm đang có lỗi tiềm ẩn hay không.
 
 ----------------------------
 
 Bước 05: Deployment/Maintenance/Enhancement (Bàn giao cho khách hàng, công bố cho mọi người sử dụng)
 		[Người Help Desk, Customer Care]
-		- Cài đặt phần mềm lên máy của khách hàng, ví dụ: các máy tính tiền ở cửa hàng.
+		- Cài đặt phần mềm lên máy của khách hàng, ví dụ: các máy tính tiền ở cửa hàng,...
+		- Triển khai lên một Server để mọi người truy cập thông qua URL.
 		- Upload lên trên internet để mọi người có thể download
-			(bán bản quyền, cho sử dụng trial).
+		  (bán bản quyền, cho sử dụng trial,...).
 		- Cài đặt một đoạn code ngầm tự động kiểm tra cập nhật
 		  sau một khoảng thời gian để bảo trì, sửa lỗi/vá lỗi (fix bug).
 		- Nâng cấp, bổ sung thêm tính năng.
@@ -370,11 +375,24 @@ Mẫu câu: As a..., I want to... so that....
 
 ===========================================================================================
 
-Functional: chức năng cần phải có trong công việc.
+[YÊU CẦU PHẦN MỀM]
+
+** Functional requirement: là những câu phát biểu trả lời cho câu hỏi WHAT, phần mềm hỗ trợ cho khách hàng làm được gì, chức năng gì cần phải có.
 	-> Phục vụ tính năng để giải quyết công việc.
 
-Non-functional: cảm giác trải nghiệm, thân thiện và dễ dàng sử dụng.
+	Ví dụ: hệ thống quản lý học tập
+		- Sinh viên muốn xem bảng điểm, đăng ký môn học,...
+		- Giảng viên muốn điểm danh sinh viên, xem lịch dạy học...
+		- Phụ huynh muốn xem kết quả học tập của sinh viên,...
+
+----------------------------
+
+** Non-functional requirement: là những câu phát biểu liên quan đến chất lượng, các ràng buộc và cảm giác khi sử dụng phần mềm (bao trùm cả hệ thống chứ không tập trung vào một tính năng cụ thể).
 	-> Phục vụ trải nghiệm trong quá trình sử dụng.
+
+	Ví dụ: hiệu năng sử dụng
+		- Hệ thống đặt vé tàu, xe, máy bay,... hỗ trợ lưu lượng người sử dụng tăng đột biến trong một khoảng thời gian nhất định.
+		- Hệ thống đăng ký môn học hỗ trợ nhiều sinh viên cùng đăng ký môn học.
 
 ===========================================================================================
 
