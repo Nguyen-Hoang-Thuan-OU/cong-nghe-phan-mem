@@ -1,4 +1,5 @@
-﻿ -------------------------------------------------------
+﻿
+ -------------------------------------------------------
 |	Làm cho WHO, Phân tích WHAT, Thiết kế HOW	|
  -------------------------------------------------------
 
@@ -6,39 +7,51 @@
 |	Công đoạn: các bước	|	Phương pháp/quy trình: cách phối hợp các bước	|
  ---------------------------------------------------------------------------------------
 
+ -------------------------------------------------------------------------------
+|	Sóng bắt đầu từ gió, làm phần mềm bắt đầu từ yêu cầu của stakeholders	|
+ -------------------------------------------------------------------------------
+
 ===========================================================================================
 
 [CÁC THUẬT NGỮ VỀ QUY TRÌNH]
 
 ** Quy trình phát triển phần mềm: một tập hợp các hoạt động có tổ chức mà mục đính là xây dựng và phát triển phần mềm, đảm bảo cho sản phẩm đạt chất lượng.
 
-** Methodology (nghĩa rộng: phương pháp luận): cách thức, phương pháp, bài viết, chỉ dẫn về một phương pháp nào đó.
-	Process (quy trình), Life cycle (chu trình, vòng đời), model, method,...
+** Methodology (nghĩa rộng: phương pháp luận): là cách thức, phương pháp, bài viết, quy trình, chỉ dẫn về một phương pháp nào đó.
+	≈ Nghĩa hẹp, cụ thể hơn: Process (quy trình), Life cycle (chu trình, vòng đời), Model, Method,...
 
 => Các bước làm phần mềm theo một thứ tự nào đó.
+
+Sau khi xong một vòng đời (xong một phần mềm) thì làm gì tiếp theo?
+	-> Chuyển sang một pha (giai đoạn) mới, phiên bản mới/làm lại từ đầu
+	   hoặc chuyển sang một phần mềm mới và lặp lại các bước.
 
 ------------------------------------------------------------------
 
 [CÁC CHỨC DANH VÀ NHIỆM VỤ]
 
-** Customer, User, Product Owner (PO): người đưa ra yêu cầu của sản phẩm.
+** Customer, User, Product Owner (PO): người đưa ra yêu cầu cho sản phẩm.
+
 	[Water-fall]: I want...
-	Software Requirement (descriptive): Yêu cầu, thứ khách hàng muốn có (feature/function)
-					    trong phần mềm mà họ sắp trả tiền để thuê
-					    nhằm phục vụ và hỗ trợ cho công việc HẰNG NGÀY của họ
-					    (những công việc mà dù không có phần mềm
-					    thì họ vẫn phải làm thủ công như bình thường)
-					    và còn hơn thế nữa, ví dụ: xem doanh thu.
+	Software Requirement (predictive): yêu cầu phần mềm, thứ khách hàng muốn có,
+					   tính năng (feature/function) trong phần mềm
+					   mà khách hàng sắp trả tiền để thuê, để sử dụng
+					   nhằm phục vụ và hỗ trợ cho công việc HẰNG NGÀY* của họ
+					   và thâm chí còn hơn thế nữa, ví dụ: xem thống kê doanh thu.
+					    (*: những công việc mà dù không có phần mềm
+					    thì khách hàng vẫn phải làm thủ công như bình thường.)
 
 	[Agile]: As a <loại người dùng>..., I want <mục tiêu>... so that <lý do>...
-	User story (predictive): Mong đợi của khách hàng về tính năng của phần mềm
+	User Story (adaptive): mong đợi của khách hàng về tính năng của phần mềm.
+				(Đồng nghĩa với Software Requirement nhưng được sử dụng trong Agile.)
 
 => Khách hàng nói ra những mong ước của họ về các tính năng của phần mềm
    vì chưa có hoặc đã có nhưng phần mềm hiện tại chưa được tốt, cần nâng cấp.
 
+----------------------------
 
-	- Investor: ông chủ của công ty, hội đồng quản trị, cổ đông,
-		    người bỏ vốn ra đầu tư, góp vốn để xây dựng đế chế.
+	- Investor: ông chủ của công ty/giải pháp phần mềm, hội đồng quản trị, cổ đông,
+		    người bỏ vốn ra đầu tư, góp vốn để xây dựng nên đế chế (công ty/doanh nghiệp).
 
 	- Product Manager (PM): giám đốc sản phẩm, người được mướn về,
 				người có tầm nhìn bao quát về sản phẩm,
@@ -46,30 +59,30 @@
 				người đảm bảo chất lượng, thời gian và tiến độ,
 				người nghiên cứu với nhiệm vụ cho ra được sản phẩm
 				có tính năng cạnh tranh cao so với đối thủ.
-				(tính năng nào hay, tính năng nào cần bổ sung thêm)
+				(tính năng nào hay, tính năng nào cần bổ sung thêm.)
 		-> Người nghiên cứu (thói quen, hành vi, nhu cầu của người dùng,...),
-		   làm việc trực tiếp với các cổ đông và trách nhiệm phát triển sản phẩm,
-		   tầm nhìn, chiến lược, chất lượng, định vị sản phẩm trong thị trường.
+		   làm việc trực tiếp với các cổ đông và chịu trách nhiệm phát triển sản phẩm,
+		   đưa ra tầm nhìn và chiến lược để đảm bảo chất lượng và định vị sản phẩm trong thị trường.
 
 		+ Product Owner (PO): người chịu trách nhiệm cho các vấn đề của người dùng
 				      khi tiếp cận và sử dụng sản phẩm.
 				      Người chịu trách nhiệm đưa ra yêu cầu của phần mềm,
 				      thu thập yêu cầu từ nhiều nơi (cấp trên, người dùng,...)
-				      sau đó truyền đạt lại cho các thành viên trong nhóm
+				      sau đó diễn đạt lại cho các thành viên trong nhóm
 				      và đội ngũ phát triển phần mềm.
 				      Có thể sẽ cần nghiên cứu để tối ưu sản phẩm tốt hơn,
 				      có được nhiều người dùng hơn và đạt doanh số của công ty.
-			-> Là cầu nối trực tiếp nhận yêu cầu từ Executives, Team, Stakeholders,
-			   Customers, Users và truyền đạt lại yêu cầu cho đội ngũ phát triển.
+			-> Là cầu nối trực tiếp nhận yêu cầu/ý tưởng phần mềm từ Executives, Team,
+			   Stakeholders, Customers, Users và diễn đạt lại cho đội ngũ phát triển.
 
-		+ Ở các công ty nhỏ thì PM/PO có thể là 1 người.
+		+ Ở một số công ty (chuyên làm sản phẩm) thì PM/PO có thể là cùng 1 người.
 
 	- Project Manager: người quản lý khi đang làm dự án phần mềm.
 
 ----------------------------
 
 ** BA, BrSE: người nói chuyện chuyên môn với khách hàng để lấy yêu cầu về sản phẩm.
-	- BA (Business Analyst): kỹ sư phân tích nghiệp vụ khách hàng.
+	- IT BA (IT Business Analyst): kỹ sư phân tích nghiệp vụ khách hàng (trong lĩnh vực CNTT).
 
 	- BrSE (Bridge Software Engineer): kỹ sư cầu nối.
 
@@ -83,9 +96,9 @@
 
 [QUY TRÌNH/VÒNG ĐỜI PHÁT TRIỂN PHẦN MỀM - SOFTWARE/SYSTEMS DEVELOPMENT LIFE CYCLE (SDLC)]
 
-Có bao nhiêu bước? --> Từ 4 đến 8 bước, tuỳ vào cách nhìn nhận của tác giả.
+Có bao nhiêu bước/công đoạn? --> Từ 4 đến 8 bước, tuỳ vào cách nhìn nhận của từng người.
 
-Bao gồm ít nhất 4 bước/công đoạn không kể thứ tự: Spec, Dev, Valid, Evol.
+Bao gồm ít nhất 4 bước không kể thứ tự: Spec, Dev, Valid, Evol.
 
 ----------------------------
 
@@ -105,13 +118,14 @@ Bao gồm ít nhất 4 bước/công đoạn không kể thứ tự: Spec, Dev, 
 
 Bước 01: Requirements/Specifications (Yêu cầu/Đặc tả)
 		[IT BA, BrSE]
-		- Hỏi khách hàng để xem cần phải làm gì, khách hàng yêu cầu gì ở phần mềm?
+		- Hỏi khách hàng để xem cần phải làm gì, hiểu khách hàng yêu cầu gì ở phần mềm?
+		- Phần mềm nên có những chức năng và kết quả xử lý là gì?
 		=> WHAT?
 
 ----------------------------
 
 Bước 02: Design (Thiết kế)
-		[BA, Solution Architect, Developer, Graphic Designer, Marketing,...]
+		[BA, Solution Architect, Developer, Graphic Designer, Marketing (bắt xu thế),...]
 		- Giao diện người dùng (UI).
 		- Cơ sở dữ liệu (DB).
 		- Kiến trúc phần mềm (Architecture),
@@ -121,41 +135,44 @@ Bước 02: Design (Thiết kế)
 
 ----------------------------
 
-Bước 03: Development/Implementation (Hiện thực hoá sản phẩm phần mềm bằng code)
+Bước 03: Development/Implementation (Thực thi/Hiện thực hoá sản phẩm phần mềm bằng code)
 		[Developer]
-		- Cần các tool, IDE,...
-		- Cần các thiết bị: máy in (in layout), máy mã quét mã vạch, máy ảo,...
+		- Cần các môi trường, tool, IDE, thư viện,... (phần mềm)
+		- Cần các thiết bị: máy in (in layout), máy mã quét mã vạch, máy ảo,... (phần cứng)
 		- Viết mã nguồn, tương tác với cơ sở dữ liệu.
 
 ----------------------------
 
 Bước 04: Testing/Verification/Validation (Kiểm thử chất lượng phần mềm)
-		[Người Quality Assurance/Quality Control (QA/QC), Tester]
-		- Test code, hệ thống (Kiểm thử tĩnh, kiểm thử động,..).
+		[Quality Assurance/Quality Control (QA/QC), Tester]
+		- Test code, hệ thống (kiểm thử tĩnh, kiểm thử động,..), cơ sở dữ liệu, giao diện.
 		- Test phần mềm để kiểm tra xem hoạt động theo đúng yêu cầu
 		  hoặc phần mềm đang có lỗi tiềm ẩn hay không.
 
 ----------------------------
 
-Bước 05: Deployment/Maintenance/Enhancement (Bàn giao cho khách hàng, công bố cho mọi người sử dụng)
-		[Người Help Desk, Customer Care]
+Bước 05: Deployment/Maintenance/Enhancement (Bàn giao cho khách hàng/Công bố cho mọi người sử dụng)
+		[Help Desk, Customer Care]
 		- Cài đặt phần mềm lên máy của khách hàng, ví dụ: các máy tính tiền ở cửa hàng,...
 		- Triển khai lên một Server để mọi người truy cập thông qua URL.
 		- Upload lên trên internet để mọi người có thể download
 		  (bán bản quyền, cho sử dụng trial,...).
-		- Cài đặt một đoạn code ngầm tự động kiểm tra cập nhật
+		- Cài đặt sẵn một đoạn code ngầm (chứa sẵn đường dẫn: URL, tập tin,...)
+		  giúp tự động kết nối đến Server của nhà phát triển và kiểm tra cập nhật
 		  sau một khoảng thời gian để bảo trì, sửa lỗi/vá lỗi (fix bug).
-		- Nâng cấp, bổ sung thêm tính năng.
-			VD: 
+		- Nâng cấp, bổ sung thêm tính năng mới (nếu có).
+			Ví dụ: 
 				- Zalo thêm tính năng chuyển tiền khi nhắn tin.
 				- Shopee, Lazada,... thêm tính năng Livestream.
 
 ===========================================================================================
 
-[MÔ HÌNH PHÁT TRIỂN PHẦN MỀM - AGILE VS. WATERFALL METHODOLOGY]
+[MÔ HÌNH PHÁT TRIỂN PHẦN MỀM BẰNG AGILE VÀ WATERFALL - AGILE VS. WATERFALL METHODOLOGY]
 
-Cách phối hợp giữa các bước như thế nào?
-	-> "Trường phái" phát triển phần mềm
+Cách phối hợp giữa các bước/công đoạn như thế nào?
+	-> "Trường phái" phát triển phần mềm.
+		=> Đích đến cuối cùng: cho ra được Working Software
+				       (phần mềm có thể hoạt động, vận hành được)
 
 ------------------------------------------------------------------
 
@@ -163,14 +180,14 @@ Cách phối hợp giữa các bước như thế nào?
 
 1. "Trường phái" truyền thống, có kế hoạch (plan-driven process): Water fall (thác nước)
 
-	=> More descriptive (miêu tả chi tiết): hướng về một thứ rõ ràng, kể/liệt kê ra được.
-	   (Khách hàng đã biết họ muốn gì trong một phần mềm do có tham khảo trước)
+	=> Predictive (miêu tả chi tiết): có thể dự đoán trước được kết quả.
+	   (Khách hàng biết họ muốn gì trong một phần mềm do đã có tham khảo từ trước.)
 
-	- Nghiêm ngặt theo từng bước, từng khoảng thời gian định trước.
+	- Nghiêm ngặt theo từng bước, từng khoảng thời gian được định trước.
 
 	- Nhấn mạnh yếu tố làm trên tổng thể (The Whole):
 	  phân tích đầy đủ yêu cầu, viết đầy đủ tài liệu rồi mới xây dựng hệ thống,
-	  (hiểu hết toàn bộ bài toán ở giao đoạn trước thì mới bước sang giai đoạn tiếp theo).
+	  (hiểu hết toàn bộ bài toán ở giai đoạn đầu thì mới bước sang giai đoạn tiếp theo).
 
 		-> Một hệ thống hoàn chỉnh với đầy đủ chức năng sẽ ra đời ở những giai đoạn cuối,
 		   nhưng cũng sẽ tốn kém khi lúc này sản phẩm không đạt được như yêu cầu.
@@ -180,31 +197,41 @@ Cách phối hợp giữa các bước như thế nào?
 2. "Trường phái" hiện đại, nhanh: Agile (linh hoạt, thực dụng hơn) || Adaptive/Incremental/Iterative
 (Nhánh con: Scrum, Extreme programming (XP), Kanban, Lean Startup)
 
-	=> More predictive (đoán trước): mơ hồ, chưa rõ ràng, cần dự đoán.
-	   (Khách hàng chưa biết họ muốn gì trong một phần mềm)
+	=> Adaptive (thích nghi): chia dự án thành những phần nhỏ theo một khoảng thời gian.
 
-	- Thoải mái, linh hoạt theo từng giai đoạn/mô đun.
+	- Thoải mái, linh hoạt theo từng giai đoạn/mô-đun.
 
 	- Nhấn mạnh yếu tố phân vùng, chia để trị (Divide and Conquer):
 	  không cần phân tích toàn bộ yêu cầu và vẽ quá chi tiết các sơ đồ,
 	  mà phân tích đến đâu thì làm đến đấy.
-	  Sớm xây dựng hệ thống sớm bằng cách tách ra từng mô-đun để thực hiện
-	  nhằm nhanh chóng nhận phản hồi từ phía khách hàng.
+	  Sớm xây dựng hệ thống bằng cách tách ra thành từng mô-đun nhỏ để thực hiện,
+	  giúp nhanh chóng có được sản phẩm để giao cho khách hàng và nhận phản hồi.
 
-	- Incremental (tăng dần): hệ thống trải qua nhiều phiên bản và dần dần hoàn thiện
-				  theo từng phiên bản sau một khoảng thời gian đều nhau.
+	- Incremental (tăng dần): hệ thống (hoàn chỉnh) được chia thành các thành phần nhỏ,
+				  trải qua nhiều phiên bản và dần hoàn thiện theo từng phiên bản
+				  sau một khoảng thời gian đều nhau.
+				  Tăng trưởng dần, hệ thống dần có thêm nhiều tính năng theo thời gian.
+					-> Dần hoàn thành từng mảng của bức tranh vốn đã đầy đủ màu sắc và bố cục.
 
 	- Iterative (lặp lại): lặp đi lặp lại các bước (cố định về số bước),
-			       chia công việc thành các đoạn thời gian bằng nhau.
+			       chia công việc thành các đoạn thời gian bằng nhau,
+			       mỗi vòng lặp sẽ cho ra một phiên bản của phần mềm.
+			       Kết thúc mỗi vòng lặp sẽ đánh giá, cải thiện
+			       để xác định yêu cầu cho phiên bản của vòng lặp tiếp theo.
+			       Quá trình này lặp lại cho đến khi sản phẩm phần mềm hoàn thành.
+					-> Dần tô màu cho bức tranh chỉ mới vẽ xong phần khung.
 
 		-> Một hệ thống không hoàn chỉnh
 		   mà chỉ là những chức năng/mô đun nhỏ được ra đời
 		   trong những khoảng thời gian bằng nhau (sprint),
-		   giúp dễ dàng thay đổi khi chức năng/mô đun ấy không đạt được yêu cầu.
+		   giúp dễ dàng thay đổi khi chức năng/mô-đun ấy không đạt được yêu cầu.
 
 		-> Sau mỗi sprint sẽ cho ra một phiên bản (version) phần mềm,
 		   có thể chưa hoàn chỉnh nhưng hoạt động được (working software),
 		   hướng đến sự hài lòng của khách hàng/người dùng cuối.
+
+		-> Chia nhỏ công việc để sớm hoàn thành và nhận phản hồi,
+		   hướng đến sự hài lòng của khách hàng và người dùng.
 
 => Trong phát triển phần mềm bây giờ sẽ tuỳ thuộc vào những công ty khác nhau,
 thường theo hướng hiện đại nhưng vẫn cần sự hỗ trợ của truyền thống.
@@ -213,16 +240,18 @@ thường theo hướng hiện đại nhưng vẫn cần sự hỗ trợ của t
 
 [CÁC DẠNG NGƯỜI DÙNG]
 
-Dev cần phải biết phần mềm cần có những tính năng gì,
+** Dev cần biết phần mềm phải có những tính năng gì,
 và Customer, User, Product Owner sẽ là người cho biết cần phải làm gì.
 
-	Người đặt hàng, đưa ra yêu cầu phần mềm -> Customer
+	* Customer (khách hàng): người đặt hàng, người bỏ tiền và đưa ra yêu cầu
+				 để có được sản phẩm nhằm phục vụ cho nội bộ doanh nghiệp
+				 hoặc customer nào đó khác của riêng họ.
 
-	Người sử dụng, trải nghiệm, tận hưởng	-> End-user, User
-	(người nắm rõ nhất mong ước về phần mềm)
+	* End-user, User (người dùng): người trực tiếp sử dụng, trải nghiệm và tận hưởng sản phẩm.
+	  			       (người nắm rõ nhất mong ước về phần mềm.)
 
 -> Làm phần mềm là phải bàn về khách hàng và người dùng (Stakeholders),
-   bắt đầu bằng những yêu cầu, tính năng cần có của phần mềm.
+   bắt đầu bằng những yêu cầu (requirements), tính năng (feature/function) cần có của phần mềm.
 
 ------------------------------------------------------------------
 
@@ -230,12 +259,14 @@ và Customer, User, Product Owner sẽ là người cho biết cần phải làm
 
 ** Công ty thuần phần mềm: FPT Software, MISA, KMS, TMA, Larion,...
 
-	- Làm phần mềm do người khác (cá nhân hoặc tổ chức) đặt hàng:
+	- Làm phần mềm do người khác (cá nhân hoặc tổ chức - customer) đặt hàng:
 		+ Các ngân hàng.
+		+ Tín dụng.
 		+ Bệnh viện.
-		+ Hiệu thuốc.
 		+ Viễn thông.
-		+ Cửa hàng kinh doanh: thời trang, mỹ phẩm,...
+		+ Cửa hàng kinh doanh: thời trang, mỹ phẩm, dược phẩm,...
+
+		-> Nhà cung cấp (Supplier) cung cấp giải pháp phần mềm (Solution), làm theo đơn đặt hàng.
 
 	=> BA (phía công ty phần mềm) làm việc với khách hàng
 	   để hiểu khách hàng muốn gì.
@@ -243,12 +274,12 @@ và Customer, User, Product Owner sẽ là người cho biết cần phải làm
 ----------------------------
 
 	- Làm phần mềm/một mô-đun nhỏ do công ty phần mềm khác đặt hàng:
-		+ Làm theo yêu cầu/đặt hàng của những công ty phần mềm khác
-		  (bên Mỹ, Nhật,...)
-			-> Nhận dự án từ khách hàng ở nước họ
+		+ Làm theo yêu cầu/đặt hàng
+		  của những công ty phần mềm khác (bên Mỹ, Nhật,...)
+			-> Họ nhận dự án từ khách hàng ở nước họ
 			   và nhờ ta gia công một số mô-đun.
-	(Làm không được thì thuê, do giá nhân công cạnh tranh,
-	thời gian không đủ để tự làm,...)
+	("Làm không được thì thuê", do giá nhân công cạnh tranh,
+	thời gian không đủ để tự làm toàn bộ,...)
 
 		-> Outsource: gia công phần mềm.
 
@@ -257,29 +288,34 @@ và Customer, User, Product Owner sẽ là người cho biết cần phải làm
 
 ----------------------------
 
-	- Tự nghĩ ra một phần mềm mà thị trường sẽ cần (chưa có ai đặt hàng).
+	- Tự nghĩ ra một phần mềm mà thị trường sẽ cần (chưa có khách hàng cụ thể đặt hàng).
+
 		-> Làm sản phẩm (product) mang thương hiệu của mình
 		   và kinh doanh, kiếm tiền bằng phần mềm đó.
 	Ví dụ:
-		VNG Corporation, Electronic Arts, Nintendo, Sony, Microsoft,...
+		VNG Corporation, Electronic Arts, Nintendo, Sony, Microsoft, Adobe,...
 			Ban lãnh đạo, phòng kinh doanh,... nghiên cứu thị trường
-				-> Đề xuất nên làm một phần mềm (game),
+				-> Đề xuất nên làm một phần mềm hoặc game,
 				   sau đó bán sản phẩm hoặc vật phẩm trong game.
 
 ------------------------------------------------------------------
 
 ** Công ty không thuần phần mềm, chỉ áp dụng công nghệ vào kinh doanh
-   (thường là công ty lớn): Lazada, Shopee, Grab, Momo, VNG, Garena, TGDD, Co.opmart, Start-up,...
+   (thường là công ty lớn): Lazada, Shopee, Grab, Momo, Garena, TGDD, Co.opmart, Khởi nghiệp (Start-up),...
 
-	Để xây dựng nên tảng (flatform)
-	nhằm hỗ trợ cho công việc của họ và sử dụng trong nội bộ:
+	Do nhận thấy được những lợi ích của việc sử dụng phần mềm
+	trong các hoạt động kinh doanh nên đã quyết định đầu tư
+	để xây dựng nên một nền tảng (platform) - nơi làm được nhiều việc
+	nhằm hỗ trợ cho công việc của họ và sử dụng trong nội bộ bằng cách:
 
 		- Thuê một công ty phần mềm làm trước cho họ phần nền/phần cơ bản,
-		  sau đó mua luôn code thay vì chỉ phần mềm/tập tin thực thi.
+		  sau đó mua luôn code thay vì chỉ phần mềm/tập tin thực thi (.exe).
 
-		- Tiết kiệm chi phí, những công ty này thường sẽ có một đội ngũ Developer riêng,
-		  nhận lương và hằng ngày phát triển tiếp tính năng, bảo trì,
-		  nâng cấp trên phần mềm đã mua trước đó để đảm bảo việc vận hành được ổn định.
+		- Để tiết kiệm chi phí, những công ty này thường sẽ có một đội ngũ Developer riêng,
+		  nhận lương và hằng ngày phát triển tiếp tính năng hoặc bảo trì và nâng cấp
+		  trên phần mềm đã mua trước đó để đảm bảo việc vận hành được ổn định.
+
+	=> BA để giao tiếp trong nội bộ công ty.
 
 ===========================================================================================
 
@@ -287,68 +323,60 @@ và Customer, User, Product Owner sẽ là người cho biết cần phải làm
 (theo mô hình thác nước)
 
 ******Hệ thống được tạo ra cho ai (WHO) sử dụng******
--> Xác định những nhóm người dùng: người dùng khiến cho hệ thống tồn tại.
 
 	01. End-user đặc biệt: những người khách (guest/visitor/anonymous) ghé ngang qua hệ thống, chưa có tài khoản hoặc chưa đăng nhập nên hệ thống chưa biết đây là ai. Sau khi đăng nhập thì có thể trở thành End-user thông thường hoặc Admin.
 
-	02. End-user thông thường: nhóm người dùng cuối, đông nhưng ít quyền thao tác trên dữ liệu (thêm, xem, sửa, xoá một số dữ liệu được cho phép). Ví dụ: người mua hàng, thu ngân bán hàng tại cửa hàng (nếu là người làm thuê thì sẽ không được xếp vào nhóm người quản trị vì họ phải đợi khách hàng mua thì họ mới có thể bán, chứ họ không có quyền quyết định những mặt hàng nào được phép bán và giá của từng mặt hàng).
+	02. End-user thông thường: nhóm người dùng cuối, số lượng đông nhưng ít quyền thao tác trên dữ liệu (thêm, xem, sửa, xoá một số dữ liệu được cho phép).
+		Ví dụ:
+			- Người mua hàng.
+			- Thu ngân bán hàng tại cửa hàng (nếu là người làm thuê thì sẽ không được xếp vào nhóm người quản trị vì họ phải đợi khách hàng mua thì họ mới có thể bán, chứ họ không có quyền quyết định những mặt hàng nào được phép bán và giá của từng mặt hàng).
 
-	03. Admin: nhóm người quản trị, ít nhưng nhiều quyền thao tác trên dữ liệu (thêm, xem, sửa, xoá gần như toàn bộ dữ liệu) nhằm cung cấp tính khả dụng về dữ liệu cho nhóm người dùng cuối. Ví dụ: người quản lý, người có quyền quyết định loại mặt hàng được bán và loại nào không, giá của từng loại hàng,...
+	03. Admin: nhóm người quản trị, số lượng ít nhưng nhiều quyền thao tác trên dữ liệu (thêm, xem, sửa, xoá gần như toàn bộ dữ liệu) nhằm cung cấp tính khả dụng về dữ liệu cho nhóm người dùng cuối.
+		Ví dụ: người quản lý - người có quyền quyết định loại mặt hàng được bán và loại nào không, giá của từng loại hàng,...
+
+=> Xác định những nhóm người dùng: người dùng khiến cho hệ thống tồn tại.
 
 ------------------------------------------------------------------
 
 ******Ai (WHO) làm được gì (WHAT) với hệ thống******
 
-** Viết theo kiểu truyền thống -> User requirements
-
 1. Xác định WHO: xác định người sẽ sử dụng (có thể không phải người đặt hàng) phần mềm (user type/role/classify).
 
 Ví dụ: phần mềm quản lý học tập do thầy hiệu trưởng đặt hàng nhưng những người sử dụng (WHO) là:
-	- Học sinh/sinh viên.
+	- Học sinh, sinh viên.
 	- Giảng viên.
-	- Phòng quản lý đào tạo.
-	- Phụ huynh của học sinh/sinh viên.
+	- Phòng quản lý đào tạo/giáo vụ.
+	- Phụ huynh của học sinh, sinh viên.
 
 ----------------------------
 
 2. Xác định WHAT: xác định những tính năng mà hệ thống cần có để phục vụ cho các nhóm người dùng.
 
-	* Xác định những mục tiêu (goal/target) cần đạt được, khách hàng muốn đạt được khi sử dụng phần mềm.
+	* Xác định những mục tiêu (goal/target/object) cần đạt được, khách hàng muốn đạt được khi sử dụng phần mềm.
 		- Những công việc thường ngày mà khách hàng phải làm thủ công nhưng nay cần được tin học hoá.
-		- Những công việc đã được tin học hoá từ lâu nhưng chưa được tốt.
+		- Những công việc đã được tin học hoá từ lâu nhưng phần mềm chưa được tốt.
 		- Chỉ nói về kết quả (đích đến - động từ), không nói về chi tiết (hành trình/lộ trình).
 			+ Đích đến: đích đến là nơi mình muốn đến.
 			+ Hành trình: phương tiện di chuyển và những nơi đi qua trước khi đến được đích.
 
-				Ví dụ 1: muốn đi du lịch.
-				Ví dụ 2: tạo mới đơn hàng.
+				Ví dụ 1: đích đến - muốn đi du lịch.
+				Ví dụ 2: đích đến - tạo mới đơn hàng.
+				Ví dụ 3: đích đến - xem được bảng điểm.
 
-	* Liệt kê ra được những tính năng: màn hình = nhãn, ô nhập, nút bấm và xử lý đi kèm.
+	* Với mỗi loại người dùng, liệt kê ra được những tính năng: màn hình = nhãn, ô nhập, nút bấm và xử lý đi kèm.
 		-> Ra được kết quả (WHAT) mà người dùng mong đợi, tin học hoá được những thao tác mà người dùng (WHO) phải làm thủ công khi chưa có phần mềm.
 
 		Ví dụ: phần mềm quản lý bán hàng
 			- Thu ngân
 				+ Tạo mới đơn hàng.
-				+ Nhập thông tin khách hàng thân thiết.
+				+ Nhập thông tin khách hàng thân thiết để tích lũy điểm mua hàng.
 
-			- Người quản trị: người tạo ra và quản lý thông tin cho hệ thống để giúp thông tin luôn khả dụng đối với mọi loại người dùng khác. Người có quyền ngầm trên hệ thống chứ không nhất thiết phải hiển thị ra bên ngoài.
+			- Người quản trị: người tạo ra và quản lý thông tin cho cả hệ thống, giúp thông tin luôn khả dụng đối với mọi loại người dùng. Người có quyền ngầm trên hệ thống chứ không nhất thiết phải hiển thị ra bên ngoài.
 				+ Thêm mặt hàng mới.
-				+ Xoá mặt hàng cũ.
-				+ Cập nhật chính sách bán hàng mới.
-				+ Cập nhật thông tin sản phẩm.
-				+ Xem doanh thu, doanh số.
-
-----------------------------
-
-** Viết theo kiểu agile/scrum -> User stories
-
-Mẫu câu: As a..., I want to... so that....
-	Ví dụ:
-		- As a cashier, I want to create an order so that I can record what our customer bought.
-		  (Là một nhân viên, tôi muốn tạo mới một đơn hàng để tôi có thể ghi nhận lại những mặt hàng mà khách hàng đã mua.)
-
-		- As a bookeeper, I want to add a new book so that it's available to any borrow.
-		  (Là một thủ thư, tôi muốn bổ sung một đầu sách mới vào hệ thống để mọi người có thể mượn.)
+				+ Xoá mặt hàng cũ/lỗi thời.
+				+ Cập nhật chính sách bán hàng mới (khuyến mãi,...).
+				+ Cập nhật thông tin sản phẩm (tăng-giảm giá, hình minh họa, mô tả sản phẩm,...).
+				+ Xem thống kê doanh thu, doanh số.
 
 ===========================================================================================
 
@@ -502,9 +530,7 @@ Do đòi hỏi nhiều công sức (effort) cho việc phát triển và bảo t
 
 		=> Hạn chế trùng lắp dữ liệu.
 
-
-
-
+===========================================================================================
 
 
 
