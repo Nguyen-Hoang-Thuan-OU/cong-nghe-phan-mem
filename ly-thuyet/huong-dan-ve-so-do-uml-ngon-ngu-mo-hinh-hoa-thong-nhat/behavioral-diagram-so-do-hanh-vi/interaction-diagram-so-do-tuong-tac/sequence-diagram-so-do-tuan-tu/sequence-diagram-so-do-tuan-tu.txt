@@ -21,8 +21,8 @@
 Lớp và Đối tượng (Class & Object)
 
 Một lớp đại diện cho một nhóm với nhiều đặc điểm tương đồng, từ lớp đó ta có thể tạo ra những đối tượng cụ thể. Ví dụ: từ lớp SinhVien, ta có thể tạo ra các đối tượng SinhVien khác nhau với các thuộc tính khác nhau.
-	=> Class: khuôn mẫu.
-	   Object: đối tượng cụ thể được tạo ra dựa trên khuôn mẫu.
+	=> Class: khung, khuôn mẫu.
+	   Object: đối tượng cụ thể được đúc ra/tạo ra (initialize/create/contruct) dựa trên khuôn mẫu.
 
 Ví dụ:
 	public class SinhVien {
@@ -41,10 +41,13 @@ Khởi tạo (new): xin cấp phát một vùng nhớ đủ lớn để chứa c
 
 ----------------------------------------
 
-SinhVien 	sv 		= new 		SinhVien("1851010999", "An", 2000, 8.0)
-lớp		biến đối tượng	khởi tạo	giá trị, đối tượng, cái gì đó cụ thể
-kiểu dữ liệu	biến tham chiếu			con con người/sinh viên cụ thể
-		biến con trỏ
+SinhVien 	sv 			= new 		SinhVien("1851010999", "An", 2000, 8.0)
+
+lớp/khuôn mẫu	biến đối tượng		khởi tạo	phiên bản/giá trị/thể hiện/hiện thân
+kiểu dữ liệu	biến tham chiếu				đối tượng, cái gì đó cụ thể
+							con con người/sinh viên cụ thể
+
+		"biến con trỏ" (trỏ vào một vùng RAM, tham chiếu đến toạ độ-địa chỉ)
 
 		-> sv là tên gọi tắt (tên gọi chung) cho một đối tượng SinhVien nào đó được khởi tạo (new SinhVien(...)).
 		-> biến sv trỏ vào vùng nhớ SinhVien(...).
