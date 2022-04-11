@@ -27,7 +27,7 @@
 * Lưu ý khi vẽ Actor:
 	- Guest/Visitor/Anonymous: khách ghé ngang hệ thống.
 	- Chỉ vẽ người dùng có sử dụng, tương tác với hệ thống.
-	- Có thể là hệ thống khác tương tác với hệ thống của chúng ta thông qua API. Ví dụ: ngân hàng, ví điện tử.
+	- Có thể là hệ thống khác tương tác với hệ thống của chúng ta thông qua API. Ví dụ: ngân hàng, ví điện tử,...
 	- Có thể là đoạn mã lệnh trong chương trình của chúng ta làm những việc tự động theo thời gian/thuật toán. Ví dụ: hệ thống gửi thông báo nhắc nhở
 		-> System Handler. (Không phải hệ thống nào cũng có).
 
@@ -57,9 +57,9 @@ Tối ưu, làm giảm độ phức tạp của sơ đồ bằng các mối quan
 				- Square is a kind of geometry.
 				- Rectangle is a kind of geometry.
 
-	- Include: (UC chính) có mối quan hệ bao gồm cả (UC phụ) bên trong, nghĩa là để (UC chính) xảy ra thì (UC phụ) bắt buộc hoàn thành trước tiên.
+	- Include: (UC chính) có mối quan hệ bao gồm cả (UC phụ) bên trong, nghĩa là để (UC chính) xảy ra thì (UC phụ) bắt buộc (MUST) hoàn thành trước tiên.
 
-	- Extend: (UC phụ) có mối quan hệ mở rộng cho (UC chính), (UC chính) có thể đơn phương, độc lập hoàn tất mà không bắt buộc phải có (UC phụ). (UC phụ) chỉ xảy ra trong một hoàn cảnh cụ thể nào đó hoặc chỉ làm phong phú thêm chứ không có quyền quyết định sự hoàn thành của (UC chính).
+	- Extend: (UC phụ) có mối quan hệ mở rộng cho (UC chính), (UC chính) có thể (MAY) đơn phương, độc lập hoàn tất mà không bắt buộc phải có (UC phụ). (UC phụ) chỉ xảy ra trong một hoàn cảnh cụ thể nào đó hoặc chỉ làm phong phú thêm chứ không có quyền quyết định sự hoàn thành của (UC chính).
 
 
 * Lưu ý khi vẽ Generalization: Cha <|----- Con
@@ -89,7 +89,7 @@ Tối ưu, làm giảm độ phức tạp của sơ đồ bằng các mối quan
 
 
 * Lưu ý khi vẽ Include: (UC chính) -----<<include>>-----> (UC chính phụ thuộc vào UC này)
-	- Đọc ở gốc mũi tên -> (UC chính) bắt buộc phải có (UC phụ) để hoàn thành.
+	- Đọc ở gốc mũi tên -> (UC chính) bắt buộc (MUST) phải có (UC phụ) để hoàn thành.
 	- Trả lời câu hỏi "Giữa những Use Case độc lập có liên kết gì với nhau?".
 	- Giữa những Use Case sẽ phụ thuộc chặt chẽ lẫn nhau.
 
@@ -103,7 +103,7 @@ Tối ưu, làm giảm độ phức tạp của sơ đồ bằng các mối quan
 
 
 * Lưu ý khi vẽ Extend: (UC chính) <-----<<extend>>----- (UC này mở rộng thêm cho UC chính)
-	- Đọc ở đầu mũi tên -> (UC chính) có thể cần hoặc không cần (UC phụ) để hoàn thành.
+	- Đọc ở đầu mũi tên -> (UC chính) có thể (MAY) cần hoặc không cần (UC phụ) để hoàn thành.
 	- Trả lời câu hỏi "Giữa những Use Case độc lập có liên kết gì với nhau?".
 	- Giữa những Use Case sẽ phụ thuộc lỏng lẻo với nhau.
 
