@@ -23,13 +23,14 @@ Trong quá trình xây dựng và thiết kế phần mềm, mô hình hoá hệ
 
 ----------------------------------------
 
-UML (Unified Modeling Language): ngôn ngữ mô hình hóa thống nhất/đồng nhất là tập hợp các loại sơ đồ để mô tả về hệ thống sẽ phục vụ cho khách hàng như thế nào theo cách tiếp cận hướng đối tượng.
+UML (Unified Modeling Language): ngôn ngữ mô hình hóa thống nhất/đồng nhất là tập hợp các loại sơ đồ để mô tả về hệ thống sẽ phục vụ cho khách hàng như thế nào theo cách tiếp cận hướng đối tượng (phong cách thiết kế).
 
 UML giúp	xác định (specifying) nghiệp vụ, vấn đề;
 		trực quan hoá (visualizing) bằng các mô hình thay vì mô tả bằng lời nói;
 		xây dựng (constructing) logic, mô phỏng nghiệp vụ xử lý trong hệ thống;
-		tài liệu hoá (documenting) từ giai đoạn phân tích, thiết kế, cài đặt và kiểm thử để phục vụ cho giai đoạn bảo trì và giải quyết vấn đề
-cho các artifact(*) của quy trình hiện thực phần mềm.
+		tài liệu hoá (documenting) từ giai đoạn phân tích, thiết kế, cài đặt và kiểm thử
+		để phục vụ cho giai đoạn bảo trì và giải quyết vấn đề cho các artifact(*)
+		của quy trình hiện thực phần mềm.
 (*)Artifact mô tả kết quả được tạo ra sau mỗi bước lặp nào đó của quy trình phần mềm.
 
 (Sơ đồ biểu diễn một thuật toán (Flow chart) và mô hình thực thể-mối kết hợp (ERD) không thuộc UML).
@@ -44,7 +45,7 @@ cho các artifact(*) của quy trình hiện thực phần mềm.
 
 * Các cách tiếp cận mô hình hoá hệ thống:
 	- Cấu trúc (structural): mô hình quy định, mô tả, thiết kế các cấu trúc, cách thức tổ chức hệ thống thành các thành phần (component) và chỉ định mối quan hệ giữa chúng. (Class Diagram,...)
-	- Hành vi (behavioral): mô hình hành vi động (mô tả những hàng động, phương thức, nghiệp vụ) của hệ thống khi nó thực thi, cách thức phản hồi của hệ thống với một sự kiện nào đó khi nhận được yêu cầu, sự tương tác giữa các thành phần hoặc giữa các đối tượng bên ngoài với thành phần bên trong hệ thống. (Use Case, Activity, State, Sequence Diagra,...)
+	- Hành vi (behavioral): mô hình hành vi động (mô tả những hàng động, phương thức, nghiệp vụ) của hệ thống khi nó thực thi, cách thức phản hồi của hệ thống với một sự kiện nào đó khi nhận được yêu cầu, sự tương tác giữa các thành phần hoặc giữa các đối tượng bên ngoài với thành phần bên trong hệ thống. (Use Case, Activity, State, Sequence Diagram,...)
 
 ==================================================================================================
 
