@@ -61,5 +61,3 @@ A Python web application to manage all bookstore activities, such as: Placing or
 
 * DealBook - Source code
 ![DealBook - Source code](https://github.com/Nguyen-Hoang-Thuan-OU/cong-nghe-phan-mem/blob/main/bai-tap/bai-tap-nhom/images/dealbook-source-code.png "DealBook - Source code")
-
-© 2022 Bản quyền thuộc về Nguyễn Hoàng Thuận
