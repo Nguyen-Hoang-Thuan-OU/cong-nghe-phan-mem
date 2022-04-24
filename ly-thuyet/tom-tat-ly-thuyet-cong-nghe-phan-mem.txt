@@ -15,7 +15,7 @@
 
 [CÁC THUẬT NGỮ VỀ QUY TRÌNH]
 
-** Quy trình phát triển phần mềm: một tập hợp các hoạt động có tổ chức mà mục đính là xây dựng và phát triển phần mềm, đảm bảo cho sản phẩm đạt chất lượng.
+** Quy trình phát triển phần mềm: một tập hợp các hoạt động có tổ chức (có thứ tự trước sau) mà mục đính là xây dựng và phát triển phần mềm, đảm bảo cho sản phẩm đạt chất lượng.
 
 ** Methodology (nghĩa rộng: phương pháp luận): là cách thức, phương pháp, bài viết, quy trình, chỉ dẫn về một phương pháp nào đó.
 	≈ Nghĩa hẹp, cụ thể hơn: Process (quy trình), Life cycle (chu trình, vòng đời), Model, Method,...
@@ -34,7 +34,7 @@ Sau khi xong một vòng đời (xong một phần mềm) thì làm gì tiếp t
 
 	[Water-fall]: I want...
 	Software Requirement (predictive): yêu cầu phần mềm, thứ khách hàng muốn có,
-					   tính năng (feature/function) trong phần mềm
+					   tính năng (feature/function/functional) trong phần mềm
 					   mà khách hàng sắp trả tiền để thuê, để sử dụng
 					   nhằm phục vụ và hỗ trợ cho công việc HẰNG NGÀY* của họ
 					   và thâm chí còn hơn thế nữa, ví dụ: xem thống kê doanh thu.
@@ -95,6 +95,10 @@ Sau khi xong một vòng đời (xong một phần mềm) thì làm gì tiếp t
 ===========================================================================================
 
 [QUY TRÌNH/VÒNG ĐỜI PHÁT TRIỂN PHẦN MỀM - SOFTWARE/SYSTEMS DEVELOPMENT LIFE CYCLE (SDLC)]
+
+SDLC: vòng đời từ lúc phần mềm được ra đời đến lúc nó mất đi và xuất hiện trở lại với một phiên bản mới.
+
+------------------------------------------------------------------
 
 Có bao nhiêu bước/công đoạn? --> Từ 4 đến 8 bước, tuỳ vào cách nhìn nhận của từng người.
 
