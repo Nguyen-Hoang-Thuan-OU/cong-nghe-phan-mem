@@ -354,7 +354,7 @@ Sử dụng Jira để quản lý các User Story (các yêu cầu của khách 
 
 ----------------------------
 
-* Lean (tinh gọn): phương pháp quản lý công việc xuất phát từ bên kinh tế, lấy cảm hứng từ phương pháp/mô hình quản trị việc sản xuất của Toyota: cần mới làm (just in time - JIT) và không làm dư thừa. Có được một hệ thống quản lý những yêu cầu, quy tắc, tính trước đầu vào và tỷ lệ hao hụt, cam kết về mặt giá thành và thời gian.
+* Lean (tinh gọn): phương pháp quản lý công việc xuất phát từ bên kinh tế, lấy cảm hứng từ phương pháp/mô hình quản trị việc sản xuất ô tô của Toyota: cần mới làm (just in time - JIT) và không làm dư thừa. Có được một hệ thống quản lý những yêu cầu, quy tắc, tính trước đầu vào và tỷ lệ hao hụt, cam kết về mặt giá thành và thời gian.
 	-> Làm vừa đủ chứ không thừa.
 
 
