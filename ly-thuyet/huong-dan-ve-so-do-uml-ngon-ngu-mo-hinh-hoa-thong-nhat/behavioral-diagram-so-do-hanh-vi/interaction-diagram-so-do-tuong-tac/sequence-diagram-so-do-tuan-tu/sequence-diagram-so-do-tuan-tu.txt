@@ -1,17 +1,26 @@
-﻿Sơ đồ Use Case và đặc tả Use Case chỉ thân thiện và dễ đọc đối với góc nhìn của khách hàng chứ vẫn chưa đủ với các lập trình viên về mặt phát triển. Để lập trình được theo sơ đồ đã được thiết kế thì họ cần nhiều chi tiết hơn nhằm phối hợp các lớp (class) lại với nhau vì nó liên quan đến code xử lý, liên quan đến các thành phần cần triển khai trong code: UI, lớp (class), cơ sở dữ liệu,... -> Liên quan đến cách bố trí, kiến trúc (architecture) các thành phần code trong quá trình xây dựng hệ thống: MVC, Web Services, Micro Services,...
+﻿Sơ đồ Use Case và đặc tả Use Case chỉ thân thiện và dễ đọc đối với góc nhìn của khách hàng chứ vẫn chưa đủ với các lập trình viên về mặt phát triển. Để lập trình được theo sơ đồ đã được thiết kế thì họ cần nhiều chi tiết hơn nhằm phối hợp các lớp (class) lại với nhau vì nó liên quan đến code xử lý, liên quan đến các thành phần cần triển khai trong code: UI, lớp (class), cơ sở dữ liệu,...
+	-> Liên quan đến cách bố trí, kiến trúc (architecture) các thành phần code trong quá trình xây dựng hệ thống.
+		Ví dụ: MVC, Web Services, Micro Services,...
 
-=> Sequence Diagram (Sơ đồ tuần tự):
+========================================================================================
 
-	- Khái quát: sơ đồ mô tả chi tiết hậu trường xử lý code của một màn hình, tính năng khi người dùng thao tác với nút bấm trên màn hình (UI).
+* Sequence Diagram (Sơ đồ tuần tự): các thành phần trong code gọi nhau như thế nào để hoàn tất một Use Case?
 
-	- Chi tiết: sơ đồ để diễn tả thêm về luồng xử lý, góc nhìn phía xử lý code, nói về thứ tự truyền những thông điệp, lời gọi hàm (các hàm gọi nhau) giữa các thành phần của code, sự tương tác giữa Actor và các đối tượng (object) bên trong hệ thống hoặc giữa các đối tượng với nhau theo một trình tự thời gian (timeline) để làm nên các tính năng, làm nên một Use Case, thể hiện chi tiết các tương tác xảy ra trên trong một Use Case cụ thể (mỗi Use Case hay chính xác hơn là mỗi đặc tả Use Case sẽ tương ứng với một sơ đồ tuần tự. Vì vậy, sau khi viết đặc tả thì ta sẽ tiến hành vẽ sơ đồ tuần tự ở bên dưới đặc tả).
+	- Khái quát: sơ đồ mô tả chi tiết hậu trường xử lý code của một màn hình/tính năng khi người dùng thao tác với nút bấm trên màn hình (UI).
+
+	- Chi tiết: sơ đồ để diễn tả thêm góc nhìn của Dev cho mỗi Use Case về:
+			+ Luồng xử lý, góc nhìn phía xử lý code
+			+ Thứ tự truyền những thông điệp, lời gọi hàm (các hàm gọi nhau) giữa các thành phần của code
+			+ Sự tương tác giữa Actor và các đối tượng (object) bên trong hệ thống hoặc giữa các đối tượng với nhau theo một trình tự thời gian (timeline)
+				-> Để làm nên các tính năng, làm nên một Use Case, thể hiện chi tiết các tương tác xảy ra bên trong một Use Case cụ thể.
+	(Mỗi Use Case hay chính xác hơn là mỗi đặc tả Use Case sẽ tương ứng với một sơ đồ tuần tự. Vì vậy, sau khi viết đặc tả xong thì ta sẽ tiến hành vẽ sơ đồ tuần tự ở bên dưới đặc tả).
 
 	-> Sơ đồ miêu tả các
 		+ Kiến trúc, thành phần, lớp (class), đối tượng (object) một cách gọn gàng (không phải liệt kê tất cả các đối tượng).
 
 			Ví dụ: vì mọi câu chuyện, xử lý bên trong hệ thống được lập trình theo hướng đối tượng đều là khởi tạo (new) và gọi hàm (.hàm).
 				Thay vì ghi: SinhVien sv = new SinhVien(...)
-				Ghi trong sequence diagram: ta quy ước |sv: SinhVien| đã là đủ cho việc khởi tạo, đặt tên và gán code.
+				Ghi trong Sequence Diagram: ta quy ước |sv: SinhVien| đã là đủ cho việc khởi tạo, đặt tên và gán code.
 					-> Hàm ý khởi tạo SinhVien() và gán vào sv.
 
 		+ Thứ tự gọi nhau (.hàm) như thế nào trong code theo trình tự thời gian (timeline) để hoàn thành một Use Case, giúp cho lập trình viên có thể đọc, hiểu và thiết kế theo.
