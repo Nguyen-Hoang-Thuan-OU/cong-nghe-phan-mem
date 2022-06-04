@@ -6,10 +6,10 @@
 Để biểu diễn được các luồng hoạt động, sử dụng các ký hiệu:
 
 * Các trạng thái:
-	- Trạng thái bắt đầu - Inital (hình tròn đặc ở bên trong): ●_____>
+	- Trạng thái bắt đầu - Inital (hình tròn đặc ở bên trong): ●―――――>
 		+ Thường sẽ chỉ có duy nhất một nơi bắt đầu.
 
-	- Trạng thái kết thúc - Final (Hai hình tròn đồng tâm, hình tròn ở bên trong là hình tròn đặc): ___>◉
+	- Trạng thái kết thúc - Final (Hai hình tròn đồng tâm, hình tròn ở bên trong là hình tròn đặc): ―――――>◉
 		+ Thường sẽ có nhiều nơi kết thúc.
 
 		Ví dụ: rút tiền ở cây ATM.
@@ -25,18 +25,18 @@
 *  Mỗi hoạt động (action/activity) đại diện bằng hình chữ nhật bo tròn 4 góc, luồng hoạt động thể hiện bằng mũi tên.
 	Ví dụ:
 		 ◜-------------◝		 ◜-------------◝
-		|Đăng nhập	|______________>|Báo lỗi	|
+		|Đăng nhập	|――――――――――――――>|Báo lỗi	|
 		 ◟-------------◞		 ◟-------------◞
 
 * Điều kiện (Decision) thể hiện bằng hình thoi, biểu diễn một biểu thức vị từ, luồng xử lý khi đúng và sai.
 	Ví dụ:
-			Sai<_____◇_____>Đúng
+			Sai<―――――◇―――――>Đúng
 
 * Nhiều hoạt động thuộc nhiều hướng/nhánh khác nhau, không thực thi đồng thời (tuần tự hoặc trước sau), chẳng hạn như if-else, cần được hợp lại (merge).
 	Ví dụ:
-		________
+		――――――――|
 			v
-		_______>◇_____>
+		―――――――>◇―――――>
 
 * Nút forking dùng để chia luồng điều khiển (hoạt động - activity) thành nhiều luồng xử lý đồng thời (hoạt động chạy song song với nhau, không ai đợi ai). Có một đường vào và nhiều đường ra.
 	Ví dụ: thanh toán -> cùng gửi hoá đơn đến email và sms.

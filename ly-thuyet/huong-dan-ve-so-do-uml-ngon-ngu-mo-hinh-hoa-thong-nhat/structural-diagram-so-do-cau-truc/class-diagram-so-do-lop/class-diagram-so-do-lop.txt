@@ -60,7 +60,7 @@ Ví dụ:
 Mối quan hệ giữa các lớp
 
 
-* Kết hợp (Association): |A|_____|B|
+* Kết hợp (Association): |A|―――――|B|
 
 	- Trong danh sách THUỘC TÍNH (không phải phương thức) của lớp A có một ĐỐI TƯỢNG, THUỘC TÍNH kiểu của B và ngược lại.
 		Ví dụ:
@@ -82,14 +82,14 @@ Mối quan hệ giữa các lớp
 
 				|---------------|				 |--------------|
 				|	Khoa	|				 |SinhVien 	|
-				|_______________|(1..2)			(30..500)|______________|
-				|-sv:SinhVien[]	|________________________________|-kh:Khoa[]	|
+				|―――――――――――――――|(1..2)			(30..500)|――――――――――――――|
+				|-sv:SinhVien[]	|――――――――――――――――――――――――――――――――|-kh:Khoa[]	|
 				|		|		|		 |	   	|
 								|
 								|
 							|-----------------------|
 							|	ThamGia		|
-							|_______________________|
+							|―――――――――――――――――――――――|
 							|-ngayThamGia:Date	|
 							|-kh:Khoa[]		|
 							|-sv:SinhVien[]		|
@@ -100,11 +100,11 @@ Mối quan hệ giữa các lớp
 
 |---------------|		|------------------|			    |--------------------|
 |LoaiSanPham	|(1..*)	  (0..*)|	SanPham	   |(1..*)	      (0..*)|	DonHang		 |
-|_______________|_______________|__________________|________________________|____________________|
-|- id : int	|		|- id : int	   |	|  <|ChiTietDonHang |- id : int		 |  
+|―――――――――――――――|―――――――――――――――|――――――――――――――――――|――――――――――――――――――――――――|――――――――――――――――――――|
+|- id : int	|		|- id : int	   |	|  ◀ChiTietDonHang  |- id : int		 |  
 |- ten : String	|		|- ten : String	   |	|		    |- ngayTao : Date    |	
-|_______________|		|- gia : BigDecimal|	|		    |- ngayCapNhat : Date|
-|		|		|__________________|	|		    |____________________|
+|―――――――――――――――|		|- gia : BigDecimal|	|		    |- ngayCapNhat : Date|
+|		|		|――――――――――――――――――|	|		    |――――――――――――――――――――|
 |_______________|		|+ SanPham()	   |	|		    |____________________|
 				|+ xemCT() : void  |	|
 				|+ timKiem() : void|	|
@@ -114,17 +114,17 @@ Mối quan hệ giữa các lớp
 							|
 						|-----------------------|
 						|ChiTietDonHang		|
-						|_______________________|
+						|―――――――――――――――――――――――|
 						|- soLuong : int	|
 						|- donGia : BigDecimal	|
 						|- sp : SanPham[]	|
 						|- dh : DonHang[]	|
-						|_______________________|
+						|―――――――――――――――――――――――|
 						|_______________________|
 
 -------------------------
 
-Tập hợp/Kết tập (Aggregation/Has-a - liên kết yếu/lỏng lẻo): |A|◇_____|B|
+Tập hợp/Kết tập (Aggregation/Has-a - liên kết yếu/lỏng lẻo): |A|◇―――――|B|
 
 	- Điều kiện:
 		+ Đã có mối quan hệ kết hợp (association).
@@ -143,7 +143,7 @@ Tập hợp/Kết tập (Aggregation/Has-a - liên kết yếu/lỏng lẻo): |A
 
 				|-------|	 |-------|
 				|SanPham|*	1|DanhMuc|
-				|_______|_______◇|_______|
+				|―――――――|―――――――◇|―――――――|
 				|	|	 |	 |
 
 
@@ -151,12 +151,12 @@ Tập hợp/Kết tập (Aggregation/Has-a - liên kết yếu/lỏng lẻo): |A
 
 				|---------|	   |---------|	      |--------|
 				|GiangVien|*	  1|TruongHoc|1	     *|SinhVien|
-				|_________|______ ◇|_________|◇_______|________|
+				|―――――――――|―――――――◇|―――――――――|◇―――――――|――――――――|
 				|	  |	   |	     |	      |	       |
 
 -------------------------
 
-Hợp thành (Composition/Part-of - liên kết mạnh/chặt chẽ): |A|♦_____|B|
+Hợp thành (Composition/Part-of - liên kết mạnh/chặt chẽ): |A|◆―――――|B|
 
 	- Điều kiện:
 		+ Đã có mối quan hệ kết hợp (aggregation) - là một trường hợp đặc biệt của aggregation.
@@ -170,13 +170,13 @@ Hợp thành (Composition/Part-of - liên kết mạnh/chặt chẽ): |A|♦____
     				}
 			};
 
-	- Khi vẽ, hình thoi đặc ♦ thường nằm ở phía trọng số là 1.
+	- Khi vẽ, hình thoi đặc ◆ thường nằm ở phía trọng số là 1.
 
 			Ví dụ: nếu đối tượng ThuMuc bị xoá thì tất cả các tập tin con bên trong đều sẽ bị xoá theo.
 
 				|-------|	   |------|
 				|ThuMuc	|1	  *|TapTin|
-				|_______|♦_________|______|
+				|―――――――|◆―――――――――|――――――|
 				|	|	   |	  |
 
 -------------------------
@@ -196,7 +196,7 @@ Phụ thuộc (Dependency/Uses-a): |A|----->|B|
 
 -------------------------
 
-Kế thừa (Inheritance/Generalization/Is-a): |A|<|_____|B|
+Kế thừa (Inheritance/Generalization/Is-a): |A|◁―――――|B|
 
 	- Quan hệ một-một của hai lớp đối tượng.
 		+ Lớp A: lớp cơ sở (base class)/lớp cha(superclass).
@@ -210,16 +210,16 @@ Kế thừa (Inheritance/Generalization/Is-a): |A|<|_____|B|
 
 |-----------------------|		|-------------------|		    |-------------------|
 |	KhachHang	|		|	NguoiDung   |		    |	Admin		|
-|_______________________|1	       1|___________________|1		   1|___________________|
-|- email : String	|_____________|>|- id: int	    |<|_____________|- laQuanLy: boolean|
+|―――――――――――――――――――――――|1	       1|―――――――――――――――――――|1		   1|―――――――――――――――――――|
+|- email : String	|――――――――――――――▷|- id: int	    |◁――――――――――――――|- laQuanLy: boolean|
 |- soDienThoai: String	|		|- taiKhoan : String|		    |			|
 |			|		|- matKhau : String |		    |			|
-|_______________________|		|___________________|		    |___________________|
+|―――――――――――――――――――――――|		|―――――――――――――――――――|		    |―――――――――――――――――――|
 |			|		|		    |		    |			|
 
 -------------------------
 
-Lớp trong (nested): |A|⊕_____|A1|
+Lớp trong (nested): |A|⊕―――――|A1|
 
 	- Trong lập trình hướng đối tượng, Java kế thừa từ C++, do đó Java thừa hưởng đầy đủ những đặc trưng trong lập trình hướng đối tượng của C++. Nhưng trong Java có thêm cơ chế đặc trưng hướng đối tượng mà C++ không có là metaclass.
 		+ Metaclass là lớp mà bên trong một lớp A có lồng thêm một số lớp A1, A2,...
@@ -264,10 +264,10 @@ Lớp trong (nested): |A|⊕_____|A1|
 
 		|-----------------------|		|---------------------------------------|
 		|	A		|		|		A1			|
-		|_______________________|		|_______________________________________|
-		|- textBoxNhap : TextBox|⊕______________|					|
-		|- buttonXuLy : Button	|		|_______________________________________|
-		|_______________________|		|+ handle (event : ActionEvent) : void	|
+		|―――――――――――――――――――――――|		|―――――――――――――――――――――――――――――――――――――――|
+		|- textBoxNhap : TextBox|⊕――――――――――――――|					|
+		|- buttonXuLy : Button	|		|―――――――――――――――――――――――――――――――――――――――|
+		|―――――――――――――――――――――――|		|+ handle (event : ActionEvent) : void	|
 		|_______________________|		|_______________________________________|
 
 ==================================================================================================
@@ -317,11 +317,11 @@ Hiện thực hóa (Realization/Implementation)
 Giao diện (Interface) chỉ có phần khai báo chứ không có phần thực thi và một vài phương thức mặc định, để chạy được cần viết một lớp đối tượng để hiện thực/triển khai, quá trình này được gọi là hiện thực hoá.
 	Ví dụ 1:
 		|---------------|
-		|[In nghiêng] I1|<|-----|
+		|[In nghiêng] I1|◁------|
 		|---------------|	|
 					|-----|class A|
 		|---------------|	|
-		|[In nghiêng] I2|<|-----|
+		|[In nghiêng] I2|◁------|
 		|---------------|
 
 ==================================================================================================
@@ -335,9 +335,9 @@ Bài tập vẽ sơ đồ lớp:
 			- Thư mục bắt buộc phải có tên, còn tập tin phải có tên và dung lượng.
 			- Một thư mục bị xoá thì tất cả tập tin, thư mục con của nó cũng bị xoá theo.
 		       1|-----------------------|	|-----------------------|
-		_______♦|	ThuMuc		|	|	TapTin		|
+		―――――――♦|	ThuMuc		|	|	TapTin		|
 		|	|_______________________|	|_______________________|
-		|	|- ten : String		|<|_____|- loai : String	|
+		|	|- ten : String		|◁――――――|- loai : String	|
 		|_______|- ngayTao : Date	|	|- dungLuong : double	|
 		       *|_______________________|	|_______________________|
 			|_______________________|	|_______________________|

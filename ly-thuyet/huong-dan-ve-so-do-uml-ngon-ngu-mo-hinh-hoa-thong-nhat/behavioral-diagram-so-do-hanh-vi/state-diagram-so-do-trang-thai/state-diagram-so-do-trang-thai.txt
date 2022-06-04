@@ -60,10 +60,10 @@ Trong quá trình hoạt động của hệ thống, cùng một đối tượng
 ===========================================================================
 
 Mỗi lược đồ trạng thái có duy nhất một trạng thái bắt đầu và có thể có nhiều trạng thái kết thúc.
-	- Trạng thái bắt đầu - Inital (hình tròn đặc ở bên trong): ●_____>
+	- Trạng thái bắt đầu - Inital (hình tròn đặc ở bên trong): ●―――――>
 		+ Thường sẽ chỉ có duy nhất một nơi bắt đầu.
 
-	- Trạng thái kết thúc - Final (Hai hình tròn đồng tâm, hình tròn ở bên trong là hình tròn đặc): ___>◉
+	- Trạng thái kết thúc - Final (Hai hình tròn đồng tâm, hình tròn ở bên trong là hình tròn đặc): ―――――>◉
 		+ Thường sẽ có nhiều nơi kết thúc.
 
 ----------------------------------------
@@ -72,7 +72,7 @@ Mỗi trạng thái được biểu diễn bằng hình chữ nhật bo tròn 4 
 
 		 ◜---------------------◝
 		|Tên của trạng thái	|	
-		|_______________________|
+		|―――――――――――――――――――――――|
 		|entry: sự kiên (event)	|	-> Điều kiện để trạng thái xảy ra
 		|do: hành động (action)	|	-> Những thứ làm được
 		|exit:			|	-> Điều kiện để chuyển trạng thái
@@ -85,7 +85,7 @@ Mỗi trạng thái được biểu diễn bằng hình chữ nhật bo tròn 4 
 Sử dụng dấu mũi tên để chuyển đổi (transition) từ trạng thái này sang trạng thái khác.
 
 	 ◜-------------◝		 ◜-------------◝
-	|Trạng thái 1	|______________>|Trạng thái 2	|
+	|Trạng thái 1	|――――――――――――――>|Trạng thái 2	|
 	 ◟-------------◞		 ◟-------------◞
 
 ===========================================================================
