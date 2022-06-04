@@ -13,17 +13,21 @@ Mục đích mô hình hoá:
 ----------------------------------------
 
 Trong quá trình xây dựng và thiết kế phần mềm, mô hình hoá hệ thống có thể sử dụng trong:
-	- Phân tích yêu cầu giúp hiểu rõ yêu cầu hệ thống: Use Case Diagram. -> Giúp cho yêu cầu của hệ thống rõ ràng hơn, dễ trình bày với khách hàng hơn và khách hàng cũng dễ hệ thống hiểu hơn.
+	- Phân tích yêu cầu giúp hiểu rõ yêu cầu hệ thống: Use Case Diagram.
+		-> Giúp cho yêu cầu của hệ thống rõ ràng hơn, dễ trình bày với khách hàng hơn và khách hàng cũng dễ hệ thống hiểu hơn.
 
-	- Thiết kế để mô tả hệ thống giúp các kỹ sư hiện thực hệ thống: Class, Component, Deployment, Activity, Sequence Diagram,... -> Thiết kế về việc thực hiện hệ thống, về một khía cạnh, cơ chế hoạt động của một component, hành vi của một mô-đun, cơ sở dữ liệu và mối quan hệ,... để giúp các kỹ sư phần mềm (lập trình viên) hiện thực hoá hệ thống theo đúng với bảng thiết kế đã đưa ra nhằm hướng hệ thống theo một hướng đúng nhất.
+	- Thiết kế để mô tả hệ thống giúp các kỹ sư hiện thực hệ thống: Class, Component, Deployment, Activity, Sequence Diagram,...
+		-> Thiết kế về việc thực hiện hệ thống, về một khía cạnh, cơ chế hoạt động của một component, hành vi của một mô-đun, cơ sở dữ liệu và mối quan hệ,... để giúp các kỹ sư phần mềm (lập trình viên) hiện thực hoá hệ thống theo đúng với bảng thiết kế đã đưa ra nhằm hướng hệ thống theo một hướng đúng nhất.
 
-	- Tài liệu hoá các hoạt động và cấu trúc hệ thống sau giai đoạn hiện thực hệ thống: Activity, Sequence Diagram,... -> Mọi thứ được lưu trữ ở mức trừu tượng nhằm phục vụ cho công đoạn bảo trì và nâng cấp hệ thống.
+	- Tài liệu hoá các hoạt động và cấu trúc hệ thống sau giai đoạn hiện thực hệ thống: Activity, Sequence Diagram,...
+		-> Mọi thứ được lưu trữ ở mức trừu tượng nhằm phục vụ cho công đoạn bảo trì và nâng cấp hệ thống.
 
 => Để mô hình hoá hệ thống, ta sử dụng các mô hình đồ hoạ (graphic) của UML.
 
 ----------------------------------------
 
-UML (Unified Modeling Language): ngôn ngữ mô hình hóa thống nhất/đồng nhất là tập hợp các loại sơ đồ để mô tả về hệ thống sẽ phục vụ cho khách hàng như thế nào theo cách tiếp cận hướng đối tượng (phong cách thiết kế).
+UML (Unified Modeling Language): ngôn ngữ mô hình hóa thống nhất/đồng nhất là tập hợp các loại sơ đồ, cách vẽ để mô tả, truyền tải ý tưởng về hệ thống trong tương lai sẽ phục vụ cho khách hàng như thế nào theo cách tiếp cận hướng đối tượng (phong cách thiết kế).
+	-> Mọi thứ đều được nhìn dưới dạng là đối tượng.
 
 UML giúp	xác định (specifying) nghiệp vụ, vấn đề;
 		trực quan hoá (visualizing) bằng các mô hình thay vì mô tả bằng lời nói;
@@ -51,7 +55,8 @@ UML giúp	xác định (specifying) nghiệp vụ, vấn đề;
 
 Kế thừa (Generalization):
 
-Cho phép ta định nghĩa một lớp trong điều kiện một lớp khác, mà làm cho nó dễ dàng hơn để tạo và duy trì một ứng dụng. Điều này cũng cung cấp cơ hội để tái sử dụng tính năng code và thời gian thực thi nhanh hơn. (Dùng mũi tên nét liền).
+Cho phép ta định nghĩa một lớp trong điều kiện một lớp khác, mà làm cho nó dễ dàng hơn để tạo và duy trì một ứng dụng. Điều này cũng cung cấp cơ hội để tái sử dụng tính năng code và thời gian thực thi nhanh hơn.
+	(Sử dụng mũi tên nét liền).
 
 	Ví dụ: HinhTron, HinhVuong, HinhChuNhat đều là hình học, nên chúng kế thừa một lớp cơ sở là HinhHoc.
 
