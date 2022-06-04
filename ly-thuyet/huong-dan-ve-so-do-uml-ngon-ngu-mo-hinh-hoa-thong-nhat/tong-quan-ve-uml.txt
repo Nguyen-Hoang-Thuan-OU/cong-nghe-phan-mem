@@ -53,7 +53,7 @@ UML giúp	xác định (specifying) nghiệp vụ, vấn đề;
 
 ==================================================================================================
 
-Kế thừa (Generalization):
+Kế thừa (Generalization/Inheritance):
 
 Cho phép ta định nghĩa một lớp trong điều kiện một lớp khác, mà làm cho nó dễ dàng hơn để tạo và duy trì một ứng dụng. Điều này cũng cung cấp cơ hội để tái sử dụng tính năng code và thời gian thực thi nhanh hơn.
 	(Sử dụng mũi tên nét liền).
@@ -77,8 +77,9 @@ Cho phép ta định nghĩa một lớp trong điều kiện một lớp khác, 
 Hiện thực hóa (Realization/Implementation):
 
 Được áp dụng cho interface (giao diện, lớp giao tiếp), các đối tượng đều thực hiện chung một phương thức trừu tượng, nhưng mỗi đối tượng lại có những kiểu hiện thực phương thức khác nhau.
+	(Dùng mũi tên nét đứt).
 
-	Ví dụ: interface chạy, nhưng ba đối tượng SinhVien, XeCo và ConMeo sẽ có những cách để hiện thực phương thức khác nhau. (Dùng mũi tên nét đứt).
+	Ví dụ: interface chạy, nhưng ba đối tượng SinhVien, XeCo và ConMeo sẽ có những cách để hiện thực phương thức khác nhau.
 
 		public class SinhVien implements Chay {//...}
 		public class XeCo implements Chay {//...}
@@ -86,13 +87,13 @@ Hiện thực hóa (Realization/Implementation):
 
 -----------------------------------
 
-Khi nào sử dụng trừu tượng (abstract) và khi nào sử dụng interface (giao diện, lớp giao tiếp)?
+Khi nào sử dụng abstract (trừu tượng) và khi nào sử dụng interface (giao diện, lớp giao tiếp)?
 
-	- HinhTron, HinhVuong, HinhChuNhat đều cùng một bản chất (là hình dạng)
-		-> Kế thừa
+	- HinhTron, HinhVuong, HinhChuNhat đều cùng một bản chất (là hình dạng-hình học)
+		-> Kế thừa (generalization/inheritance)
 
-	- SinhVien, XeCo, DongVat hoàn toàn khác bản chất (SinhVien là người, XeCo là vật thể, ConMeo là động vật) nhưng lại di chuyển được theo cách khác nhau
-		-> Hiện thực hoá
+	- SinhVien, XeCo, DongVat hoàn toàn khác bản chất (SinhVien là người, XeCo là vật thể, ConMeo là động vật) nhưng lại di chuyển được theo những cách khác nhau
+		-> Hiện thực hoá (realization/implementation)
 
 ==================================================================================================
 
