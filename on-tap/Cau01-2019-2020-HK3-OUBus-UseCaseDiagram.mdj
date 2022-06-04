@@ -36,7 +36,7 @@
 					"_parent": {
 						"$ref": "AAAAAAGBLdvdM3TLIdk="
 					},
-					"name": "Cau01-OUBus-UseCaseDiagram-HK3-2019-2020",
+					"name": "Cau01-2019-2020-HK3-OUBus-UseCaseDiagram",
 					"ownedViews": [
 						{
 							"_type": "UMLUseCaseSubjectView",
@@ -12536,6 +12536,24 @@
 							}
 						}
 					]
+				}
+			]
+		},
+		{
+			"_type": "UMLActivity",
+			"_id": "AAAAAAGBL3ApvijL/Fs=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "Activity1",
+			"ownedElements": [
+				{
+					"_type": "UMLActivityDiagram",
+					"_id": "AAAAAAGBL3ApwCjMzY0=",
+					"_parent": {
+						"$ref": "AAAAAAGBL3ApvijL/Fs="
+					},
+					"name": "Cau02-2019-2020-HK3-OUBus-ActivityDiagram"
 				}
 			]
 		}
