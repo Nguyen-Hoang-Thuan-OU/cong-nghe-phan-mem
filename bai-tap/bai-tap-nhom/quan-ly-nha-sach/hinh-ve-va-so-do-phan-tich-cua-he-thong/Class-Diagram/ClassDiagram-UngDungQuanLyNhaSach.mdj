@@ -674,7 +674,7 @@
 											"top": 191,
 											"width": 150.22265625,
 											"height": 18,
-											"text": "Product"
+											"text": "Book"
 										},
 										{
 											"_type": "LabelView",
@@ -3873,12 +3873,12 @@
 										"$ref": "AAAAAAF+URUbw5RqbEQ="
 									},
 									"font": "Roboto;18;0",
-									"left": 873,
-									"top": 661,
+									"left": 864,
+									"top": 659,
 									"width": 27.333984375,
 									"height": 18,
-									"alpha": 0.8329814011756002,
-									"distance": 29.732137494637012,
+									"alpha": 0.6254853136075754,
+									"distance": 22.20360331117452,
 									"hostEdge": {
 										"$ref": "AAAAAAF+URUbxZRtZVE="
 									},
@@ -5364,7 +5364,7 @@
 					"_parent": {
 						"$ref": "AAAAAAF+UMkwOnjgIaY="
 					},
-					"name": "Product",
+					"name": "Book",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
