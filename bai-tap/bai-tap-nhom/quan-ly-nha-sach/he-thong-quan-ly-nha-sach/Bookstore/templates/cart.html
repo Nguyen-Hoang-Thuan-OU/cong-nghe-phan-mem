@@ -1,0 +1,66 @@
+{% extends 'layout/base.html' %}
+{% block css %}
+   <link href="{{ url_for('static', filename='css/cart.css') }}" rel="stylesheet" />
+{% endblock %}
+
+
+{% block title %}Giỏ Hàng{% endblock %}
+{% block content %}
+
+
+    <div class="container cart">
+        <h1 class="text-center text-success">THANH TOÁN GIỎ HÀNG</h1>
+        <div class="alert alert-warning">
+            <h3>Số lượng sản phẩm: <span class="cart-info">{{ cart_stats.total_quantity }}</span></h3>
+            <h3>Tổng tiền :  <span id="amountId">{{ "{:,.0f}".format(cart_stats.total_amount) }}</span> VND</h3>
+        </div>
+        {% if 'cart' in session and session['cart'] %}
+        <table class="table">
+    <tr>
+        <th>Mã sản phẩm</th>
+        <th>Tên sản phẩm</th>
+        <th>Đơn giá</th>
+        <th>Số lượng</th>
+        <th></th>
+    </tr>
+    {% for c in session['cart'].values() %}
+    <tr id="product{{ c.id }}">
+        <td>{{ c.id }}</td>
+        <td>{{ c.name }}</td>
+        <td>{{ "{:,.1f}".format(c.price) }} VND</td>
+        <td>
+            <div class="form-group">
+                <input type="number"
+                       onchange ="updateCart({{ c.id }}, this)"
+                       value="{{ c.quantity }}"
+                       class="form-control" />
+            </div>
+        </td>
+        <td>
+            <input type="button"
+                   value="Xóa"
+                   onclick="deleteCart({{ c.id }})"
+                   class="btn btn-danger" />
+        </td>
+    </tr>
+    {% endfor %}
+    </table>
+        {% if current_user.is_authenticated %}
+        <div>
+           <input type="button"
+               onclick="pay()"
+               value="Thanh toán"
+               class="btn btn-danger" />
+        </div>
+        <br><br>
+        <a href="{{ url_for('bill') }}" class="bill">Hóa Đơn</a>
+        {% else %}
+            <a href="{{ url_for('login', next='cart') }}" class="pay">Đăng nhập để thanh toán</a>
+        {% endif %}
+    </div>
+{% else %}
+    <p><i>Không có sản phẩm nào trong giỏ</i></p>
+{% endif %}
+<!--<a href="{{ url_for('bill') }}" class="bill">Hóa Đơn</a>-->
+{% endblock %}
+

@@ -1,0 +1,126 @@
+﻿[SƠ ĐỒ HOẠT ĐỘNG - ACTIVITY DIAGRAM]
+
+Sơ đồ hoạt động (Activity Diagram) biểu diễn các hoạt động tạo nên quy trình hệ thống, chức năng của hệ thống, sự tương tác giữa các đối tượng bên trong hệ thống và luồng điều khiển từ hoạt động này đến hoạt động khác.
+	-> Đi qua những đối tượng, hoạt động nào để hoàn thành được một luồng, hoàn thành được logic bên trong hệ thống.
+
+==========================================================================================
+
+Để biểu diễn được các luồng hoạt động, sử dụng các ký hiệu:
+
+* Các trạng thái:
+
+	- Trạng thái bắt đầu - Inital (hình tròn đặc ở bên trong): ●―――――>
+		+ Thường sẽ chỉ có duy nhất một nơi bắt đầu.
+
+----------------------------------------
+
+	- Trạng thái kết thúc - Final (Hai hình tròn đồng tâm, hình tròn ở bên trong là hình tròn đặc): ―――――>◉
+		+ Thường sẽ có nhiều nơi kết thúc.
+
+		Ví dụ: rút tiền ở cây ATM.
+			- Một điểm bắt đầu: cho thẻ vào máy ATM và thực hiện chứng thực.
+			- Nhiều điểm kết thúc:
+				+ Nhập sai mật khẩu/mã pin quá 5 lần, máy không nhận thẻ nữa
+					-> Xác thực thất bại và rút tiền không thành công.
+				+ Đã rút tiền không thành công, máy trả thẻ lại cho người dùng.
+					-> Rút tiền thành công và kết thúc giao dịch.
+
+------------------------------------------------------------
+
+	* Khi vẽ sơ đồ mô tả luồng hoạt động của hoạt động này đến hoạt động kia, các tương tác bên trong của hệ thống để hoàn tất một nghiệp vụ nào đó, cũng cần có những điều kiện:
+	
+		- Pre-condition: điều kiện tiên quyết để một hoạt động nào đó bắt đầu được thực hiện.
+			-> Trạng thái bắt đầu (Inital).
+			
+		- Post-condition: điều kiện phải thực hiện sau khi hoạt động hoàn tất, kết thúc nghiệp vụ.
+			-> Trạng thái kết thúc (Final).
+
+--------------------------------------------------------------------------------
+
+*  Mỗi hoạt động (action/activity) đại diện bằng hình chữ nhật bo tròn 4 góc, luồng hoạt động thể hiện bằng mũi tên.
+	Ví dụ:
+		 ◜-------------◝		 ◜-------------◝
+		|Đăng nhập	|――――――――――――――>|Báo lỗi	|
+		 ◟-------------◞		 ◟-------------◞
+
+--------------------------------------------------------------------------------
+
+* Điều kiện (decision/condition) thể hiện bằng hình thoi, biểu diễn một biểu thức vị từ, luồng xử lý khi đúng và sai.
+	Ví dụ:
+			Sai<―――――◇―――――>Đúng
+
+--------------------------------------------------------------------------------
+
+* Bên cạnh công dụng rẻ nhánh để biểu diễn luồng xử lý của đúng và sai, ký hiệu điều kiện (decision) trong sơ đồ hoạt động (activity diagram) còn có thêm công dụng là hợp lại (merge) những hoạt động thuộc nhiều hướng/nhánh khác nhau khi chúng không thực thi đồng thời (tuần tự hoặc trước sau), chẳng hạn như if-else.
+	Ví dụ:
+		――――――――╷
+			v
+		―――――――>◇―――――>
+
+--------------------------------------------------------------------------------
+
+* Nút forking dùng để chia luồng điều khiển (hoạt động - activity) thành nhiều luồng xử lý đồng thời (hoạt động chạy song song với nhau, không ai đợi ai). Có một đường vào và nhiều đường ra.
+	- Ký hiệu là một đường thẳng (có thể nằm dọc hoặc ngang), một đầu vào và nhiều đầu ra:
+												 │
+												 v
+												━━━
+												│ │
+												v v
+	Ví dụ: thanh toán
+		-> Cùng gửi hoá đơn đến email và sms.
+
+------------------------------------------------------------
+
+* Nút joining dùng để kết hợp nhiều luồng xử lý (hoạt động - activity) đồng thời thành một luồng duy nhất, để thông báo kết quả xử lý hoặc ghi nhận vào hệ thống rằng đã hoàn thành tác vụ. Có nhiều đường vào và một đường ra.
+	- Ký hiệu là một đường thẳng (có thể nằm dọc hoặc ngang), nhiều đầu vào và một đầu ra:
+												│ │
+												v v
+												━━━
+												 │
+												 v
+
+--------------------------------------------------------------------------------
+
+* Khi vẽ một sơ đồ hoạt động, logic xử lý các hoạt động có thể rất phức tạp, rất khó để biết hoạt động nào thuộc thành phần (component) nào. Để có được cái nhìn tổng quát về sơ đồ hoạt động, có thể chia các nhóm các hoạt động liên quan thành những cột khác nhau.
+
+==========================================================================================
+
+Lưu ý: khi sẽ, tránh trường hợp để một action/activity nằm riêng lẻ, xử lý xong mà không biết nên tiếp tục hay kết thúc. Nên nối các action/activity năm riêng lẻ đến một luồng hoạt động khác để tiếp tục luồng xử lý hoặc kết thúc action/activity năm riêng lẻ ấy bằng trạng thái kết thúc (final).
+
+
+==========================================================================================
+
+--------------------------------------------------------------------------------
+
+------------------------------------------------------------
+
+----------------------------------------
+
+--------------------
+
+----------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

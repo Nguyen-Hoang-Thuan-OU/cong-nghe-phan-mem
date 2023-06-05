@@ -1,0 +1,457 @@
+﻿[SƠ ĐỒ LỚP - CLASS DIAGRAM]
+
+Sơ đồ lớp (Class Diagram) là một mô hình cấu trúc tĩnh của hệ thống, dùng biểu diễn các lớp đối tượng và mối quan hệ giữa chúng.
+	Association - Kết hợp
+	Aggregation - Tập hợp (không phụ thuộc)
+	Composition - Hợp thành (phụ thuộc)
+	Inheritance - Kế thừa
+	Dependency - Phụ thuộc.
+
+--------------------------------------------------------------------------------
+
+Trong sơ đồ lớp có nhiều loại lớp, trong đó có lớp thực thể đại diện cho cơ sở dữ liệu. Tránh nhầm với sơ đồ thực thể-mối kết hợp (ERD).
+	- Class Diagram: lớp đối tượng, ngoài việc có những lớp đại diện cho cơ sở dữ liệu (entity class) thì sơ đồ lớp còn có nhiều lớp xử lý khác (lớp giao diện, controller,...).
+	- ERD: sơ đồ ý niệm, nằm bên trong cơ sở dữ liệu.
+
+==========================================================================================
+
+* Ký hiệu / Quy ước biểu diễn lớp:
+
+---------------------------------------------------------
+|	Tên lớp	/ Tên đối tượng				|	-> Class / Object
+|-------------------------------------------------------|
+|- tên-thuộc-tính1: kiểu-dữ-liệu1 = giá-trị-mặc-định1	|	-> Attribute/Field/Property: Thuộc tính
+|- tên-thuộc-tính2: kiểu-dữ-liệu2 = giá-trị-mặc-định2	|	được đóng gói trong lớp / đối tượng
+|-------------------------------------------------------|
+|+ tên-phương-thức1(ds-tham-số1): kiểu-trả-về1		|	-> Behavior/Method/Function: Phương thức
+|+ tên-phương-thức2(ds-tham-số2): kiểu-trả-về2		|	thể hiện hành vi của lớp / đối tượng
+|_______________________________________________________|
+
+
+-----------------------------------------------------------------------------------------
+|		|	 Tên lớp	| Tên thuộc tính	| Tên phương thức	|
+|---------------|-----------------------|-----------------------|-----------------------|
+| [N] Thường	| Lớp thông thường	| Thuộc tính thường	| Phương thức thường	|
+|---------------|-----------------------|-----------------------|-----------------------|
+|		| Đối tượng cụ thể của /| Thuộc tính tĩnh	| Phương thức tĩnh	|
+|		| được tạo ra từ lớp	| (Thuộc tính được	| (Phương thức có thể	|
+|		| (Object / Instance	| chia sẻ, dùng chung	| được gọi qua tên lớp	|
+| [U] Gạch chân	| đã được tạo của lớp)	| cho toàn bộ đối tượng	| mà không cần thông qua|
+|		|			| được tạo ra từ lớp đó,| việc tạo đối tượng,	|
+|		|			| thuộc tính tĩnh được	| nó tương tự như	|
+|		|			| tạo ra ngay cả khi lớp| một hàm cơ bản)	|
+|		|			| chưa có đối tượng nào)|			|
+|---------------|-----------------------|-----------------------|-----------------------|
+|		| Lớp trừu tượng	| [Không thể]		| Phương thức trừu tượng|
+|		| (Lớp không cho phép	|			| (Phương thức không có	|
+|		| tạo mới đối tượng,	|			| phần thân thực thi,	|
+| [I] Nghiêng	| chỉ định nghĩa khuôn	|			| chỉ có phần		|
+|		| để các lớp con kế thừa|			| khai báo phương thức)	|
+|		| và hiện thực một số	|			|			|
+|		| nhiệm vụ trừu tượng)	|			|			|
+|---------------|-----------------------|-----------------------|-----------------------|
+|		| Trong kế thừa, đây là	| Là một vùng RAM	| Trong kế thừa, lớp Cha|
+|		| "tự cung" để tuyệt tự,| không cho phép	| "gia trưởng, bảo thủ"	|
+| final		| không cho phép	| thay đổi giá trị,	| không cho phép lớp Con|
+|		| mở rộng (extends)	| mà giá trị chỉ có thể	| vượt mặt, mọi xử lý	|
+|		| để tạo lớp Con	| gán trong lúc khai báo| đều phải sử dụng	|
+|		|			|			| phương thức của Cha	|
+-----------------------------------------------------------------------------------------
+
+* Lưu ý: Đối với thuộc tính và phương thức, ngoài việc sử dụng từ khoá final, ta còn có thể sử dụng ký tự gạch dưới "_".
+
+------------------------------------------------------------
+
+* Phạm vi truy cập (Access modifier): được đặt ở trước tên thuộc tính và tên phương thức.
+	- public: + (mọi người đều có thể truy cập)
+	- private: - (để thể hiện tính che giấu dữ liệu trong lập trình hướng đối tượng, thuộc tính thường có phạm vi truy cập là private hoặc protected, và truy cập thông qua hai phương thức getter và setter.)
+	- protected: # (để các thuộc tính, phương thức con có thể truy cập)
+	- package (Java)/namespace (C#): ~ (trong Java, khi một thuộc tính không được khai báo phạm vi truy cập sẽ được mặc định gán phạm vi truy cập là default - được phép truy cập bởi các lớp (anh em) trong cùng một package)
+
+--------------------------------------------------------------------------------
+
+Ví dụ:
+
+	Tên lớp:
+		Student
+		Circle
+
+	Thuộc tính:
+
+		// Thuộc tính x kiểu số nguyên
+		// với phạm vi truy cập là private
+		- x: int = 0
+
+		// Thuộc tính s kiểu chuỗi
+		// với phạm vi truy cập là private
+		- s: String = "Hello"
+
+		// Cách khai báo hằng số
+		// với phạm vi truy cập là public
+		+ final PI: double	// + PI_: double
+
+	Phương thức:
+
+		// Phương thức để rút gọn phân
+		// với phạm vi truy cập là public
+		// và kết quả trả về là một phân số
+		+ rutGonPhanSo(): 
+
+		// Phương thức để cộng phân số
+		// với phạm vi truy cập là public
+		// và kết quả trả về là một phân số
+		+ congPhanSo(p: PhanSo): PhanSo
+
+		// Cách khai báo phương thức
+		// không cho phép vượt mặt / ghi đè
+		+ final getAge(): int	// + getAge_(): int
+
+==========================================================================================
+
+Mối quan hệ giữa các lớp
+
+
+* Kết hợp (Association): |A|―――――|B|
+
+	- Điều kiện:
+		+ Là hai đối tượng độc lập với hai "vòng đời" riêng biệt.
+		+ Mối quan hệ là nhiều-nhiều.
+		+ Không có mối quan hệ chủ-tớ.
+
+	- Trong danh sách THUỘC TÍNH (không phải phương thức) của lớp A có một ĐỐI TƯỢNG, THUỘC TÍNH kiểu của B và ngược lại.
+	
+		Ví dụ:
+			class A {
+    				private B b;
+			};
+
+	- Bản số/trọng số (multiplicity): xác định số đối tượng của hai lớp có liên kết với nhau, tham gia vào quan hệ đó.
+		*: nhiều.
+		1: một.
+		0..*: từ 0 đến nhiều.
+		1..*: từ 1 đến nhiều.
+		1..3: từ 1 đến 3.
+
+	* Khi không thể đặt thuộc tính vào một lớp/đối tượng nào đó vì sẽ làm ảnh hướng đến khả năng mở rộng.
+		+ Lớp trung gian được sinh ra từ hai lớp quan hệ nhiều-nhiều sẽ được vẽ bằng nét đứt.
+
+			Ví dụ 1: sử dụng ký hiệu của lớp trung gian (đường nét đứt) cho các mối quan hệ với trọng số nhiều-nhiều. Ràng buộc số lượng sinh viên tối thiểu và tối đa của một khoa, số lượng khoa (chuyên ngành) mà một sinh viên được phép tham gia.
+
+			|---------------|				 |--------------|
+			|	Khoa	|				 |SinhVien 	|
+			|―――――――――――――――|(1..2)			(30..500)|――――――――――――――|
+			|-sv:SinhVien[]	|――――――――――――――――――――――――――――――――|-kh:Khoa[]	|
+			|		|		|		 |	   	|
+							|
+							|
+						|-----------------------|
+						|	ThamGia		|
+						|―――――――――――――――――――――――|
+						|-ngayThamGia:Date	|
+						|-kh:Khoa[]		|
+						|-sv:SinhVien[]		|
+						|			|
+					
+		
+			Ví dụ 2: giữa SanPham và LoaiSanPham có quan hệ nhiều-nhiều nhưng không có thuộc tính quan hệ nào khác.
+
+|---------------|		|------------------|			    |--------------------|
+|LoaiSanPham	|(1..*)	  (0..*)|	SanPham	   |(1..*)	      (0..*)|	DonHang		 |
+|―――――――――――――――|―――――――――――――――|――――――――――――――――――|――――――――――――――――――――――――|――――――――――――――――――――|
+|- id : int	|		|- id : int	   |	|  ◀ChiTietDonHang  |- id : int		 |  
+|- ten : String	|		|- ten : String	   |	|		    |- ngayTao : Date    |	
+|―――――――――――――――|		|- gia : BigDecimal|	|		    |- ngayCapNhat : Date|
+|		|		|――――――――――――――――――|	|		    |――――――――――――――――――――|
+|_______________|		|+ SanPham()	   |	|		    |____________________|
+				|+ xemCT() : void  |	|
+				|+ timKiem() : void|	|
+				|------------------|	|
+				|__________________|	|
+							|
+							|
+						|-----------------------|
+						|ChiTietDonHang		|
+						|―――――――――――――――――――――――|
+						|- soLuong : int	|
+						|- donGia : BigDecimal	|
+						|- sp : SanPham[]	|
+						|- dh : DonHang[]	|
+						|―――――――――――――――――――――――|
+						|_______________________|
+
+--------------------------------------------------------------------------------
+
+* Tập hợp/Kết tập (Aggregation/Has-a - Liên kết yếu/lỏng lẻo): |A|◇―――――|B|
+
+	- Điều kiện:
+		+ Đã có mối quan hệ kết hợp (association).
+		+ Mối quan hệ một chiều (một-nhiều/nhiều-một).
+
+	- Trong danh sách THUỘC TÍNH (không phải phương thức) của lớp A có một THUỘC TÍNH kiểu của B (thuộc tính b), và khi đối tượng a của lớp A bị huỷ thì đối tượng b của lớp B (thuộc tính b bên trong A) vẫn còn tồn tại (cả hai thực thể có thể tồn tại riêng lẻ).
+
+		Ví dụ: lớp A có quan hệ kết tập với lớp B khi B được truyền vào làm tham số cho phương thức của A.
+			class A {
+    				void lamXYZ (B b) { };
+			};
+
+	- Khi vẽ, hình thoi rỗng ◇ thường nằm ở phía trọng số là 1.
+
+		Ví dụ 1: nếu đối tượng DanhMuc bị xoá thì tất cả các sản phẩm thuộc SanPham vẫn còn tồn tại.
+
+			|-------|	 |-------|
+			|SanPham|*	1|DanhMuc|
+			|―――――――|―――――――◇|―――――――|
+			|	|	 |	 |
+
+		Ví dụ 2: thu đi để lại lá vàng.
+
+			|-------|	 |-------|
+			|LaVang |*	1|MuaThu |
+			|―――――――|―――――――◇|―――――――|
+			|	|	 |	 |
+
+
+		Ví dụ 3: nếu đối tượng TruongHoc bị xoá thì tất cả các SinhVien và GiangVien vẫn còn tồn tại.
+
+			|---------|	   |---------|	      |--------|
+			|GiangVien|*	  1|TruongHoc|1	     *|SinhVien|
+			|―――――――――|―――――――◇|―――――――――|◇―――――――|――――――――|
+			|	  |	   |	     |	      |	       |
+
+--------------------------------------------------------------------------------
+
+* Hợp thành/Cấu thành (Composition/Part-of - Liên kết mạnh/chặt chẽ): |A|◆―――――|B|
+
+	- Điều kiện:
+		+ Đã có mối quan hệ kết hợp (aggregation) - là một trường hợp đặc biệt của aggregation.
+
+	- Trong danh sách THUỘC TÍNH (không phải phương thức) của lớp A có một THUỘC TÍNH kiểu của B (thuộc tính b), và khi đối tượng a của lớp A bị huỷ thì đối tượng b của lớp B (thuộc tính b bên trong A) sẽ bị huỷ theo (cả hai thực thể đều phụ thuộc vào nhau).
+
+		Ví dụ: lớp A có quan hệ compostion với lớp B khi B được truyền vào làm tham số cho phương thức khởi tạo của A.
+			class A {
+    				A (B b) {
+        				new B ();
+    				}
+			};
+
+	- Khi vẽ, hình thoi đặc ◆ thường nằm ở phía trọng số là 1.
+
+			Ví dụ 1: nếu đối tượng ThuMuc bị xoá thì tất cả các tập tin con bên trong đều sẽ bị xoá theo.
+
+				|-------|	   |------|
+				|ThuMuc	|1	  *|TapTin|
+				|―――――――|◆―――――――――|――――――|
+				|	|	   |	  |
+
+			Ví dụ 2: nếu đối tượng SinhVien bị xoá thì tất cả các thông tin về CV đều sẽ bị xoá theo.
+
+				|--------|	    |--------|
+				|SinhVien|1	   1|CVOnline|
+				|――――――――|◆―――――――――|――――――――|
+				|	 |	    |	    |
+
+--------------------------------------------------------------------------------
+
+* Phụ thuộc (Dependency/Uses-a - Cần sử dụng đến): |A|----->|B|
+
+	- Điều kiện:
+		+ Chỉ xét đến khi hai lớp đối tượng không có cả ba mối quan hệ association, aggregation và composition.
+
+	- Trong danh sách PHƯƠNG THỨC (không phải thuộc tính) của lớp A có một THUỘC TÍNH với tham số/đối số kiểu của B, có một biến cục bộ kiểu B, hoặc trả về một biến kiểu B.
+		-> Lớp A phụ thuộc vào lớp B, có liên quan đến lớp B.
+
+		Ví dụ 1:
+			test (B b) {			// Tham số kiểu của B
+				// B b;			// Biến cục bộ kiểu B
+				return new B();		// Trả về một biến kiểu B
+			}
+
+		Ví dụ 2:
+			public class Diem {...}
+			public class HinhTron {...}
+
+			public int viTriCuaDiemSoVoiHinhTron(Diem p) {...}	// Tham số
+
+			public Diem TamHinhTron() {
+				// Tạo mới một đối tượng Diem
+				// với tung độ và hoành độ
+				// là tâm của hình tròn
+				return new Diem(this.x, this.y);	// Kết quả trả về
+			}
+
+--------------------------------------------------------------------------------
+
+* Kế thừa (Inheritance/Generalization/Is-a - Là một dạng của): |A|◁―――――|B|
+
+	- Quan hệ một-một của hai lớp đối tượng.
+		+ Lớp A: lớp cơ sở (base class)/lớp cha(superclass).
+		+ Lớp B: lớp dẫn xuất (derived class)/lớp con (subclass).
+			-> Một lớp B ánh xạ với một đối tượng lớp A (B là mở rộng (extends) của A).
+			-> Khi chuyển xuống cơ sở dữ liệu sẽ là mối quan hệ ánh xạ một-một.
+
+	- Lớp B thừa hưởng những đặc tính, hành vi của lớp A.
+
+		Ví dụ:
+
+|-----------------------|		|-------------------|		    |-------------------|
+|	KhachHang	|		|	NguoiDung   |		    |	Admin		|
+|―――――――――――――――――――――――|1	       1|―――――――――――――――――――|1		   1|―――――――――――――――――――|
+|- email : String	|――――――――――――――▷|- id: int	    |◁――――――――――――――|- laQuanLy: boolean|
+|- soDienThoai: String	|		|- taiKhoan : String|		    |			|
+|			|		|- matKhau : String |		    |			|
+|―――――――――――――――――――――――|		|―――――――――――――――――――|		    |―――――――――――――――――――|
+|			|		|		    |		    |			|
+
+--------------------------------------------------------------------------------
+
+* Lớp trong (nested): |A|⊕―――――|A1|
+
+	- Trong lập trình hướng đối tượng, Java kế thừa từ C++, do đó Java thừa hưởng đầy đủ những đặc trưng trong lập trình hướng đối tượng của C++. Nhưng trong Java có thêm cơ chế đặc trưng hướng đối tượng mà C++ không có là metaclass.
+		+ Metaclass là lớp mà bên trong một lớp A có lồng thêm một số lớp A1, A2,...
+		+ Lớp lồng bên trong được phép truy cập vào thành viên của lớp lớn. Khác với quan hệ kế thừa.
+
+	- Thành viên tĩnh là thành viên dùng chung cho tất cả các đối tượng. Lớp tĩnh (static class) được phép khai báo bên trong một lớp lớn, giúp lớp lớn truy cập trực tiếp vào lớp trong bằng tên của lớp lớn và tạo đối tượng ở bên trong, thay vì phải tạo đối tượng từ lớp lớn rồi dùng đối tượng vừa tạo để truy cập vào lớp trong (thường được áp dụng trong xử lý sự kiện của lập trình giao diện).
+
+			Ví dụ 1:
+				class A {
+					// Phạm vi truy cập bên private
+					// chỉ cho truy cập bên trong phạm vi của lớp,
+					// không cho lớp nào khác được phép truy cập
+					private int x;
+
+					// Lớp B (lớp trong) giờ đây cũng được truy cập
+					// vào thành phần private của lớp A
+					class B {
+					}
+
+					// Lớp tĩnh cho phép lớp A truy cập trực tiếp vào lớp C
+					// bằng tên của lớp A và tạo đối tượng ở bên trong
+					// mà không cần phải tạo đối tượng ở lớp A
+					static class C {
+					}
+				}
+
+
+			Ví dụ 2:
+				// Lớp giao diện
+				class A {
+					private textBoxNhap;
+					private buttonXuLy;
+
+					// Lớp xử lý sự kiện
+					// và có thể truy cập vào thuộc tính privte
+					class A1 {
+					}
+				}
+
+
+		Ví dụ: lớp A1 là lớp trong của lớp A
+
+		|-----------------------|		|---------------------------------------|
+		|	A		|		|		A1			|
+		|―――――――――――――――――――――――|		|―――――――――――――――――――――――――――――――――――――――|
+		|- textBoxNhap : TextBox|⊕――――――――――――――|					|
+		|- buttonXuLy : Button	|		|―――――――――――――――――――――――――――――――――――――――|
+		|―――――――――――――――――――――――|		|+ handle (event : ActionEvent) : void	|
+		|_______________________|		|_______________________________________|
+
+==========================================================================================
+
+Trong mô hình Model-View-Controller (MVC):
+
+	- Controller: nơi nhận các yêu cầu (request) từ phía giao diện của người dùng để xử lý, định tuyến để gọi các action, sau đó giao tiếp với Model.
+
+	- Model: nơi tương tác với cơ sở dữ liệu, sau khi được Controller gọi sẽ thực hiện các thao tác thêm hoặc xoá dữ liệu trong cơ sở dữ liệu, sau đó trả kết quả về cho View.
+
+	- View: là nơi để người dùng thao tác và thay người dùng gửi yêu cầu (request) lên Server.
+-> Trong sơ đồ lớp cũng có các loại tương ứng.
+
+--------------------------------------------------------------------------------
+
+Một số loại lớp khác bên cạnh các loại lớp đại diện cho dữ liệu:
+
+	- Boundary Class: dùng để mô hình hoá sự tương tác giữa người dùng và hệ thống, chẳng hạn như giao diện chương trình.
+		+ Kí hiệu: Ю (dấu | nằm bên trái hình tròn O)
+		+ Tương ứng với View trong mô hình MVC.
+
+--------------------------------------------------------------------------------
+
+	- Entity Class: dùng để mô hình hoá những thông tin của thành phần/lớp đối tượng được lưu trữ/tồn tại lâu dài trong hệ thống. Nó đại diện cho những bảng dữ liệu (table) trong cơ sở dữ liệu, chẳng hạn như như SanPham, GiaoDich,...
+		+ Kí hiệu: ⍜ (dấu gạch dưới _ nằm ở ngay bên dưới hình tròn O)
+		+ Tương ứng với Model trong mô hình MVC.
+
+--------------------------------------------------------------------------------
+
+	- Controller Class: biểu diễn các đối tượng trung gian giữa boundary (view) và entity (model). Nó thực thi các lệnh từ boundary (view) bằng cách tương tác với các đối tượng entity (model) và boundary (view).
+		+ Kí hiệu: ⥀ (mũi tên nhỏ dạng vòng lặp ↺ được vẽ ở biên của hình tròn O)
+		+ Tương ứng với Controller trong mô hình MVC.
+
+--------------------------------------------------------------------------------
+
+	Ю : Boundary [dấu | nằm bên trái hình tròn O] - đại diện cho giao diện, tương tác giữa bên trong hệ thống và bên ngoài (thường là giao diện người dùng - UI) để Actor có thể thấy được.
+
+	⍜ : Entity [dấu gạch dưới _ nằm ở ngay bên dưới hình tròn O] - đại diện cho cơ sỡ dữ liệu để lưu trữ dữ liệu. Là đối tượng thực thể xác định, thể hiện dữ liệu hệ thống (Data Model), chẳng hạn như cơ sỡ dữ liệu có bảng SinhVien, GiangVien thì trong design sẽ có đối tượng SinhVien, GiangVien tương ứng.
+
+	⥀ : Control [mũi tên nhỏ dạng vòng lặp ↺ được vẽ ở biên của hình tròn O] - giao tiếp với entity để lấy dữ liệu và trả kết quả về cho boundary.
+
+	Actor > Ю > ⥀ > ⍜
+
+==========================================================================================
+
+Hiện thực hóa (Realization/Implementation): |Đối tượng|-----▷|<<interface>>|
+Giao diện (Interface) chỉ có phần khai báo và một vài phương thức mặc định chứ không có phần thực thi, để chạy được cần viết một lớp đối tượng để hiện thực/triển khai, quá trình này được gọi là hiện thực hoá.
+	-> Sử dụng interface
+		-> Implementation
+
+	Ví dụ 1:
+		|---------------|
+		|[In nghiêng] I1|◁------|
+		|---------------|	|
+					|-----|class A|
+		|---------------|	|
+		|[In nghiêng] I2|◁------|
+		|---------------|
+
+==========================================================================================
+
+Bài tập vẽ sơ đồ lớp:
+	Bài tập 1: thiết kế lớp TapTin và ThuMuc
+		Thư mục chứa thông tin tên thư mục, ngày tạo.
+		Tập tin cũng là một loại thư mục có thêm thông tin loại tập tin và dung lượng.
+		Thư mục có thể chứa các thư mục con và nhiều tập tin khác.
+		Trong đó:
+			- Thư mục bắt buộc phải có tên, còn tập tin phải có tên và dung lượng.
+			- Một thư mục bị xoá thì tất cả tập tin, thư mục con của nó cũng bị xoá theo.
+		       1|-----------------------|	|-----------------------|
+		―――――――◆|	ThuMuc		|	|	TapTin		|
+		│	|_______________________|	|_______________________|
+		│	|- ten : String		|◁――――――|- loai : String	|
+		│_______|- ngayTao : Date	|	|- dungLuong : double	|
+		       *|_______________________|	|_______________________|
+			|_______________________|	|_______________________|
+
+
+==========================================================================================
+
+--------------------------------------------------------------------------------
+
+------------------------------------------------------------
+
+----------------------------------------
+
+--------------------
+
+----------
+
+
+
+
+
+
+
+
+
+
+
+
+

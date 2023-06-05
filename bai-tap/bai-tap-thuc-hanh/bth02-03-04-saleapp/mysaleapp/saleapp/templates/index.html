@@ -1,0 +1,64 @@
+{% extends 'layout/base.html' %}
+
+{% block title %} Trang chủ {% endblock %}
+
+{% block content %}
+
+<!--Câu chào mừng-->
+<h1 class="subject">
+    Chào mừng bạn đã đến với website bán hàng trực tuyến
+</h1>
+
+
+<!--Đánh số trang (ở đầu trang)-->
+{% if pages > 1 %}
+<ul class="pagination">
+    {% for idx in range(1, pages+1) %}
+    <li class="page-item"><a class="page-link" href="{{ url_for('home', page=idx) }}">{{ idx }}</a></li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+<!--Hiện sản phẩm dưới dạng các thẻ-->
+<div class="row">
+
+    {% for p in products %}
+    <div class="col-md-3" style="padding: 5px">
+
+        <div class="card" style="padding: 10px">
+
+            {% if p.image %}
+            <img class="card-img-top img-fluid" src="{{ url_for('static', filename=p.image) }}" alt="{{p.name}}">
+            {% else %}
+            <img class="card-img-top img-fluid"
+                 src="{{ url_for('static', filename='images/default-samsung-galaxy-z-fold-3-green-1-600x600.jpg') }}"
+                 alt="{{p.name}}">
+            {% endif %}
+
+            <div class="card-body">
+                <h4 class="card-title">{{ p.name }}</h4>
+                <p class="card-text">{{ "{:,.1f}".format(p.price) }} VNĐ</p>
+                <a href="" class="btn btn-primary"
+                   onclick="addToCart({{ p.id }}, '{{ p.name }}', {{ p.price }})">
+                    Đặt hàng
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+    {% endfor %}
+
+</div>
+
+<!--Đánh số trang (ở cuối trang)-->
+{% if pages > 1 %}
+<ul class="pagination">
+    {% for idx in range(1, pages+1) %}
+    <li class="page-item"><a class="page-link" href="{{ url_for('home', page=idx) }}">{{ idx }}</a></li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+
+{% endblock %}

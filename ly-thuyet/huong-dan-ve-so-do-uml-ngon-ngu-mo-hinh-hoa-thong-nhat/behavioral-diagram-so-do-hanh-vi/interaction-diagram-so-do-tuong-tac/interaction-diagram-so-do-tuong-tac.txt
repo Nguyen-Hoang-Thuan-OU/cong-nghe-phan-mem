@@ -1,0 +1,50 @@
+﻿[SƠ ĐỒ TƯƠNG TÁC - INTERACTION DIAGRAM]
+
+Sơ đồ tương tác (Interaction Diagram):
+
+Nhiệm vụ:
+	- Dùng để biểu diễn tương tác.
+	- Mô hình hoá các kịch bản chắn chắn.
+	- Mô tả chuỗi giao tiếp ở các mức độ chi tiết khác nhau.
+
+Sơ đồ tương tác thể hiện những luồng:
+	- Giao tiếp giữa một hệ thống và môi trường.
+	- Giao tiếp giữa các thành phần của hệ thống với nhau để cho thấy một Use Case có thể làm được gì.
+	- Giao tiếp giữa các tiến trình, trong đó các thành tố thực hiện một giao thức.
+	- Giao tiếp giữa các cấp lớp (phép gọi hàm, hành vi tương tác giữa những đối tượng).
+
+
+==========================================================================================
+
+--------------------------------------------------------------------------------
+
+------------------------------------------------------------
+
+----------------------------------------
+
+--------------------
+
+----------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

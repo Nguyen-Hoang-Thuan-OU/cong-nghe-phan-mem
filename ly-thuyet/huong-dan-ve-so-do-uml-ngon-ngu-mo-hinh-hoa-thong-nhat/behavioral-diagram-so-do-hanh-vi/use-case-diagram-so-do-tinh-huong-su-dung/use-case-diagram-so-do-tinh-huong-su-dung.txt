@@ -1,0 +1,438 @@
+﻿[SƠ ĐỒ TÌNH HUỐNG SỬ DỤNG - USE CASE]
+
+Toàn bộ những Requirements/Features + chi tiết (hành trình) trong cuốn tài liệu SRS có thể làm người đọc cảm thấy choáng ngợp. Vì vậy, cần chuyển những yêu cầu (WHAT) thành mô hình để dễ hình dung và có cảm nhận ban đầu về hệ thống mà chưa cần quan tâm đến chi tiết.
+
+"A picture is worth a thousand words" - Henrik Ibsen
+(Một bức hình hơn vạn lời nói.)
+
+===========================================================================================
+
+[USE CASE DIAGRAM - SƠ ĐỒ TÌNH HUỐNG SỬ DỤNG]
+
+01. ĐỊNH NGHĨA
+
+Dù đội ngũ lập trình viên có giỏi đến mấy, khách hàng giỏi đến mấy thì cũng cần phải có cảm nhận ban đầu về tính năng và tính thiếu đủ của tính năng. Việc chi tiết hơn sẽ từ từ tính sau.
+
+Có thể thủ công liệt kê ra giấy toàn bộ những nhóm người dùng và tính năng mà những nhóm người dùng ấy có thể sử dụng, nhưng sẽ rất dài dòng, mệt mỏi và đôi khi có những tính năng dùng chung cho nhiều nhóm người dùng.
+
+	=> Use Case Diagram (UCD): sơ đồ tình huống sử dụng.
+		-> Chỉ ra WHO làm được WHAT với hệ thống.
+
+		Ví dụ: hệ thống quản lý học tập
+			- Sinh viên có thể xem điểm, lịch thi, đăng ký môn học,...
+			- Giảng viên có thể điểm danh, đăng tài liệu, xem danh sách lớp,...
+				-> Không quan tâm chi tiết bên trong xử lý như thế nào, chỉ quan tâm ai làm được gì.
+
+=> Use Case Diagram là loại sơ đồ vẽ ra nhằm liệt kê các tính năng (đích đến) mà người dùng sẽ trải nghiệm, sử dụng để phục vụ cho công việc hằng ngày của họ (không liệt kê từng bước sử dụng, luồng dữ liệu, mạch tương tác - hành trình).
+	≈ Một hoặc một vài màn hình để đạt được kết nào nào đó cho người dùng, kể cả khi không có phần mềm.
+
+--------------------------------------------------------------------------------
+
+02. THÀNH PHẦN CHÍNH
+
+	- System boundary: đường biên hình chữ nhật bao quanh, bên trong là tên của hệ thống, mô-đun (lớn) hoặc tính năng (lớn) kèm với các WHAT, xung quanh là các người dùng (Actor) tương tác với hệ thống, mô-đun hoặc tính năng.
+		-> Use Case Subject.
+
+	- Actor: tác nhân tương tác (nhân tố tác động), không phải là một người dùng cụ thể theo tên mà chỉ nói về một nhóm người dùng thuộc một vai trò (role) nào đó hoặc thậm chí là một thành phần/tính năng/hệ thống.
+		Ví dụ: Khách, Người quản trị, Thành viên, Sinh viên, Giảng viên,...
+
+	- Use Case: tình huống, tính năng, mục tiêu sử dụng, có kết quả sau cùng trả về cho người dùng khi sử dụng hệ thống. Mô tả về một kết quả (vật lý) có thể cầm trong tay hoặc giá trị về mặt thông tin/dữ liệu.
+		-> WHAT.
+		* Step: các bước thao tác phải có để có được kết quả.
+
+------------------------------------------------------------
+
+* Lưu ý khi vẽ System boundary:
+
+	- Vẽ bằng hình chữ nhật, có chứa tên của hệ thống (ở phía trên).
+	
+	- Actor vẽ bên ngoài biên, Use Case vẽ bên trong biên.
+	
+		+ Actor chính vẽ bên trái.
+		
+		+ Actor phụ vẽ bên phải.
+
+------------------------------------------------------------
+
+* Lưu ý khi vẽ Actor:
+
+	- Vẽ hình người giả (người que/người rơm).
+	
+	- Guest/Visitor/Anonymous/UnAuthenticated User: khách ghé ngang hệ thống.
+	
+	- Chỉ vẽ nhóm người dùng có sử dụng, tương tác với hệ thống.
+	
+	- Có thể là hệ thống khác (External Agent - Tác nhân bên ngoài) tương tác với hệ thống của chúng ta thông qua API (tập hợp các cách giao tiếp với nơi khác).
+	
+		Ví dụ: ngân hàng, ví điện tử,...
+		
+	- Có thể là đoạn mã lệnh trong chương trình của chúng ta làm những việc tự động theo thời gian/thuật toán.
+		-> System Handler (không phải hệ thống nào cũng có).
+	
+		Ví dụ: hệ thống gửi thông báo nhắc nhở
+
+		* System Handler: đoạn code bên trong hệ thống thay thế con người, dựa vào các thông số mặc định được con người thiết lập sẵn thông qua tính năng quản trị, hệ thống sẽ thu thập dữ liệu (về thói quen, lịch sử hành vi,...), lọc, xử lý dữ liệu và đóng vai trò của một người nhân viên phía hậu trường để tự động gửi thông tin, thông báo, cảnh báo, gợi ý, nhắc nhở,... giúp tăng tiện ích và độ trải nghiệm cho người dùng.
+		
+			Ví dụ:
+				- Facebook tự động gửi thông báo mỗi khi có lượt bày tỏ cảm xúc, bình luận, tin nhắn, yêu cầu kết bạn,...
+				
+				- Hệ thống lấy ngày giờ và những giá trị cho trước để đặt lịch nhắc nhở uống thuốc, nhắc nhở uống nước, nhắc nhở nghỉ ngơi và vận động do đã ngồi làm việc quá lâu,...
+				
+				- Hệ thống quét (thời gian hiện tại - thời gian mua đơn hàng gần nhất), nếu lớn hơn thời gian được cài đặt (ví dụ: 1 tháng, 2 tháng,...) sẽ tự động gửi thông báo nhắc nhở và có thể kèm mã giảm giá.
+
+------------------------------------------------------------
+
+* Lưu ý khi vẽ Use Case:
+
+	- Vẽ bằng hình Elíp.
+	
+	- Cấu trúc đặt tên phải bắt đầu bằng một động từ (V) + danh từ (Noun) hoặc tính từ (Adv/object).
+	
+	- Không có các Use Case trùng tên vì mỗi Use Case là một tính năng khác nhau.
+	
+	- Không được nhầm lẫn với các bước để hoàn thành một Use Case.
+	
+		+ Không vẽ theo luồng sử dụng của người dùng.
+			Ví dụ: Bước 1 -> Bước 2 -> Bước 3...
+			
+		+ Chỉ liệt kê các hành động, tương tác của người dùng và các phụ thuộc (nếu có).
+
+--------------------------------------------------------------------------------
+
+03. THÀNH PHẦN PHỤ
+
+* CRUD: các thao tác quản trị dữ liệu.
+
+	- Create (Tạo/Thêm)
+	
+	- Retrieve/Read (Lấy/Đọc): tuỳ người mà có thể xem đây không phải là thao tác quản trị.
+	
+	- Update (Cập nhật)
+	
+	- Delete/Remove (Xoá/Loại bỏ): không hẳn là xoá mất mà chỉ là ẩn thông tin đi (đặt Status = InActive)
+	
+		Ví dụ: sinh viên bỏ học, rút hồ sơ khỏi trường
+			-> Thông tin vẫn phải được giữ lại chứ không được xoá
+				-- DELETE FROM [Student] WHERE Id = "MSSV-cần-xoá"
+					-> Làm như vậy sẽ không thể thống kê được tỉ lệ nghỉ học và bỏ học
+						(Phục vụ cho việc tái sử dụng và thống kê về sau này)
+
+--------------------------------------------------------------------------------
+
+Khi giữa các tính năng có sự liên kết, các xử lý có liên quan đến nhau dù chặt chẽ hay lỏng lẻo.
+
+	Ví dụ: bình thường thì chỉ có tính năng [Dán] được kích hoạt, nhưng khi bôi đen một đoạn văn thì sẽ có thêm tính năng [Sao chép], [Cắt] được kích hoạt.
+		-> Tối ưu, làm giảm độ phức tạp của sơ đồ bằng các mối quan hệ/các nét nối giữa các Use Case với nhau.
+
+	* Generalization (inheritance): kế thừa, cha có thì con có, cha mất thì con cũng mất theo.
+		-> Những gì của cha là của con, những gì của riêng con lại là của riêng con.
+			=> Mục đích cuối cùng là để tái sử dụng.
+
+		- Mối quan hệ giữa các class/đối tượng/thực thể ngoài đời: is a (kind of) - là một phiên bản/hình dạng của...
+			Ví dụ: ở ngoài đời thực: "Nhìn nét giống con nhà cô/chú/anh/chị..."
+				-> Nhìn hình ảnh của con sẽ gợi nhớ được hình ảnh của cha.
+
+		- Gom những gì chung nhất của lớp con vào lớp cha.
+			-> Tổng quát hoá (generalization).
+
+			* Ví dụ:
+				- Dog is a kind of Pet.
+				- Cat is a kind of Pet.
+				
+				- Square is a kind of rectangle.
+				- Square is a kind of geometry.
+				- Circle is a kind of geometry.
+				- Rectangle is a kind of geometry.
+
+------------------------------------------------------------
+
+	* Include: (UC chính) có mối quan hệ bao gồm cả (UC phụ) bên trong. (UC phụ) là một mắt xích quan trọng và bắt buộc phải hoàn thành trong một thời điểm nào đó, miễn là trước khi (UC chính) được hoàn thành.
+		-> Để (UC chính) xảy ra thì (UC phụ) bắt buộc (MUST) hoàn thành trước tiên.
+			≈ #include<> / import -> Không thể biên dịch (compile) ứng dụng nếu thiếu thư viện
+
+------------------------------------------------------------
+
+	* Extend: (UC phụ) có mối quan hệ mở rộng cho (UC chính). (UC phụ) chỉ xảy ra trong một hoàn cảnh cụ thể nào đó hoặc chỉ làm phong phú thêm chứ không có quyền quyết định sự hoàn thành của (UC chính).
+		-> (UC chính) có thể (MAY) đơn phương, độc lập hoàn tất mà không bắt buộc phải có (UC phụ).
+			≈ Có em đời bỗng vui
+
+--------------------------------------------------------------------------------
+
+* Lưu ý khi vẽ Generalization: (Cha) ◁――――― (Con)
+
+	- Trả lời câu hỏi: "Bà con họ hàng có liên kết gì với nhau?".
+	
+	- Gom những gì chung nhất để ở Use Case cha, những điều khác biệt để lại ở Use Case con.
+	
+	- Trong lập trình, tổng quát hoá mang ý nghĩa gom menu, tách cụm menu/cụm tính năng có liên quan đến một Actor nào đó.
+	
+	- Chỉ nên sử dụng khi một cha có ít nhất hai con trở lên.
+
+		Ví dụ 1: Thực hiện giao dịch tại ngân hàng:
+			(Nạp tiền)
+			(Rút tiền)
+			(Chuyển tiền)			――――――――▷ (Giao dịch tại ngân hàng)
+			(Đóng/Khoá tài khoản)
+			(Cập nhật thông tin cá nhân)
+			...
+
+			* Đọc: Use Case (Giao dịch tại ngân hàng) là trường hợp tổng quát của các tình huống (Nạp tiền), (Rút tiền), (Chuyển tiền), (Đóng/Khoá tài khoản), (Cập nhật thông tin cá nhân),...
+
+		Ví dụ 2: Quản lý bài đăng trong một diễn đàn:
+			(Viết bài đăng)
+			(Duyệt bài đăng)
+			(Sửa bài đăng)
+			(Ghim bài đăng)			――――――――▷ (Quản lý các tuyến bài đăng)
+			(Ẩn bài)
+			(Chặn người dùng)
+			...
+
+			* Đọc: Use Case (Quản lý các tuyến bài đăng) là trường hợp tổng quát của các tình huống (Viết bài đăng), (Duyệt bài đăng), (Sửa bài đăng),... (CRUD bài đăng).
+
+--------------------------------------------------------------------------------
+
+* Lưu ý khi vẽ Include: (UC chính) -----<<include>>-----> (UC chính sẽ bị phụ thuộc vào UC này)
+
+	- Đọc ở gốc mũi tên (đọc ở đâu thì Actor sẽ ở đấy).
+		-> (UC chính) bắt buộc (MUST) phải có (UC phụ) để hoàn thành.
+
+	- Trả lời câu hỏi "Giữa những Use Case độc lập có liên kết gì với nhau?".
+	
+	- Giữa những Use Case sẽ phụ thuộc chặt chẽ, (UC chính) không thể thiếu (UC phụ) nếu muốn hoàn tất.
+
+		Ví dụ 1: (Hắt hơi) -----<<include>>-----> (Nhắm mắt)
+			-> Muốn hắt hơi thành công => Phải có nhắm mắt trước, không có ngoại lệ dù là ai.
+
+			* Đọc: Use Case (Nhắm mắt) là trường hợp bắt buộc phải có để hoàn thành Use Case (Hắt hơi).
+
+		Ví dụ 2: (Ăn cơm) -----<<include>>-----> (Trả tiền)
+			-> Muốn ăn bữa cơm thành công => Phải trả tiền trước, không có ngoại lệ dù là ai.
+
+			* Đọc: Use Case (Trả tiền) là trường hợp bắt buộc phải có để hoàn thành Use Case (Ăn cơm).
+
+--------------------------------------------------------------------------------
+
+* Lưu ý khi vẽ Extend: (UC chính) <-----<<extend>>----- (UC này sẽ mở rộng, bổ sung thêm cho UC chính)
+	- Đọc ở đầu mũi tên (đọc ở đâu thì Actor sẽ ở đấy).
+		-> (UC chính) có thể (MAY) cần hoặc không cần (UC phụ) để hoàn thành.
+
+	- Trả lời câu hỏi "Giữa những Use Case độc lập có liên kết gì với nhau?".
+	
+	- Giữa những Use Case sẽ phụ thuộc lỏng lẻo, (UC chính) có thể độc lập hoàn tất mà không cần (UC phụ).
+
+		Ví dụ 1: (Hắt hơi) <-----<<extend>>----- (Xin lỗi)
+			-> Hắt hơi xong ≈> Có xin lỗi hay không thì tuỳ, không bắt buộc, nhưng nếu có thì sẽ tăng thêm phần tế nhị và lịch sự.
+
+			* Đọc: Use Case (Hắt hơi) không bắt buộc phải có Use Case (Xin lỗi) để hoàn thành. Use Case (Xin lỗi) thêm vào chỉ để bổ trợ thêm cho Use Case (Hắt hơi), không có cũng không sao.
+
+		Ví dụ 2: (Ăn cơm) <-----<<extend>>----- (Gọi cơm thêm)
+			-> Ăn cơm xong ≈> Có muốn gọi cơm thêm không thì tuỳ, không bắt buộc, nhưng nếu có thì sẽ càng no hơn.
+
+			* Đọc: Use Case (Ăn cơm) không bắt buộc phải có Use Case (Gọi cơm thêm) để hoàn thành. Use Case (Gọi cơm thêm) thêm vào chỉ để làm phong phú thêm cho Use Case (Ăn cơm), không có cũng không sao.
+
+	- Vì quan hệ Extend là "lỏng lẻo", không phải lúc nào cũng xảy ra nên nếu muốn được Use Case xảy ra thì cần phải đi kèm điều kiện. Tương đương với câu điều kiện If và Switch-Case trong lập trình.
+		-> Khi nào/Tình huống/Điều kiện gì thì gọi đến (Use Case) Extend.
+
+		+ Condition: điều kiện và hành động của Actor khi gặp/tương tác với Extension point.
+			-> Nếu gặp đúng Extension point thì lập tức thực hiện Condition.
+		+ Extension point: điểm mở rộng, điểm rẽ nhánh, điều kiện mà Use Case có mối quan hệ Extend sẽ xảy ra.
+			-> Điều kiện để Use Case xảy ra, để rẻ vào nhánh này thay vì nhánh khác.
+		=> Để (UC phụ) xảy ra thì phải thoả mãn được điều kiện trong Condition và Extension point.
+			=> Rẻ nhánh ở [Extension point] khi thoả [Condition]
+			=> Phải thoả [Condition] thì mới rẻ vô được [Extension point]
+
+			Ví dụ 1: (Xem thông tin)
+				   (―――――――――――――)
+				  (Extension points)
+				   (Sửa thông tin)
+					^
+					|<<extend>>
+					|_
+					| _
+					|  _
+					|    _  -----------------------------------------`
+					|     _ |Condition: {Actor nhấn nút [Chỉnh sửa]} |
+					|	|					 |
+					|	|Extension point: Sửa thông tin		 |
+					|	|_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ |
+				   (Sửa thông tin)
+
+			Ví dụ 2: (Đánh giá chuyến đi)
+				   (――――――――――――――――――)
+				    (Extension points)
+				  (Đánh giá cho tài xế)
+					 ^
+					 |<<extend>>
+					 |_
+					 | _
+					 |  _
+					 |    _  ---------------------------------------`
+					 |     _ |Condition: {Khách hàng đánh giá 5 sao} |
+					 |	 |					 |
+					 |	 |Extension point: Đánh giá cho tài xế	 |
+					 |	 |_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _|
+				      (Gửi tiền tip)
+
+			(Vì chỉ gửi được tiền tip cho tài xế sau khi đã đánh giá 5 sao)
+
+https://www.uml-diagrams.org/use-case-extend.html
+
+===========================================================================================
+
+[USE CASE DESCRIPTION / SPECIFICATION - ĐẶC TẢ TÌNH HUỐNG SỬ DỤNG]
+
+01. ĐỊNH NGHĨA
+
+Trong sơ đồ Use Case chỉ vẽ phần tổng quát (phần WHAT) để khách hàng hiểu được họ đạt được cái gì khi sử dụng hệ thống. Điều này sẽ tốt, dễ dàng cho khách hàng hiểu nhưng lại làm thiếu tính chi tiết về cách thức hiện thực/triển khai/cài đặt các yêu cầu phần mềm cho lập trình viên. Bên cạnh đó, sơ đồ Use Case chỉ thể hiện được những tình huống lý tưởng (happy case/happy path) nhưng lại không thể hiện được những tình huống ngoại lệ, điều này cũng sẽ gây khó khăn cho kiểm thử viên trong cách thức kiểm thử vì không biết thế nào là đúng và đủ.
+
+Để mô tả chi tiết, cận cảnh (macro) về những xử lý bên trong các tính năng (phần HOW) và các bước cần thực hiện để đạt được tính năng của một Use Case, cần có thêm một tài liệu/phiếu/biểu mẫu.
+
+	Ví dụ 1: (Tạo thời khoá biểu) -> Có được TKB cho sinh viên học và giảng viên xem -> WHAT
+			- Bị xung đột thời gian học và dạy, phòng,... -> HOW
+
+	Ví dụ 2: (Tạo đơn hàng) -> Có được hoá đơn tính tiền -> WHAT
+			- Tích điểm, quên thẻ khách hàng, phiếu quà tặng, mua hàng, giảm giá,... -> HOW
+
+Khi làm ứng dụng (viết code), mỗi Use Case sẽ tương ứng với một hoặc một vài màn hình, kèm với ô nhập, nút bấm, liên kết,... để xử lý thông tin và trả kết quả về cho người dùng.
+
+	Ví dụ: Để in ra được một hoá đơn bán hàng:
+		+ Màn hình nhập chi tiết đơn hàng
+		+ Màn hình nhập thông tin khách hàng
+		+ Màn hình xem lại hoá đơn trước khi in
+		+ Nhấn nút [In hoá đơn]
+
+=> Bản mô tả chi tiết cách vận hành của từng Use Case.
+
+--------------------------------------------------------------------------------
+
+02. CẤU TRÚC
+
+	01. Mã số Use Case: mã để phân biệt các Use Case, có thể tự đặt hoặc sinh tự động.
+
+	02. Tên Use Case: tên của Use Case, lấy theo tên đặt trong sơ đồ.
+
+	03. Mô tả vắn tắt use case (description/summary/goal): xác định người dùng với quyền tương ứng đã được quy định từ trước có thể làm được gì với hệ thống.
+
+	04. Actor chính (primary actor): Actor trực tiếp tiếp cận Use Case này.
+
+	05. Actor phụ (secondary actor): Actor hỗ trợ cho Actor chính.
+
+	06.1. Kích hoạt (trigger): thường là việc nhấn nút, nhấn liên kết hoặc tính năng khác kết thúc thì Use Case này sẽ được gọi.
+		-> Khi nào, hành động gì để chính thức chạy code/tính năng.
+	06.2. Tiền điều kiện (pre-conditions): điều kiện tiên quyết (không thể thiếu) để chạy Use Case này. Phục vụ cho trường hợp, tình huống lý tưởng (happy case/happy path), nhưng trước tiên cần phải có sẵn cái gì để Use Case này xảy ra.
+		-> Cần có những dữ liệu đi kèm, thiết bị, đầu vào là gì để xử lý được.
+
+		Ví dụ: Để đăng nhập thành công vào hệ thống rút tiền
+			- Pre-conditions: thẻ ATM cần còn thời hạn sử dụng.
+			- Trigger: nhấn nút [Đăng nhập].
+
+	07. Hậu điều kiện (post-conditions): sau khi Use Case được thực hiện thì người dùng hoặc hệ thống nhận được, kết quả đạt được là gì.
+		-> Thành công hoặc thất bại thì được làm gì tiếp hoặc nhận về kết quả là gì.
+		Ví dụ: sau khi đăng nhập thành công
+			- Vào được trang tương ứng với kiểu người dùng đã được phân quyền (những người dùng với phân quyền khác nhau sẽ thấy được những màn hình, giao diện khác nhau).
+			- Được ghi nhận vào tập tin nhật ký (Log file) của hệ thống.
+
+	08. Luồng hoạt động (main flows/main success scenario/basic flows/normal flows): đường đi, bước, kịch bản, cách làm để đến đích thành công. Actor tương tác gì với hệ thống & Hệ thống sẽ xử lý và phản hồi như thế nào hoặc trả về kết quả gì sau khi được Actor tác động.
+
+	09. Luồng thay thế / Luồng nhiệm ý (alternative flows): các đường đi, bước, kịch bản, cách làm khác (vẫn) để đến đích thành công.
+		-> Đường khác thay thế nhưng vẫn đến đích thành công.
+
+	10. Luồng ngoại lệ (exception flows): tình huống trên đường đi khiến ta không thành công, không đến đích, không đạt được như những gì đã mô tả.
+		-> Đường đi đến thất bại.
+
+	11. Quy tắc/Ràng buộc nghiệp vụ (business rules): Use Case chỉ là đích đến, còn trên đường đến được đích thì sẽ có thêm những con số, câu lệnh, câu điều kiện (if), ràng buộc trên dữ liệu/thiết bị để ép Use Case phải tuân theo mới hoàn tất và cho ra được kết quả hoặc để tính năng mới hoạt động đúng được. Nghiệp vụ chính là cách mà tổ chức vận hành, vì đây là công việc của khách hàng nên phải hỏi/phỏng vấn khách hàng để nắm được.
+		-> Những chốt chặn phải đi qua để việc hành xử được đúng và đến được đúng đích.
+		Ví dụ: Ràng buộc về điểm:
+			- Điểm nhập phải nằm trong khoảng [0, 10].
+			- Cột điểm = 0 -> Rớt môn.
+			- Khi muốn tính điểm GPA tích luỹ, phải chuyển từ hệ 10 -> hệ 4.
+
+------------------------------------------------------------
+
+Ví dụ: Đặc tả Use Case (Đăng nhập)
+
+	01. Mã số Use Case: UC-Login-001
+
+	02. Tên Use Case: Đăng nhập.
+
+	03. Mô tả vắn tắt use case (description/summary/goal): Use Case cho phép người dùng chưa xác thực (khách) đăng nhập vào hệ thống với quyền tương ứng đã được định trước.
+
+	04. Actor chính (primary actor): Người dùng chưa xác thực (khách).
+
+	05. Actor phụ (secondary actor): Không.
+
+	06.1. Kích hoạt (trigger): Khách nhấn nút [Đăng nhập].
+	06.2. Tiền điều kiện (pre-conditions): Tài khoản đã tồn tại trong hệ thống.
+
+	07. Hậu điều kiện (post-conditions):
+		- Vào được trang tương ứng với kiểu phân quyền.
+		- Log file được ghi nhận.
+
+	08. Luồng hoạt động (main flows/main success scenario/basic flows/normal flows):
+			Actor					|		Hệ thống
+		01. Mở hệ thống					|	02. Hiện màn hình đăng nhập
+		03. Nhập tài khoản và mật khẩu			|
+		04. Nhấn nút [Đăng nhập]			|
+
+	09. Luồng thay thế (alternative flows):
+			Actor					|		Hệ thống
+		03a. Nhấn chọn [Đăng nhập bằng Google]		|
+		03b. Nhấn chọn [Đăng nhập bằng Facebook]	|
+
+	10. Luồng ngoại lệ (exception flows):
+			Actor					|		Hệ thống
+		04e. Nhập sai ba lần				|	Tạm khoá tài khoản trong 30 phút
+
+	11. Quy tắc/Ràng buộc nghiệp vụ (business rules):
+		Ràng buộc: nếu đăng nhập thất bại quá (x) lần thì sẽ bị khoá tài khoản hoặc...
+
+------------------------------------------------------------------
+
+* Use Case Description
+=> Kể câu chuyện xử lý phía hậu trường bằng văn bản.
+
+* Sequence Diagram
+=> Sơ đồ bổ trợ thêm cho Use Case Description, diễn tả việc xử lý thông tin của Use Case, giúp kể chi tiết câu chuyện của việc thiết kế - liên quan đến lập trình (sử dụng mô hình nào và bố trí từng thành phần trong code ra sao) để các lập trình viên có sự nhất quán với nhau trong việc khiển khai.
+
+===========================================================================================
+
+Use Case là sơ đồ quan trọng vì nó thể hiện được góc nhìn của người dùng (và vì hệ thống được viết ra là để người dùng sử dụng).
+
+1 Use Case ------------- 1 đặc tả Use Case
+
+* Logic bên trong hệ thống:
+1 Use Case ------------- 1 Sequence Diagram (sơ đồ tuần tự)
+1 Use Case ------------- 1 Activity Diagram (sơ đồ hoạt động)
+1 Use Case ------------- ... 
+	-> Được gọi chung là UML: tập hợp các loại sơ đồ mô tả về hệ thống theo phong cách tiếp cận hướng đối tượng.
+
+
+==========================================================================================
+
+--------------------------------------------------------------------------------
+
+------------------------------------------------------------
+
+----------------------------------------
+
+--------------------
+
+----------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

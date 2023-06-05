@@ -1,0 +1,115 @@
+{% extends 'admin/base.html' %}
+
+{% block body %}
+
+{% if current_user.is_authenticated %}
+<h1 class="text-info">
+    Chào mừng
+    <span class="text-danger">{{ current_user.ten_nguoi_dung }}
+    </span>
+    đến với trang quản trị
+</h1>
+
+<div class="row">
+
+    <!--Phần bảng dữ liệu (bên trái)-->
+    <div class="col-md-5">
+        <table class="table">
+            <tr>
+                <th>Id danh mục</th>
+                <th>Tên danh mục</th>
+                <th>Số lượng sản phẩm</th>
+            </tr>
+
+            {% for s in thong_ke_bao_cao %}
+            <tr>
+                <td>{{ s[0].id }}</td>
+                <td>{{ s[0].ten_loai_san_pham }}</td>
+                <td>{{ s[1] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <!--Phần biểu đồ (bên phải)-->
+    <div class="col-md-6">
+        <canvas id="bieuDoCuaToi" width="400" height="400"></canvas>
+    </div>
+
+</div>
+
+<!--Vẽ biểu đồ-->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    let tenLoaiSanPham = []
+    let boDem = []
+    let mauSacLoaiSanPham = []
+    let mauSacVienLoaiSanPham = []
+    let mauDo, mauXanhLa, mauXanhDuong
+
+    {% for s in thong_ke_bao_cao %}
+        tenLoaiSanPham.push('{{ s[0].ten_loai_san_pham }}')
+
+        boDem.push({{ s[1] }})
+
+        mauDo = parseInt(Math.random()*255)
+        mauXanhLa = parseInt(Math.random()*255)
+        mauXanhDuong = parseInt(Math.random()*255)
+        mauSacLoaiSanPham.push(`rgba(${mauDo},
+                                        ${mauXanhLa},
+                                        ${mauXanhDuong},
+                                        0.2)`)
+        mauSacVienLoaiSanPham.push(`rgba(${mauDo},
+                                        ${mauXanhLa},
+                                        ${mauXanhDuong},
+                                        1)`)
+    {% endfor %}
+
+    const ctx = document.getElementById('bieuDoCuaToi').getContext('2d');
+    const bieuDoCuaToi = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: tenLoaiSanPham,
+            datasets: [{
+                label: 'Thống kê sản phẩm theo danh mục',
+                data: boDem,
+                backgroundColor: mauSacLoaiSanPham,
+                borderColor: mauSacVienLoaiSanPham,
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+
+{% else %}
+<h1 class="text-info text-center">Đăng nhập vào trang quản trị</h1>
+
+<form method="post" action="{{ url_for('dang_nhap_tu_cach_quan_tri') }}">
+
+    <div class="form-group">
+        <label for="tendangnhap">Tên đăng nhập:</label>
+        <input type="text" class="form-control"
+               name="tendangnhap"
+               placeholder="Nhập tên người dùng" id="tendangnhap">
+    </div>
+
+    <div class="form-group">
+        <label for="matkhaudangnhap">Mật khẩu đăng nhập:</label>
+        <input type="password" class="form-control"
+               name="matkhaudangnhap"
+               placeholder="Nhập mật khẩu đăng nhập" id="matkhaudangnhap">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Đăng nhập</button>
+</form>
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,59 @@
+<!--
+    Chứa các tập tin html
+    với nhiệm vụ hiển thị cho người dùng!
+
+    Vì đây là template
+    nên được phép nhúng mã nguồn python vào để xử lý
+    bằng Jinja (template engine)
+    chứ không đơn giản là các thẻ
+-->
+
+
+{% extends 'layout/base.html' %}
+
+{% block title %} Trang chủ {% endblock %}
+
+{% block content %}
+<h1>Chào mừng bạn đã đến với website của tôi!</h1>
+
+{#
+    Biến từ Server gửi qua cho view,
+    sử dụng ký pháp {{ để biểu thị biểu thức
+#}
+<h1>{{thong_diep}}</h1>
+
+<!--Form tìm kiếm-->
+<form action="/">
+    <input type="text" name="tukhoa" placeholder="Nhập từ khoá để tìm..."/>
+    <input type="submit" value="Tìm kiếm"/>
+</form>
+
+<hr>
+
+<!--Form đăng nhập-->
+<form method="post" action="/dang-nhap">
+    <input type="text" name="tentaikhoan" placeholder="Nhập tên tài khoản..."/>
+    <input type="password" name="matkhau" placeholder="Nhập mật khẩu..."/>
+    <input type="submit" value="Đăng nhập"/>
+</form>
+
+<hr>
+
+<!--Form đăng tải hình ảnh-->
+<form method="post" enctype="multipart/form-data" action="/tai-len">
+    <input type="file" name="hinhanh"/>
+    <input type="submit" value="Tải lên"/>
+</form>
+
+<hr>
+
+{#
+    Hiển thị danh sách người dùng,
+    sử dụng cú pháp {% để xử lý, thực thi lệnh
+#}
+<ul>
+    {% for nguoi_dung in danhsachnguoidung %}
+    <li>{{ nguoi_dung.ten }} - {{ nguoi_dung.email }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}

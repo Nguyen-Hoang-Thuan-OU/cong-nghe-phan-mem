@@ -1,0 +1,253 @@
+﻿Sơ đồ Use Case và đặc tả Use Case chỉ thân thiện và dễ đọc đối với góc nhìn của khách hàng chứ vẫn chưa đủ với các lập trình viên về mặt phát triển. Để lập trình được theo sơ đồ đã được thiết kế thì họ cần nhiều chi tiết hơn nhằm phối hợp các lớp (class) lại với nhau vì nó liên quan đến code xử lý, liên quan đến các thành phần cần triển khai trong code: UI, lớp (class), cơ sở dữ liệu,...
+	-> Liên quan đến cách bố trí, kiến trúc (architecture) các thành phần code trong quá trình xây dựng hệ thống.
+		Ví dụ: MVC, Web Services, Micro Services,...
+
+========================================================================================
+
+* Sequence Diagram (Sơ đồ tuần tự): các thành phần trong code gọi nhau như thế nào để hoàn tất một Use Case?
+
+	- Khái quát: sơ đồ mô tả chi tiết hậu trường xử lý code của một màn hình/tính năng khi người dùng thao tác với nút bấm trên màn hình (UI).
+
+	- Chi tiết: sơ đồ để diễn tả thêm góc nhìn của Dev cho mỗi Use Case về:
+			+ Luồng xử lý, góc nhìn phía xử lý code
+			+ Thứ tự truyền những thông điệp, lời gọi hàm (các hàm gọi nhau) giữa các thành phần của code
+			+ Sự tương tác giữa Actor và các đối tượng (object) bên trong hệ thống hoặc giữa các đối tượng với nhau theo một trình tự thời gian (timeline)
+				-> Để làm nên các tính năng, làm nên một Use Case, thể hiện chi tiết các tương tác xảy ra bên trong một Use Case cụ thể.
+	(Mỗi Use Case hay chính xác hơn là mỗi đặc tả Use Case sẽ tương ứng với một sơ đồ tuần tự. Vì vậy, sau khi viết đặc tả xong thì ta sẽ tiến hành vẽ sơ đồ tuần tự ở bên dưới đặc tả).
+
+	-> Sơ đồ miêu tả các
+		+ Kiến trúc, thành phần, lớp (class), đối tượng (object) một cách gọn gàng (không phải liệt kê tất cả các đối tượng).
+
+			Ví dụ: vì mọi câu chuyện, xử lý bên trong hệ thống được lập trình theo hướng đối tượng đều là khởi tạo (new) và gọi hàm (.hàm).
+				Thay vì ghi: SinhVien sv = new SinhVien(...)
+				Ghi trong Sequence Diagram: ta quy ước |sv: SinhVien| đã là đủ cho việc khởi tạo, đặt tên và gán code.
+					-> Hàm ý khởi tạo SinhVien() và gán vào sv.
+
+		+ Thứ tự gọi nhau (.hàm) như thế nào trong code theo trình tự thời gian (timeline) để hoàn thành một Use Case, giúp cho lập trình viên có thể đọc, hiểu và thiết kế theo.
+
+========================================================================================
+
+Lớp và Đối tượng (Class & Object)
+
+Một lớp đại diện cho một nhóm với nhiều đặc điểm tương đồng, từ lớp đó ta có thể tạo ra những đối tượng cụ thể. Ví dụ: từ lớp SinhVien, ta có thể tạo ra các đối tượng SinhVien khác nhau với các thuộc tính khác nhau.
+	=> Class: khung, khuôn mẫu.
+	   Object: đối tượng cụ thể được đúc ra/tạo ra (initialize/create/contruct) dựa trên khuôn mẫu.
+
+Ví dụ:
+	public class SinhVien {
+		private String id;
+		private String ten;
+		private int namSinh;
+		private double gpa;
+		...
+	}
+
+	public static void main() {
+		SinhVien sv = new SinhVien("1851010999", "An", 2000, 8.0)
+	}
+
+Khởi tạo (new): xin cấp phát một vùng nhớ đủ lớn để chứa các thông tin của đối tượng và các hàm, sẵn sàng được chạy khi có ai đó gọi.
+
+----------------------------------------
+
+SinhVien 	sv 			= new 		SinhVien("1851010999", "An", 2000, 8.0)
+
+lớp/khuôn mẫu	biến đối tượng		khởi tạo	phiên bản/giá trị/thể hiện/hiện thân
+kiểu dữ liệu	biến tham chiếu				đối tượng, cái gì đó cụ thể
+							con người/sinh viên cụ thể
+
+		"biến con trỏ" (trỏ vào một vùng RAM, tham chiếu đến toạ độ-địa chỉ)
+
+		-> sv là tên gọi tắt (tên gọi chung) cho một đối tượng SinhVien nào đó được khởi tạo (new SinhVien(...)).
+		-> biến sv trỏ vào vùng nhớ SinhVien(...).
+
+		sv.hàmGìĐó();	-> Gọi hàm tức là gửi thông điệp để yêu cầu ai đó (object) phải làm gì.
+				-> Gọi hành động của sv để báo cho sv biết rằng cần phải làm gì.
+				-> Giao tiếp, gửi thông điệp đề nghị sv làm gì đó.
+		sv.lấyTuổi(); 	-> Hỏi sv tuổi của họ.
+		sv.hienThongTinCaNhan(); -> Yêu cầu sv cho biết thông tin cá nhân của họ.
+
+		// App chạy -> Báo lỗi Null pointer
+		sv = null;
+		int tuoi = sv.getTuoi();
+
+----------------------------------------
+
+Trong khi vẽ sơ đồ tuần tự, cần có một cách để biểu diễn gọn gàng hơn cho các lớp, đối tượng xuất hiện trong code.
+Thay vì ghi: SinhVien sv = new SinhVien(...) để nói về một đối tượng, ta sử dụng |: SinhVien| (hàm ý khởi tạo SinhVien() và gán vào sv).
+
+Khi code, ta chủ động khởi tạo đối tượng, chủ động đặt tên cho đối tượng.
+
+	Ví dụ: 
+		an là tên gọi cho đối tượng new SinhVien(...);
+		binh là tên gọi cho đối tượng new SinhVien(...);
+		cuong là tên gọi cho đối tượng new SinhVien(...);
+		dung là tên gọi cho đối tượng new SinhVien(...);
+
+Khi chạy, chương trình cũng tạo thành class.
+	- Controller/Servlet (Java) là một class và cũng cần ai đó khởi tạo.
+	- abcDAO, abcDTO là một class.
+	- JSP (Java) khi chạy cũng tạo thành class/servlet.
+
+Khi chạy thật sự, khi người dùng tương tác với hệ thống, phải khởi tạo tất cả những cái trên.
+	- Controller sẽ do Tomcat (container) tự động khởi tạo và ta sẽ không biết tên lớp, đối tượng mà nó tự động đặt là gì.
+
+		Ví dụ: ta sẽ không biết tên đối tượng và cũng không cần chú ý, vì quan trọng là đối tượng đã được khởi tạo.
+			PostServlet ? = new PostServlet(); -> |?: PostServlet|
+			UserServlet ? = new UserServlet(); -> |?: UserServlet|
+			OrderServlet ? = new OrderServlet(); -> |?: UserServlet|
+	- DAO, DTO sẽ do lập trình viên chủ động khởi tạo và tự đặt tên biến.
+
+========================================================================================
+
+Khi người dùng nhấn đăng nhập bằng tên tài khoản và mật khẩu:
+
+public class NguoiDungController extends ... {
+	private NguoiDungDAO dao = new NguoiDungDAO();
+
+	// Servlet gọi để xử lý việc gọi đăng nhập từ người dùng lên Server
+	hamXyLyChinh () {
+		if (dao.kiemTraDangNhap() != null) {
+			//
+		}
+
+		// Đi vào bảng điều khiển - dashboard hoặc nhận được thông báo lỗi
+	}
+}
+
+class NguoiDungDAO implements Serializable {
+	private List<NguoiDungDTO> list = new ArrayList();
+
+	public NguoiDung kiemTraDangNhap() {
+		// Gửi thông điệp đến cơ sở dữ liệu
+		.executeQuery();
+
+		ResultSet...
+
+		if (0 row thì return null)
+		else retunr new NguoiDungDTO(phân quyền người dùng);
+	}
+}
+
+(Xem thêm chi tiết sơ đồ tại: SequenceDiagram-UCDangNhap.v2-simple)
+
+========================================================================================
+
+========================================================================================
+
+class TaoNguoiDungController {
+	NguoiDungDAO dao = new NguoiDungDAO();
+
+	xuLy() {
+		ketQua = dao.themNguoiDung(...);
+
+		if (thành-công) -> làm gì tiếp
+		if (thất-bại) -> làm gì tiếp
+	}
+}
+
+
+class NguoiDungDAO {
+	Connection ketNoi = DBUtil.getConnection();
+
+	? themNguoiDung(...) {
+		String sql = "themCacGiaTriVaoNguoiDung(...)";
+		.executeUpdate();
+		// hàm execute() của cơ sở dữ liệu phải trả về một kết quả để DAO tính tiếp
+
+		return ?;
+	}
+}
+
+(Xem thêm chi tiết sơ đồ tại: SequenceDiagram-UCTaoMoiNguoiDung)
+
+========================================================================================
+
+[Hình người] Actor: người dùng (tác nhân bên ngoài) tương tác với hệ thống/code.
+
+----------------------------------------
+
+[Hình chữ nhật không có dấu hai chấm ở đằng trước tên lớp] Lớp (Class): những thứ do một bên thứ ba nào đó khác tạo ra, không liên quan đến lập trình hoặc không chắc chắn và cách vận hành, đặt tên, tổ chức lớp ra sao.
+	Ví dụ: trình duyệt, cơ sở dữ liệu.
+[Hình chữ nhật có dấu hai chấm ở đằng trước tên lớp] Lớp (Class): đại diện cho việc khởi tạo và gán code, thành phần mà lập trình viên quản lý được, đại diện cho các đối tượng liên quan đến lập trình (những thứ xuất hiện trong code).
+	Ví dụ: controller, DAO.
+
+	--------------------------------------------------------------------------------
+	Có thể sử dụng các ký hiệu cụ thể thay vì sử dụng ký hiệu chung chung bằng một hình chữ nhật:
+
+	Ю : Boundary [dấu | nằm bên trái hình tròn O] - đại diện cho giao diện, tương tác giữa bên trong hệ thống và bên ngoài (thường là giao diện người dùng - UI) để Actor có thể thấy được.
+
+	⍜ : Entity [dấu gạch dưới _ nằm ở ngay bên dưới hình tròn O] - đại diện cho cơ sỡ dữ liệu để lưu trữ dữ liệu. Là đối tượng thực thể xác định, thể hiện dữ liệu hệ thống (Data Model), chẳng hạn như cơ sỡ dữ liệu có bảng SinhVien, GiangVien thì trong design sẽ có đối tượng SinhVien, GiangVien tương ứng.
+
+	⥀ : Control [mũi tên nhỏ dạng vòng lặp ↺ được vẽ ở biên của hình tròn O] - giao tiếp với entity để lấy dữ liệu và trả kết quả về cho boundary.
+
+	Actor > Ю > ⥀ > ⍜
+
+	(Xem thêm chi tiết ở lý thuyết của sơ đồ lớp - class diagram)
+	--------------------------------------------------------------------------------
+
+----------------------------------------
+
+[Đường né đứt từ Actor và Object kéo xuống] Lifeline: biểu diễn vòng đời tồn tại, sự sống, sự tồn tại của object trong hệ thống. Dòng thời gian tương tác (của người dùng với hệ thống), thời gian sống từ lúc cung cấp thông tin, nhấn nút và nhận kết quả trả về.
+
+[Thanh nằm đề lên Lifeline] Activation bar/Activation box/Timeline: tiến trình thời gian để cho thấy sự sống, thời gian làm việc của một đối tượng khi thực hiện một dịch vụ, tác vụ nào đó.
+
+----------------------------------------
+
+[Đường mũi tên] Thông điệp (Message): giúp xác định được sự tương tác giữa các đối tượng bằng cách gửi và nhận thông điệp (gọi phương thức của đối tượng), gồm những yêu cầu (request) và phản hồi (response) trong hệ thống.
+
+	[Đường mũi tên nét liền] Yêu cầu (Request ➞).
+
+	[Đường mũi tên nét đứt] Phản hồi (Response/Reply/Return ⬸).
+
+------------------------
+
+	[Đường mũi tên nét liền, đầu mũi tên được tô đậm] Thông điệp đồng bộ (Synchronous Message ➞): khi gửi yêu cầu thì phải đợi kết quả phản hồi trước khi thực hiện tiếp.
+		-> Nếu bước bên phải không trả về kết quả thì bước bên trái không thể thực hiện tiếp được.
+
+	[Đường mũi tên nét liền, đầu mũi tên không được tô đậm] Thông điệp bất đồng bộ (Asynchronous Message ➔ , ⇀): có thể liên tục gửi yêu mà không cần nhận phản hồi để thực hiện thao tác tiếp theo, liên tục thực hiện những tác vụ mà không cần chờ hoàn tất và các tác vụ phía sau vẫn được thực thi bình thường dù các tác vụ trước đó chưa hoàn tất.
+		-> Bước bên trái không cần đợi kết quả trả về của bước bên phải.
+
+	[Đường mũi tên nét liền, tuỳ vào đồng bộ hoặc bất đồng bộ mà đầu mũi tên sẽ khác nhau, tự trỏ về chính mình] Thông điệp tự gửi/Phản thân/Đệ quy (Self Message/Recursive ⤸): Thông điệp tự gửi cho chính mình để thực hiện các hàm như kiểm tra tính hợp lệ dữ liệu.
+
+		Ví dụ: trong một class, hàm được liên tục gọi và trả về kết quả để kiểm tra một xử lý nào đó, hàm trợ giúp (helper) để hàm khác gọi.
+
+------------------------
+
+	[<<create>> + Đường mũi tên nét đứt + Đối tượng] Tạo thông điệp (Create message <<create>>⤑|Đối tượng|): gửi yêu cầu tạo mới một đối tượng.
+
+	[Đường mũi tên nét đứt + Đối tượng + X] Tạo thông điệp (Create message ⤑|Đối tượng|-----X): thực hiện thao tác huỷ một đối tượng.
+
+----------------------------------------
+
+Combined Fragment: phân chia các trường hợp.
+
+	- Lựa chọn thay thế (alt - alternative mutiple fragments): câu điều kiện if-else, switch-case; khi có nhiều điều kiện thì sẽ thực thi khi một điều kiện nào đó đúng. Lựa chọn một trong hai.
+		Ví dụ: [trạng thái tìm kiếm], [trạng thái hợp lệ]
+
+	- Tuỳ chọn (opt - optional): câu điều kiện if, không có else; thực thi nếu một điều kiện duy nhất nào đó đúng. Thích thì chọn, không thì thôi.
+		Ví dụ: [bật tính năng xác thực hai bước]
+
+	- Vòng lặp (loop): câu lệnh lặp do-while, for; được thực thi nhiều lần dựa trên điều kiện được chỉ định trong guard. Lặp đi lặp lại, còn sai là còn lặp.
+		Ví dụ: [kiểm tra tính hợp lệ của form], [quét mã qr để đọc mặt hàng ở siêu thị]
+
+		+ guard: điều kiện của các câu lệnh, chỉ định số lần lặp.
+			Ví dụ: [đăng nhập thành công], [đăng nhập thất bại]
+
+	- Song song (par - parallel): mỗi fragment, tác vụ được thực thi, tương tác song song trong phạm vi được vẽ.
+
+	- Vùng/Nhóm quan trọng (region - critical region): fragment chỉ một luồng (thread, liên quan đến đa luồng) được thi một lần bên trong phạm vi được vẽ, không bị ngắt bởi những sự kiện không mong muốn, không kể thứ tự được thực hiện bên trong.
+
+	- Không hợp lệ (neg - negative): fragment chỉ định các tương tác không hợp lệ. Mục đích là để chỉ ra những trường hợp sẽ xảy ra lỗi, những thứ tự không đúng.
+
+	- Tên biểu đồ (sd - sequence diagram): sử dụng để bọc toàn bộ sơ đồ tuần tự và đặt tên cho sơ đồ.
+
+	- Tham chiếu (ref - reference/Interaction Use): trỏ, tham chiếu đến một sơ đồ khác. Dùng để ẩn, che giấu đi một cụm xử lý rất phức tạp và chuyển thành biểu tượng Ref. Tách phần phức tạp sang một sơ đồ khác, chỉ thể hiện rằng mạch đi của dữ liệu có nhận vào và trả về nhằm đảm bảo xử lý và tạo cảm giác giống như chưa tách.
+		-> Sơ đồ chi tiết được gọi là reference/decomposition (phân rã).
+
+
+
+
+
+
+

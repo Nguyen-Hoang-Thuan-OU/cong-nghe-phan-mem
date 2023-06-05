@@ -1,0 +1,164 @@
+﻿Mô hình hoá hệ thống là quá trình phát triển mô hình trừu tượng (nhìn mọi thứ một cách tổng quan) cho hệ thống, phác thảo những bức tranh toàn cảnh về hệ thống, luồng xử lý và sự tương tác của hệ thống. Mỗi mô hình thể hiện những đường đi, khía cạnh/khung nhìn (view) khác nhau về hệ thống (Ví dụ: Use Case là để phân tích, Sequence và Activity dùng để mô tả luồng, logic hoạt động của chương trình).
+
+------------------------------------------------------------
+
+Mục đích mô hình hoá:
+	- Làm sáng tỏ hệ thống, bao quát và dễ quản lý hơn cho cả phía khách hàng và lập trình viên.
+	- Mô phỏng các hình ảnh, luồng hoạt động/logic của hệ thống, cho thấy được hệ thống trong tương lai sẽ được xây dựng như thế nào. Dễ dàng kiểm tra, đối chiếu lại xem liệu đã xây dựng được đầy đủ tính năng so với những yêu cầu hay chưa.
+	- Đơn giản hoá hệ thống, tránh được việc code xong mới thiết kế, làm khổ những người đến sau khi họ phải đọc code để suy ra tính năng của hệ thống.
+	- Tăng khả năng bảo trì hệ thống, giúp những người đến sau có thể dễ dàng tiếp quản code, xác định được ưu và khuyết điểm của code, từ đó đưa ra được kết luận hệ thống có thể tích hợp được những tính năng mới mà lập trình viên định đưa vào hay không, giúp cô lập và giải quyết vấn đề khi xảy ra lỗi (chẳng hạn như lỗi ở cơ sở dữ liệu khi có trùng lắp dữ liệu sẽ được phân tích ở cấp độ trừu tượng: phân tích lược đồ cơ sở dữ liệu quan hệ để tìm xem trong thiết kế có vi phạm các ràng buộc nào không, các quan hệ được thiết lập có phù hợp không,...).
+
+=> Mô hình hoá hệ thống giúp lựa chọn ra được con đường tối ưu nhất để xây dựng, bảo trì và mở rộng hệ thống.
+
+------------------------------------------------------------
+
+Trong quá trình xây dựng và thiết kế phần mềm, mô hình hoá hệ thống có thể sử dụng trong:
+	- Phân tích yêu cầu giúp hiểu rõ yêu cầu hệ thống: Use Case Diagram.
+		-> Giúp cho yêu cầu của hệ thống rõ ràng hơn, dễ trình bày với khách hàng hơn và khách hàng cũng dễ hệ thống hiểu hơn.
+
+	- Thiết kế để mô tả hệ thống giúp các kỹ sư hiện thực hệ thống: Class, Component, Deployment, Activity, Sequence Diagram,...
+		-> Thiết kế về việc thực hiện hệ thống, về một khía cạnh, cơ chế hoạt động của một component, hành vi của một mô-đun, cơ sở dữ liệu và mối quan hệ,... để giúp các kỹ sư phần mềm (lập trình viên) hiện thực hoá hệ thống theo đúng với bảng thiết kế đã đưa ra nhằm hướng hệ thống theo một hướng đúng nhất.
+
+	- Tài liệu hoá các hoạt động và cấu trúc hệ thống sau giai đoạn hiện thực hệ thống: Activity, Sequence Diagram,...
+		-> Mọi thứ được lưu trữ ở mức trừu tượng nhằm phục vụ cho công đoạn bảo trì và nâng cấp hệ thống.
+
+=> Để mô hình hoá hệ thống, ta sử dụng các mô hình đồ hoạ (graphic) của UML.
+
+--------------------------------------------------------------------------------
+
+UML (Unified Modeling Language): ngôn ngữ mô hình hóa thống nhất/đồng nhất là tập hợp các loại sơ đồ, cách vẽ để mô tả/đặc tả/xây dựng/làm tài liệu/hình dung và truyền tải ý tưởng (dưới dạng kiến trúc phần mềm) về hệ thống trong tương lai sẽ phục vụ cho khách hàng như thế nào theo cách tiếp cận hướng đối tượng (phong cách thiết kế).
+	-> Mọi thứ đều được nhìn dưới dạng là đối tượng.
+
+UML giúp	xác định (specifying) nghiệp vụ, vấn đề;
+		trực quan hoá (visualizing) bằng các mô hình thay vì mô tả bằng lời nói;
+		xây dựng (constructing) logic, mô phỏng nghiệp vụ xử lý trong hệ thống;
+		tài liệu hoá (documenting) từ giai đoạn phân tích, thiết kế, cài đặt và kiểm thử
+		để phục vụ cho giai đoạn bảo trì và giải quyết vấn đề cho các artifact(*)
+		của quy trình hiện thực phần mềm.
+(*)Artifact mô tả kết quả được tạo ra sau mỗi bước lặp nào đó của quy trình phần mềm.
+
+(Sơ đồ biểu diễn một thuật toán (Flow chart) và mô hình thực thể-mối kết hợp (ERD) không thuộc UML).
+
+------------------------------------------------------------
+
+* Các dạng mô hình UML:
+	- Mô hình tĩnh (static model): mô tả các thông số, cấu trúc và khía cạnh tĩnh, ít/không bị thay đổi trong quá trình xây dựng và vận hành hệ thống.
+	- Mô hình động (dynamic model): mô tả hành vi, thủ tục, xử lý bên trong của hệ thống, biểu diễn sự tương tác, luồng tương tác giữa các đối tượng bên trong hoặc bên ngoài hệ thống để thực hiện một công việc hệ thống.
+
+------------------------------------------------------------
+
+* Các cách tiếp cận mô hình hoá hệ thống:
+	- Cấu trúc (structural): mô hình quy định, mô tả, thiết kế các cấu trúc, cách thức tổ chức hệ thống thành các thành phần (component) và chỉ định mối quan hệ giữa chúng. (Class Diagram,...)
+	- Hành vi (behavioral): mô hình hành vi động (mô tả những hàng động, phương thức, nghiệp vụ) của hệ thống khi nó thực thi, cách thức phản hồi của hệ thống với một sự kiện nào đó khi nhận được yêu cầu, sự tương tác giữa các thành phần hoặc giữa các đối tượng bên ngoài với thành phần bên trong hệ thống. (Use Case, Activity, State, Sequence Diagram,...)
+
+==========================================================================================
+
+Kế thừa (Generalization/Inheritance): |Lớp con|―――――▷|Lớp cha|
+
+Cho phép ta định nghĩa một lớp trong điều kiện một lớp khác, giúp dễ dàng hơn trong việc tạo và duy trì một ứng dụng. Điều này cũng cung cấp cơ hội để tái sử dụng tính năng code (tái sử dụng những thuộc tính, phương thức), từ đó mà thời gian thực thi cũng nhanh hơn.
+
+	Ví dụ: HinhTron, HinhVuong, HinhChuNhat đều là hình học, nên chúng kế thừa một lớp cơ sở là HinhHoc.
+		=> Có thể tái sử dụng những thuộc tính, phương thức của lớp HinhHoc mà không cần phải khai báo lại
+
+		// Thông thường, khi làm lớp cơ sở,
+		// lớp HinhHoc sẽ được khai báo dạng trừu tượng (abstract)
+		public abstract class HinhHoc {//...}
+
+		import HinhHoc;
+		public class HinhTron extends HinhHoc {//...}
+		public class HinhVuong extends HinhHoc {//...}
+		public class HinhChuNhat extends HinhHoc {//...}
+
+--------------------------------------------------------------------------------
+
+Hiện thực hóa (Realization/Implementation): |Đối tượng|-----▷|<<interface>>|
+
+Được áp dụng cho interface (giao diện, lớp giao tiếp), các đối tượng đều thực hiện chung một phương thức trừu tượng, nhưng mỗi đối tượng lại có những kiểu hiện thực phương thức khác nhau.
+	-> Sử dụng interface
+		-> Implementation
+
+	Ví dụ: interface chạy, nhưng ba đối tượng SinhVien, XeCo và ConMeo sẽ có những cách để hiện thực phương thức khác nhau.
+
+		public class SinhVien implements Chay {//...}
+		public class XeCo implements Chay {//...}
+		public class ConMeo implements Chay {//...}
+
+--------------------------------------------------------------------------------
+
+Khi nào sử dụng abstract (trừu tượng) và khi nào sử dụng interface (giao diện, lớp giao tiếp)?
+
+	- HinhTron, HinhVuong, HinhChuNhat đều cùng một bản chất (là hình dạng - hình học)
+		-> Kế thừa (generalization/inheritance)
+
+	- SinhVien, XeCo, DongVat hoàn toàn khác bản chất (SinhVien là người, XeCo là vật thể, ConMeo là động vật) nhưng lại di chuyển được theo những cách khác nhau
+		-> Hiện thực hoá (realization/implementation)
+
+-----------------------------------
+
+(Tham khảo thêm: https://www.giaosucan.com/2016/10/design-bi-luc-hoi-1.html)
+
+==========================================================================================
+
+Use Case Diagram (UCD): sơ đồ tình huống sử dụng.
+	-> Chỉ ra WHO làm được WHAT với hệ thống.
+
+Sequence Diagram: sơ đồ tuần tự.
+	-> Các thành phần trong code gọi nhau như thế nào và trình tự của các thông điệp để hoàn thành một Use Case.
+
+==========================================================================================
+
+[DANH SÁCH CÁC BIỂU TƯỢNG ĐỂ VẼ]
+
+│
+│
+╷
+―――――
+◜◝
+◟◞
+➞⬸⤑
+↿↾⇃⇂↼↽⇀⇁⤸
+△▽◁▷
+▲▼◀▶
+◇
+◆
+⊕
+Ю
+⍜
+⥀
+●
+◉
+
+==========================================================================================
+
+--------------------------------------------------------------------------------
+
+------------------------------------------------------------
+
+----------------------------------------
+
+--------------------
+
+----------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

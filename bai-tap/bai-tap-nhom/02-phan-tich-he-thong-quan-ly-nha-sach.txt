@@ -1,0 +1,90 @@
+﻿Sử dụng Use Case Diagram để phân tích yêu cầu
+
+--------------------------------------------------------------------------------
+
+Hệ thống có những vai trò (role) gì, từng vai trò được thực hiện những tính năng gì:
+
+01. Quản lý kho:
+
+	- Quản trị sách (CRUD sách)
+
+	- Nhập sách vào kho
+
+		* Phiếu nhập sách:
+			+ Ngày nhập
+			+ STT
+			+ Sách
+			+ Thể loại
+			+ Tác giả
+			+ Số lượng: số lượng nhập ít nhất 150, chỉ nhập những đầu sách có số lượng ít hơn 300.
+
+------------------------------------------------------------
+
+02. Khách hàng:
+
+	- Mua sách online: sau 48 tiếng từ thời điểm đặt, người dùng không đến lấy sách và thanh toán thì đơn hàng sẽ bị huỷ
+		+ Thanh toán online: miễn phí giao hàng
+		+ Thanh toán trực tiếp khi đến nhà sách nhận sách
+
+------------------------------------------------------------
+
+03. Nhân viên:
+
+	- Bán sách tại quầy:
+
+		* Hoá đơn bán sách:
+			+ Họ tên khách hàng
+			+ Ngày lập hoá đơn
+			+ Ngày nhập
+			+ STT
+			+ Sách
+			+ Thể loại
+			+ Số lượng
+			+ Đơn giá
+			+ Nhân viên thanh toán
+
+------------------------------------------------------------
+
+04. Người quản trị:
+
+	- Xem thông kê: dạng bảng và biểu đồ
+
+		* Thống kê báo cáo về doanh thu từng tháng được chọn cho từng thể loại sách:
+			+ Tháng
+			+ STT
+			+ Thể loại sách
+			+ Doanh thu
+			+ Số lượt thuê
+			+ Tỷ lệ
+			+ Tổng doanh thu
+
+		* Thống kê tần suất từng đầu sách theo tháng:
+			+ Tháng
+			+ STT
+			+ Tên sách
+			+ Thể loại
+			+ Số lượng
+			+ Tỷ lệ
+
+	- Thay đổi quy định
+		+ Thay đổi số lượng nhập tối thiểu, số lượng tồn tối thiểu trước khi nhập
+		+ Thay đổi quy định thời gian huỷ đơn hàng nếu người dùng không nhận
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

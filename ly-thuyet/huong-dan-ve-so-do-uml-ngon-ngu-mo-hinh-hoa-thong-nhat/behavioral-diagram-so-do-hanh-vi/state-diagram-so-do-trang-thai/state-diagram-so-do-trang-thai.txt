@@ -1,0 +1,119 @@
+﻿[SƠ ĐỒ TRẠNG THÁI - STATE DIAGRAM]
+
+Sơ đồ trạng thái (State Diagram): biểu diễn trạng thái (state) của hệ thống và các sự kiện (event) làm chuyển đổi (transition) từ trạng thái này sang trạng thái khác. Tuỳ vào những trạng thái khác nhau mà hệ thống sẽ có những cách xử lý (action) khác nhau tương ứng với trạng thái đó.
+
+	– states: các trạng thái của đối tượng, ứng với mỗi trạng thái mà hệ thống sẽ có những cách hành xử khác nhau. Đặt tên: danh từ hoặc tính từ.
+
+	– transitions: sự dịch chuyển/các chuyển đổi từ trạng thái này sang trạng thái khác (có thể chuyển đổi được, không phải chuyển đổi một cách vô lý).
+
+	– events: các sự kiện/lý do/chức năng dẫn đến sự dịch chuyển trạng thái, giống như phương thức trong lớp và đối tượng khiến cho đối tượng chuyển trạng thái. Đặt tên: động từ.
+
+	– actions: các hành động mà đối tượng đó sẽ làm sau khi rơi vào trạng thái được chỉ định, các hành động là kết quả của việc chuyển đổi trạng thái (state).
+
+==========================================================================================
+
+Trong quá trình hoạt động của hệ thống, cùng một đối tượng và ngữ cảnh, nhưng trạng thái khác nhau thì hệ thống sẽ có những cách khác nhau để xử lý.
+
+	Ví dụ 1: trong một trò chơi điện tử
+		- Nếu nhân vật đang trong trạng thái khoẻ mạnh (đầy đủ HP, MP, không bị thương,...) thì tông màu của nhân vật thường tươi sáng, nhân vật di chuyển nhanh, đòn đánh có uy lực cao,...
+		- Nếu nhân vật đang yếu thì tông màu sẽ nhợt nhạt, di chuyển chậm, đòn đánh thiếu uy lực,...
+
+	Ví dụ 2: khi rút tiền tại máy ATM
+		- 5p vẫn còn rút được tiền do máy ATM còn đủ tiền.
+		- 5p sau đã không thể rút do máy tạm hết tiền hoặc tài khoản không còn đủ tiền để rút.
+
+	Ví dụ 3: khi đăng nhập vào hệ thống
+		- Nếu đăng nhập với tài khoản quản trị thì sẽ thực hiện được nhiều thao tác.
+		- Nếu đăng nhập với tài khoản người dùng thông thường thì sẽ bị hạn chế về thao tác.
+
+	Ví dụ 4: trạng thái của học sinh-sinh viên khi học tại trường
+		- Ngày đầu nộp đơn nhập học: Trạng thái - thí sinh dự thi.
+			-> Hành động: không cần phải có bất kỳ trách nhiệm gì với nhà trường (không phải quan tâm đến số tín chỉ, đăng ký môn học, đóng học phí, đánh giá giảng viên, thực hiện khảo sát, điểm rèn luyện,...), nhưng sẽ được nhà trường hướng dẫn, giới thiệu về trường, giảng viên, khoa/ngành,...
+
+		- Trúng tuyển và bắt đầu đi học: Trạng thái - sinh viên.
+			-> Hành động: bắt đầu có trách nhiệm gì với nhà trường (phải quan tâm đến số tín chỉ, đăng ký môn học, đóng học phí, đánh giá giảng viên, thực hiện khảo sát, điểm rèn luyện, hoàn tất chương trình học,...)
+
+		- Tốt nghiệp: Trạng thái - cựu sinh viên.
+			-> Hành động: chỉ còn trách nhiệm thực hiện khảo sát sau tốt nghiệp, xin bảng điểm, bằng tốt nghiệp,... để nhà trường cải thiện chương trình đào tạo.
+
+		- Ở lại trường để làm việc: Trạng thái - nhân viên, giảng viên.
+			-> Hành động: được tham gia vào các hoạt động dành cho cán bộ viên chức, nhận lương,...
+
+			------------------------sự dịch chuyển------	
+			|		|			   |
+			|		V			   |
+			|					   |
+			|		học văn bằng 2		   |
+			v	-------------------------	   v
+				|			|	   
+		 trúng tuyển	v	tốt nghiệp	|	ứng tuyển
+	(Thí sinh)--------->(Sinh viên)------------>(Cựu sinh viên)--->(Nhân viên)
+		^		^    ^					|
+		|		|    |					|
+		-----------------    ------------------------------------
+			bỏ học			học văn bằng 2
+
+==========================================================================================
+
+Mỗi lược đồ trạng thái có duy nhất một trạng thái bắt đầu và có thể có nhiều trạng thái kết thúc.
+
+	- Trạng thái bắt đầu - Inital (hình tròn đặc ở bên trong): ●―――――>
+		+ Thường sẽ chỉ có duy nhất một nơi bắt đầu.
+
+	- Trạng thái kết thúc - Final (Hai hình tròn đồng tâm, hình tròn ở bên trong là hình tròn đặc): ―――――>◉
+		+ Thường sẽ có nhiều nơi kết thúc.
+
+--------------------------------------------------------------------------------
+
+Mỗi trạng thái được biểu diễn bằng hình chữ nhật bo tròn 4 góc giống như sau:
+
+		 ◜---------------------◝
+		|Tên của trạng thái	|	
+		|―――――――――――――――――――――――|
+		|entry: sự kiên (event)	|	-> Điều kiện để trạng thái xảy ra
+		|do: hành động (action)	|	-> Những thứ làm được
+		|exit:			|	-> Điều kiện để chuyển trạng thái
+		 ◟---------------------◞
+
+Để ngắn gọi trong lúc vẽ thì người ta chỉ vẽ Tên của trạng thái.
+
+--------------------------------------------------------------------------------
+
+Sử dụng dấu mũi tên để chuyển đổi (transition) từ trạng thái này sang trạng thái khác.
+
+	 ◜-------------◝		 ◜-------------◝
+	|Trạng thái 1	|――――――――――――――>|Trạng thái 2	|
+	 ◟-------------◞		 ◟-------------◞
+
+==========================================================================================
+
+Mối quan hệ giữa sơ đồ trạng thái (state diagram) và sơ đồ lớp (class diagram):
+
+...
+
+
+==========================================================================================
+
+--------------------------------------------------------------------------------
+
+------------------------------------------------------------
+
+----------------------------------------
+
+--------------------
+
+----------
+
+
+
+
+
+
+
+
+
+
+
+
+
+

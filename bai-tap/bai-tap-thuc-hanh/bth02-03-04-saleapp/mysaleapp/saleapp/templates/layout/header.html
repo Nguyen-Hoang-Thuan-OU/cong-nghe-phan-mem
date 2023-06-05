@@ -1,0 +1,77 @@
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="/">Website thương mại điện tử</a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Thanh menu -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+
+            <!--Nạp danh mục và danh sách sản phẩm-->
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('home') }}">Tất cả sản phẩm</a>
+            </li>
+
+            <!--Danh sách các sản phẩm-->
+            {% for c in categories %}
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('home', category_id=c.id) }}">{{ c.name }}</a>
+            </li>
+            {% endfor %}
+
+            <!--Xử lý chỉ hiện -->
+            {% if current_user.is_authenticated %}
+            <!--Hiển thị ảnh đại diện và tên người dùng-->
+            <li class="nav-item">
+                <a class="nav-link text-danger" href="{{ url_for('home') }}">
+                    {% if current_user.avatar %}
+                    <img src="{{ current_user.avatar }}"
+                         class="rounded-circle"
+                         width="30" alt="{{ current_user.name }}">
+                    {% else %}
+                    <img src="{{ url_for('static', filename='images/ou-logo-vietnamese.png') }}"
+                         class="rounded-circle"
+                         width="30" alt="{{ current_user.name }}">
+                    {% endif %}
+
+                    {{ current_user.username }}
+                </a>
+            </li>
+
+            <!--Đăng nhập tài khoản-->
+            <li class="nav-item">
+                <a class="nav-link text-success" href="{{ url_for('user_signout') }}">Đăng xuất</a>
+            </li>
+            {% else %}
+            <!--Đăng ký tài khoản-->
+            <li class="nav-item">
+                <a class="nav-link text-danger" href="{{ url_for('user_register') }}">Đăng ký</a>
+            </li>
+
+            <!--Đăng nhập tài khoản-->
+            <li class="nav-item">
+                <a class="nav-link text-success" href="{{ url_for('user_signin') }}">Đăng nhập</a>
+            </li>
+            {% endif %}
+
+            <!--Giỏ hàng-->
+            <li class="nav-item">
+                <a class="nav-link text-success" href="#">
+                    Giỏ hàng <span class="badge badge-info">0</span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+
+    <!--Ô tìm kiếm sản phẩm-->
+    <form class="form-inline">
+        <input class="form-control mr-sm-2" type="text" name="keyword" placeholder="Nhập từ khoá tìm kiếm">
+        <button class="btn btn-success" type="submit">Tìm kiếm</button>
+    </form>
+
+</nav>

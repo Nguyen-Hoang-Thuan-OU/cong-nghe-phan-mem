@@ -1,0 +1,483 @@
+
+ -----------------------------------------------
+| 3-5-3 (3 Roles - 5 Activities - 3 Artifacts)	|
+ -----------------------------------------------
+
+===========================================================================================
+
+[LỊCH SỬ HÌNH THÀNH]
+
+* Manifesto (tuyên ngôn): lời nói tuyên bố với tất cả mọi người và những người có quan tâm.
+
+17 chuyên gia (sếp công ty, kiến trúc sư phần mềm, giáo sư đại học,...) họp vào năm 2001.
+	=> Đề xuất ra cách thức làm phần mềm nhanh và linh hoạt với khách hàng: Agile.
+		-> Manifesto (tuyên ngôn/giá trị/nguyên lý/nguyên tắc chung).
+	("Đạo"/phương pháp phát triển phần mềm được khai sinh với bốn "điều răn")
+
+Thông báo được đặt công khai trên một website (https://agilemanifesto.org/) để hướng dẫn mọi người cách làm phần mềm theo kiểu mới. Không nói về lập trình mà nói về cách quản lý và làm ra một sản phẩm phần mềm.
+
+------------------------------------------------------------
+
+	[TUYÊN NGÔN]
+
+"Chúng tôi khám phá ra một cách tốt hơn để phát triển phần mềm bằng cách chúng tôi đang áp dụng nó và giúp đỡ mọi người cùng hiện thực hoá nó. Thông qua những công việc này, chúng tôi đi đến kết luận giá trị cốt lõi (quan trọng/đặc trưng) như sau":
+
+	01. Ưu tiên CÁ NHÂN HOÁ VÀ SỰ TƯƠNG TÁC hơn bất kỳ quy trình và công cụ nào.
+		(INDIVIDUALS AND INTERACTIONS over processes and tools)
+		+ Cá nhân hoá và sự tương tác giữa các thành viên trong nhóm.
+		+ Quy trình và công cụ: nghiêm ngặt làm theo khuôn khổ, bị cứng nhắc và ràng buộc theo một quy tắc.
+		-> Xóa bỏ các rào cản về quy trình và nâng cao vị thế cho các cá nhân.
+
+	02. Ưu tiên PHẦN MỀM HOẠT ĐỘNG ĐƯỢC hơn là tài liệu thiết kế hoàn hảo (SRS).
+		(WORKING SOFTWARE over comprehensive documentation)
+		-> Nhanh chóng cho ra sản phẩm có thể dùng được.
+
+	03. Ưu tiên PHỐI HỢP VỚI KHÁCH HÀNG hơn là làm theo điều khoản/đàm phán hợp đồng.
+		(CUSTOMER COLLABORATION over contract negotiation)
+		-> Cộng tác chặt chẽ với khách hàng.
+
+	04. Ưu tiên TƯƠNG THÍCH, LẮNG NGHE THAY ĐỔI hơn là cứ làm theo kế hoạch đã định.
+		(RESPONDING TO CHANGE over following a plan)
+		-> Tiếp nhận đóng góp và đáp ứng (thay vì chống lại) sự thay đổi.
+
+"Vẫn giữ nguyên giá trị của vế bên phải, song chúng tôi đề cao giá trị của vế bên trái hơn."
+
+	-> 12 nguyên lý để thực hành 4 tuyến ngôn (từng nhánh con khác nhau sẽ có độ nghiêm ngặt và chi tiết hoá khác nhau).
+		=> Định hướng cách quản lý dự án.
+
+--------------------------------------------------------------------------------
+
+	[NGUYÊN LÝ]
+
+01. Our highest priority is to satisfy the customer
+through early and continuous delivery
+of valuable software.
+
+----------------------------------------
+
+02. Welcome changing requirements, even late in
+development. Agile processes harness change for
+the customer's competitive advantage.
+
+----------------------------------------
+
+03. Deliver working software frequently, from a
+couple of weeks to a couple of months, with a
+preference to the shorter timescale.
+
+(Liên tục cho ra phần mềm có thể sử dụng được...)
+
+----------------------------------------
+
+04. Business people and developers must work
+together daily throughout the project.
+
+(Khách hàng và lập trình viên cùng làm việc với nhau...)
+
+----------------------------------------
+
+05. Build projects around motivated individuals.
+Give them the environment and support they need,
+and trust them to get the job done.
+
+(Cách tiến hành làm việc nhóm với nhau
+là hỗ trợ tối đa năng lực của mỗi cá nhân...)
+
+----------------------------------------
+
+06. The most efficient and effective method of
+conveying information to and within a development
+team is face-to-face conversation.
+
+----------------------------------------
+
+07. Working software is the primary measure of progress.
+
+----------------------------------------
+
+08. Agile processes promote sustainable development.
+The sponsors, developers, and users should be able
+to maintain a constant pace indefinitely.
+
+----------------------------------------
+
+09. Continuous attention to technical excellence
+and good design enhances agility.
+
+----------------------------------------
+
+10. Simplicity--the art of maximizing the amount
+of work not done--is essential.
+
+(Đơn giản hoá mọi việc nếu có thể,
+vì đơn giản hoá là nghệ thuật để làm được nhiều việc.)
+	-> Khách hàng cần sớm nhìn thấy được kết quả.
+
+	Ví dụ: cứ viết code và kết nối thành công với một hệ quản trị cơ sở dữ liệu trước, rồi sau đó mới tính đến việc kết nối với những hệ quản trị cơ sở dữ liệu khác.
+
+----------------------------------------
+
+11. The best architectures, requirements, and designs
+emerge from self-organizing teams.
+
+----------------------------------------
+
+12. At regular intervals, the team reflects on how
+to become more effective, then tunes and adjusts
+its behavior accordingly.
+
+===========================================================================================
+
+[NHỮNG FRAMEWORK SỬ DỤNG AGILE - AGILE FRAMEWORK]
+
+Agile có sự linh hoạt - linh hoạt đối với người dùng, luôn có tư duy thích ứng đối với những yêu cầu của phần mềm.
+
+	Ví dụ: sự linh hoạt có thể bắt gặp ở
+		- Dòng nước khi gặp vật cản sẽ tìm cách rẽ để tiếp tục chảy.
+
+--------------------------------------------------------------------------------
+
+Agile (linh hoạt, thực dụng hơn) || Adaptive / Incremental / Iterative
+(Nhánh con - triển khai thực tế: Scrum, Extreme programming (XP), Kanban, Lean Startup)
+
+Nếu xem Agile giống như là nguyên lý thiết kế "động cơ 4 thì": Nạp-Nén-Nổ-Xả (chung chung, trừu tượng)
+thì Honda, Yamaha, Kawasaki hoặc SYM,... sẽ có những bí quyết riêng để cài đặt (implement) "động cơ 4 thì" này một cách cụ thể để làm sao hiệu quả nhất.
+	-> Agile là tuyên ngôn để các phương pháp phát triển phần mềm ứng dụng theo và quản lý dự án phần mềm của mình.
+
+--------------------------------------------------------------------------------
+
+Được xây dựng dựa trên nguyên tắc làm việc nhóm (cross-functional), trong đội ngũ phát triển phần mềm không có người BA/BrSE để chuyên đi lấy yêu cầu từ phía khách hàng mà là toàn bộ người trong đội ngũ phát triển sẽ cùng lấy yêu cầu khách hàng.
+	-> Lấy kinh nghiệm lập trình để tư vấn cho khách hàng về đầu ra của sản phẩm.
+
+"Nếu bạn có vấn đề nhưng không nói cho chúng tôi biết thì vấn đề đó là vấn đề chung".
+	-> Vấn đề cá nhân không được giải quyết sẽ trở thành vấn đề của cả nhóm.
+
+===========================================================================================
+
+[AGILE: SCRUM FRAMEWORK]
+[THUẬT NGỮ THƯỜNG GẶP]
+
+Agile chia dự án thành từng giai đoạn đều nhau (Sprint), làm và bàn giao trong một khoảng thời gian đều nhau, nhưng không quá lâu để nhanh chóng thu thập phản hồi và từ đó sửa đổi theo đúng ý của khách hàng nhất có thể.
+
+** Quy trình Scrum:
+
+ -----------------------------------------------------------------------	
+| PO -> Product Backlog -> Sprint Planning Meeting -> Print Backlog	|
+| 	-> Sprint -> Daily Scrum Meeting				|
+| -> Sprint Review -> Sprint Retrospective -> Product Increment		|
+ -----------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+
+[3 VAI TRÒ (3 SCRUM ROLES) CỦA NHỮNG THÀNH VIÊN TRONG NHÓM SCRUM (SCRUM TEAM)]
+
+** Các thành viên trong Scrum Team được phân chia theo ba vai trò như sau:
+
+01. Người sở hữu sản phẩm (Product Owner): thường là khách hàng hoặc người đại diện cho khách hàng. Có nhiệm vụ khởi động dự án, tạo ra các yêu cầu, quyết định các chức năng và đánh giá độ ưu tiên của từng chức năng; người hiểu rõ nhất về các yêu cầu của sản phẩm, có trách nhiệm tối ưu hoá giá trị mà sản phẩm đó mang lại cho khách hàng. Product Owner như là một cầu nối giữa tất cả các bên liên quan (khách hàng và các thành viên của Scrum).
+
+	-> Người đại diện cho khách hàng để đưa ra yêu cầu.
+
+------------------------------------------------------------
+
+02. Lãnh đạo đầy tớ (Scrum Master): người trưởng nhóm, bảo vệ các thành viên trong nhóm, hiểu biết về mô hình và cách vận hành Scrum, quản lý và điều phối mọi hoạt động nhóm Scrum (thường gồm 7-8 thành viên), quản lý tiến độ và phối hợp với những thành viên khác để đàm phán với khách hàng, có thể tham gia vào việc code nếu cần thiết. Người đảm bảo mọi thành viên trong Scrum làm việc một cách hiệu quả nhất, đảm bảo hoàn thành dự án theo đúng mục tiêu và với kết quả tốt nhất.
+
+	-> Người đảm bảo Sprint hoàn thành đúng hạn và mục tiêu.
+
+------------------------------------------------------------
+
+03. Nhóm phát triển (Development Team): những người có kỹ năng thế mạnh nào đó trong việc trực tiếp sản xuất ra sản phẩm, cài đặt các chức năng theo yêu cầu. Họ có thể là các chuyên gia phân tích, các lập trình viên, những người chuyên viên kiểm thử phần mềm,... Tất cả các thành viên có vai trò ngang nhau và mỗi thành viên phải tự lên kế hoạch cho các chức năng, tự tổ chức và quản lý công việc của mình sao cho hiệu quả nhất.
+
+	-> Người cài đặt, triển khai cắc chức năng theo đặc tả yêu cầu.
+
+--------------------------------------------------------------------------------
+
+[5 HOẠT ĐỘNG CỦA SCRUM (5 SCRUM ACTIVITIES)]
+
+** Có tất cả 5 hoạt động của Scrum (Scrum Activities hay còn gọi là Scrum Events hay Scrum Ceremonies):
+
+01. Khung thời gian/Vòng lặp ngắn (Sprint): bước chạy nước rút, bứt tốc, gấp gáp. Là một khung-thời-gian (thường kéo dài từ 1-4 tuần) được lặp lại trong quy trình phát triển phần mềm (SDLC) để tạo ra các phần nhỏ hoàn thiện của sản phẩm. Khi khách hàng không thể diễn đạt được mong muốn của họ thì ta sẽ phát triển phần mềm thật nhanh để cho ra được sản phẩm mẫu và nhận phản hồi bằng cách chia nhỏ những chức năng ra và thực hiện theo đủ các bước trong quy trình phát triển phần mềm (SDLC) ở mỗi Sprint.
+
+	-> Áp dụng đầy đủ các bước trong quy trình phát triển phần mềm (SDLC) cho mỗi mô-đun của một Sprint để nhanh chóng cho ra được sản phẩm và nhận phản hồi từ phía khách hàng.
+
+----------------------------------------
+
+* Trong suốt một Sprint:
+	- Không cho phép bất kì sự thay đổi nào ảnh hưởng đến mục tiêu của Sprint (Sprint Goal) đã được đề ra từ đầu mỗi Sprint.
+
+	- Thành phần trong Development Team được giữ nguyên.
+
+	- Mục tiêu chất lượng không bị cắt giảm.
+
+	- Phạm vi công việc có thể được làm rõ và tái thương lượng giữa Product Owner với Development Team.
+
+------------------------------------------------------------
+
+02. Cuộc họp để lập kế hoạch cho Sprint (Sprint Planning Meeting): diễn ra duy nhất một lần vào đầu Sprint để chuẩn bị cho toàn bộ Sprint và lập ra Sprint Goal (mục tiêu của Sprint). Khách hàng sẽ đưa ra yêu cầu (Product Backlog), ta sẽ phải họp cùng khách hàng để quyết định nên làm những gì trong Sprint đó, cả nhóm sẽ chọn ra những tính năng với độ ưu tiên cao và có khả năng hoàn tất kịp trong một Sprint để thực hiện và bàn giao cho khách hàng (khách hàng muốn cái nào thì ta chọn cái đó).
+
+	-> Cuộc họp để xác định các chức năng cần phải làm trong Sprint.
+
+------------------------------------------------------------
+
+03. Cuộc họp nhóm hằng ngày (Daily Scrum Meeting): buổi họp đầu mỗi ngày làm việc, được lặp lại hằng ngày, có thể đứng họp (Stand-up Meeting) thay vì ngồi. Mục đích để giúp mọi người nắm được những việc đang xảy ra trong nhóm, nhanh chóng báo cáo tiến độ công việc để sớm phát hiện vấn đề (của cá nhân và nhóm).
+
+	-> Cuộc họp để sớm phát hiện và giải quyết vấn đề.
+
+* Mỗi thành viên phải trả lời ba câu hỏi sau:
+	1. Hôm qua bạn đã làm được gì?
+	2. Hôm nay bạn dự định sẽ làm gì?
+	3. Bạn có đang gặp vướng mắc hay khó khăn gì không?
+
+------------------------------------------------------------
+
+04. Sơ kết Sprint (Sprint Review): họp sau khi kết thúc một Sprint để xem thành quả của sản phẩm sau mỗi Sprint, những gì làm được trong Sprint sẽ được demo để lấy ý kiến đánh giá từ các bên liên quan, đề suất chỉnh sửa cũng như các thay đổi cần thiết trước khi chuyển giao sản phẩm cho khách hàng.
+
+	-> Đánh giá kết quả của Sprint, cập nhật trạng thái của tính năng, cái gì làm được và chưa làm được, hướng tiếp tục phát triển.
+
+------------------------------------------------------------
+
+05. Thanh tra chính mình/Cải tiến (Sprint Retrospective): diễn ra khi kết thúc một Sprint, sau Sprint Review nhưng trước khi bắt đầu một sprint mới. Người tham dự chủ yếu là thành viên của Development Team (có thể mời những thành viên khác của Scrum) để giúp mọi người trong Development Team hiểu được những việc đã và chưa đạt được, từ đó tìm ra phương pháp cải tiến cũng như những kế hoạch tiếp theo.
+
+	-> Đánh giá ưu và khuyết điểm của từng thành viên trong quá trình làm Sprint để rút ra bài học kinh nghiệm.
+
+--------------------------------------------------------------------------------
+
+[3 KẾT QUẢ ĐƯỢC TẠO RA SAU MỖI BƯỚC LẶP SCRUM (3 SCRUM ARTIFACTS)]
+
+* Artifact: mô tả kết quả được tạo ra sau mỗi bước lặp nào đó của quy trình phần mềm.
+
+* Có 3 kết quả được tạo ra sau mỗi bước lặp Scrum (Scrum Artifacts) được sử dụng để đảm bảo tính minh bạch. Từ đó giúp cho nhóm Scrum có thể tối ưu hoá sản phẩm của mình:
+
+----------------------------------------
+
+01. Khối lượng công việc yêu cầu (Product Backlog): nơi chứa danh sách tất cả các yêu cầu/khối lượng công việc/tính năng cần phải làm đến từ phía khách hàng/sản phẩm, được sắp xếp theo độ ưu tiên. Người chịu trách nhiệm đưa ra, tổng hợp các tính năng này là Product Owner hoặc cả nhóm cùng viết. Có thể thường xuyên bị thay đổi theo những yêu cầu của khách hàng.
+
+	-> Danh sách các chức năng cần phát triển cho sản phẩm.
+
+	* Sàng lọc khối lượng công việc (Product Backlog Refinement): thường bị hiểu lầm là một hoạt động của Scrum, nhưng thực ra đây là hoạt động thêm vào các chi tiết, ước lượng, và trình tự của các hạng mục trong danh sách Product Backlog. Là một quá trình liên tục, theo đó các thành viên của Scrum thảo luận về các chi tiết của từng hạng mục. Trong suốt quá trình sàng lọc này, các hạng mục sẽ được xem xét để tăng độ ưu tiên loại bỏ những hạng mục không cần thiết.
+
+------------------------------------------------------------
+
+02. Bản kế hoạch cho một Sprint (Sprint Backlog): là kết quả của các buổi Sprint Planning Meeting. Với sự kết hợp của Product Owner, nhóm sẽ phân tích các yêu cầu theo độ ưu tiên từ cao xuống thấp để hiện thực hoá các hạng mục trong Product Backlog dưới dạng danh sách công việc (To Do list).
+
+	-> Danh sách chức năng (trích từ Product Backlog) cần phát triển của một Sprint.
+
+------------------------------------------------------------
+
+03. Sản phẩm dùng được (Product Increment): sản phẩm có thể sử dụng được, sẵn sàng để phát hành đến người dùng. Product Increment là tổng của tất cả các Product Backlog hoàn thành trong Sprint hiện tại với những giá trị của sản phẩm đã hoàn thành trong những Sprint trước đó.
+
+	Ví dụ: sản xuất một chiếc xe đạp
+	
+		- Product Backlog: những yêu cầu thành phẩm của chiếc xe đạp: có khung xe chắc chắn, 2 bánh xe, bàn đạp, dây xích, có thắng xe để đảm bảo an toàn, khóa xe đạp để tránh bị mất trộm,...
+
+		- Sprint Backlog:
+			+ Sprint thứ nhất phải hoàn thành được khung xe và bánh xe.
+			+ Sprint thứ hai phải hoàn thành bàn đạp và lắm ráp được những bộ phận trước đó lại với nhau,...
+
+		- Product Increment: sản xuất ra được một chiếc xe đạp hoàn thiện với đầy đủ các chi tiết được đề ra và thỏa mãn Product backlog.
+
+===========================================================================================
+
+[YÊU CẦU PHẦN MỀM CỦA NGƯỜI DÙNG - USER STORY]
+
+Khi làm phần mềm, luôn xuất hiện 1 câu hỏi: "Phần mềm viết cho đối tượng nào sử dụng?"
+(Người đặt làm phần mềm và người sử dụng phần mềm đôi khi có thể là hai đối tượng khác nhau.)
+
+--------------------------------------------------------------------------------
+
+* Yêu cầu phần mềm của người dùng (User Story): các yêu cầu (requirements) mà khách hàng đưa ra, là mong muốn về tính năng phần mềm (màn hình ứng dụng) mà khách hàng muốn sử dụng để hỗ trợ cho công việc của họ. Nếu khách hàng không biết hoặc không thể diễn đạt thành ý thì có thể thảo luận với toàn bộ thành viên trong đội ngũ phát triển.
+
+Được diễn đạt lại dưới dạng những câu phát biểu:
+	- Viết tự do.
+	- Viết theo định dạng: Là một (as a) <loại người dùng>, tôi muốn (I want) <mục tiêu muốn làm/đạt được>... để (so that) <lý do>...
+		(As a <WHO>, I want <WHAT> so that <WHY>)
+		* WHAT - mục tiêu muốn làm/đạt được: thứ gì đó đem về cho người dùng và họ cảm thấy hài lòng.
+
+		Ví dụ:
+			- As a cashier, I want to create an order so that I can record what our customer bought.
+			  (Là một nhân viên, tôi muốn tạo mới một đơn hàng để tôi có thể ghi nhận lại những mặt hàng mà khách hàng đã mua.)
+
+			- As a bookeeper, I want to add a new book so that it's available to any borrow.
+			  (Là một thủ thư, tôi muốn bổ sung một đầu sách mới vào hệ thống để mọi người có thể mượn.)
+
+	Ví dụ: hệ thống quản lý học tập
+
+		- Loại người dùng:
+			+ Với vai trò học sinh, sinh viên.
+			+ Với vai trò giảng viên.
+			+ Với vai trò nhân viên phòng quản lý đào tạo/giáo vụ.
+			+ Với vai trò phụ huynh.
+
+		- Mục tiêu:
+			+ Muốn xem thời khoá biểu.
+			+ Muốn điểm danh.
+			+ Muốn quản lý môn học.
+			+ Muốn xem kết quả học tập.
+
+		- Lý do:
+			+ Để biết lịch học và đi học/đi làm đúng giờ.
+			+ Để cộng điểm chuyên cần.
+			+ Để phân bổ tiết học cho học viên và giảng viên.
+			+ Để nắm được tình hình học tập một cách tổng quan.
+
+------------------------------------------------------------
+
+Phong cách viết User Story:
+
+	* Viết tự do:
+		- The system should allow students to view a course schedule while registering for classes.
+		- I want a feature of/function of viewing my own academic transcipt.
+
+	* Viết theo định dạng:
+		- As a student, I want to view the timetable so that I can be in the class on time.
+		- As a student, I want to view the attendance infomation so that I can know if my lecturer checked my own attendance or not.
+		- As a student, I want to download my own academic transcript so that I can apply for a new job.
+		- As a student, I want to feedback my own lecturer so that they can improve their teaching skills.
+
+===========================================================================================
+
+[SỬ DỤNG CÔNG CỤ JIRA]
+
+Trong phong cách phát triển phần mềm theo hướng truyền thống, ta có thể sử dụng Sơ đồ Gantt (còn gọi là sơ đồ ngang Gantt hay biểu đồ Gantt) để quản lý dự án. Nhưng trong quy trình làm phần mềm theo phong cách Agile/Scrum, ta có sử dụng công cụ Jira (của Atlassian) để hỗ trợ việc quản lý các User Story (các yêu cầu của khách hàng), quản lý tiến độ, phân công công việc,... giúp vận hành và hiện thực hoá công đoạn/vòng đời làm sản phẩm.
+
+* Tạo mới một dự án: Projects -> Create project
+	Plan/template: Kanban/Scrum/Bug tracking -> Use template
+	Project type: Team-managed/Company-managed
+	* Create project:
+		- Name: tên đầy đủ của dự án, có thể đặt dài và chứa khoảng trắng (nhưng có giới hạn ký tự).
+		- Key: tên/mã số viết tắt của dự án.
+
+--------------------------------------------------------------------------------
+
+[FLAT BACKLOG - Jira thuần/Scrum chuẩn]
+
+* Quản lý các dự án:
+
+	1. Thêm các yêu cầu/công việc vào Product Backlog: Backlog -> Create
+		Project: dự án đã tạo ở bước trên
+		Issue Type: Story
+		Summary: câu phát biểu As a..., I want... so that...
+
+		(Ghi chú: các User Story, Bug, Task,... được gọi chung là Issue)
+
+	2. Tạo Sprint dựa trên các Product Backlog đã có: Backlog -> Create Sprint
+		a. [...] -> Edit Sprint
+			Sprint name: đặt tên để dễ tìm kiếm sau này.
+			Duration: 2-4 tuần.
+
+		b. Kéo thả những yêu cầu/công việc ở mục [Backlog] vào mục [Sprint]
+
+		c. Start sprint -> Start -> Active sprints (Scrum board: To do, In Progress, Done,...)
+
+	3. Chia nhỏ các yêu cầu/công việc: chọn Story -> Create substask
+		Substask: liệt kê những công việc cần làm
+			=> Task breakout
+
+		(Ghi chú: khi tất cả các subtask đã được hoàn thành, cho phép cập nhật lại trạng thái của Issue gốc, kí hiệu bằng chữ ̶g̶ạ̶c̶h̶ ̶n̶g̶a̶n̶g)
+
+--------------------------------------------------------------------------------
+
+[AGILE USER STORY MAPPING]
+
+Việc phân công và theo dõi tiến độ làm việc, danh sách các User Story,... trong từng Sprint bằng thao tác "kéo-thả" (Phẳng/Flat) sẽ rất dễ gây rối và lộn xộn. Chỉ mang tính chất liệt kê công việc và tiến độ làm việc của Dev để người quản lý dự án có thể theo dõi, nhưng sẽ chưa rõ dưới góc độ của người dùng khi không thể hiện được những tính năng mà người dùng sẽ được trải nghiệm trong Sprint.
+	-> [Flat] Quản lý theo phong cách "phẳng" truyền thống sẽ chưa thể hiện rõ được về góc nhìn mà hệ thống sẽ phục vụ công việc cho người dùng.
+
+Ở mức độ tổng quát, để dễ trong việc đưa ra quyết định rằng người dùng cần tính năng nào sớm, trong Sprint sắp tới cần đẩy cụm tính năng nào lên để làm trước hoặc nên bổ sung thêm những tính năng gì để người dùng tiếp tục hài lòng khi trải nghiệm,... thì cần phải biến tấu lại Backlog cho trực quan hơn. Vẫn quản trị được công việc theo phong cách "phẳng" truyền thống, nhưng lại "chăm sóc" được người dùng khi cho biết họ có thể được trải nghiệm cụm tính năng nào trước và sau theo đúng cách mà họ mong đợi.
+	-> [User Story Mapping] Cho biết được những tính năng đã/đang phát triển trong Sprint sẽ phục vụ được gì cho người dùng, để từ đó đánh giá được sự thiếu hoặc đủ và đưa ra thứ tự ưu tiên phát triển của tính năng.
+
+Cảm thấy Backlog truyền thống hơi "vô hồn" khi chỉ được dùng để quán lý các tác vụ một cách thuần túy. Vào năm 2004, Jeff Patton đã đề xuất một Backlog kiểu mới, giúp quản lý các Sprint theo kiểu mới, được gọi là User Story Mapping.
+	-> Jeff Patton sáng tạo ra khái niệm "User Story Mapping", ưu tiên theo góc nhìn của người dùng hơn là quản lý công việc.
+
+------------------------------------------------------------
+
+Story Map sẽ lấy toàn bộ Backlog (danh sách User Story) sang và hiển thị dưới góc nhìn của người dùng với:
+
+* Epic / Backbone (Roadmap): tên gọi chung cho góc nhìn của người dùng. Giúp tạo nên đường trục/xương sống (Backbone) của Story Map và cho biết đống User Story trong Sprint hướng về tính năng nào để phục vụ người dùng (người dùng rất mong đợi nên cần phải được triển khai sớm).
+	-> Danh sách những cụm tính năng hướng về người dùng (người dùng sẽ trải nghiệm được gì).
+
+* User Story Map: bảng phân bố những User Story/tính năng nhỏ hiển thị trong Sprint (đã/đang làm), hướng về người dùng. Được sử dụng để giải quyết cho Epic và hỗ trợ thêm ngữ nghĩa cho Backlog, Scrum board.
+
+	Ví dụ: website Thế Giới Di Động
+
+	* Tầng 1: Khách mua hàng	| Quản trị viên				| Nhóm người dùng 3 (User)
+
+	* Tầng 2: Tìm sản phẩm		| Quản trị câu hỏi 			| Cụm tính năng 3 (Epic)
+
+	* Tầng 3:			|					|
+		- Sprint 1:		| - Sprint 1:				| - Sprint 1:
+			+ User Story 1:	| 	+ User Story 3: Xem câu hỏi	| 	+ User Story 7:
+			+ User Story 2:	| 	+ User Story 4: Duyệt câu hỏi	|
+					| 	+ User Story 5: Xóa câu hỏi	|
+					| 	+ User Story 6: Trả lời câu hỏi	|
+
+		- Sprint 2:		| - Sprint 2:				| - Sprint 2:
+			+ User Story 8:	|					|
+			+ User Story 9:	|					|
+			+ User Story 10:|					|
+
+		- Sprint 3:		| - Sprint 3:				| - Sprint 3:
+					|					| 	+ User Story 11:
+					|					| 	+ User Story 12:
+
+* Gán (ngược) User Story vào Epic Link:
+	User Story -> More fields/Details -> Epic Link
+
+----------------------------------------
+
+Để hiện thực hóa User Story Mapping trên Jira, có thể sự một một trong số những công cụ: Easy Agile User Story Maps for Jira,...
+
+* Cài đặt phần mềm:
+	App -> Manage your apps
+		Atlassian Marketplace -> Find new apps: nhập tên ứng dụng, ví dụ: Story Map
+
+* Tạo Epic: Backlog -> Create
+		Project: dự án đã tạo ở những bước trên
+		Issue Type: Epic
+		Issue Name: tên của cụm tính năng lớn - hướng người dùng
+		Summary: tóm tắt về ý nghĩa của cụm tính năng
+
+------------------------------------------------------------
+
+Tham khảo thêm:
+	- https://plan.io/blog/user-story-mapping/
+	- https://uxknowledgebase.com/story-mapping-part-1-e65b0b74591
+
+===========================================================================================
+
+** Phương pháp quản lý quá trình phát triển sản phẩm/dự án và chất lượng để làm sao đem lại giá trị lợi ích cao nhất cho khách hàng trong thời gian sớm nhất mà vẫn đúng với chất lượng và yêu cầu.
+	-> Cách làm sao cho hiệu quả nhất, hướng về khách hàng.
+
+* Mô hình ≈ cách thức: bước 1, 2, 3,... nên làm gì, cần có gì, lưu ý những sai sót gì,...
+
+--------------------------------------------------------------------------------
+
+* Kanban: một ngày chỉ làm đúng một lượng công việc cố định, không hơn không kém, nếu bất chợt có việc khác khẩn cấp hơn (công việc mới) buộc phải giải quyết thì phải tăng tốc để nhanh chóng hoàn thành cho xong những công việc cũ trước khi chèn thêm công việc mới vào.
+	-> Cam kết, mọi việc vẫn phải trong tầm kiểm soát (công việc không quá ít hoặc nhiều).
+
+------------------------------------------------------------
+
+* Lean (tinh gọn): phương pháp quản lý công việc xuất phát từ bên kinh tế, lấy cảm hứng từ phương pháp/mô hình quản trị việc sản xuất ô tô của Toyota: cần mới làm (just in time - JIT), là vừa đủ, vừa đúng và không làm dư thừa. Có được một hệ thống quản lý những yêu cầu, quy tắc, tính trước đầu vào và tỷ lệ hao hụt, cam kết về mặt giá thành và thời gian.
+	-> Làm vừa đủ chứ không thừa.
+
+
+==========================================================================================
+
+--------------------------------------------------------------------------------
+
+------------------------------------------------------------
+
+----------------------------------------
+
+--------------------
+
+----------
+
+
+
+
+
+
+
+
+
+
+
