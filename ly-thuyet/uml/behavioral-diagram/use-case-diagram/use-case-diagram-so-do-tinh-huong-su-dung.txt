@@ -72,13 +72,14 @@ Có thể thủ công liệt kê ra giấy toàn bộ những nhóm người dù
 		Ví dụ: hệ thống gửi thông báo nhắc nhở
 
 		* System Handler: đoạn code bên trong hệ thống thay thế con người, dựa vào các thông số mặc định được con người thiết lập sẵn thông qua tính năng quản trị, hệ thống sẽ thu thập dữ liệu (về thói quen, lịch sử hành vi,...), lọc, xử lý dữ liệu và đóng vai trò của một người nhân viên phía hậu trường để tự động gửi thông tin, thông báo, cảnh báo, gợi ý, nhắc nhở,... giúp tăng tiện ích và độ trải nghiệm cho người dùng.
+			-> Một nhân viên chăm sóc khách hằng tự động.
 		
 			Ví dụ:
 				- Facebook tự động gửi thông báo mỗi khi có lượt bày tỏ cảm xúc, bình luận, tin nhắn, yêu cầu kết bạn,...
 				
 				- Hệ thống lấy ngày giờ và những giá trị cho trước để đặt lịch nhắc nhở uống thuốc, nhắc nhở uống nước, nhắc nhở nghỉ ngơi và vận động do đã ngồi làm việc quá lâu,...
 				
-				- Hệ thống quét (thời gian hiện tại - thời gian mua đơn hàng gần nhất), nếu lớn hơn thời gian được cài đặt (ví dụ: 1 tháng, 2 tháng,...) sẽ tự động gửi thông báo nhắc nhở và có thể kèm mã giảm giá.
+				- Hệ thống quét và tính toán thời gian bằng cách: thời gian hiện tại - thời gian mua đơn hàng gần nhất, nếu lớn hơn thời gian được cài đặt (ví dụ: 1 tháng, 2 tháng,...) sẽ tự động gửi thông báo nhắc nhở và có thể kèm mã giảm giá.
 
 ------------------------------------------------------------
 
