@@ -38,6 +38,12 @@ Sau khi xong một vòng đời (xong một phần mềm) thì làm gì tiếp t
 
 --------------------------------------------------------------------------------
 
+[CÁC THUẬT NGỮ VỀ DỰ ÁN]
+
+* Ticket: Một yêu cầu cần phải xử lý.
+
+--------------------------------------------------------------------------------
+
 [CÁC CHỨC DANH VÀ NHIỆM VỤ]
 
 ** Customer, User, Product Owner (PO): người cung cấp thông tin, đưa ra yêu cầu cho sản phẩm.
