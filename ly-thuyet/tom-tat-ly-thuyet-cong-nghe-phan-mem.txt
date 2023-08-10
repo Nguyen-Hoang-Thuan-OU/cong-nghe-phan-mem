@@ -137,13 +137,13 @@ Bao gồm ít nhất 4 bước không kể thứ tự: Spec, Dev, Valid, Evol.
 
 01. Requirements---------
 			V
-		02. Design-----------------------
-						V
-				03. Development/Implementation-----------
+	02. Design-----------------------
+					V
+		03. Development/Implementation-----------
+							V
+			04. Testing/Verification/Validation--------------
 									V
-						04. Testing/Verification/Validation--------------
-												V
-								05. Evolution/Deployment/Maintenance/Enhancement
+				05. Evolution/Deployment/Maintenance/Enhancement
 
 --------------------------------------------------------------------------------
 
@@ -208,7 +208,7 @@ Bước 05: Evolution/Deployment/Maintenance/Enhancement (Bàn giao cho khách h
 
 				4. Kiểm tra lại câu từ, chính tả, lý lẽ/dẫn chứng/lập luận
 
-					5. Nộp bài, đợi giảng viên đưa ra nhận xét và "cho điểm"
+					5. Nộp bài, đợi giáo viên đưa ra nhận xét và "cho điểm"
 
 ==========================================================================================
 
@@ -222,7 +222,7 @@ Cách phối hợp giữa các bước/công đoạn như thế nào?
 --------------------------------------------------------------------------------
 
 ** Trình tự phát triển phần mềm: có 2 "trường phái"/nhánh/phương pháp/kỹ thuật lớn
-				 trong việc phối hợp các bước để ra được phần mềm
+				 trong việc phối hợp các bước để ra được phần mềm.
 
 1. "Trường phái" truyền thống, có kế hoạch (plan-driven process): Water fall (thác nước) || Linear-sequential Life Cycle Model
 
@@ -231,20 +231,27 @@ Cách phối hợp giữa các bước/công đoạn như thế nào?
 
 	- Nghiêm ngặt theo từng bước, kết quả đầu ra (output) của bước trước đó
 	  sẽ là dữ liệu đầu vào (input) của bước tiếp sau.
-	  Là mô hình phát triển tuần tự, mỗi giai đoạn cần phải được hoàn thiện đầy đủ
-	  trước khi bước sang các giai đoạn tiếp theo.
-	  Tùy theo các giai đoạn mà sẽ có từng khoảng thời gian khác nhau.
+	  	+ Là mô hình phát triển tuần tự,
+		  mỗi giai đoạn cần phải được hoàn thiện đầy đủ
+		  trước khi bước sang các giai đoạn tiếp theo.
+	  	+ Tùy theo các giai đoạn mà sẽ có
+		  từng khoảng thời gian thực hiện khác nhau.
 
 	- Nhấn mạnh yếu tố làm trên tổng thể (The Whole):
-	  lập kế hoạch cho toàn bộ dự án trước khi bắt đầu thực hiện.
+	  lập kế hoạch cho toàn bộ dự án trước khi bắt đầu thực hiện,
 	  phân tích đầy đủ yêu cầu, viết đầy đủ tài liệu rồi mới xây dựng hệ thống.
-	  Việc lập tài liệu phải được diễn ra xuyên suốt trong mọi bước/giai đoạn của quy trình
-	  để đảm bảo rằng mọi thành viên đều hiểu đủ và đúng về một vấn đề.
-	  Giá phải trả sẽ rất lớn nếu có sai xót vì phản hồi từ phía khách hàng chỉ đến ở giai đoạn cuối.
-	  (hiểu hết toàn bộ bài toán ở giai đoạn đầu thì mới bước sang giai đoạn tiếp theo).
+		+ Việc lập tài liệu phải được diễn ra xuyên suốt
+		  trong mọi bước/giai đoạn của quy trình
+		  để đảm bảo rằng mọi thành viên đều hiểu đủ và đúng về một vấn đề.
+		+ Có một khoảng cách rất xa
+		  kể từ những ngày đầu tiên gặp mặt để thu thập yêu cầu
+		  đến khi bàn giao sản phẩm.
+		+ Cái giá phải trả sẽ rất lớn nếu có sai xót
+		  vì phản hồi từ phía khách hàng chỉ đến ở giai đoạn cuối.
+	  (Hiểu hết toàn bộ bài toán ở giai đoạn đầu thì mới bước sang giai đoạn tiếp theo).
 
-		-> Một hệ thống hoàn chỉnh với đầy đủ chức năng sẽ ra đời ở những giai đoạn cuối,
-		   nhưng cũng sẽ tốn kém khi lúc này sản phẩm không đạt được như yêu cầu.
+	-> Một hệ thống hoàn chỉnh với đầy đủ chức năng sẽ ra đời ở những giai đoạn cuối,
+	   nhưng cũng sẽ tốn kém khi lúc này sản phẩm không đạt được như yêu cầu.
 
 ------------------------------------------------------------
 
@@ -256,19 +263,23 @@ Cách phối hợp giữa các bước/công đoạn như thế nào?
 	    cần phải "khám phá" và liên tục nhận phản hồi từ phía khách hàng để thay đổi.)
 
 	- Thoải mái, linh hoạt theo từng giai đoạn/mô-đun.
-	  Giúp liên tục lặp lại quá trình phát triển và kiểm thử
-	  trong suốt quá trình phát triển phần mềm.
-	  Các hoạt động phát triển và kiểm thử diễn ra đồng thời.
-	  Cho phép giao tiếp nhiều hơn giữa khách hàng, lập trình viên,
-	  người quản lý và kiểm thử viên.
+		+ Liên tục lặp lại quá trình: thu thập, thiết kế, phát triển và kiểm thử
+		  trong suốt quá trình phát triển phần mềm.
+		+ Các hoạt động phát triển và kiểm thử diễn ra đồng thời.
+		+ Cho phép giao tiếp nhiều hơn giữa khách hàng, lập trình viên,
+		  người quản lý và kiểm thử viên.
+		+ Giúp sớm cho ra một sản phẩm phần mềm hạn chế lỗi,
+		  sớm nhận được những phản hồi, đánh giá từ phía khách hàng,
+		  để từ đó đưa ra những tính năng khớp với yêu cầu của khách hàng hơn.
 
 	- Nhấn mạnh yếu tố phân vùng, chia để trị (Partial/Divide and Conquer):
 	  chia nhỏ (break down) quá trình phát triển thành từng phần nhỏ,
 	  dần hoàn thành (increment*) trong các lần lặp lại (iteration*).
-	  Không cần phân tích toàn bộ yêu cầu và vẽ quá chi tiết các sơ đồ,
-	  mà phân tích đến đâu thì làm đến đấy.
-	  Sớm xây dựng hệ thống bằng cách tách toàn bộ hệ thống ra thành từng mô-đun nhỏ để thực hiện,
-	  giúp nhanh chóng có được sản phẩm để giao cho khách hàng và nhận phản hồi.
+		+ Không cần phân tích toàn bộ yêu cầu và vẽ quá chi tiết các sơ đồ,
+		  mà phân tích đến đâu thì làm đến đấy.
+		+ Sớm xây dựng hệ thống bằng cách tách toàn bộ hệ thống
+		  ra thành từng mô-đun nhỏ để thực hiện,
+		  giúp nhanh chóng có được sản phẩm để giao cho khách hàng và nhận phản hồi.
 
 	* Incremental (tăng dần): hệ thống (hoàn chỉnh) được chia thành các thành phần/cụm tính năng nhỏ,
 				  trải qua nhiều phiên bản, có thêm nhiều tính năng mới hơn
@@ -497,14 +508,15 @@ và Customer, User, Product Owner sẽ là người cho biết cần phải làm
 		+ Du lịch.
 		+ Cửa hàng kinh doanh: ẩm thực, thời trang, mỹ phẩm, dược phẩm,...
 
-		-> Service-base: nhà cung cấp (Supplier) cung cấp giải pháp phần mềm (Solution), làm theo đơn đặt hàng.
+		-> Service-base: nhà cung cấp (Supplier) cung cấp giải pháp phần mềm (Solution),
+				 làm theo đơn đặt hàng.
 
 	=> BA (phía công ty phần mềm) làm việc với khách hàng
 	   để hiểu khách hàng muốn gì.
 
 ------------------------------------------------------------
 
-	- Làm phần mềm/một mô-đun nhỏ do công ty phần mềm khác đặt hàng:
+	- Làm phần mềm/mô-đun nhỏ do một công ty phần mềm khác đặt hàng:
 		+ Làm theo yêu cầu/đặt hàng
 		  của những công ty phần mềm khác (bên Mỹ, Nhật,...)
 			-> Họ nhận dự án từ khách hàng ở nước họ
@@ -525,8 +537,11 @@ và Customer, User, Product Owner sẽ là người cho biết cần phải làm
 		   và kinh doanh, kiếm tiền bằng phần mềm đó.
 	Ví dụ:
 		VNG Corporation, Electronic Arts, Nintendo, Sony, Microsoft, Adobe,...
+		|____________________________________________________________________|
+				|
 			Ban lãnh đạo, phòng kinh doanh, phòng phát triển sản phẩm,...
-				-> Nghiên cứu thị trường và đề xuất nên làm một phần mềm hoặc game,
+				-> Nghiên cứu thị trường và đề xuất
+				   nên làm một phần mềm hoặc game,
 				   sau đó bán sản phẩm hoặc vật phẩm trong game.
 
 --------------------------------------------------------------------------------
@@ -564,13 +579,16 @@ và Customer, User, Product Owner sẽ là người cho biết cần phải làm
 	01. End-user đặc biệt: những người khách (guest/visitor/anonymous) ghé ngang qua hệ thống, chưa có tài khoản hoặc đã có tài khoản nhưng chưa đăng nhập, chưa để lại danh tính nên hệ thống chưa biết đây là ai. Sau khi đăng nhập thì có thể trở thành End-user thông thường hoặc Admin.
 
 	02. End-user thông thường: nhóm người dùng cuối, số lượng đông nhưng ít quyền thao tác trên dữ liệu (thêm, xem, sửa, xoá một số dữ liệu được cho phép). Rất quan trọng, vì đây là nhóm tạo nguồn thu và "gián tiếp" duy trì hoạt động của hệ thống.
+
 		Ví dụ:
 			- Học sinh, sinh viên, giảng viên.
 			- Người mua hàng.
 			- Thu ngân bán hàng tại cửa hàng (nếu là người làm thuê thì sẽ không được xếp vào nhóm người quản trị vì họ phải đợi khách hàng mua thì họ mới có thể bán, chứ họ không có quyền quyết định những mặt hàng nào được phép bán và giá bán của từng mặt hàng).
 
 	03. Administrator: nhóm người quản trị, số lượng ít nhưng nhiều quyền thao tác và can thiệp trên dữ liệu (thêm, xem, sửa, xoá gần như toàn bộ dữ liệu). Người tạo ra và quản lý thông tin cho cả hệ thống nhằm duy trì và đảm bảo thông tin luôn khả dụng cho nhóm người dùng cuối. Người có quyền ngầm trên hệ thống chứ không nhất thiết phải hiển thị ra bên ngoài.
+
 		Ví dụ 1: người quản lý - người có quyền quyết định loại mặt hàng được bán và loại nào không, giá của từng loại hàng, khi nào khuyến mãi và giảm giá,...
+
 		Ví dụ 2: những administrator của một trường đại học
 				- Phòng công tác sinh viên
 				- Phòng quản lý đào tạo
@@ -586,11 +604,11 @@ và Customer, User, Product Owner sẽ là người cho biết cần phải làm
 
 1. Xác định WHO: xác định người sẽ sử dụng (có thể không phải người đặt hàng) phần mềm (user type/role/classify).
 
-Ví dụ: phần mềm quản lý học tập do thầy hiệu trưởng/ban giám hiệu đặt hàng nhưng những người thật sự sử dụng (WHO) là:
-	- Học sinh, sinh viên.
-	- Giảng viên.
-	- Phòng quản lý đào tạo/giáo vụ.
-	- Phụ huynh của học sinh, sinh viên.
+	Ví dụ: phần mềm quản lý học tập do thầy hiệu trưởng/ban giám hiệu đặt hàng, nhưng những người thật sự sử dụng (WHO) là:
+		- Học sinh, sinh viên.
+		- Giảng viên.
+		- Phòng quản lý đào tạo/giáo vụ.
+		- Phụ huynh của học sinh, sinh viên.
 
 ------------------------------------------------------------
 
@@ -616,10 +634,11 @@ Ví dụ: phần mềm quản lý học tập do thầy hiệu trưởng/ban gi�
 --------------------
 
 	* Với mỗi loại người dùng, liệt kê ra được:
-		- Những công việc/bước = nhãn, ô nhập, nút bấm, checkbox,... -> Tạo nên màn hình.
+		- Những công việc/bước = nhãn, ô nhập, nút bấm, checkbox,...
+			-> Tạo nên màn hình.
 		- Những tính năng = màn hình và kết quả xử lý đi kèm.
 
-		-> Ra được kết quả (WHAT) mà người dùng mong đợi, tin học hoá được những thao tác mà người dùng (WHO) phải làm thủ công khi chưa có phần mềm hoặc đã có nhưng chưa tốt.
+		-> Ra được kết quả (WHAT) mà người dùng (WHO) mong đợi, tin học hoá được những thao tác mà người dùng (WHO) phải làm thủ công khi chưa có phần mềm hoặc đã có nhưng chưa tốt.
 
 		Ví dụ: phần mềm quản lý bán hàng
 		
@@ -637,7 +656,7 @@ Ví dụ: phần mềm quản lý học tập do thầy hiệu trưởng/ban gi�
 
 ----------------------------------------
 
-	* Đừng nhầm lẫn với các công việc/bước phải thực hiện để đạt được WHAT, để phục vụ cho tính năng.
+	* Đừng nhầm lẫn giữa tính năng cần dùng (WHAT) với các công việc/bước phải thực hiện để đạt được WHAT (để phục vụ cho tính năng).
 	
 		Ví dụ 1:
 			* WHAT - goal/target/object: đăng nhập vào hệ thống
