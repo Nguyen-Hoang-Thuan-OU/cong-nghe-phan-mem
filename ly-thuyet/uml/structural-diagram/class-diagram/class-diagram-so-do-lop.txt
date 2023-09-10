@@ -15,18 +15,19 @@ Trong sơ đồ lớp có nhiều loại lớp, trong đó có lớp thực th�
 
 ==========================================================================================
 
-* Ký hiệu / Quy ước biểu diễn lớp:
+* Ký hiệu UML để biểu diễn lớp:
 
----------------------------------------------------------
-|	Tên lớp	/ Tên đối tượng				|	-> Class / Object
-|-------------------------------------------------------|
+_________________________________________________________
+|		Tên lớp	/ Tên đối tượng			|	-> Class / Object
+|_______________________________________________________|
 |- tên-thuộc-tính1: kiểu-dữ-liệu1 = giá-trị-mặc-định1	|	-> Attribute/Field/Property: Thuộc tính
 |- tên-thuộc-tính2: kiểu-dữ-liệu2 = giá-trị-mặc-định2	|	được đóng gói trong lớp / đối tượng
-|-------------------------------------------------------|
+|_______________________________________________________|
 |+ tên-phương-thức1(ds-tham-số1): kiểu-trả-về1		|	-> Behavior/Method/Function: Phương thức
 |+ tên-phương-thức2(ds-tham-số2): kiểu-trả-về2		|	thể hiện hành vi của lớp / đối tượng
 |_______________________________________________________|
 
+* Bảng ký hiệu / Quy ước biểu diễn lớp:
 
 -----------------------------------------------------------------------------------------
 |		|	 Tên lớp	| Tên thuộc tính	| Tên phương thức	|
@@ -34,47 +35,47 @@ Trong sơ đồ lớp có nhiều loại lớp, trong đó có lớp thực th�
 | [N] Thường	| Lớp thông thường	| Thuộc tính thường	| Phương thức thường	|
 |---------------|-----------------------|-----------------------|-----------------------|
 |		| Đối tượng cụ thể của /| Thuộc tính tĩnh	| Phương thức tĩnh	|
-|		| được tạo ra từ lớp	| (Thuộc tính được	| (Phương thức có thể	|
-|		| (Object / Instance	| chia sẻ, dùng chung	| được gọi qua tên lớp	|
-| [U] Gạch chân	| đã được tạo của lớp)	| cho toàn bộ đối tượng	| mà không cần thông qua|
-|		|			| được tạo ra từ lớp đó,| việc tạo đối tượng,	|
-|		|			| thuộc tính tĩnh được	| nó tương tự như	|
-|		|			| tạo ra ngay cả khi lớp| một hàm cơ bản)	|
-|		|			| chưa có đối tượng nào)|			|
+|		| được tạo ra từ lớp	| (Thuộc tính được	| (Phương thức được	|
+|		| (Object / Instance	| chia sẻ / dùng chung	| chia sẻ / dùng chung	|
+| [U] Gạch chân	| đã được tạo của lớp)	| cho toàn bộ đối tượng	| cho toàn bộ đối tượng	|
+|		|			| được tạo ra từ lớp đó,| được tạo ra từ lớp đó,|
+|		|			| được gọi qua tên lớp	| được gọi qua tên lớp	|
+|		|			| mà không cần thông qua| mà không cần thông qua|
+|		|			| việc tạo đối tượng)	| việc tạo đối tượng)	|
 |---------------|-----------------------|-----------------------|-----------------------|
-|		| Lớp trừu tượng	| [Không thể]		| Phương thức trừu tượng|
+|		| Lớp trừu tượng	| [Không thể trừu tượng]| Phương thức trừu tượng|
 |		| (Lớp không cho phép	|			| (Phương thức không có	|
 |		| tạo mới đối tượng,	|			| phần thân thực thi,	|
-| [I] Nghiêng	| chỉ định nghĩa khuôn	|			| chỉ có phần		|
-|		| để các lớp con kế thừa|			| khai báo phương thức)	|
-|		| và hiện thực một số	|			|			|
+| [I] Nghiêng	| chỉ định nghĩa khuôn	|			| chỉ có phần khai báo	|
+|		| để các lớp con kế thừa|			| tên phương thức	|
+|		| và hiện thực một số	|			| và danh sách tham số)	|
 |		| nhiệm vụ trừu tượng)	|			|			|
 |---------------|-----------------------|-----------------------|-----------------------|
-|		| Trong kế thừa, đây là	| Là một vùng RAM	| Trong kế thừa, lớp Cha|
+|		| Trong kế thừa, lớp Cha| Hằng số - Vùng RAM	| Trong kế thừa, lớp Cha|
 |		| "tự cung" để tuyệt tự,| không cho phép	| "gia trưởng, bảo thủ"	|
-| final		| không cho phép	| thay đổi giá trị,	| không cho phép lớp Con|
-|		| mở rộng (extends)	| mà giá trị chỉ có thể	| vượt mặt, mọi xử lý	|
+| final		| không cho phép kế thừa| thay đổi giá trị,	| không cho phép lớp Con|
+|		| mở rộng (extends)	| giá trị chỉ có thể	| vượt mặt, mọi xử lý	|
 |		| để tạo lớp Con	| gán trong lúc khai báo| đều phải sử dụng	|
 |		|			|			| phương thức của Cha	|
 -----------------------------------------------------------------------------------------
 
-* Lưu ý: Đối với thuộc tính và phương thức, ngoài việc sử dụng từ khoá final, ta còn có thể sử dụng ký tự gạch dưới "_".
+	(* Lưu ý: Đối với thuộc tính và phương thức, ngoài việc sử dụng từ khoá final, ta còn có thể sử dụng ký tự gạch dưới "_" phía sau tên.)
 
 ------------------------------------------------------------
 
 * Phạm vi truy cập (Access modifier): được đặt ở trước tên thuộc tính và tên phương thức.
-	- public: + (mọi người đều có thể truy cập)
-	- private: - (để thể hiện tính che giấu dữ liệu trong lập trình hướng đối tượng, thuộc tính thường có phạm vi truy cập là private hoặc protected, và truy cập thông qua hai phương thức getter và setter.)
-	- protected: # (để các thuộc tính, phương thức con có thể truy cập)
-	- package (Java)/namespace (C#): ~ (trong Java, khi một thuộc tính không được khai báo phạm vi truy cập sẽ được mặc định gán phạm vi truy cập là default - được phép truy cập bởi các lớp (anh em) trong cùng một package)
+	- public (+): mọi người đều có thể truy cập.
+	- private (-): để thể hiện tính che giấu dữ liệu trong lập trình hướng đối tượng, thuộc tính thường có phạm vi truy cập là private hoặc protected, và chỉ cho phép truy cập thông qua hai phương thức getter() và setter().
+	- protected (#): chỉ các thuộc tính, phương thức con mới có thể truy cập.
+	- default (~): khi một thuộc tính không được khai báo phạm vi truy cập sẽ được mặc định gán phạm vi truy cập mặc định, được phép truy cập bởi các lớp (anh em) trong cùng một package (Java)/namespace (C#).
 
 --------------------------------------------------------------------------------
 
-Ví dụ:
+Ví dụ 1:
 
-	Tên lớp:
-		Student
-		Circle
+	Tên lớp:		Tên đối tượng:
+		Student			s͟i͟n͟h͟V͟i͟e͟n͟
+		Circle			h͟i͟n͟h͟C͟h͟u͟N͟h͟a͟t͟
 
 	Thuộc tính:
 
@@ -92,19 +93,50 @@ Ví dụ:
 
 	Phương thức:
 
-		// Phương thức để rút gọn phân
+		// Phương thức khởi tạo không tham số
+		// của lớp phân số
+		+ PhanSo()
+
+		// Phương thức khởi tạo có tham số
+		// của lớp phân số
+		+ PhanSo(tuSo: int, mauSo: int)
+
+		// Phương thức để rút gọn phân số
 		// với phạm vi truy cập là public
 		// và kết quả trả về là một phân số
-		+ rutGonPhanSo(): 
+		+ rutGonPhanSo(): PhanSo
 
 		// Phương thức để cộng phân số
-		// với phạm vi truy cập là public
-		// và kết quả trả về là một phân số
+		// với phạm vi truy cập là public,
+		// nhận đầu vào là một phân số
+		// và kết quả trả về cũng là một phân số
 		+ congPhanSo(p: PhanSo): PhanSo
 
+		// Phương thức tĩnh
+		// để tìm ước chung lớn nhất
+		// và phục vụ cho việc rút gọn phân số
+		// (không liên quan đến một phân số cụ thể
+		//  mà được sử dụng chung cho tất cả phân số)
+		+͟ ͟t͟i͟m͟U͟C͟L͟N͟(͟a͟:͟ ͟i͟n͟t͟,͟ ͟b͟:͟i͟n͟t͟)͟:͟ ͟i͟n͟t͟
+
 		// Cách khai báo phương thức
-		// không cho phép vượt mặt / ghi đè
+		// không cho phép vượt mặt / ghi đè (Override)
 		+ final getAge(): int	// + getAge_(): int
+
+Ví dụ 2: Thiết kế sơ đồ lớp cho lớp phân số.
+
+	_________________________________
+	|	PhanSo			|
+	|_______________________________|
+	|- tuSo: int			|
+	|- mauSo: int			|
+	|_______________________________|
+	|+ PhanSo()			|
+	|+ PhanSo(tuSo: int, mauSo: int)|
+	|+ rutGonPhanSo(): PhanSo	|
+	|+ congPhanSo(p: PhanSo): PhanSo|
+	|+͟ ͟t͟i͟m͟U͟C͟L͟N͟(͟a͟:͟ ͟i͟n͟t͟,͟ ͟b͟:͟i͟n͟t͟)͟:͟ ͟i͟n͟t͟  |
+	|_______________________________|
 
 ==========================================================================================
 
@@ -120,9 +152,15 @@ Mối quan hệ giữa các lớp
 
 	- Trong danh sách THUỘC TÍNH (không phải phương thức) của lớp A có một ĐỐI TƯỢNG, THUỘC TÍNH kiểu của B và ngược lại.
 	
-		Ví dụ:
+		Ví dụ 1:
 			class A {
     				private B b;
+			};
+	
+		Ví dụ 2:
+			class DoanThang {
+    				private Diem d1;
+    				private Diem d2;
 			};
 
 	- Bản số/trọng số (multiplicity): xác định số đối tượng của hai lớp có liên kết với nhau, tham gia vào quan hệ đó.
@@ -137,14 +175,14 @@ Mối quan hệ giữa các lớp
 
 			Ví dụ 1: sử dụng ký hiệu của lớp trung gian (đường nét đứt) cho các mối quan hệ với trọng số nhiều-nhiều. Ràng buộc số lượng sinh viên tối thiểu và tối đa của một khoa, số lượng khoa (chuyên ngành) mà một sinh viên được phép tham gia.
 
-			|---------------|				 |--------------|
+			_________________				 _________________
 			|	Khoa	|				 |SinhVien 	|
 			|―――――――――――――――|(1..2)			(30..500)|――――――――――――――|
 			|-sv:SinhVien[]	|――――――――――――――――――――――――――――――――|-kh:Khoa[]	|
 			|		|		|		 |	   	|
 							|
 							|
-						|-----------------------|
+						_________________________
 						|	ThamGia		|
 						|―――――――――――――――――――――――|
 						|-ngayThamGia:Date	|
@@ -155,7 +193,7 @@ Mối quan hệ giữa các lớp
 		
 			Ví dụ 2: giữa SanPham và LoaiSanPham có quan hệ nhiều-nhiều nhưng không có thuộc tính quan hệ nào khác.
 
-|---------------|		|------------------|			    |--------------------|
+_________________		____________________			    ______________________
 |LoaiSanPham	|(1..*)	  (0..*)|	SanPham	   |(1..*)	      (0..*)|	DonHang		 |
 |―――――――――――――――|―――――――――――――――|――――――――――――――――――|――――――――――――――――――――――――|――――――――――――――――――――|
 |- id : int	|		|- id : int	   |	|  ◀ChiTietDonHang  |- id : int		 |  
@@ -165,11 +203,11 @@ Mối quan hệ giữa các lớp
 |_______________|		|+ SanPham()	   |	|		    |____________________|
 				|+ xemCT() : void  |	|
 				|+ timKiem() : void|	|
-				|------------------|	|
 				|__________________|	|
 							|
 							|
-						|-----------------------|
+							|
+						_________________________
 						|ChiTietDonHang		|
 						|―――――――――――――――――――――――|
 						|- soLuong : int	|
@@ -198,14 +236,14 @@ Mối quan hệ giữa các lớp
 
 		Ví dụ 1: nếu đối tượng DanhMuc bị xoá thì tất cả các sản phẩm thuộc SanPham vẫn còn tồn tại.
 
-			|-------|	 |-------|
+			_________	 _________
 			|SanPham|*	1|DanhMuc|
 			|―――――――|―――――――◇|―――――――|
 			|	|	 |	 |
 
 		Ví dụ 2: thu đi để lại lá vàng.
 
-			|-------|	 |-------|
+			_________	 _________
 			|LaVang |*	1|MuaThu |
 			|―――――――|―――――――◇|―――――――|
 			|	|	 |	 |
@@ -213,7 +251,7 @@ Mối quan hệ giữa các lớp
 
 		Ví dụ 3: nếu đối tượng TruongHoc bị xoá thì tất cả các SinhVien và GiangVien vẫn còn tồn tại.
 
-			|---------|	   |---------|	      |--------|
+			___________	   ___________	      ___________
 			|GiangVien|*	  1|TruongHoc|1	     *|SinhVien|
 			|―――――――――|―――――――◇|―――――――――|◇―――――――|――――――――|
 			|	  |	   |	     |	      |	       |
@@ -238,14 +276,14 @@ Mối quan hệ giữa các lớp
 
 			Ví dụ 1: nếu đối tượng ThuMuc bị xoá thì tất cả các tập tin con bên trong đều sẽ bị xoá theo.
 
-				|-------|	   |------|
+				_________	   ________
 				|ThuMuc	|1	  *|TapTin|
 				|―――――――|◆―――――――――|――――――|
 				|	|	   |	  |
 
 			Ví dụ 2: nếu đối tượng SinhVien bị xoá thì tất cả các thông tin về CV đều sẽ bị xoá theo.
 
-				|--------|	    |--------|
+				__________	    __________
 				|SinhVien|1	   1|CVOnline|
 				|――――――――|◆―――――――――|――――――――|
 				|	 |	    |	    |
@@ -293,7 +331,7 @@ Mối quan hệ giữa các lớp
 
 		Ví dụ:
 
-|-----------------------|		|-------------------|		    |-------------------|
+_________________________		_____________________		    _____________________
 |	KhachHang	|		|	NguoiDung   |		    |	Admin		|
 |―――――――――――――――――――――――|1	       1|―――――――――――――――――――|1		   1|―――――――――――――――――――|
 |- email : String	|――――――――――――――▷|- id: int	    |◁――――――――――――――|- laQuanLy: boolean|
@@ -347,7 +385,7 @@ Mối quan hệ giữa các lớp
 
 		Ví dụ: lớp A1 là lớp trong của lớp A
 
-		|-----------------------|		|---------------------------------------|
+		_________________________		_________________________________________
 		|	A		|		|		A1			|
 		|―――――――――――――――――――――――|		|―――――――――――――――――――――――――――――――――――――――|
 		|- textBoxNhap : TextBox|⊕――――――――――――――|					|
@@ -398,38 +436,67 @@ Một số loại lớp khác bên cạnh các loại lớp đại diện cho d�
 
 ==========================================================================================
 
-Hiện thực hóa (Realization/Implementation): |Đối tượng|-----▷|<<interface>>|
+Hiện thực hóa/Triển khai (Realization/Implementation): |Đối tượng|-----▷|<<interface>>|
 Giao diện (Interface) chỉ có phần khai báo và một vài phương thức mặc định chứ không có phần thực thi, để chạy được cần viết một lớp đối tượng để hiện thực/triển khai, quá trình này được gọi là hiện thực hoá.
 	-> Sử dụng interface
 		-> Implementation
 
 	Ví dụ 1:
-		|---------------|
+		_________________
 		|[In nghiêng] I1|◁------|
-		|---------------|	|
+		|_______________|	|     _________
 					|-----|class A|
-		|---------------|	|
+		_________________	|     |_______|
 		|[In nghiêng] I2|◁------|
-		|---------------|
+		|_______________|
 
 ==========================================================================================
 
 Bài tập vẽ sơ đồ lớp:
-	Bài tập 1: thiết kế lớp TapTin và ThuMuc
+
+	Bài tập 1: Thiết kế lớp TapTin và ThuMuc
 		Thư mục chứa thông tin tên thư mục, ngày tạo.
 		Tập tin cũng là một loại thư mục có thêm thông tin loại tập tin và dung lượng.
 		Thư mục có thể chứa các thư mục con và nhiều tập tin khác.
 		Trong đó:
 			- Thư mục bắt buộc phải có tên, còn tập tin phải có tên và dung lượng.
 			- Một thư mục bị xoá thì tất cả tập tin, thư mục con của nó cũng bị xoá theo.
-		       1|-----------------------|	|-----------------------|
+			
+		       1_________________________	_________________________
 		―――――――◆|	ThuMuc		|	|	TapTin		|
 		│	|_______________________|	|_______________________|
-		│	|- ten : String		|◁――――――|- loai : String	|
-		│_______|- ngayTao : Date	|	|- dungLuong : double	|
+		│	|- ten: String		|◁――――――|- loai: String	|
+		│_______|- ngayTao: Date	|	|- dungLuong: double	|
 		       *|_______________________|	|_______________________|
 			|_______________________|	|_______________________|
 
+
+	Bài tập 2: Hệ thống quản lý câu hỏi trắc nghiệm.
+		Quản lý theo danh mục, mỗi câu hỏi gồm: nội dung câu hỏi, các phương án lựa chọn câu hỏi và danh mục của câu hỏi.
+
+		Chú ý: Một câu hỏi có thể có từ 1..n phương án lựa chọn và trong đó có ít nhất một phương án đúng, mỗi phương án chỉ thuộc một câu hỏi.
+
+		_________________________			_________________________
+		|	CauHoi		|			|	PhuongAn	|
+		|_______________________| 1		   1..* |_______________________|
+		|- noiDung: String	|◆――――――――――――――――――――――|- noiDung: int		|
+		|- danhMuc: DanhMuc[]	|	▶ Có		|			|
+		|- phuongAn: PhuongAn[]	|			|			|
+		|- dapAn: PhuongAn[]	|			|			|
+		|			| 1		   1..* |			|
+		|			|◆――――――――――――――――――――――|			|
+		|			|	▶ Đáp án đúng	|			|
+		|_______________________|			|_______________________|
+		|_______________________|			|_______________________|		
+			│ *
+			│
+			│ 1..*
+		________│________________
+		|	DanhMuc		|
+		|_______________________|
+		|- ten: String		|
+		|_______________________|
+		|_______________________|
 
 ==========================================================================================
 
