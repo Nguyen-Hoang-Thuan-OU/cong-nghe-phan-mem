@@ -112,7 +112,7 @@ Ví dụ 1:
 		// và kết quả trả về cũng là một phân số
 		+ congPhanSo(p: PhanSo): PhanSo
 
-		// Phương thức tĩnh
+		// Phương thức tĩnh (static)
 		// để tìm ước chung lớn nhất
 		// và phục vụ cho việc rút gọn phân số
 		// (không liên quan đến một phân số cụ thể
@@ -175,19 +175,21 @@ Mối quan hệ giữa các lớp
 
 			Ví dụ 1: sử dụng ký hiệu của lớp trung gian (đường nét đứt) cho các mối quan hệ với trọng số nhiều-nhiều. Ràng buộc số lượng sinh viên tối thiểu và tối đa của một khoa, số lượng khoa (chuyên ngành) mà một sinh viên được phép tham gia.
 
-			_________________				 _________________
+			_________________				 ________________
 			|	Khoa	|				 |SinhVien 	|
 			|―――――――――――――――|(1..2)			(30..500)|――――――――――――――|
-			|-sv:SinhVien[]	|――――――――――――――――――――――――――――――――|-kh:Khoa[]	|
+			|-ten: String	|――――――――――――――――――――――――――――――――|-hoTen: String|
+			|-sv: SinhVien[]|		|		 |-mssv: String	|
+			|		|		|		 |-kh: Khoa[]	|
 			|		|		|		 |	   	|
 							|
 							|
 						_________________________
 						|	ThamGia		|
 						|―――――――――――――――――――――――|
-						|-ngayThamGia:Date	|
-						|-kh:Khoa[]		|
-						|-sv:SinhVien[]		|
+						|-ngayThamGia: Date	|
+						|-kh: Khoa[]		|
+						|-sv: SinhVien[]	|
 						|			|
 					
 		
@@ -196,13 +198,13 @@ Mối quan hệ giữa các lớp
 _________________		____________________			    ______________________
 |LoaiSanPham	|(1..*)	  (0..*)|	SanPham	   |(1..*)	      (0..*)|	DonHang		 |
 |―――――――――――――――|―――――――――――――――|――――――――――――――――――|――――――――――――――――――――――――|――――――――――――――――――――|
-|- id : int	|		|- id : int	   |	|  ◀ChiTietDonHang  |- id : int		 |  
-|- ten : String	|		|- ten : String	   |	|		    |- ngayTao : Date    |	
-|―――――――――――――――|		|- gia : BigDecimal|	|		    |- ngayCapNhat : Date|
+|- id: int	|		|- id: int	   |	|  ◀ ChiTietDonHang |- id: int		 |  
+|- ten: String	|		|- ten: String	   |	|		    |- ngayTao: Date     |	
+|―――――――――――――――|		|- gia: BigDecimal|	|		    |- ngayCapNhat: Date |
 |		|		|――――――――――――――――――|	|		    |――――――――――――――――――――|
 |_______________|		|+ SanPham()	   |	|		    |____________________|
-				|+ xemCT() : void  |	|
-				|+ timKiem() : void|	|
+				|+ xemCT(): void  |	|
+				|+ timKiem(): void|	|
 				|__________________|	|
 							|
 							|
@@ -210,10 +212,10 @@ _________________		____________________			    ______________________
 						_________________________
 						|ChiTietDonHang		|
 						|―――――――――――――――――――――――|
-						|- soLuong : int	|
-						|- donGia : BigDecimal	|
-						|- sp : SanPham[]	|
-						|- dh : DonHang[]	|
+						|- soLuong: int		|
+						|- donGia: BigDecimal	|
+						|- sp: SanPham[]	|
+						|- dh: DonHang[]	|
 						|―――――――――――――――――――――――|
 						|_______________________|
 
@@ -295,13 +297,13 @@ _________________		____________________			    ______________________
 	- Điều kiện:
 		+ Chỉ xét đến khi hai lớp đối tượng không có cả ba mối quan hệ association, aggregation và composition.
 
-	- Trong danh sách PHƯƠNG THỨC (không phải thuộc tính) của lớp A có một THUỘC TÍNH với tham số/đối số kiểu của B, có một biến cục bộ kiểu B, hoặc trả về một biến kiểu B.
-		-> Lớp A phụ thuộc vào lớp B, có liên quan đến lớp B.
+	- Trong danh sách PHƯƠNG THỨC (không phải thuộc tính) của lớp A có một THUỘC TÍNH với tham số/đối số kiểu của B, hoặc có một biến cục bộ kiểu B, hoặc trả về một biến kiểu B.
+		-> Lớp A phụ thuộc vào lớp B (có liên quan đến lớp B) để có thể hoạt động.
 
 		Ví dụ 1:
 			test (B b) {			// Tham số kiểu của B
 				// B b;			// Biến cục bộ kiểu B
-				return new B();		// Trả về một biến kiểu B
+				// return new B();	// Trả về một biến kiểu B
 			}
 
 		Ví dụ 2:
@@ -322,33 +324,54 @@ _________________		____________________			    ______________________
 * Kế thừa (Inheritance/Generalization/Is-a - Là một dạng của): |A|◁―――――|B|
 
 	- Quan hệ một-một của hai lớp đối tượng.
-		+ Lớp A: lớp cơ sở (base class)/lớp cha(superclass).
-		+ Lớp B: lớp dẫn xuất (derived class)/lớp con (subclass).
+		+ Lớp A: lớp cơ sở (base class) / lớp cha(superclass).
+		+ Lớp B: lớp dẫn xuất (derived class) / lớp con (subclass).
 			-> Một lớp B ánh xạ với một đối tượng lớp A (B là mở rộng (extends) của A).
 			-> Khi chuyển xuống cơ sở dữ liệu sẽ là mối quan hệ ánh xạ một-một.
 
-	- Lớp B thừa hưởng những đặc tính, hành vi của lớp A.
+	- Lớp B thừa hưởng những đặc tính và hành vi của lớp A. Có thể nói:
+		+ Lớp B là trường hợp đặc biệt / chuyên biệt của lớp A.
+		+ Lớp A là trường hợp tổng quát của lớp B.
 
 		Ví dụ:
 
 _________________________		_____________________		    _____________________
-|	KhachHang	|		|	NguoiDung   |		    |	Admin		|
+|	KhachHang	|		|	NguoiDung   |		    |	QuanTriVien	|
 |―――――――――――――――――――――――|1	       1|―――――――――――――――――――|1		   1|―――――――――――――――――――|
-|- email : String	|――――――――――――――▷|- id: int	    |◁――――――――――――――|- laQuanLy: boolean|
-|- soDienThoai: String	|		|- taiKhoan : String|		    |			|
-|			|		|- matKhau : String |		    |			|
+|- email: String	|――――――――――――――▷|- id: int	    |◁――――――――――――――|- laQuanLy: boolean|
+|- soDienThoai: String	|		|- taiKhoan: String |		    |			|
+|			|		|- matKhau: String  |		    |			|
 |―――――――――――――――――――――――|		|―――――――――――――――――――|		    |―――――――――――――――――――|
-|			|		|		    |		    |			|
+|_______________________|		|___________________|		    |___________________|
+	△ 1
+	│
+	│
+	│ 1
+________│________________
+| KhachHangThanThiet	|
+|―――――――――――――――――――――――|
+|- soDiemTichLuy: int	|
+|―――――――――――――――――――――――|
+|_______________________|
 
 --------------------------------------------------------------------------------
 
 * Lớp trong (nested): |A|⊕―――――|A1|
 
-	- Trong lập trình hướng đối tượng, Java kế thừa từ C++, do đó Java thừa hưởng đầy đủ những đặc trưng trong lập trình hướng đối tượng của C++. Nhưng trong Java có thêm cơ chế đặc trưng hướng đối tượng mà C++ không có là metaclass.
-		+ Metaclass là lớp mà bên trong một lớp A có lồng thêm một số lớp A1, A2,...
-		+ Lớp lồng bên trong được phép truy cập vào thành viên của lớp lớn. Khác với quan hệ kế thừa.
+	- Trong lập trình hướng đối tượng, Java kế thừa từ C++, do đó Java thừa hưởng đầy đủ những đặc trưng trong lập trình hướng đối tượng của C++. Nhưng trong Java có thêm cơ chế đặc trưng hướng đối tượng mà C++ không có, đó là metaclass.
+		+ Metaclass là lớp (Outer Class) mà trong lớp đó có lồng thêm một số lớp khác (Inner Class).
+		+ Khi tạo mới đối tượng, thay vì cho ra một đối tượng mới, metaclass sẽ cho ra một lớp khác.
+		+ Khác với quan hệ kế thừa, lớp lồng trong được phép truy cập vào thành viên (thuộc tính và phương thức) của lớp ngoài, mặc dù những thành viên này có phạm vi truy cập là private.
+		
 
-	- Thành viên tĩnh là thành viên dùng chung cho tất cả các đối tượng. Lớp tĩnh (static class) được phép khai báo bên trong một lớp lớn, giúp lớp lớn truy cập trực tiếp vào lớp trong bằng tên của lớp lớn và tạo đối tượng ở bên trong, thay vì phải tạo đối tượng từ lớp lớn rồi dùng đối tượng vừa tạo để truy cập vào lớp trong (thường được áp dụng trong xử lý sự kiện của lập trình giao diện).
+	- Thành viên tĩnh là thành viên dùng chung cho tất cả các đối tượng.
+		+ Lớp trong được phép khai báo static (trong khi lớp lồng ngoài không được phép khai báo là static).
+		+ Khi tạo mới đối tượng từ lớp ngoài, tất cả những đối tượng được tạo ra đều sẽ có chung một lớp trong.
+		+ Vì lớp trong là lớp sử dụng chung, nên lớp ngoài có thể truy cập trực tiếp vào lớp trong bằng tên của lớp ngoài và tạo đối tượng ở trong, thay vì phải tạo đối tượng từ lớp ngoài rồi dùng đối tượng vừa tạo để truy cập vào lớp trong.
+
+	- Thường được áp dụng trong xử lý sự kiện của lập trình giao diện, giúp các lớp trong dễ dàng truy cập vào những thành viên của lớp ngoài, vì lớp trong đã có đủ độ tin cậy.
+
+	- Khi biên dịch, lớp trong vẫn sẽ tạo ra một tập tin *.class riêng biệt.
 
 			Ví dụ 1:
 				class A {
@@ -363,10 +386,17 @@ _________________________		_____________________		    _____________________
 					}
 
 					// Lớp tĩnh cho phép lớp A truy cập trực tiếp vào lớp C
-					// bằng tên của lớp A và tạo đối tượng ở bên trong
+					// bằng tên của lớp A và tạo đối tượng ở trong
 					// mà không cần phải tạo đối tượng ở lớp A
 					static class C {
 					}
+
+						// Tạo đối tượng từ lớp trong non-static
+						// A a = new A();
+						// a.B b = new a.B();
+
+						// Tạo đối tượng từ lớp trong static
+						// A.B b = new A.B();
 				}
 
 
@@ -480,12 +510,12 @@ Bài tập vẽ sơ đồ lớp:
 		|	CauHoi		|			|	PhuongAn	|
 		|_______________________| 1		   1..* |_______________________|
 		|- noiDung: String	|◆――――――――――――――――――――――|- noiDung: int		|
-		|- danhMuc: DanhMuc[]	|	▶ Có		|			|
+		|- danhMuc: DanhMuc[]	|	Có ▶		|			|
 		|- phuongAn: PhuongAn[]	|			|			|
 		|- dapAn: PhuongAn[]	|			|			|
 		|			| 1		   1..* |			|
 		|			|◆――――――――――――――――――――――|			|
-		|			|	▶ Đáp án đúng	|			|
+		|			|	Đáp án đúng ▶	|			|
 		|_______________________|			|_______________________|
 		|_______________________|			|_______________________|		
 			│ *
